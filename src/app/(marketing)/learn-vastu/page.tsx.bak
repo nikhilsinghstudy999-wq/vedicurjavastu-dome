@@ -1,0 +1,3 @@
+'use client';
+import LearnVastuPage from '@/features/learn/components/LearnVastuPage';
+export default LearnVastuPage;

@@ -1,0 +1,1367 @@
+./
+├── .backups/
+│   ├── about-page-20260416-081700/
+│   │   ├── Footer.tsx
+│   │   ├── Header.tsx
+│   │   └── page.tsx
+│   ├── admin-consult-manager-20260416-114522/
+│   │   └── page.tsx
+│   ├── admin-panel-20260416-113830/
+│   │   └── page.tsx
+│   ├── admin-realtime-scroll-20260416-122150/
+│   │   └── ConsultationsManager.tsx
+│   ├── admin-rewrite-20260416-115032/
+│   │   └── page.tsx
+│   ├── admin-slots-fix-20260416-120033/
+│   │   └── ConsultationsManager.tsx
+│   ├── admin-users-meeting-20260416-120936/
+│   │   └── page.tsx
+│   ├── ahey-integration-20260415-103843/
+│   │   ├── MeetingRoom.tsx.bak
+│   │   └── bookings-page.tsx.bak
+│   ├── ai-tools-20260415-085842/
+│   │   └── src/
+│   │       └── app/
+│   │           ├── (admin)/
+│   │           │   └── admin/
+│   │           │       └── page.tsx
+│   │           └── (marketing)/
+│   │               └── free-tools/
+│   │                   ├── kundali/
+│   │                   │   └── page.tsx
+│   │                   ├── name-suggestion/
+│   │                   │   └── page.tsx
+│   │                   └── vastu-scan/
+│   │                       └── page.tsx
+│   ├── ai-tools-admin-20260415-084131/
+│   │   └── src/
+│   │       └── app/
+│   │           └── (marketing)/
+│   │               └── free-tools/
+│   │                   └── kundali/
+│   │                       └── page.tsx
+│   ├── ai-tools-admin-20260415-084731/
+│   │   └── src/
+│   │       └── app/
+│   │           └── (marketing)/
+│   │               └── free-tools/
+│   │                   └── kundali/
+│   │                       └── page.tsx
+│   ├── ai-tools-admin-20260415-085425/
+│   │   └── src/
+│   │       └── app/
+│   │           └── (marketing)/
+│   │               └── free-tools/
+│   │                   └── kundali/
+│   │                       └── page.tsx
+│   ├── ai-tools-full-20260415-090409/
+│   │   └── src/
+│   │       └── app/
+│   │           ├── (admin)/
+│   │           │   └── admin/
+│   │           │       └── page.tsx
+│   │           └── (marketing)/
+│   │               └── free-tools/
+│   │                   ├── kundali/
+│   │                   │   └── page.tsx
+│   │                   ├── name-suggestion/
+│   │                   │   └── page.tsx
+│   │                   └── vastu-scan/
+│   │                       └── page.tsx
+│   ├── auth-gateway-20260415-152009/
+│   │   └── layout.tsx
+│   ├── auth-google-20260416-105511/
+│   │   ├── AuthGateway.tsx
+│   │   └── page.tsx
+│   ├── auth-pages-20260416-082514/
+│   │   └── page.tsx
+│   ├── bbb-fix-20260417-154944/
+│   ├── blog-20260415-143356/
+│   │   └── page.tsx
+│   ├── blog-20260415-143538/
+│   │   └── page.tsx
+│   ├── booking-style-fix-20260415-101454/
+│   │   └── page.tsx
+│   ├── booking-workflow-20260415-100548/
+│   │   ├── PaymentSimulationModal.tsx
+│   │   └── page.tsx
+│   ├── bookings-12sections-20260416-104403/
+│   │   └── page.tsx
+│   ├── bookings-20260415-093805/
+│   │   └── src/
+│   │       ├── app/
+│   │       │   ├── (admin)/
+│   │       │   │   └── admin/
+│   │       │   │       └── page.tsx
+│   │       │   └── (marketing)/
+│   │       │       └── bookings/
+│   │       │           └── page.tsx
+│   │       └── components/
+│   │           └── sections/
+│   │               └── dashboard/
+│   │                   └── MeetingRoom.tsx
+│   ├── cleanup-courses-20260416-080046/
+│   │   ├── LearnVastuTeaser.tsx
+│   │   └── page.tsx
+│   ├── comprehensive-ui-fix-20260416-152536/
+│   │   ├── Footer.tsx
+│   │   ├── Header.tsx
+│   │   └── page.tsx
+│   ├── contact-admin-20260416-102521/
+│   │   └── CosmicHero.tsx
+│   ├── contact-final-20260416-102810/
+│   │   ├── CosmicHero.tsx
+│   │   └── page.tsx
+│   ├── contact-fix-20260416-102315/
+│   │   └── CosmicHero.tsx
+│   ├── critical-fixes-20260416-144043/
+│   │   ├── LuxuryHeroButton.tsx
+│   │   ├── ServiceCard3DEnhanced.tsx
+│   │   ├── page.tsx
+│   │   └── soundManager.ts
+│   ├── daily-clean-20260415-120605/
+│   │   ├── MeetingRoom.tsx.bak
+│   │   ├── bookings-page.tsx.bak
+│   │   └── route.ts.bak
+│   ├── daily-clean-20260415-121039/
+│   │   ├── MeetingRoom.tsx.bak
+│   │   ├── bookings-page.tsx.bak
+│   │   └── route.ts.bak
+│   ├── daily-integration-20260415-115739/
+│   │   ├── MeetingRoom.tsx.bak
+│   │   └── bookings-page.tsx.bak
+│   ├── dashboard-profile-20260415-151041/
+│   │   └── page.tsx
+│   ├── emergency-20260417-044337/
+│   │   └── src/
+│   │       ├── app/
+│   │       │   ├── (admin)/
+│   │       │   │   ├── admin/
+│   │       │   │   │   ├── loading.tsx
+│   │       │   │   │   ├── page.tsx
+│   │       │   │   │   └── page.tsx.bak
+│   │       │   │   └── layout.tsx
+│   │       │   ├── (dashboard)/
+│   │       │   │   ├── dashboard/
+│   │       │   │   │   ├── account/
+│   │       │   │   │   │   └── page.tsx
+│   │       │   │   │   ├── billing/
+│   │       │   │   │   │   └── page.tsx
+│   │       │   │   │   ├── connected/
+│   │       │   │   │   │   └── page.tsx
+│   │       │   │   │   ├── consultations/
+│   │       │   │   │   │   └── page.tsx
+│   │       │   │   │   ├── library/
+│   │       │   │   │   │   ├── loading.tsx
+│   │       │   │   │   │   └── page.tsx
+│   │       │   │   │   ├── meeting/
+│   │       │   │   │   │   └── page.tsx
+│   │       │   │   │   ├── notifications/
+│   │       │   │   │   │   └── page.tsx
+│   │       │   │   │   ├── privacy/
+│   │       │   │   │   │   └── page.tsx
+│   │       │   │   │   ├── security/
+│   │       │   │   │   │   └── page.tsx
+│   │       │   │   │   ├── loading.tsx
+│   │       │   │   │   └── page.tsx
+│   │       │   │   └── layout.tsx
+│   │       │   ├── (marketing)/
+│   │       │   │   ├── about/
+│   │       │   │   │   └── page.tsx
+│   │       │   │   ├── book/
+│   │       │   │   │   └── page.tsx
+│   │       │   │   ├── bookings/
+│   │       │   │   │   ├── loading.tsx
+│   │       │   │   │   ├── page.tsx
+│   │       │   │   │   └── page.tsx.bak
+│   │       │   │   ├── client-stories/
+│   │       │   │   │   ├── story/
+│   │       │   │   │   │   └── page.tsx
+│   │       │   │   │   ├── page.tsx
+│   │       │   │   │   └── page.tsx.bak
+│   │       │   │   ├── contact/
+│   │       │   │   │   └── page.tsx
+│   │       │   │   ├── courses/
+│   │       │   │   │   ├── course/
+│   │       │   │   │   │   └── page.tsx
+│   │       │   │   │   └── page.tsx
+│   │       │   │   ├── free-tools/
+│   │       │   │   │   ├── kundali/
+│   │       │   │   │   │   └── page.tsx
+│   │       │   │   │   ├── name-suggestion/
+│   │       │   │   │   │   └── page.tsx
+│   │       │   │   │   ├── vastu-scan/
+│   │       │   │   │   │   └── page.tsx
+│   │       │   │   │   ├── loading.tsx
+│   │       │   │   │   ├── page.tsx
+│   │       │   │   │   └── page.tsx.bak
+│   │       │   │   ├── insights/
+│   │       │   │   │   ├── post/
+│   │       │   │   │   │   └── page.tsx
+│   │       │   │   │   ├── loading.tsx
+│   │       │   │   │   ├── page.tsx
+│   │       │   │   │   └── page.tsx.bak
+│   │       │   │   ├── learn-vastu/
+│   │       │   │   │   ├── loading.tsx
+│   │       │   │   │   ├── page.tsx
+│   │       │   │   │   └── page.tsx.bak
+│   │       │   │   ├── library/
+│   │       │   │   │   ├── book/
+│   │       │   │   │   │   └── page.tsx
+│   │       │   │   │   └── page.tsx
+│   │       │   │   ├── payment/
+│   │       │   │   │   └── status/
+│   │       │   │   │       └── page.tsx
+│   │       │   │   ├── post/
+│   │       │   │   │   └── page.tsx
+│   │       │   │   ├── privacy/
+│   │       │   │   │   └── page.tsx
+│   │       │   │   ├── service/
+│   │       │   │   │   └── page.tsx
+│   │       │   │   ├── services/
+│   │       │   │   │   ├── service/
+│   │       │   │   │   │   └── page.tsx
+│   │       │   │   │   ├── page.tsx
+│   │       │   │   │   └── page.tsx.bak
+│   │       │   │   ├── signin/
+│   │       │   │   │   └── page.tsx
+│   │       │   │   ├── signup/
+│   │       │   │   │   └── page.tsx
+│   │       │   │   ├── story/
+│   │       │   │   │   └── page.tsx
+│   │       │   │   ├── terms/
+│   │       │   │   │   └── page.tsx
+│   │       │   │   ├── vastu-consultant/
+│   │       │   │   │   └── page.tsx
+│   │       │   │   ├── vastu-consultant-[city]/
+│   │       │   │   │   └── page.tsx
+│   │       │   │   ├── layout.tsx
+│   │       │   │   └── page.tsx
+│   │       │   ├── auth/
+│   │       │   │   └── confirm/
+│   │       │   │       └── page.tsx
+│   │       │   ├── globals.css
+│   │       │   ├── layout.tsx
+│   │       │   ├── layout.tsx.bak
+│   │       │   ├── loading.tsx
+│   │       │   └── not-found.tsx
+│   │       ├── components/
+│   │       │   ├── account/
+│   │       │   │   └── SupportTicketForm.tsx
+│   │       │   ├── admin/
+│   │       │   │   └── ConsultationsManager.tsx
+│   │       │   ├── auth/
+│   │       │   │   ├── AuthGateway.tsx
+│   │       │   │   └── AuthGateway.tsx.bak
+│   │       │   ├── blog/
+│   │       │   │   ├── BlogCard.tsx
+│   │       │   │   └── CategoryFilter.tsx
+│   │       │   ├── global/
+│   │       │   │   ├── AdminGuard.tsx
+│   │       │   │   ├── AuthModal.tsx
+│   │       │   │   ├── CinematicLogo.tsx
+│   │       │   │   ├── GPUFallback.tsx
+│   │       │   │   ├── GradientBackground.tsx
+│   │       │   │   ├── GridBackground.tsx
+│   │       │   │   ├── HeroButton.css
+│   │       │   │   ├── HeroButton.tsx
+│   │       │   │   ├── LanguageModal.tsx
+│   │       │   │   ├── LanguageProvider.tsx
+│   │       │   │   ├── LanguageSelector.tsx
+│   │       │   │   ├── LenisSmoothScroll.tsx
+│   │       │   │   ├── LuxuryButton.tsx
+│   │       │   │   ├── LuxuryCursor.tsx
+│   │       │   │   ├── LuxuryGradientBackground.tsx
+│   │       │   │   ├── MagneticButton.tsx
+│   │       │   │   ├── PageTransition.tsx
+│   │       │   │   ├── PageViewTracker.tsx
+│   │       │   │   ├── Providers.tsx
+│   │       │   │   ├── SafeLink.tsx
+│   │       │   │   ├── ScrollSmoother.tsx
+│   │       │   │   ├── ScrollSmoother.tsx.bak
+│   │       │   │   ├── SmoothScroll.tsx
+│   │       │   │   └── SoundController.tsx
+│   │       │   ├── kundali/
+│   │       │   │   └── KundaliChartSVG.tsx
+│   │       │   ├── layout/
+│   │       │   │   ├── DashboardSidebar.tsx
+│   │       │   │   ├── Footer.tsx
+│   │       │   │   ├── Footer.tsx.bak
+│   │       │   │   ├── Header.tsx
+│   │       │   │   ├── Header.tsx.bak
+│   │       │   │   └── MobileNav.tsx
+│   │       │   ├── learn/
+│   │       │   │   ├── CourseCard3D.tsx
+│   │       │   │   ├── CourseDashboard.tsx
+│   │       │   │   ├── CurriculumSection.tsx
+│   │       │   │   ├── InstructorSection.tsx
+│   │       │   │   ├── LearnCTA.tsx
+│   │       │   │   └── MissionSection.tsx
+│   │       │   ├── sections/
+│   │       │   │   ├── about/
+│   │       │   │   │   ├── LineageTimeline.tsx
+│   │       │   │   │   ├── MediaMasonry.tsx
+│   │       │   │   │   ├── ParallaxHero.tsx
+│   │       │   │   │   └── PhilosophyAccordion.tsx
+│   │       │   │   ├── dashboard/
+│   │       │   │   │   ├── ChatPanel.tsx
+│   │       │   │   │   ├── MeetingRoom.tsx
+│   │       │   │   │   ├── VideoCallFrame.tsx
+│   │       │   │   │   ├── VideoSDKMeeting.tsx
+│   │       │   │   │   ├── WhiteboardCanvas.tsx
+│   │       │   │   │   └── index.ts
+│   │       │   │   ├── home/
+│   │       │   │   │   ├── AcharyaVow.tsx
+│   │       │   │   │   ├── AcharyaVow.tsx.bak
+│   │       │   │   │   ├── BlogPreview.tsx
+│   │       │   │   │   ├── BrandCarousel3D.css
+│   │       │   │   │   ├── BrandCarousel3D.tsx
+│   │       │   │   │   ├── CTASection.tsx
+│   │       │   │   │   ├── CosmicHero.css
+│   │       │   │   │   ├── CosmicHero.tsx
+│   │       │   │   │   ├── CosmicHero.tsx.bak
+│   │       │   │   │   ├── FinalCTA.tsx
+│   │       │   │   │   ├── FinalCTA.tsx.bak
+│   │       │   │   │   ├── FreeAITools.tsx
+│   │       │   │   │   ├── FreeAITools.tsx.bak
+│   │       │   │   │   ├── FreeToolsSection.tsx
+│   │       │   │   │   ├── FreeToolsWidget.tsx
+│   │       │   │   │   ├── GlobalMap.tsx
+│   │       │   │   │   ├── GlobalPresence.css
+│   │       │   │   │   ├── GlobalPresence.tsx
+│   │       │   │   │   ├── GlobalPresence.tsx.bak
+│   │       │   │   │   ├── GlobalSection.tsx
+│   │       │   │   │   ├── GlobalTrust.tsx
+│   │       │   │   │   ├── HeroSection.tsx
+│   │       │   │   │   ├── LearnVastuTeaser.tsx
+│   │       │   │   │   ├── LearnVastuTeaser.tsx.bak
+│   │       │   │   │   ├── LibraryTeaser.tsx
+│   │       │   │   │   ├── LineageSection.tsx
+│   │       │   │   │   ├── LineageTimeline.tsx
+│   │       │   │   │   ├── SacredArchives.tsx
+│   │       │   │   │   ├── SacredArchives.tsx.bak
+│   │       │   │   │   ├── SacredServices.tsx
+│   │       │   │   │   ├── SacredServices.tsx.bak
+│   │       │   │   │   ├── ServiceCard3D.tsx
+│   │       │   │   │   ├── ServiceCard3D.tsx.bak
+│   │       │   │   │   ├── ServicePreviewGrid.tsx
+│   │       │   │   │   ├── ServicesGrid.tsx
+│   │       │   │   │   ├── SocialMediaFeed.tsx
+│   │       │   │   │   ├── TestimonialsSection.tsx
+│   │       │   │   │   ├── TestimonialsSlider.css
+│   │       │   │   │   ├── TestimonialsSlider.tsx
+│   │       │   │   │   ├── TrustMarquee.tsx
+│   │       │   │   │   ├── VirtualConsultCTA.tsx
+│   │       │   │   │   ├── VirtualConsultCTA.tsx.bak
+│   │       │   │   │   └── WordsOfGratitude.tsx
+│   │       │   │   ├── insights/
+│   │       │   │   │   ├── BlogGrid.tsx
+│   │       │   │   │   ├── BlogPostContent.tsx
+│   │       │   │   │   └── TableOfContents.tsx
+│   │       │   │   ├── library/
+│   │       │   │   │   └── BookCard.tsx
+│   │       │   │   ├── services/
+│   │       │   │   │   ├── CaseStudySlider.tsx
+│   │       │   │   │   ├── PainPointsChecklist.tsx
+│   │       │   │   │   ├── ProcessStepper.tsx
+│   │       │   │   │   ├── ServiceDetailHero.tsx
+│   │       │   │   │   └── ServiceGrid.tsx
+│   │       │   │   └── tools/
+│   │       │   │       ├── FreeToolCard3D.tsx
+│   │       │   │       ├── FreeToolCard3D.tsx.bak
+│   │       │   │       ├── KundaliChart.tsx
+│   │       │   │       ├── KundaliChart3D.tsx
+│   │       │   │       ├── KundaliForm.tsx
+│   │       │   │       ├── LuxuryToolCard.tsx
+│   │       │   │       ├── NameSuggestionForm.tsx
+│   │       │   │       ├── PaywallOverlay.tsx
+│   │       │   │       ├── PlanetaryStrengthBars.tsx
+│   │       │   │       ├── SyllableCard3D.tsx
+│   │       │   │       ├── VastuBars3D.tsx
+│   │       │   │       └── VastuScanCanvas.tsx
+│   │       │   ├── services/
+│   │       │   │   ├── CTABanner.tsx
+│   │       │   │   ├── ParallaxServiceSection.tsx
+│   │       │   │   ├── ServiceCard3DEnhanced.tsx
+│   │       │   │   ├── ServiceCard3DEnhanced.tsx.bak
+│   │       │   │   ├── ServiceCategoryGrid.tsx
+│   │       │   │   ├── TestimonialCarousel.tsx
+│   │       │   │   └── VideoPlaceholder.tsx
+│   │       │   ├── shared/
+│   │       │   │   ├── BrandLogo.tsx
+│   │       │   │   ├── LoadingSkeleton.tsx
+│   │       │   │   └── SocialLinks.tsx
+│   │       │   ├── svg/
+│   │       │   │   ├── FloatingParticles.tsx
+│   │       │   │   ├── GlowingOrb.tsx
+│   │       │   │   ├── Mandala3D.tsx
+│   │       │   │   └── VastuGrid.tsx
+│   │       │   ├── testimonials/
+│   │       │   │   ├── CategoryFilter.tsx
+│   │       │   │   ├── FAQSection.tsx
+│   │       │   │   └── TestimonialCard.tsx
+│   │       │   ├── ui/
+│   │       │   │   ├── .gitkeep
+│   │       │   │   ├── AnimatedGradientBackground.tsx
+│   │       │   │   ├── AnimatedText.tsx
+│   │       │   │   ├── CountdownTimer.tsx
+│   │       │   │   ├── GlobalLoader.css
+│   │       │   │   ├── GlobalLoader.tsx
+│   │       │   │   ├── LanguageSwitcher.tsx
+│   │       │   │   ├── LanguageSwitcher.tsx.bak
+│   │       │   │   ├── LocationAutocomplete.tsx
+│   │       │   │   ├── LuxuryAnimatedBackground.tsx
+│   │       │   │   ├── LuxuryHeroButton.tsx
+│   │       │   │   ├── LuxuryTiltCard.tsx
+│   │       │   │   ├── MediaContainer.tsx
+│   │       │   │   ├── PageLoaderWrapper.tsx
+│   │       │   │   ├── PaymentSimulationModal.tsx
+│   │       │   │   ├── PointsBadge.tsx
+│   │       │   │   ├── PremiumLockOverlay.tsx
+│   │       │   │   ├── SectionTitle.tsx
+│   │       │   │   ├── StaticGradientBackground.tsx
+│   │       │   │   ├── TestimonialCard3D.tsx
+│   │       │   │   └── VideoBackground.tsx
+│   │       │   └── vastu/
+│   │       │       └── VastuScanProcessor.tsx
+│   │       ├── contexts/
+│   │       │   ├── AdminContext.tsx
+│   │       │   ├── LanguageContext.tsx
+│   │       │   └── LanguageContext.tsx.bak
+│   │       ├── data/
+│   │       │   ├── faqs.ts
+│   │       │   └── nakshatra-syllables.json
+│   │       ├── hooks/
+│   │       │   ├── useAuth.ts
+│   │       │   ├── usePageView.ts
+│   │       │   ├── useRealtimeContent.ts
+│   │       │   ├── useRealtimeContent.ts.bak
+│   │       │   ├── useSound.ts
+│   │       │   └── useSupabase.ts
+│   │       ├── lib/
+│   │       │   ├── animations/
+│   │       │   │   ├── sequences.ts
+│   │       │   │   └── tokens.ts
+│   │       │   ├── api/
+│   │       │   │   ├── useAI.ts
+│   │       │   │   ├── useBlogPosts.ts
+│   │       │   │   ├── useBooks.ts
+│   │       │   │   ├── useConsultations.ts
+│   │       │   │   └── useServices.ts
+│   │       │   ├── audio/
+│   │       │   │   └── soundManager.ts
+│   │       │   ├── constants/
+│   │       │   │   ├── colors.ts
+│   │       │   │   ├── config.ts
+│   │       │   │   └── routes.ts
+│   │       │   ├── hooks/
+│   │       │   │   ├── useAmbientAudio.ts
+│   │       │   │   ├── useAuth.ts
+│   │       │   │   ├── useCinematicEntry.ts
+│   │       │   │   ├── useGPUDetect.ts
+│   │       │   │   ├── useMagnetic.ts
+│   │       │   │   ├── useRealtime.ts
+│   │       │   │   ├── useScrollSmoother.ts
+│   │       │   │   ├── useSlideIn.ts
+│   │       │   │   └── useSound.ts
+│   │       │   ├── kundali/
+│   │       │   │   └── calculator.ts
+│   │       │   ├── realtime/
+│   │       │   │   └── channelManager.ts
+│   │       │   ├── store/
+│   │       │   │   ├── audioStore.ts
+│   │       │   │   ├── cartStore.ts
+│   │       │   │   ├── consultationStore.ts
+│   │       │   │   ├── uiStore.ts
+│   │       │   │   └── userStore.ts
+│   │       │   ├── three/
+│   │       │   │   ├── loaders/
+│   │       │   │   │   └── GLTFLoader.ts
+│   │       │   │   ├── materials/
+│   │       │   │   │   └── PrakashGoldMaterial.ts
+│   │       │   │   └── shaders/
+│   │       │   │       ├── goldFoil.frag
+│   │       │   │       ├── pageCurl.frag
+│   │       │   │       ├── pageCurl.vert
+│   │       │   │       └── pranaParticles.frag
+│   │       │   ├── utils/
+│   │       │   │   ├── cn.ts
+│   │       │   │   ├── seo.ts
+│   │       │   │   ├── soundSprite.ts
+│   │       │   │   └── springConfig.ts
+│   │       │   ├── videosdk/
+│   │       │   │   └── generateToken.ts
+│   │       │   ├── mediaConfig.ts
+│   │       │   ├── supabaseClient.ts
+│   │       │   ├── upload.ts
+│   │       │   └── uploadAvatar.ts
+│   │       ├── styles/
+│   │       │   ├── fonts.ts
+│   │       │   └── keyframes.css
+│   │       └── types/
+│   │           ├── admin.ts
+│   │           ├── admin.ts.bak
+│   │           ├── consultation.ts
+│   │           ├── content.ts
+│   │           ├── course.ts
+│   │           ├── global.d.ts
+│   │           ├── lite-youtube.d.ts
+│   │           ├── tools.ts
+│   │           ├── tools.ts.bak
+│   │           └── user.ts
+│   ├── final-20260415-160319/
+│   │   └── page.tsx
+│   ├── final-auth-fix-20260416-111947/
+│   │   ├── AuthGateway.tsx
+│   │   └── supabaseClient.ts
+│   ├── final-fixes-20260415-094917/
+│   │   └── useRealtimeContent.ts
+│   ├── footer-20260415-163104/
+│   │   └── layout.tsx
+│   ├── footer-cleanup-20260415-163738/
+│   │   ├── CourseDashboard.tsx
+│   │   ├── Footer.tsx
+│   │   ├── not-found.tsx
+│   │   └── page.tsx
+│   ├── footer-full-fix-20260416-150930/
+│   │   ├── Footer.tsx
+│   │   └── layout.tsx
+│   ├── footer-social-20260416-150059/
+│   │   ├── Footer.tsx
+│   │   └── SocialMediaFeed.tsx
+│   ├── free-tools/
+│   │   ├── page.tsx.bak-1776183039
+│   │   └── page.tsx.bak-1776187362
+│   ├── free-tools-12sections-20260416-101319/
+│   │   ├── admin.ts
+│   │   └── page.tsx
+│   ├── freetool-fix-20260416-100815/
+│   │   ├── admin.ts
+│   │   └── page.tsx
+│   ├── global-loader-20260415-155441/
+│   │   ├── AuthGateway.tsx
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── header-fullscreen-overlay-20260416-162732/
+│   │   └── Header.tsx.old
+│   ├── header-logo-20260416-143457/
+│   │   └── Header.tsx
+│   ├── header-luxury-20260415-174039/
+│   │   └── Header.tsx
+│   ├── header-luxury-20260416-152954/
+│   │   └── Header.tsx.bak
+│   ├── header-restore-20260416-161813/
+│   │   └── Header.tsx.clean
+│   ├── header-rewrite-20260416-113253/
+│   │   └── Header.tsx.bak
+│   ├── header-rewrite-20260416-162112/
+│   │   └── Header.tsx.old
+│   ├── hero-buttons-20260416-101808/
+│   │   └── CosmicHero.tsx
+│   ├── homepage-admin-20260415-083224/
+│   │   └── src/
+│   │       ├── app/
+│   │       │   └── (admin)/
+│   │       │       └── admin/
+│   │       │           └── page.tsx
+│   │       └── components/
+│   │           └── sections/
+│   │               └── home/
+│   │                   ├── AcharyaVow.tsx
+│   │                   ├── CosmicHero.tsx
+│   │                   ├── FinalCTA.tsx
+│   │                   ├── FreeAITools.tsx
+│   │                   ├── GlobalPresence.tsx
+│   │                   ├── LearnVastuTeaser.tsx
+│   │                   ├── SacredArchives.tsx
+│   │                   ├── SacredServices.tsx
+│   │                   ├── VirtualConsultCTA.tsx
+│   │                   └── WordsOfGratitude.tsx
+│   ├── homepage-auth-fix-20260415-170203/
+│   │   ├── AuthGateway.tsx
+│   │   └── page.tsx
+│   ├── homepage-auth-fix-20260415-170434/
+│   │   ├── AuthGateway.tsx
+│   │   └── page.tsx
+│   ├── homepage-fix-20260415-172725/
+│   │   ├── AcharyaVow.tsx
+│   │   ├── CosmicHero.tsx
+│   │   └── page.tsx
+│   ├── homepage-mobile-20260416-083744/
+│   │   ├── AcharyaVow.tsx
+│   │   ├── CosmicHero.tsx
+│   │   └── TrustMarquee.tsx
+│   ├── homepage-rebuild-20260415-171949/
+│   │   └── page.tsx
+│   ├── jaas-final-20260415-103029/
+│   │   ├── MeetingRoom.tsx.bak
+│   │   └── bookings-page.tsx.bak
+│   ├── jaas-integration-20260415-102636/
+│   │   ├── MeetingRoom.tsx.bak
+│   │   └── bookings-page.tsx.bak
+│   ├── learn-vastu-20260416-075715/
+│   │   ├── Header.tsx
+│   │   └── page.tsx
+│   ├── learn-vastu-final-20260415-141631/
+│   │   └── page.tsx
+│   ├── learn-vastu-final-20260415-141642/
+│   │   └── page.tsx
+│   ├── link-fix-20260415-172953/
+│   │   └── BlogPreview.tsx
+│   ├── link-fixes-20260415-095233/
+│   │   ├── AcharyaVow.tsx
+│   │   ├── AcharyaVow.tsx.bak
+│   │   ├── AdminContext.tsx.bak
+│   │   ├── AdminGuard.tsx.bak
+│   │   ├── AnimatedGradientBackground.tsx.bak
+│   │   ├── AuthModal.tsx.bak
+│   │   ├── BlogGrid.tsx.bak
+│   │   ├── BlogPostContent.tsx.bak
+│   │   ├── BlogPreview.tsx.bak
+│   │   ├── BookCard.tsx.bak
+│   │   ├── Bookshelf3D.tsx.bak
+│   │   ├── BrandCarousel3D.tsx.bak
+│   │   ├── BrandLogo.tsx.bak
+│   │   ├── CTABanner.tsx.bak
+│   │   ├── CTASection.tsx.bak
+│   │   ├── CaseStudySlider.tsx.bak
+│   │   ├── ChatPanel.tsx.bak
+│   │   ├── CinematicLogo.tsx.bak
+│   │   ├── CosmicHero.tsx
+│   │   ├── CosmicHero.tsx.bak
+│   │   ├── CountdownTimer.tsx.bak
+│   │   ├── CourseCard.tsx.bak
+│   │   ├── CourseCards.tsx.bak
+│   │   ├── CourseDashboard.tsx.bak
+│   │   ├── CurriculumSection.tsx.bak
+│   │   ├── DashboardSidebar.tsx.bak
+│   │   ├── FinalCTA.tsx
+│   │   ├── FinalCTA.tsx.bak
+│   │   ├── Footer.tsx.bak
+│   │   ├── FreeAITools.tsx.bak
+│   │   ├── FreeToolCard3D.tsx.bak
+│   │   ├── FreeToolsSection.tsx.bak
+│   │   ├── FreeToolsWidget.tsx.bak
+│   │   ├── GPUFallback.tsx.bak
+│   │   ├── GlobalMap.tsx.bak
+│   │   ├── GlobalPresence.tsx
+│   │   ├── GlobalPresence.tsx.bak
+│   │   ├── GlobalSection.tsx.bak
+│   │   ├── GlobalTrust.tsx.bak
+│   │   ├── GradientBackground.tsx.bak
+│   │   ├── GridBackground.tsx.bak
+│   │   ├── Header.tsx.bak
+│   │   ├── HeroButton.tsx.bak
+│   │   ├── HeroSection.tsx.bak
+│   │   ├── InstructorSection.tsx.bak
+│   │   ├── KundaliChart.tsx.bak
+│   │   ├── KundaliChart3D.tsx.bak
+│   │   ├── KundaliChartSVG.tsx.bak
+│   │   ├── KundaliForm.tsx.bak
+│   │   ├── LanguageContext.tsx.bak
+│   │   ├── LanguageModal.tsx.bak
+│   │   ├── LanguageProvider.tsx.bak
+│   │   ├── LanguageSelector.tsx.bak
+│   │   ├── LearnCTA.tsx.bak
+│   │   ├── LearnVastuTeaser.tsx
+│   │   ├── LearnVastuTeaser.tsx.bak
+│   │   ├── LenisSmoothScroll.tsx.bak
+│   │   ├── LibraryTeaser.tsx.bak
+│   │   ├── LineageSection.tsx.bak
+│   │   ├── LineageTimeline.tsx.bak
+│   │   ├── LoadingSkeleton.tsx.bak
+│   │   ├── LocationAutocomplete.tsx.bak
+│   │   ├── LuxuryAnimatedBackground.tsx.bak
+│   │   ├── LuxuryButton.tsx.bak
+│   │   ├── LuxuryCursor.tsx.bak
+│   │   ├── LuxuryGradientBackground.tsx.bak
+│   │   ├── LuxuryTiltCard.tsx.bak
+│   │   ├── LuxuryToolCard.tsx.bak
+│   │   ├── MagneticButton.tsx.bak
+│   │   ├── MediaContainer.tsx.bak
+│   │   ├── MediaMasonry.tsx.bak
+│   │   ├── MeetingRoom.tsx.bak
+│   │   ├── MissionSection.tsx.bak
+│   │   ├── MobileNav.tsx.bak
+│   │   ├── NameSuggestionForm.tsx.bak
+│   │   ├── PageTransition.tsx.bak
+│   │   ├── PageViewTracker.tsx.bak
+│   │   ├── PainPointsChecklist.tsx.bak
+│   │   ├── ParallaxHero.tsx.bak
+│   │   ├── ParallaxServiceSection.tsx.bak
+│   │   ├── PaymentSimulationModal.tsx.bak
+│   │   ├── PaywallOverlay.tsx.bak
+│   │   ├── PhilosophyAccordion.tsx.bak
+│   │   ├── PlanetaryStrengthBars.tsx.bak
+│   │   ├── PremiumLockOverlay.tsx.bak
+│   │   ├── ProcessStepper.tsx.bak
+│   │   ├── Providers.tsx.bak
+│   │   ├── SacredArchives.tsx.bak
+│   │   ├── SacredServices.tsx.bak
+│   │   ├── ScrollSmoother.tsx.bak
+│   │   ├── SectionTitle.tsx.bak
+│   │   ├── ServiceCard3D.tsx.bak
+│   │   ├── ServiceCategoryGrid.tsx.bak
+│   │   ├── ServiceDetailHero.tsx.bak
+│   │   ├── ServiceGrid.tsx.bak
+│   │   ├── ServicePreviewGrid.tsx.bak
+│   │   ├── ServicesGrid.tsx.bak
+│   │   ├── SmoothScroll.tsx.bak
+│   │   ├── SocialLinks.tsx.bak
+│   │   ├── SoundController.tsx.bak
+│   │   ├── StaticGradientBackground.tsx.bak
+│   │   ├── SyllableCard3D.tsx.bak
+│   │   ├── TableOfContents.tsx.bak
+│   │   ├── TestimonialCard3D.tsx.bak
+│   │   ├── TestimonialCarousel.tsx.bak
+│   │   ├── TestimonialsSection.tsx.bak
+│   │   ├── TestimonialsSlider.tsx.bak
+│   │   ├── TrustMarquee.tsx.bak
+│   │   ├── VastuBars3D.tsx.bak
+│   │   ├── VastuScanCanvas.tsx.bak
+│   │   ├── VastuScanProcessor.tsx.bak
+│   │   ├── VideoBackground.tsx.bak
+│   │   ├── VideoCallFrame.tsx.bak
+│   │   ├── VirtualConsultCTA.tsx
+│   │   ├── VirtualConsultCTA.tsx.bak
+│   │   ├── WhiteboardCanvas.tsx.bak
+│   │   ├── WordsOfGratitude.tsx.bak
+│   │   ├── layout.tsx.bak
+│   │   ├── not-found.tsx.bak
+│   │   ├── page.tsx
+│   │   └── page.tsx.bak
+│   ├── loader-20260415-161032/
+│   │   └── src/
+│   │       ├── app/
+│   │       │   ├── (marketing)/
+│   │       │   │   ├── courses/
+│   │       │   │   │   └── course/
+│   │       │   │   │       └── page.tsx
+│   │       │   │   └── payment/
+│   │       │   │       └── status/
+│   │       │   │           └── page.tsx
+│   │       │   └── layout.tsx
+│   │       └── components/
+│   │           └── auth/
+│   │               └── AuthGateway.tsx
+│   ├── loader-fix-20260415-155649/
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── luxury-booking-20260415-101252/
+│   │   ├── MeetingRoom.tsx
+│   │   └── page.tsx
+│   ├── mobile-google-fix-20260416-155056/
+│   │   ├── Header.tsx.bak
+│   │   └── page.tsx.bak
+│   ├── mobile-menu-3d-20260416-155720/
+│   │   └── Header.tsx.bak
+│   ├── mobile-menu-3d-black-20260416-160528/
+│   │   └── Header.tsx.bak
+│   ├── mobile-menu-centered-20260416-163136/
+│   │   └── Header.tsx.bak
+│   ├── mobile-menu-pro-20260416-161428/
+│   │   └── Header.tsx.bak
+│   ├── portrait-sound-20260416-153412/
+│   │   ├── AcharyaVow.tsx
+│   │   └── SoundController.tsx
+│   ├── profile-20260415-150648/
+│   │   └── page.tsx
+│   ├── profile-type-fix-20260415-153702/
+│   │   ├── AuthGateway.tsx
+│   │   ├── admin.ts
+│   │   └── user.ts
+│   ├── realtime-hook-20260415-094602/
+│   │   └── useRealtimeContent.ts.bak
+│   ├── realtime-manager-20260415-170809/
+│   │   └── useRealtimeContent.ts
+│   ├── sanctuary-final-20260416-084726/
+│   │   └── page.tsx
+│   ├── service-card-no-emoji-20260416-144306/
+│   │   └── ServiceCard3DEnhanced.tsx
+│   ├── services-page-20260415-161836/
+│   │   └── page.tsx
+│   ├── signin-mobile-20260416-155925/
+│   │   └── page.tsx.bak
+│   ├── sound-fix-20260416-144827/
+│   │   ├── SoundController.tsx
+│   │   └── soundManager.ts
+│   ├── sound-guide-20260416-160115/
+│   │   └── SoundController.tsx.bak
+│   ├── sound-runtime-fix-20260416-145322/
+│   │   ├── SoundController.tsx
+│   │   ├── soundManager.ts
+│   │   └── useSound.ts
+│   ├── student-portal-20260415-140812/
+│   │   └── src/
+│   │       ├── app/
+│   │       │   └── (dashboard)/
+│   │       │       └── dashboard/
+│   │       │           └── library/
+│   │       │               └── page.tsx
+│   │       └── types/
+│   │           └── admin.ts
+│   ├── student-portal-fixed-20260415-141032/
+│   │   ├── ChapterQuiz.tsx
+│   │   ├── ChapterViewer.tsx
+│   │   ├── CourseDetail.tsx
+│   │   └── course.ts
+│   ├── supabase-fix-20260416-111510/
+│   │   ├── AuthGateway.tsx
+│   │   ├── supabaseClient.ts
+│   │   └── useAuth.ts
+│   ├── supabase-pkce-fix-20260416-111157/
+│   │   ├── page.tsx
+│   │   └── supabaseClient.ts
+│   ├── supabase-static-fix-20260416-143951/
+│   │   └── supabaseClient.ts.bak
+│   ├── testimonials/
+│   │   ├── TestimonialsSlider.tsx.bak-1776187715
+│   │   └── page.tsx.bak-1776187715
+│   ├── testimonials-20260415-144750/
+│   │   └── page.tsx
+│   ├── testimonials-final-20260415-145400/
+│   │   └── page.tsx
+│   ├── translate-final-20260415-153324/
+│   │   └── layout.tsx
+│   ├── translate-integration-20260415-152352/
+│   │   ├── Header.tsx
+│   │   ├── PaymentSimulationModal.tsx
+│   │   ├── admin.ts
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── ultimate-fix-20260415-095643/
+│   │   └── src/
+│   │       ├── app/
+│   │       │   └── (marketing)/
+│   │       │       ├── bookings/
+│   │       │       │   └── page.tsx
+│   │       │       ├── free-tools/
+│   │       │       │   ├── kundali/
+│   │       │       │   │   └── page.tsx
+│   │       │       │   ├── name-suggestion/
+│   │       │       │   │   └── page.tsx
+│   │       │       │   ├── vastu-scan/
+│   │       │       │   │   └── page.tsx
+│   │       │       │   └── page.tsx
+│   │       │       ├── payment/
+│   │       │       │   └── status/
+│   │       │       │       └── page.tsx
+│   │       │       ├── signin/
+│   │       │       │   └── page.tsx
+│   │       │       └── signup/
+│   │       │           └── page.tsx
+│   │       ├── components/
+│   │       │   ├── courses/
+│   │       │   │   ├── CourseCard.tsx
+│   │       │   │   ├── CourseCards.tsx
+│   │       │   │   └── CourseDashboard.tsx
+│   │       │   ├── global/
+│   │       │   │   ├── HeroButton.tsx
+│   │       │   │   ├── LuxuryButton.tsx
+│   │       │   │   └── SafeLink.tsx
+│   │       │   ├── layout/
+│   │       │   │   └── Header.tsx
+│   │       │   ├── learn/
+│   │       │   │   └── LearnCTA.tsx
+│   │       │   └── sections/
+│   │       │       ├── home/
+│   │       │       │   ├── AcharyaVow.tsx
+│   │       │       │   ├── BlogPreview.tsx
+│   │       │       │   ├── CosmicHero.tsx
+│   │       │       │   ├── FinalCTA.tsx
+│   │       │       │   ├── FreeAITools.tsx
+│   │       │       │   ├── FreeToolsSection.tsx
+│   │       │       │   ├── GlobalPresence.tsx
+│   │       │       │   ├── LearnVastuTeaser.tsx
+│   │       │       │   ├── SacredArchives.tsx
+│   │       │       │   ├── SacredServices.tsx
+│   │       │       │   ├── ServiceCard3D.tsx
+│   │       │       │   ├── VirtualConsultCTA.tsx
+│   │       │       │   └── WordsOfGratitude.tsx
+│   │       │       └── tools/
+│   │       │           └── FreeToolCard3D.tsx
+│   │       └── hooks/
+│   │           └── useRealtimeContent.ts
+│   └── videosdk-luxury-20260415-122821/
+│       ├── MeetingRoom.tsx.bak
+│       └── bookings-page.tsx.bak
+├── .github/
+│   └── workflows/
+│       └── deploy-static.yml
+├── public/
+│   ├── audio/
+│   │   ├── ambient/
+│   │   │   └── .gitkeep
+│   │   ├── .gitkeep
+│   │   ├── ui-click.webm
+│   │   └── vastu-ui-sounds.webm
+│   ├── fonts/
+│   │   ├── cormorant-garamond.woff2
+│   │   └── inter.woff2
+│   ├── images/
+│   │   ├── blog/
+│   │   │   ├── astrology.svg
+│   │   │   ├── commercial.svg
+│   │   │   ├── numerology.svg
+│   │   │   ├── remedies.svg
+│   │   │   ├── residential.svg
+│   │   │   ├── spiritual.svg
+│   │   │   └── vastu-science.svg
+│   │   ├── home/
+│   │   │   ├── acharya-portrait.jpg
+│   │   │   ├── bookshelf-bg.jpg
+│   │   │   ├── commercial.jpg
+│   │   │   ├── globe-texture.jpg
+│   │   │   ├── incense-bg.jpg
+│   │   │   ├── kundali-icon.jpg
+│   │   │   ├── land.jpg
+│   │   │   ├── luxury-living.jpg
+│   │   │   ├── mandala-bg.jpg
+│   │   │   ├── name-icon.jpg
+│   │   │   ├── vastu-icon.jpg
+│   │   │   └── vastu-pattern.png
+│   │   ├── services/
+│   │   │   ├── commercial.jpg
+│   │   │   ├── geopathic.jpg
+│   │   │   ├── industrial.jpg
+│   │   │   ├── land.jpg
+│   │   │   ├── offline-consult.jpg
+│   │   │   ├── residential.jpg
+│   │   │   ├── spritual.jpg
+│   │   │   └── vastu-intro-poster.jpg
+│   │   ├── social/
+│   │   │   ├── post1.jpg
+│   │   │   ├── post2.jpg
+│   │   │   ├── post3.jpg
+│   │   │   └── post4.jpg
+│   │   ├── .gitkeep
+│   │   ├── avatar-placeholder.jpg
+│   │   ├── favicon.ico
+│   │   └── logo.svg
+│   ├── logo/
+│   │   ├── logo.png
+│   │   └── s.txt
+│   ├── models/
+│   │   └── .gitkeep
+│   ├── textures/
+│   │   └── .gitkeep
+│   ├── videos/
+│   │   ├── home/
+│   │   │   ├── hero-bg.mp4
+│   │   │   └── virtual-consult-bg.mp4
+│   │   └── placeholder.mp4
+│   └── .gitkeep
+├── src/
+│   ├── app/
+│   │   ├── (admin)/
+│   │   │   ├── admin/
+│   │   │   │   ├── loading.tsx
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── page.tsx.bak
+│   │   │   └── layout.tsx
+│   │   ├── (dashboard)/
+│   │   │   ├── dashboard/
+│   │   │   │   ├── account/
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── billing/
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── connected/
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── consultations/
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── library/
+│   │   │   │   │   ├── loading.tsx
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── notifications/
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── privacy/
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── security/
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── loading.tsx
+│   │   │   │   └── page.tsx
+│   │   │   └── layout.tsx
+│   │   ├── (marketing)/
+│   │   │   ├── about/
+│   │   │   │   └── page.tsx
+│   │   │   ├── book/
+│   │   │   │   └── page.tsx
+│   │   │   ├── bookings/
+│   │   │   │   ├── loading.tsx
+│   │   │   │   ├── page.tsx
+│   │   │   │   ├── page.tsx.bak
+│   │   │   │   └── page.tsx.fix
+│   │   │   ├── client-stories/
+│   │   │   │   ├── story/
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── page.tsx.bak
+│   │   │   ├── contact/
+│   │   │   │   └── page.tsx
+│   │   │   ├── courses/
+│   │   │   │   ├── course/
+│   │   │   │   │   └── page.tsx
+│   │   │   │   └── page.tsx
+│   │   │   ├── free-tools/
+│   │   │   │   ├── kundali/
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── name-suggestion/
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── vastu-scan/
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── loading.tsx
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── page.tsx.bak
+│   │   │   ├── insights/
+│   │   │   │   ├── post/
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── loading.tsx
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── page.tsx.bak
+│   │   │   ├── learn-vastu/
+│   │   │   │   ├── loading.tsx
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── page.tsx.bak
+│   │   │   ├── library/
+│   │   │   │   ├── book/
+│   │   │   │   │   └── page.tsx
+│   │   │   │   └── page.tsx
+│   │   │   ├── payment/
+│   │   │   │   └── status/
+│   │   │   │       └── page.tsx
+│   │   │   ├── post/
+│   │   │   │   └── page.tsx
+│   │   │   ├── privacy/
+│   │   │   │   └── page.tsx
+│   │   │   ├── service/
+│   │   │   │   └── page.tsx
+│   │   │   ├── services/
+│   │   │   │   ├── service/
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── page.tsx.bak
+│   │   │   ├── signin/
+│   │   │   │   └── page.tsx
+│   │   │   ├── signup/
+│   │   │   │   └── page.tsx
+│   │   │   ├── story/
+│   │   │   │   └── page.tsx
+│   │   │   ├── terms/
+│   │   │   │   └── page.tsx
+│   │   │   ├── vastu-consultant/
+│   │   │   │   └── page.tsx
+│   │   │   ├── vastu-consultant-[city]/
+│   │   │   │   └── page.tsx
+│   │   │   ├── layout.tsx
+│   │   │   └── page.tsx
+│   │   ├── api/
+│   │   ├── auth/
+│   │   │   └── confirm/
+│   │   │       └── page.tsx
+│   │   ├── meeting/
+│   │   │   └── page.tsx
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── layout.tsx.bak
+│   │   ├── loading.tsx
+│   │   └── not-found.tsx
+│   ├── components/
+│   │   ├── account/
+│   │   │   └── SupportTicketForm.tsx
+│   │   ├── admin/
+│   │   │   └── ConsultationsManager.tsx
+│   │   ├── auth/
+│   │   │   ├── AuthGateway.tsx
+│   │   │   └── AuthGateway.tsx.bak
+│   │   ├── blog/
+│   │   │   ├── BlogCard.tsx
+│   │   │   └── CategoryFilter.tsx
+│   │   ├── global/
+│   │   │   ├── AdminGuard.tsx
+│   │   │   ├── AuthModal.tsx
+│   │   │   ├── CinematicLogo.tsx
+│   │   │   ├── GPUFallback.tsx
+│   │   │   ├── GradientBackground.tsx
+│   │   │   ├── GridBackground.tsx
+│   │   │   ├── HeroButton.css
+│   │   │   ├── HeroButton.tsx
+│   │   │   ├── LanguageModal.tsx
+│   │   │   ├── LanguageProvider.tsx
+│   │   │   ├── LanguageSelector.tsx
+│   │   │   ├── LenisSmoothScroll.tsx
+│   │   │   ├── LuxuryButton.tsx
+│   │   │   ├── LuxuryCursor.tsx
+│   │   │   ├── LuxuryGradientBackground.tsx
+│   │   │   ├── MagneticButton.tsx
+│   │   │   ├── PageTransition.tsx
+│   │   │   ├── PageViewTracker.tsx
+│   │   │   ├── Providers.tsx
+│   │   │   ├── SafeLink.tsx
+│   │   │   ├── ScrollSmoother.tsx
+│   │   │   ├── ScrollSmoother.tsx.bak
+│   │   │   ├── SmoothScroll.tsx
+│   │   │   └── SoundController.tsx
+│   │   ├── kundali/
+│   │   │   └── KundaliChartSVG.tsx
+│   │   ├── layout/
+│   │   │   ├── DashboardSidebar.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── Footer.tsx.bak
+│   │   │   ├── Header.tsx
+│   │   │   ├── Header.tsx.bak
+│   │   │   └── MobileNav.tsx
+│   │   ├── learn/
+│   │   │   ├── CourseCard3D.tsx
+│   │   │   ├── CourseDashboard.tsx
+│   │   │   ├── CurriculumSection.tsx
+│   │   │   ├── InstructorSection.tsx
+│   │   │   ├── LearnCTA.tsx
+│   │   │   └── MissionSection.tsx
+│   │   ├── meeting/
+│   │   │   └── BBBIframe.tsx
+│   │   ├── sections/
+│   │   │   ├── about/
+│   │   │   │   ├── LineageTimeline.tsx
+│   │   │   │   ├── MediaMasonry.tsx
+│   │   │   │   ├── ParallaxHero.tsx
+│   │   │   │   └── PhilosophyAccordion.tsx
+│   │   │   ├── dashboard/
+│   │   │   │   ├── ChatPanel.tsx
+│   │   │   │   ├── MeetingRoom.module.css
+│   │   │   │   ├── WhiteboardCanvas.tsx
+│   │   │   │   └── index.ts
+│   │   │   ├── home/
+│   │   │   │   ├── AcharyaVow.tsx
+│   │   │   │   ├── AcharyaVow.tsx.bak
+│   │   │   │   ├── BlogPreview.tsx
+│   │   │   │   ├── BrandCarousel3D.css
+│   │   │   │   ├── BrandCarousel3D.tsx
+│   │   │   │   ├── CTASection.tsx
+│   │   │   │   ├── CosmicHero.css
+│   │   │   │   ├── CosmicHero.module.css
+│   │   │   │   ├── CosmicHero.tsx
+│   │   │   │   ├── CosmicHero.tsx.bak
+│   │   │   │   ├── FinalCTA.tsx
+│   │   │   │   ├── FinalCTA.tsx.bak
+│   │   │   │   ├── FreeAITools.tsx
+│   │   │   │   ├── FreeAITools.tsx.bak
+│   │   │   │   ├── FreeToolsSection.tsx
+│   │   │   │   ├── FreeToolsWidget.tsx
+│   │   │   │   ├── GlobalMap.tsx
+│   │   │   │   ├── GlobalPresence.css
+│   │   │   │   ├── GlobalPresence.tsx
+│   │   │   │   ├── GlobalPresence.tsx.bak
+│   │   │   │   ├── GlobalSection.tsx
+│   │   │   │   ├── GlobalTrust.tsx
+│   │   │   │   ├── HeroSection.tsx
+│   │   │   │   ├── LearnVastuTeaser.tsx
+│   │   │   │   ├── LearnVastuTeaser.tsx.bak
+│   │   │   │   ├── LibraryTeaser.tsx
+│   │   │   │   ├── LineageSection.tsx
+│   │   │   │   ├── LineageTimeline.tsx
+│   │   │   │   ├── SacredArchives.tsx
+│   │   │   │   ├── SacredArchives.tsx.bak
+│   │   │   │   ├── SacredServices.tsx
+│   │   │   │   ├── SacredServices.tsx.bak
+│   │   │   │   ├── ServiceCard3D.module.css
+│   │   │   │   ├── ServiceCard3D.tsx
+│   │   │   │   ├── ServiceCard3D.tsx.bak
+│   │   │   │   ├── ServicePreviewGrid.tsx
+│   │   │   │   ├── ServicesGrid.tsx
+│   │   │   │   ├── SocialMediaFeed.tsx
+│   │   │   │   ├── TestimonialsSection.tsx
+│   │   │   │   ├── TestimonialsSlider.css
+│   │   │   │   ├── TestimonialsSlider.module.css
+│   │   │   │   ├── TestimonialsSlider.tsx
+│   │   │   │   ├── TrustMarquee.tsx
+│   │   │   │   ├── VirtualConsultCTA.tsx
+│   │   │   │   ├── VirtualConsultCTA.tsx.bak
+│   │   │   │   └── WordsOfGratitude.tsx
+│   │   │   ├── insights/
+│   │   │   │   ├── BlogGrid.tsx
+│   │   │   │   ├── BlogPostContent.tsx
+│   │   │   │   └── TableOfContents.tsx
+│   │   │   ├── library/
+│   │   │   │   └── BookCard.tsx
+│   │   │   ├── services/
+│   │   │   │   ├── CaseStudySlider.tsx
+│   │   │   │   ├── PainPointsChecklist.tsx
+│   │   │   │   ├── ProcessStepper.tsx
+│   │   │   │   ├── ServiceDetailHero.tsx
+│   │   │   │   └── ServiceGrid.tsx
+│   │   │   └── tools/
+│   │   │       ├── FreeToolCard3D.module.css
+│   │   │       ├── FreeToolCard3D.tsx
+│   │   │       ├── FreeToolCard3D.tsx.bak
+│   │   │       ├── KundaliChart.tsx
+│   │   │       ├── KundaliChart3D.tsx
+│   │   │       ├── KundaliForm.tsx
+│   │   │       ├── LuxuryToolCard.tsx
+│   │   │       ├── NameSuggestionForm.tsx
+│   │   │       ├── PaywallOverlay.tsx
+│   │   │       ├── PlanetaryStrengthBars.tsx
+│   │   │       ├── SyllableCard3D.tsx
+│   │   │       ├── VastuBars3D.tsx
+│   │   │       └── VastuScanCanvas.tsx
+│   │   ├── services/
+│   │   │   ├── CTABanner.tsx
+│   │   │   ├── ParallaxServiceSection.tsx
+│   │   │   ├── ServiceCard3DEnhanced.tsx
+│   │   │   ├── ServiceCard3DEnhanced.tsx.bak
+│   │   │   ├── ServiceCategoryGrid.tsx
+│   │   │   ├── TestimonialCarousel.tsx
+│   │   │   └── VideoPlaceholder.tsx
+│   │   ├── shared/
+│   │   │   ├── BrandLogo.tsx
+│   │   │   ├── LoadingSkeleton.tsx
+│   │   │   └── SocialLinks.tsx
+│   │   ├── svg/
+│   │   │   ├── FloatingParticles.tsx
+│   │   │   ├── GlowingOrb.tsx
+│   │   │   ├── Mandala3D.css
+│   │   │   ├── Mandala3D.tsx
+│   │   │   └── VastuGrid.tsx
+│   │   ├── testimonials/
+│   │   │   ├── CategoryFilter.tsx
+│   │   │   ├── FAQSection.tsx
+│   │   │   └── TestimonialCard.tsx
+│   │   ├── ui/
+│   │   │   ├── .gitkeep
+│   │   │   ├── AnimatedGradientBackground.tsx
+│   │   │   ├── AnimatedText.tsx
+│   │   │   ├── CountdownTimer.tsx
+│   │   │   ├── GlobalLoader.module.css
+│   │   │   ├── GlobalLoader.tsx
+│   │   │   ├── LanguageSwitcher.tsx
+│   │   │   ├── LanguageSwitcher.tsx.bak
+│   │   │   ├── LocationAutocomplete.tsx
+│   │   │   ├── LuxuryAnimatedBackground.tsx
+│   │   │   ├── LuxuryHeroButton.tsx
+│   │   │   ├── LuxuryTiltCard.tsx
+│   │   │   ├── MediaContainer.tsx
+│   │   │   ├── PageLoaderWrapper.tsx
+│   │   │   ├── PaymentSimulationModal.tsx
+│   │   │   ├── PointsBadge.tsx
+│   │   │   ├── PremiumLockOverlay.tsx
+│   │   │   ├── SectionTitle.tsx
+│   │   │   ├── StaticGradientBackground.tsx
+│   │   │   ├── TestimonialCard3D.tsx
+│   │   │   └── VideoBackground.tsx
+│   │   └── vastu/
+│   │       └── VastuScanProcessor.tsx
+│   ├── contexts/
+│   │   ├── AdminContext.tsx
+│   │   ├── LanguageContext.tsx
+│   │   └── LanguageContext.tsx.bak
+│   ├── data/
+│   │   ├── faqs.ts
+│   │   └── nakshatra-syllables.json
+│   ├── hooks/
+│   │   ├── useAuth.ts
+│   │   ├── usePageView.ts
+│   │   ├── useRealtimeContent.ts
+│   │   ├── useRealtimeContent.ts.bak
+│   │   ├── useSound.ts
+│   │   └── useSupabase.ts
+│   ├── lib/
+│   │   ├── animations/
+│   │   │   ├── sequences.ts
+│   │   │   └── tokens.ts
+│   │   ├── api/
+│   │   │   ├── useAI.ts
+│   │   │   ├── useBlogPosts.ts
+│   │   │   ├── useBooks.ts
+│   │   │   ├── useConsultations.ts
+│   │   │   └── useServices.ts
+│   │   ├── audio/
+│   │   │   └── soundManager.ts
+│   │   ├── bbb/
+│   │   │   └── client.ts
+│   │   ├── constants/
+│   │   │   ├── colors.ts
+│   │   │   ├── config.ts
+│   │   │   └── routes.ts
+│   │   ├── hooks/
+│   │   │   ├── useAmbientAudio.ts
+│   │   │   ├── useAuth.ts
+│   │   │   ├── useCinematicEntry.ts
+│   │   │   ├── useGPUDetect.ts
+│   │   │   ├── useMagnetic.ts
+│   │   │   ├── useRealtime.ts
+│   │   │   ├── useScrollSmoother.ts
+│   │   │   ├── useSlideIn.ts
+│   │   │   └── useSound.ts
+│   │   ├── kundali/
+│   │   │   └── calculator.ts
+│   │   ├── realtime/
+│   │   │   └── channelManager.ts
+│   │   ├── store/
+│   │   │   ├── audioStore.ts
+│   │   │   ├── cartStore.ts
+│   │   │   ├── consultationStore.ts
+│   │   │   ├── uiStore.ts
+│   │   │   └── userStore.ts
+│   │   ├── three/
+│   │   │   ├── loaders/
+│   │   │   │   └── GLTFLoader.ts
+│   │   │   ├── materials/
+│   │   │   │   └── PrakashGoldMaterial.ts
+│   │   │   └── shaders/
+│   │   │       ├── goldFoil.frag
+│   │   │       ├── pageCurl.frag
+│   │   │       ├── pageCurl.vert
+│   │   │       └── pranaParticles.frag
+│   │   ├── utils/
+│   │   │   ├── cn.ts
+│   │   │   ├── seo.ts
+│   │   │   ├── soundSprite.ts
+│   │   │   └── springConfig.ts
+│   │   ├── mediaConfig.ts
+│   │   ├── supabaseClient.ts
+│   │   ├── upload.ts
+│   │   └── uploadAvatar.ts
+│   ├── styles/
+│   │   ├── animations.css
+│   │   ├── fonts.ts
+│   │   └── keyframes.css
+│   └── types/
+│       ├── admin.ts
+│       ├── admin.ts.bak
+│       ├── consultation.ts
+│       ├── content.ts
+│       ├── course.ts
+│       ├── global.d.ts
+│       ├── lite-youtube.d.ts
+│       ├── tools.ts
+│       ├── tools.ts.bak
+│       └── user.ts
+├── .env.local
+├── .gitignore
+├── clear-videosdk-urls.sql
+├── loader-implementation-20260415-161032.log
+├── next-env.d.ts
+├── next.config.js
+├── next.config.js.bak
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── project_tree.txt
+├── rebuild.sh*
+├── setup-vastu-fixed.sh*
+├── supabase-fixes.sql
+├── supabase-seed-testimonials.sql
+├── supabase-update-course.sql
+├── supabase_fix_slots.sql
+├── supabase_migration_ai_tools_admin.sql
+├── supabase_migration_bookings.sql
+├── supabase_migration_contact.sql
+├── supabase_migration_footer.sql
+├── supabase_migration_language_preference.sql
+├── supabase_migration_quizzes.sql
+├── supabase_migration_services.sql
+├── supabase_migration_support_tickets.sql
+├── tsconfig.json
+├── tsconfig.tsbuildinfo
+└── vedicurja.code-workspace
+
+385 directories, 980 files

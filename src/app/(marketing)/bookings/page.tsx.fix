@@ -1,0 +1,33 @@
+  const handlePaymentSuccess = async () => {
+    if (!user || !selectedSlot || !selectedPrice) return;
+    setBookingInProgress(true);
+    try {
+      // Generate meeting URL with client-side BBB
+      const meetingUrl = `/meeting?id=${selectedSlot.id}`;
+      
+      const { data: consultation, error } = await supabase.from('consultations').insert({
+        client_id: user.id,
+        scheduled_at: selectedSlot.start_time,
+        duration_minutes: 60,
+        status: 'scheduled',
+        payment_status: 'paid',
+        meeting_url: meetingUrl,
+      }).select().single();
+
+      if (error) throw error;
+
+      await supabase.from('consultation_availability').update({ 
+        is_booked: true, 
+        consultation_id: consultation.id 
+      }).eq('id', selectedSlot.id);
+
+      setUpcomingConsultation(consultation as Consultation);
+      setShowPayment(false);
+      document.getElementById('upcoming-meeting')?.scrollIntoView({ behavior: 'smooth' });
+    } catch (err) {
+      console.error('Booking failed:', err);
+      alert('Booking failed. Please try again.');
+    } finally {
+      setBookingInProgress(false);
+    }
+  };
