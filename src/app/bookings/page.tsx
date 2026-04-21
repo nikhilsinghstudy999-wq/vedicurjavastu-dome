@@ -178,6 +178,46 @@ export default function BookingsPage() {
       </SmoothScroll>
     </>
   );
+        }center">
+              <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-sacred-saffron uppercase tracking-[0.3em] text-sm mb-4 block">Begin Your Transformation</motion.span>
+              <AnimatedText text="Align Your Space," className="font-serif text-5xl sm:text-6xl md:text-8xl text-white mb-2 leading-tight" />
+              <GradientText text="Elevate Your Life" className="font-serif text-5xl sm:text-6xl md:text-8xl mb-6 block" />
+              <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10">Experience personalised Vastu guidance from Vastuvid KK Nagaich, wherever you are.</motion.p>
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onClick={scrollToForm} className="luxury-button text-lg px-10 py-5">Book Your Session</button>
+                <button onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })} className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-full text-lg">How It Works</button>
+              </motion.div>
+            </div>
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2"><span className="block w-6 h-10 border-2 border-prakash-gold rounded-full mx-auto"><span className="block w-1 h-3 bg-prakash-gold rounded-full mx-auto mt-2 animate-bounce" /></span></div>
+          </section>
+          <section id="how-it-works" className="py-24 bg-white">
+            <div className="container mx-auto px-4"><AnimatedText text="How It Works" className="font-serif text-4xl text-center text-nidra-indigo mb-16" />
+              <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
+                {['Submit inquiry','Upload layout plan','Acharya reviews','WhatsApp confirmation','Video consultation'].map((step,i)=>(
+                  <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i*0.1 }} className="text-center w-40">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-prakash-gold/20 flex items-center justify-center text-2xl font-bold text-nidra-indigo">{i+1}</div><p className="font-medium text-nidra-indigo">{step}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+          <section className="py-20 bg-gradient-to-b from-white to-vastu-parchment">
+            <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12 max-w-5xl">
+              <div className="md:w-1/3 flex justify-center"><img src="/acharyajiphoto.png" alt="Vastuvid KK Nagaich" className="w-48 h-48 rounded-full object-cover shadow-2xl border-4 border-prakash-gold" /></div>
+              <div className="md:w-2/3 text-center md:text-left"><AnimatedText text="Vastuvid KK Nagaich" className="font-serif text-3xl text-nidra-indigo mb-4" /><p className="text-sacred-saffron uppercase tracking-wider text-sm mb-4">4th Generation Vastu Guru</p><p className="text-nidra-indigo/70">With over four decades of experience and 500+ clients globally, Acharya ji brings authentic Vedic wisdom to every consultation.</p></div>
+            </div>
+          </section>
+          <section className="py-20 bg-white"><TestimonialsSlider /></section>
+          <section ref={formRef} className="py-24 bg-vastu-parchment">
+            <div className="container mx-auto px-4"><AnimatedText text="Ready to Begin?" className="font-serif text-4xl text-center text-nidra-indigo mb-4" /><p className="text-center text-nidra-indigo/60 mb-8">Fill the form below and Acharya ji will contact you within 12 hours.</p><BookingFormSection /></div>
+          </section>
+          <section className="py-32 bg-nidra-indigo text-white text-center">
+            <div className="container mx-auto px-4"><AnimatedText text="Still have questions?" className="font-serif text-4xl md:text-6xl mb-6 text-white" /><p className="text-xl text-white/80 max-w-3xl mx-auto mb-10">Contact us directly via WhatsApp or call.</p><Link href="/contact" className="bg-prakash-gold hover:bg-sacred-saffron text-nidra-indigo font-bold px-10 py-5 rounded-full text-lg transition">Contact Acharya</Link></div>
+          </section>
+        </main>
+      </SmoothScroll>
+    </>
+  );
                     }      }
       setLayoutPlan(file);
       setError('');
