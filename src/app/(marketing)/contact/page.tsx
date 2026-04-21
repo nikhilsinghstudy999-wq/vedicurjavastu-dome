@@ -7,85 +7,72 @@ import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
 import { SoundController } from '@/features/shared/components/SoundController';
 import Mandala3D from '@/features/shared/components/Mandala3D';
 import FloatingParticles from '@/features/shared/components/svg/FloatingParticles';
-import { supabase } from '@/lib/supabase/client';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
     email: '',
-    address: '',
+    phone: '',
     message: '',
   });
-  const [layoutPlan, setLayoutPlan] = useState<File | null>(null);
-  const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
-  const [uploadProgress, setUploadProgress] = useState(0);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      setLayoutPlan(file);
+  const sendWhatsAppMessage = async (messageText: string): Promise<boolean> => {
+    const response = await fetch('/api/send-whatsapp', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messageText }),
+    });
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Failed to send message');
     }
+    const data = await response.json();
+    return data.status === 'success' || data.success === true;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (!layoutPlan) {
-      setError('Please upload a computerized layout plan (required).');
+    setError('');
+
+    if (!formData.name.trim()) {
+      setError('Please enter your name.');
+      return;
+    }
+    if (!formData.phone.trim()) {
+      setError('Please enter your phone number.');
+      return;
+    }
+    if (!formData.message.trim()) {
+      setError('Please enter your message.');
       return;
     }
 
     setSubmitting(true);
-    setError('');
-    setUploadProgress(0);
-
     try {
-      // 1. Upload layout plan to Supabase Storage
-      const fileExt = layoutPlan.name.split('.').pop();
-      const fileName = `${Date.now()}-${Math.random().toString(36).substring(2)}.${fileExt}`;
-      const filePath = `layout-plans/${fileName}`;
+      const messageLines = [
+        `*📬 New Contact Form Message*`,
+        `──────────────────────────────`,
+        `👤 *Name:* ${formData.name}`,
+        `📞 *Phone:* ${formData.phone}`,
+        `📧 *Email:* ${formData.email || 'Not provided'}`,
+        `💬 *Message:* ${formData.message}`,
+        `──────────────────────────────`,
+        `_Sent via VedicUrja contact form_`,
+      ];
+      const messageText = messageLines.join('\n');
 
-      const { error: uploadError, data: uploadData } = await supabase.storage
-        .from('consultation-files')
-        .upload(filePath, layoutPlan, {
-          cacheControl: '3600',
-          upsert: false,
-        });
-
-      if (uploadError) throw new Error(`File upload failed: ${uploadError.message}`);
-
-      // 2. Get public URL for the uploaded file
-      const { data: urlData } = supabase.storage
-        .from('consultation-files')
-        .getPublicUrl(filePath);
-
-      const layoutPlanUrl = urlData.publicUrl;
-
-      // 3. Insert contact message with all fields
-      const { error: insertError } = await supabase
-        .from('contact_messages')
-        .insert({
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email || null,
-          address: formData.address,
-          message: formData.message || null,
-          layout_plan_url: layoutPlanUrl,
-        });
-
-      if (insertError) throw new Error(`Failed to save message: ${insertError.message}`);
+      const sent = await sendWhatsAppMessage(messageText);
+      if (!sent) throw new Error('Message could not be delivered.');
 
       setSubmitted(true);
-      setFormData({ name: '', phone: '', email: '', address: '', message: '' });
-      setLayoutPlan(null);
-      setUploadProgress(100);
+      setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (err: any) {
       setError(err.message || 'Something went wrong. Please try again.');
     } finally {
@@ -104,7 +91,7 @@ export default function ContactPage() {
             <Mandala3D />
           </div>
           <FloatingParticles />
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -113,9 +100,11 @@ export default function ContactPage() {
           >
             <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 border border-prakash-gold/30">
               <div className="text-center mb-8">
-                <h1 className="font-serif text-3xl sm:text-4xl text-nidra-indigo">Consult Acharya</h1>
+                <h1 className="font-serif text-3xl sm:text-4xl text-nidra-indigo">
+                  Contact Acharya
+                </h1>
                 <p className="text-nidra-indigo/60 text-sm sm:text-base mt-2">
-                  Share your details and Vastuvid KK Nagaich will respond personally.
+                  Send us a message and we'll respond within 12 hours.
                 </p>
               </div>
 
@@ -126,153 +115,100 @@ export default function ContactPage() {
                   className="text-center py-12"
                 >
                   <div className="text-6xl mb-4">🙏</div>
-                  <h2 className="font-serif text-2xl text-nidra-indigo mb-2">Thank You</h2>
+                  <h2 className="font-serif text-2xl text-nidra-indigo mb-2">Thank You!</h2>
                   <p className="text-nidra-indigo/70">
-                    Your consultation request has been received.<br />
-                    Acharya ji will contact you within 24 hours.
+                    Your message has been sent successfully.<br />
+                    We'll get back to you soon.
                   </p>
+                  <button
+                    onClick={() => setSubmitted(false)}
+                    className="mt-8 luxury-button"
+                  >
+                    Send Another Message
+                  </button>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
-                  {/* Name */}
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-nidra-indigo mb-1">
+                    <label className="block text-sm font-medium text-nidra-indigo mb-1">
                       Full Name *
                     </label>
-                    <motion.input
-                      whileFocus={{ scale: 1.01 }}
+                    <input
                       type="text"
-                      id="name"
                       name="name"
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-5 py-4 bg-white/50 backdrop-blur-sm border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none transition-all text-nidra-indigo placeholder:text-nidra-indigo/40"
+                      className="w-full px-5 py-4 bg-white/50 backdrop-blur-sm border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none text-nidra-indigo placeholder:text-nidra-indigo/40"
                       placeholder="Your full name"
                     />
                   </div>
 
-                  {/* Phone Number */}
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-nidra-indigo mb-1">
+                    <label className="block text-sm font-medium text-nidra-indigo mb-1">
                       Phone Number *
                     </label>
-                    <motion.input
-                      whileFocus={{ scale: 1.01 }}
+                    <input
                       type="tel"
-                      id="phone"
                       name="phone"
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-5 py-4 bg-white/50 backdrop-blur-sm border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none transition-all text-nidra-indigo placeholder:text-nidra-indigo/40"
+                      className="w-full px-5 py-4 bg-white/50 backdrop-blur-sm border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none text-nidra-indigo placeholder:text-nidra-indigo/40"
                       placeholder="+91 XXXXX XXXXX"
                     />
                   </div>
 
-                  {/* Email (Optional) */}
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-nidra-indigo mb-1">
-                      Email Address (Optional)
+                    <label className="block text-sm font-medium text-nidra-indigo mb-1">
+                      Email Address
                     </label>
-                    <motion.input
-                      whileFocus={{ scale: 1.01 }}
+                    <input
                       type="email"
-                      id="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-5 py-4 bg-white/50 backdrop-blur-sm border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none transition-all text-nidra-indigo placeholder:text-nidra-indigo/40"
+                      className="w-full px-5 py-4 bg-white/50 backdrop-blur-sm border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none text-nidra-indigo placeholder:text-nidra-indigo/40"
                       placeholder="you@example.com"
                     />
                   </div>
 
-                  {/* Full Address */}
                   <div>
-                    <label htmlFor="address" className="block text-sm font-medium text-nidra-indigo mb-1">
-                      Full Address *
+                    <label className="block text-sm font-medium text-nidra-indigo mb-1">
+                      Message *
                     </label>
-                    <motion.textarea
-                      whileFocus={{ scale: 1.01 }}
-                      id="address"
-                      name="address"
-                      rows={2}
-                      required
-                      value={formData.address}
-                      onChange={handleChange}
-                      className="w-full px-5 py-4 bg-white/50 backdrop-blur-sm border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none transition-all text-nidra-indigo placeholder:text-nidra-indigo/40 resize-none"
-                      placeholder="Your complete address"
-                    />
-                  </div>
-
-                  {/* Layout Plan Upload (Required) */}
-                  <div>
-                    <label htmlFor="layoutPlan" className="block text-sm font-medium text-nidra-indigo mb-1">
-                      Computerized Layout Plan * (PDF, JPG, PNG)
-                    </label>
-                    <input
-                      type="file"
-                      id="layoutPlan"
-                      name="layoutPlan"
-                      accept=".pdf,.jpg,.jpeg,.png"
-                      required
-                      onChange={handleFileChange}
-                      className="w-full px-5 py-4 bg-white/50 backdrop-blur-sm border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none transition-all text-nidra-indigo file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-medium file:bg-prakash-gold/20 file:text-nidra-indigo hover:file:bg-prakash-gold/30"
-                    />
-                    {layoutPlan && (
-                      <p className="text-xs text-green-600 mt-1">Selected: {layoutPlan.name}</p>
-                    )}
-                  </div>
-
-                  {/* Message (Optional) */}
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-nidra-indigo mb-1">
-                      Additional Message (Optional)
-                    </label>
-                    <motion.textarea
-                      whileFocus={{ scale: 1.01 }}
-                      id="message"
+                    <textarea
                       name="message"
-                      rows={3}
+                      rows={4}
+                      required
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-5 py-4 bg-white/50 backdrop-blur-sm border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none transition-all text-nidra-indigo placeholder:text-nidra-indigo/40 resize-none"
-                      placeholder="Any specific concerns or questions..."
+                      className="w-full px-5 py-4 bg-white/50 backdrop-blur-sm border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none text-nidra-indigo placeholder:text-nidra-indigo/40 resize-none"
+                      placeholder="Your message..."
                     />
                   </div>
 
                   {error && (
-                    <motion.p
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      className="text-red-500 text-sm text-center"
-                    >
-                      {error}
-                    </motion.p>
+                    <p className="text-red-500 text-sm text-center">{error}</p>
                   )}
 
-                  {uploadProgress > 0 && uploadProgress < 100 && (
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div
-                        className="bg-prakash-gold h-2 rounded-full transition-all"
-                        style={{ width: `${uploadProgress}%` }}
-                      />
-                    </div>
-                  )}
-
-                  <motion.button
+                  <button
                     type="submit"
                     disabled={submitting}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full luxury-button py-4 text-lg disabled:opacity-50"
+                    className="w-full luxury-button py-4 text-lg disabled:opacity-50 flex items-center justify-center gap-2"
                   >
-                    {submitting ? 'Sending...' : 'Submit Consultation Request'}
-                  </motion.button>
-
-                  <p className="text-xs text-center text-nidra-indigo/50 mt-4">
-                    * Required fields. Your layout plan helps Acharya ji provide accurate Vastu guidance.
-                  </p>
+                    {submitting ? (
+                      <>
+                        <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Sending...
+                      </>
+                    ) : (
+                      'Send Message'
+                    )}
+                  </button>
                 </form>
               )}
             </div>

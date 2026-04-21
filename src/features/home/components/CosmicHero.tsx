@@ -33,10 +33,16 @@ const fallbackHero: HeroSection = {
 
 export function CosmicHero() {
   const ref = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoError, setVideoError] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  
+
   useEffect(() => {
     setIsMounted(true);
+    // Preload video
+    if (videoRef.current) {
+      videoRef.current.load();
+    }
   }, []);
 
   const { scrollYProgress } = useScroll(
@@ -69,8 +75,31 @@ export function CosmicHero() {
       style={isMounted ? { opacity } : undefined}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-nidra-indigo via-sacred-saffron/5 to-kumkuma-red/10" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#1A2A3A_50%)] opacity-30" />
+      {/* Video Background with Fallback Image */}
+      <div className="absolute inset-0 w-full h-full">
+        {!videoError ? (
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover"
+            onError={() => setVideoError(true)}
+          >
+            <source src="/videos/home/lucknow.mp4" type="video/mp4" />
+          </video>
+        ) : (
+          // Fallback drone image of Indian city
+          <div
+            className="absolute inset-0 w-full h-full bg-cover bg-center"
+            style={{ backgroundImage: "url('/images/home/lucknow-fallback.jpg')" }}
+          />
+        )}
+        {/* Overlay gradient for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-br from-nidra-indigo/70 via-nidra-indigo/40 to-transparent" />
+      </div>
 
       <motion.div style={isMounted ? { y } : undefined} className="container mx-auto px-4 sm:px-6 relative z-10 text-center mt-20">
         <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-2xl">
@@ -96,6 +125,7 @@ export function CosmicHero() {
         <CommunityCounter3D />
       </motion.div>
 
+      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
         <span className="block w-6 h-10 border-2 border-prakash-gold rounded-full mx-auto">
           <span className="block w-1 h-3 bg-prakash-gold rounded-full mx-auto mt-2 animate-bounce" />

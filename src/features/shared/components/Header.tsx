@@ -1,5 +1,4 @@
 'use client';
-import { useAuthStore } from '@/stores/authStore';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,10 +7,7 @@ import { useLanguage } from '@/features/shared/contexts/LanguageContext';
 
 export default function Header() {
   const { t } = useLanguage();
-  const { user, profile } = useAuthStore();
-  const signOut = useAuthStore((state) => state.signOut);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [profileMenuOpen, setProfileMenuOpen] = useState(false);
   const [imgError, setImgError] = useState(false);
 
   useEffect(() => {
@@ -32,16 +28,6 @@ export default function Header() {
     { key: 'testimonials', href: '/client-stories' },
     { key: 'about', href: '/about' },
   ];
-
-  const handleSignOut = () => {
-    setProfileMenuOpen(false);
-    setMobileMenuOpen(false);
-    signOut();
-  };
-
-  const avatarUrl = profile?.avatar_url;
-  const userInitial = profile?.full_name?.charAt(0) || user?.email?.charAt(0) || 'U';
-  const isAdmin = profile?.role === 'admin';
 
   return (
     <>
@@ -67,24 +53,6 @@ export default function Header() {
           </nav>
           <div className="flex items-center gap-2.5 sm:gap-3 z-50">
             <LanguageSwitcher />
-            {user ? (
-              <div className="relative">
-                <button onClick={() => setProfileMenuOpen(!profileMenuOpen)} className="w-7 h-7 sm:w-8 sm:h-8 rounded-full overflow-hidden border-[1.5px] border-white/60 hover:border-yellow-400 shadow-sm transition-all">
-                  {avatarUrl ? <Image src={avatarUrl} alt="Profile" width={32} height={32} className="object-cover" /> : <div className="w-full h-full bg-white/20 flex items-center justify-center text-white font-bold text-xs">{userInitial}</div>}
-                </button>
-                {profileMenuOpen && (
-                  <div className="absolute right-0 mt-3 w-56 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden z-50">
-                    <div className="p-3 bg-gray-50 border-b border-gray-100"><p className="font-bold text-gray-900 text-sm">{profile?.full_name || 'User'}</p><p className="text-xs text-gray-500 mt-0.5 truncate">{user.email}</p></div>
-                    <div className="py-1.5 flex flex-col gap-1 px-2">
-                      <Link href="/dashboard" onClick={() => setProfileMenuOpen(false)} className="pearl-btn w-full !bg-orange-500"><div className="wrap"><p><span>✦</span><span>✧</span>Dashboard</p></div></Link>
-                      <Link href="/terms" onClick={() => setProfileMenuOpen(false)} className="pearl-btn w-full !bg-orange-500"><div className="wrap"><p><span>✦</span><span>✧</span>Terms</p></div></Link>
-                      {isAdmin && <Link href="/admin" onClick={() => setProfileMenuOpen(false)} className="pearl-btn w-full !bg-red-600"><div className="wrap"><p><span>✦</span><span>✧</span>Admin Panel</p></div></Link>}
-                      <button onClick={handleSignOut} className="pearl-btn w-full !bg-gray-700"><div className="wrap"><p><span>✦</span><span>✧</span>Sign Out</p></div></button>
-                    </div>
-                  </div>
-                )}
-              </div>
-            ) : <Link href="/signin" className="hidden sm:inline-flex pearl-btn"><div className="wrap"><p><span>✦</span><span>✧</span>Sign In</p></div></Link>}
             <div className="hidden sm:block"><Link href="/contact" className="pearl-btn"><div className="wrap"><p><span>✦</span><span>✧</span>Consult Vastuvid ji</p></div></Link></div>
             <button onClick={() => setMobileMenuOpen(true)} className="lg:hidden w-7 h-7 sm:w-8 sm:h-8 rounded-md flex items-center justify-center text-white border border-white/20 bg-white/5 hover:bg-white/10"><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h16"/></svg></button>
           </div>
@@ -98,22 +66,8 @@ export default function Header() {
               <button onClick={() => setMobileMenuOpen(false)} className="w-9 h-9 rounded-full flex items-center justify-center text-white bg-white/10"><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12"/></svg></button>
             </div>
             <div className="flex-1 flex flex-col">
-              {user && <div className="mb-6 p-4 bg-white/10 border border-white/20 rounded-xl text-white"><p className="font-bold text-base">{profile?.full_name || 'User'}</p><p className="text-sm text-white/70 truncate">{user.email}</p></div>}
               <nav className="flex flex-col gap-3 mb-6">{menuItems.map((item) => <Link key={item.key} href={item.href} onClick={() => setMobileMenuOpen(false)} className="pearl-btn w-full"><div className="wrap !text-center"><p className="!justify-center text-[15px]"><span>✦</span><span>✧</span>{t(`common.${item.key}`)}</p></div></Link>)}</nav>
               <div className="mt-auto pt-6 border-t border-white/20 flex flex-col gap-3">
-                {user ? (
-                  <>
-                    <Link href="/dashboard" onClick={() => setMobileMenuOpen(false)} className="pearl-btn w-full"><div className="wrap !text-center"><p className="!justify-center text-[15px]"><span>✦</span><span>✧</span>Dashboard</p></div></Link>
-                    <Link href="/terms" onClick={() => setMobileMenuOpen(false)} className="pearl-btn w-full"><div className="wrap !text-center"><p className="!justify-center text-[15px]"><span>✦</span><span>✧</span>Terms</p></div></Link>
-                    {isAdmin && <Link href="/admin" onClick={() => setMobileMenuOpen(false)} className="pearl-btn w-full !bg-red-600"><div className="wrap !text-center"><p className="!justify-center text-[15px]"><span>✦</span><span>✧</span>Admin Panel</p></div></Link>}
-                    <button onClick={handleSignOut} className="pearl-btn w-full !bg-gray-800 mt-2"><div className="wrap !text-center"><p className="!justify-center text-[15px]"><span>✦</span><span>✧</span>Sign Out</p></div></button>
-                  </>
-                ) : (
-                  <>
-                    <Link href="/signin" onClick={() => setMobileMenuOpen(false)} className="pearl-btn w-full"><div className="wrap !text-center"><p className="!justify-center text-[15px]"><span>✦</span><span>✧</span>Sign In</p></div></Link>
-                    <Link href="/signup" onClick={() => setMobileMenuOpen(false)} className="pearl-btn w-full"><div className="wrap !text-center"><p className="!justify-center text-[15px]"><span>✦</span><span>✧</span>Create Account</p></div></Link>
-                  </>
-                )}
                 <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="pearl-btn w-full mt-4"><div className="wrap !text-center !py-3"><p className="!justify-center text-lg uppercase tracking-wide"><span>✦</span><span>✧</span>Consult Vastuvid ji</p></div></Link>
               </div>
             </div>

@@ -1,7 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { useRealtimeContent } from '@/features/shared/hooks/useRealtimeContent';
 import { SiteSetting } from '@/types/admin';
 
@@ -20,21 +19,13 @@ const navigation = {
     { name: 'Land Selection', href: '/services#land' },
     { name: 'Spiritual Spaces', href: '/services#spiritual' },
     { name: 'Geopathic Stress', href: '/services#geopathic' },
-    { name: 'Find a Consultant', href: '/bookings' },
+    { name: 'Book a Consultation', href: '/bookings' },
   ],
   learn: [
     { name: 'Free AI Tools', href: '/free-tools' },
     { name: 'Insights', href: '/insights' },
     { name: 'Client Stories', href: '/client-stories' },
     { name: 'Library', href: '/library' },
-  ],
-  dashboard: [
-    { name: 'Dashboard', href: '/dashboard' },
-    { name: 'My Account', href: '/dashboard/account' },
-    { name: 'Billing', href: '/dashboard/billing' },
-    { name: 'My Library', href: '/dashboard/library' },
-    { name: 'Consultations', href: '/dashboard/consultations' },
-    { name: 'Book a Session', href: '/bookings' },
   ],
 };
 
@@ -58,7 +49,7 @@ export default function Footer() {
   return (
     <footer className="footer bg-gradient-to-br from-sacred-saffron via-kumkuma-red to-prakash-gold border-t border-prakash-gold/30 pt-16 pb-8 relative z-10">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-12 border-b border-white/30">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 border-b border-white/30">
           <div className="lg:col-span-1">
             <Link href="/" className="font-serif text-2xl text-white hover:text-white transition">VedicUrja<span className="text-prakash-gold">.</span></Link>
             <p className="mt-4 text-sm text-white/90 leading-relaxed">{aboutText}</p>
@@ -96,20 +87,6 @@ export default function Footer() {
               {navigation.learn.map((item) => (
                 <li key={item.name}><Link href={item.href} className="text-sm text-white/90 hover:text-white transition">{item.name}</Link></li>
               ))}
-            </ul>
-            <h3 className="font-serif text-prakash-gold text-sm uppercase tracking-wider mb-4">Client Area</h3>
-            <ul className="space-y-2">
-              {navigation.dashboard.map((item) => (
-                <li key={item.name}><Link href={item.href} className="text-sm text-white/90 hover:text-white transition">{item.name}</Link></li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3 className="font-serif text-prakash-gold text-sm uppercase tracking-wider mb-4">Connect</h3>
-            <ul className="space-y-2 text-sm text-white/90">
-              <li className="flex items-start gap-2"><span className="mt-0.5">📍</span><span>{fallbackContact.address}</span></li>
-              <li className="flex items-center gap-2"><span>📞</span><a href={`tel:${fallbackContact.phone}`} className="hover:text-white">{fallbackContact.phone}</a></li>
-              <li className="flex items-center gap-2"><span>✉️</span><a href={`mailto:${fallbackContact.email}`} className="hover:text-white">{fallbackContact.email}</a></li>
             </ul>
           </div>
         </div>

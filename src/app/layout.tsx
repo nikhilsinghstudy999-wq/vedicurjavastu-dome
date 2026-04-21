@@ -2,10 +2,7 @@ import Footer from '@/features/shared/components/Footer';
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { LanguageProvider } from "@/features/shared/contexts/LanguageContext";
-import { AdminProvider } from "@/features/admin/contexts/AdminContext";
 import LenisSmoothScroll from "@/features/shared/components/global/LenisSmoothScroll";
-import AuthGateway from "@/features/auth/components/AuthGateway";
-import { AuthRefresh } from "@/features/auth/components/AuthRefresh";
 import { GlobalSoundProvider } from "@/features/shared/components/global/GlobalSoundProvider";
 import { TranslateLoader } from "@/features/shared/components/global/TranslateLoader";
 import { fontSerif, fontSans, fontMono } from "@/styles/fonts";
@@ -25,16 +22,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-vastu-parchment text-nidra-indigo antialiased">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <LanguageProvider>
-            <AdminProvider>
-              <AuthGateway>
-                <AuthRefresh />
-                <GlobalSoundProvider>
-                  <LenisSmoothScroll>
-                    {children}
-                  </LenisSmoothScroll>
-                </GlobalSoundProvider>
-              </AuthGateway>
-            </AdminProvider>
+            <GlobalSoundProvider>
+              <LenisSmoothScroll>
+                {children}
+              </LenisSmoothScroll>
+            </GlobalSoundProvider>
           </LanguageProvider>
         </ThemeProvider>
         <TranslateLoader />

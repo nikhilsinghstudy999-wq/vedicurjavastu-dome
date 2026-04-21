@@ -1,262 +1,380 @@
-#!/bin/bash
-# =============================================================================
-# VEDICURJA – COMPLETE PRODUCTION FIX (OVERWRITE CORRUPTED FILES)
-# =============================================================================
-set -e
+cat > src/app/bookings/page.tsx << 'EOF'
+'use client';
+import { useState, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
+import Header from '@/features/shared/components/Header';
+import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
+import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
+import { SoundController } from '@/features/shared/components/SoundController';
+import Mandala3D from '@/features/shared/components/Mandala3D';
+import FloatingParticles from '@/features/shared/components/svg/FloatingParticles';
+import AnimatedText, { GradientText } from '@/features/shared/components/AnimatedText';
+import { TestimonialsSlider } from '@/features/home/components/TestimonialsSlider';
+import { supabase } from '@/lib/supabaseClient';
 
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-RED='\033[0;31m'
-BLUE='\033[0;34m'
-NC='\033[0m'
+// =============================================================================
+// Booking Form Component (embedded in the journey)
+// =============================================================================
+function BookingFormSection() {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    phone: '',
+    email: '',
+    address: '',
+    pincode: '',
+    message: '',
+  });
+  const [layoutPlan, setLayoutPlan] = useState<File | null>(null);
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
+  const [uploadProgress, setUploadProgress] = useState(0);
 
-echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${GREEN}     VEDICURJA – OVERWRITE CORRUPTED FILES & FIX BUILD${NC}"
-echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-# ---------- 1. Create backup of current state ----------
-BACKUP_DIR=".pre_fix_backup_$(date +%Y%m%d_%H%M%S)"
-mkdir -p "$BACKUP_DIR"
-cp -r src "$BACKUP_DIR/" 2>/dev/null || true
-cp next.config.js "$BACKUP_DIR/" 2>/dev/null || true
-echo -e "${YELLOW}📦 Backup created at ${BACKUP_DIR}${NC}"
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const validTypes = ['application/pdf', 'image/jpeg', 'image/jpg', 'image/png'];
+      if (!validTypes.includes(file.type)) {
+        setError('Please upload a PDF, JPG, or PNG file.');
+        return;
+      }
+      if (file.size > 10 * 1024 * 1024) {
+        setError('File size must be less than 10MB.');
+        return;
+      }
+      setLayoutPlan(file);
+      setError('');
+    }
+  };
 
-# ---------- 2. Delete duplicate Supabase client ----------
-rm -f src/lib/supabaseClient.ts
-echo -e "${GREEN}✅ Removed duplicate Supabase client${NC}"
+  const uploadFile = async (file: File): Promise<string> => {
+    const fileExt = file.name.split('.').pop();
+    const fileName = `${Date.now()}-${Math.random().toString(36).substring(2)}.${fileExt}`;
 
-# ---------- 3. Update all import paths to use @/lib/supabase/client ----------
-echo -e "${YELLOW}🔧 Updating Supabase imports...${NC}"
-find src -type f \( -name "*.ts" -o -name "*.tsx" \) -exec sed -i \
-  -e "s|@/lib/supabaseClient|@/lib/supabase/client|g" \
-  -e "s|'@/lib/supabaseClient'|'@/lib/supabase/client'|g" \
-  -e 's|"@/lib/supabaseClient"|"@/lib/supabase/client"|g' \
-  -e "s|'./supabaseClient'|'@/lib/supabase/client'|g" \
-  -e 's|"./supabaseClient"|"@/lib/supabase/client"|g' \
-  -e "s|'../supabaseClient'|'@/lib/supabase/client'|g" \
-  -e 's|"../supabaseClient"|"@/lib/supabase/client"|g' \
-  {} \;
+    const { error } = await supabase.storage
+      .from('layout-plans')
+      .upload(fileName, file, {
+        cacheControl: '3600',
+        upsert: false,
+      });
 
-# ---------- 4. Remove static export from next.config.js ----------
-sed -i "/output:.*export/d" next.config.js
-echo -e "${GREEN}✅ Removed static export${NC}"
+    if (error) throw new Error(`Upload failed: ${error.message}`);
 
-# ---------- 5. OVERWRITE authStore.ts with correct version ----------
-cat > src/stores/authStore.ts << 'EOF'
-import { create } from 'zustand';
-import { supabase } from '@/lib/supabase/client';
-import type { User, Session } from '@supabase/supabase-js';
+    const { data: { publicUrl } } = supabase.storage
+      .from('layout-plans')
+      .getPublicUrl(fileName);
 
-interface Profile {
-  id: string;
-  full_name: string;
-  avatar_url: string | null;
-  coins: number;
-  role: 'client' | 'admin';
-}
+    return publicUrl;
+  };
 
-interface AuthState {
-  user: User | null;
-  profile: Profile | null;
-  session: Session | null;
-  isLoading: boolean;
-  isInitialized: boolean;
-  initialize: () => Promise<void>;
-  signOut: () => void;
-}
+  const sendWhatsAppMessage = async (messageText: string): Promise<boolean> => {
+    const response = await fetch('/api/send-whatsapp', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messageText }),
+    });
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Failed to send message');
+    }
+    const data = await response.json();
+    return data.status === 'success' || data.success === true;
+  };
 
-const DEFAULT_ADMIN = { email: 'admin99899@vedicurja.local', password: 'admin99899' };
-let adminSignInAttempted = false;
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError('');
 
-export const useAuthStore = create<AuthState>((set, get) => ({
-  user: null,
-  profile: null,
-  session: null,
-  isLoading: true,
-  isInitialized: false,
+    if (!formData.fullName.trim()) { setError('Please enter your full name.'); return; }
+    if (!formData.phone.trim()) { setError('Please enter your phone number.'); return; }
+    if (!formData.address.trim()) { setError('Please enter your full address.'); return; }
+    if (!formData.pincode.trim() || !/^\d{6}$/.test(formData.pincode)) { setError('Please enter a valid 6-digit pincode.'); return; }
+    if (!layoutPlan) { setError('Please upload a computerized layout plan.'); return; }
 
-  initialize: async () => {
-    if (get().isInitialized) return;
-
-    const timeoutId = setTimeout(() => {
-      set({ isLoading: false, isInitialized: true });
-    }, 2000);
+    setSubmitting(true);
+    setUploadProgress(20);
 
     try {
-      const { data: { session } } = await supabase.auth.getSession();
+      setUploadProgress(40);
+      const fileUrl = await uploadFile(layoutPlan);
+      setUploadProgress(70);
 
-      if (session?.user) {
-        const { data: profile } = await supabase
-          .from('profiles')
-          .select('*')
-          .eq('id', session.user.id)
-          .single();
-        set({
-          user: session.user,
-          profile,
-          session,
-          isLoading: false,
-          isInitialized: true,
-        });
-      } else {
-        // Attempt automatic admin sign-in only once
-        if (!adminSignInAttempted) {
-          adminSignInAttempted = true;
-          try {
-            const { data } = await supabase.auth.signInWithPassword(DEFAULT_ADMIN);
-            if (data.user) {
-              const { data: profile } = await supabase
-                .from('profiles')
-                .select('*')
-                .eq('id', data.user.id)
-                .single();
-              set({
-                user: data.user,
-                profile,
-                session: data.session,
-                isLoading: false,
-                isInitialized: true,
-              });
-              return;
-            }
-          } catch {
-            // Ignore auto-login failure
-          }
-        }
-        set({
-          user: null,
-          profile: null,
-          session: null,
-          isLoading: false,
-          isInitialized: true,
-        });
-      }
-    } catch {
-      set({
-        user: null,
-        profile: null,
-        session: null,
-        isLoading: false,
-        isInitialized: true,
-      });
+      const messageLines = [
+        `*🔔 New Consultation Request*`,
+        `──────────────────────────────`,
+        `👤 *Name:* ${formData.fullName}`,
+        `📞 *Phone:* ${formData.phone}`,
+        `📧 *Email:* ${formData.email || 'Not provided'}`,
+        `📍 *Address:* ${formData.address}`,
+        `📮 *Pincode:* ${formData.pincode}`,
+        `📎 *Layout Plan:* ${fileUrl}`,
+        `💬 *Message:* ${formData.message || 'No additional message'}`,
+        `──────────────────────────────`,
+        `_Sent via VedicUrja website_`,
+      ];
+      const messageText = messageLines.join('\n');
+
+      const sent = await sendWhatsAppMessage(messageText);
+      if (!sent) throw new Error('Message could not be delivered.');
+
+      setUploadProgress(100);
+      setSubmitted(true);
+      setFormData({ fullName: '', phone: '', email: '', address: '', pincode: '', message: '' });
+      setLayoutPlan(null);
+    } catch (err: any) {
+      setError(err.message || 'Failed to send request. Please try again.');
     } finally {
-      clearTimeout(timeoutId);
+      setSubmitting(false);
+      setUploadProgress(0);
     }
+  };
 
-    // Listen for auth changes
-    supabase.auth.onAuthStateChange(async (event, session) => {
-      if (event === 'SIGNED_IN' && session?.user) {
-        const { data: profile } = await supabase
-          .from('profiles')
-          .select('*')
-          .eq('id', session.user.id)
-          .single();
-        set({ user: session.user, profile, session, isLoading: false });
-      } else if (event === 'SIGNED_OUT') {
-        set({ user: null, profile: null, session: null, isLoading: false });
-      }
-    });
-  },
-
-  signOut: () => {
-    set({ user: null, profile: null, session: null, isLoading: false });
-    if (typeof window !== 'undefined') {
-      localStorage.removeItem('vedicurja_skip_auth');
-      window.location.href = '/';
-    }
-    supabase.auth.signOut().catch(console.error);
-  },
-}));
-
-if (typeof window !== 'undefined') {
-  useAuthStore.getState().initialize();
-}
-EOF
-echo -e "${GREEN}✅ Rewrote authStore.ts with correct exports${NC}"
-
-# ---------- 6. OVERWRITE AuthGuard.tsx with correct syntax ----------
-cat > src/features/auth/components/AuthGuard.tsx << 'EOF'
-'use client';
-
-import GlobalLoader from '@/features/shared/components/ui/GlobalLoader';
-import { useAuth } from '@/features/auth/hooks/useAuth';
-import { useRouter, usePathname } from 'next/navigation';
-import { useEffect, ReactNode } from 'react';
-
-interface AuthGuardProps {
-  children: ReactNode;
-  requireAuth?: boolean;
-  redirectTo?: string;
-}
-
-export default function AuthGuard({ 
-  children, 
-  requireAuth = true, 
-  redirectTo = '/signin' 
-}: AuthGuardProps) {
-  const { user, loading } = useAuth();
-  const router = useRouter();
-  const pathname = usePathname();
-
-  useEffect(() => {
-    if (loading) return;
-    if (requireAuth && !user) {
-      const redirectUrl = new URL(redirectTo, window.location.origin);
-      redirectUrl.searchParams.set('redirect', pathname);
-      router.push(redirectUrl.toString());
-      return;
-    }
-    if (!requireAuth && user) {
-      router.push('/dashboard');
-      return;
-    }
-  }, [user, loading, requireAuth, redirectTo, router, pathname]);
-
-  if (loading) {
-    return <GlobalLoader isLoading={true} message="Verifying session..." />;
+  if (submitted) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl p-8 border border-prakash-gold/30 text-center max-w-2xl mx-auto"
+      >
+        <div className="text-6xl mb-4">🙏</div>
+        <h2 className="font-serif text-3xl text-nidra-indigo mb-2">Thank You!</h2>
+        <p className="text-nidra-indigo/70 text-lg mb-6">
+          Your consultation request has been sent successfully.<br />
+          Acharya ji will respond within 12 hours.
+        </p>
+        <button onClick={() => setSubmitted(false)} className="luxury-button">
+          Book Another Consultation
+        </button>
+      </motion.div>
+    );
   }
 
-  return <>{children}</>;
-}
-EOF
-echo -e "${GREEN}✅ Rewrote AuthGuard.tsx with correct syntax${NC}"
-
-# ---------- 7. Ensure GlobalLoader component exists ----------
-if [ ! -f "src/features/shared/components/ui/GlobalLoader.tsx" ]; then
-  echo -e "${YELLOW}⚠️  GlobalLoader missing; creating fallback...${NC}"
-  mkdir -p src/features/shared/components/ui
-  cat > src/features/shared/components/ui/GlobalLoader.tsx << 'EOF'
-'use client';
-export default function GlobalLoader({ isLoading, message = "Loading..." }: { isLoading: boolean; message?: string }) {
-  if (!isLoading) return null;
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-white/80 backdrop-blur-sm">
-      <div className="text-center">
-        <div className="w-12 h-12 border-4 border-prakash-gold border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-        <p className="text-nidra-indigo font-serif">{message}</p>
-      </div>
-    </div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="bg-white/85 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 border border-prakash-gold/30 max-w-2xl mx-auto"
+    >
+      <h3 className="font-serif text-2xl sm:text-3xl text-nidra-indigo mb-6 text-center">
+        Complete Your Inquiry
+      </h3>
+      <form onSubmit={handleSubmit} className="space-y-5">
+        <div>
+          <label className="block text-sm font-medium text-nidra-indigo mb-1">Full Name *</label>
+          <input type="text" name="fullName" required value={formData.fullName} onChange={handleChange} className="w-full px-5 py-3 bg-white/60 backdrop-blur-sm border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none" placeholder="Your full name" />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-nidra-indigo mb-1">Phone Number *</label>
+          <input type="tel" name="phone" required value={formData.phone} onChange={handleChange} className="w-full px-5 py-3 bg-white/60 backdrop-blur-sm border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none" placeholder="+91 XXXXX XXXXX" />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-nidra-indigo mb-1">Email Address</label>
+          <input type="email" name="email" value={formData.email} onChange={handleChange} className="w-full px-5 py-3 bg-white/60 backdrop-blur-sm border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none" placeholder="you@example.com" />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-nidra-indigo mb-1">Full Address *</label>
+          <textarea name="address" rows={2} required value={formData.address} onChange={handleChange} className="w-full px-5 py-3 bg-white/60 backdrop-blur-sm border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none resize-none" placeholder="Your complete address" />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-nidra-indigo mb-1">Pincode *</label>
+          <input type="text" name="pincode" required pattern="\d{6}" maxLength={6} value={formData.pincode} onChange={handleChange} className="w-full px-5 py-3 bg-white/60 backdrop-blur-sm border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none" placeholder="6-digit pincode" />
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-nidra-indigo mb-1">Computerized Layout Plan *</label>
+          <input type="file" accept=".pdf,.jpg,.jpeg,.png" required onChange={handleFileChange} className="w-full px-5 py-3 bg-white/60 backdrop-blur-sm border-2 border-prakash-gold/30 rounded-xl file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:bg-prakash-gold/20" />
+          {layoutPlan && <p className="text-xs text-green-600 mt-1">✅ {layoutPlan.name} ({(layoutPlan.size / 1024).toFixed(1)} KB)</p>}
+          <p className="text-xs text-nidra-indigo/50 mt-2">If you don't have a layout plan, please visit a nearby architect to get one made.</p>
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-nidra-indigo mb-1">Additional Message</label>
+          <textarea name="message" rows={3} value={formData.message} onChange={handleChange} className="w-full px-5 py-3 bg-white/60 backdrop-blur-sm border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none resize-none" placeholder="Any specific concerns..." />
+        </div>
+        {error && <p className="text-red-500 text-sm text-center">{error}</p>}
+        {uploadProgress > 0 && (
+          <div className="w-full bg-gray-200 rounded-full h-2">
+            <div className="bg-prakash-gold h-2 rounded-full transition-all" style={{ width: `${uploadProgress}%` }} />
+          </div>
+        )}
+        <button type="submit" disabled={submitting} className="w-full luxury-button py-4 text-lg disabled:opacity-50 flex items-center justify-center gap-2">
+          {submitting ? 'Sending...' : 'Submit Consultation Request'}
+        </button>
+      </form>
+    </motion.div>
+  );
+}
+
+// =============================================================================
+// Main Bookings Page with Journey Sections
+// =============================================================================
+export default function BookingsPage() {
+  const formRef = useRef<HTMLDivElement>(null);
+
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <>
+      <LuxuryCursor />
+      <SoundController />
+      <Header />
+      <SmoothScroll>
+        <main className="relative bg-vastu-parchment">
+          {/* 1. Hero Section with 3D Curved Text */}
+          <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-nidra-indigo via-nidra-indigo/80 to-vastu-parchment">
+            <Mandala3D />
+            <FloatingParticles />
+            <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center">
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-sacred-saffron uppercase tracking-[0.3em] text-sm mb-4 block"
+              >
+                Begin Your Transformation
+              </motion.span>
+              <AnimatedText
+                text="Align Your Space,"
+                className="font-serif text-5xl sm:text-6xl md:text-8xl text-white mb-2 leading-tight"
+              />
+              <GradientText
+                text="Elevate Your Life"
+                className="font-serif text-5xl sm:text-6xl md:text-8xl mb-6 block"
+              />
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+                className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10"
+              >
+                Experience personalised Vastu guidance from Vastuvid KK Nagaich, wherever you are.
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center"
+              >
+                <button onClick={scrollToForm} className="luxury-button text-lg px-10 py-5">
+                  Book Your Session
+                </button>
+                <button
+                  onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-full text-lg"
+                >
+                  How It Works
+                </button>
+              </motion.div>
+            </div>
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+              <span className="block w-6 h-10 border-2 border-prakash-gold rounded-full mx-auto">
+                <span className="block w-1 h-3 bg-prakash-gold rounded-full mx-auto mt-2 animate-bounce" />
+              </span>
+            </div>
+          </section>
+
+          {/* 2. Problem/Solution Section */}
+          <section className="py-20 bg-white">
+            <div className="container mx-auto px-4 max-w-4xl text-center">
+              <AnimatedText text="Traveling for Vastu advice is impractical." className="font-serif text-3xl md:text-4xl text-nidra-indigo mb-6" />
+              <p className="text-lg text-nidra-indigo/70">You deserve trusted guidance without leaving your home.</p>
+            </div>
+          </section>
+
+          {/* 3. Solution Introduction */}
+          <section className="py-20 bg-vastu-stone/30">
+            <div className="container mx-auto px-4 max-w-4xl text-center">
+              <AnimatedText text="Introducing VedicUrja Virtual Consultations" className="font-serif text-3xl md:text-4xl text-nidra-indigo mb-6" />
+              <p className="text-lg text-nidra-indigo/70">Personalised analysis, screen sharing, and real‑time remedies – all online.</p>
+            </div>
+          </section>
+
+          {/* 4. How It Works */}
+          <section id="how-it-works" className="py-24 bg-white">
+            <div className="container mx-auto px-4">
+              <AnimatedText text="How It Works" className="font-serif text-4xl text-center text-nidra-indigo mb-16" />
+              <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
+                {['Submit inquiry', 'Upload layout plan', 'Acharya reviews', 'WhatsApp confirmation', 'Video consultation'].map((step, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                    className="text-center w-40"
+                  >
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-prakash-gold/20 flex items-center justify-center text-2xl font-bold text-nidra-indigo">
+                      {i + 1}
+                    </div>
+                    <p className="font-medium text-nidra-indigo">{step}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 5. Meet Vastuvid */}
+          <section className="py-20 bg-gradient-to-b from-white to-vastu-parchment">
+            <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12 max-w-5xl">
+              <div className="md:w-1/3 flex justify-center">
+                <img src="/acharyajiphoto.png" alt="Vastuvid KK Nagaich" className="w-48 h-48 rounded-full object-cover shadow-2xl border-4 border-prakash-gold" />
+              </div>
+              <div className="md:w-2/3 text-center md:text-left">
+                <AnimatedText text="Vastuvid KK Nagaich" className="font-serif text-3xl text-nidra-indigo mb-4" />
+                <p className="text-sacred-saffron uppercase tracking-wider text-sm mb-4">4th Generation Vastu Guru</p>
+                <p className="text-nidra-indigo/70">With over four decades of experience and 500+ clients globally, Acharya ji brings authentic Vedic wisdom to every consultation.</p>
+              </div>
+            </div>
+          </section>
+
+          {/* 6. Benefits */}
+          <section className="py-20 bg-vastu-stone/20">
+            <div className="container mx-auto px-4 max-w-4xl">
+              <AnimatedText text="Why Virtual?" className="font-serif text-3xl text-center text-nidra-indigo mb-12" />
+              <div className="grid grid-cols-2 gap-6">
+                {['No travel required', 'Session recording', 'Screen share floor plans', 'Post‑consult summary'].map((b, i) => (
+                  <div key={i} className="flex items-center gap-3 bg-white/50 p-4 rounded-xl">
+                    <span className="text-prakash-gold text-xl">✓</span>
+                    <span>{b}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* 7. Testimonials */}
+          <section className="py-20 bg-white">
+            <TestimonialsSlider />
+          </section>
+
+          {/* 8. The Form Section */}
+          <section ref={formRef} className="py-24 bg-vastu-parchment">
+            <div className="container mx-auto px-4">
+              <AnimatedText text="Ready to Begin?" className="font-serif text-4xl text-center text-nidra-indigo mb-4" />
+              <p className="text-center text-nidra-indigo/60 mb-8">Fill the form below and Acharya ji will contact you within 12 hours.</p>
+              <BookingFormSection />
+            </div>
+          </section>
+
+          {/* 9. Final CTA */}
+          <section className="py-32 bg-nidra-indigo text-white text-center">
+            <div className="container mx-auto px-4">
+              <AnimatedText text="Still have questions?" className="font-serif text-4xl md:text-6xl mb-6 text-white" />
+              <p className="text-xl text-white/80 max-w-3xl mx-auto mb-10">Contact us directly via WhatsApp or call.</p>
+              <Link href="/contact" className="bg-prakash-gold hover:bg-sacred-saffron text-nidra-indigo font-bold px-10 py-5 rounded-full text-lg transition">
+                Contact Acharya
+              </Link>
+            </div>
+          </section>
+        </main>
+      </SmoothScroll>
+    </>
   );
 }
 EOF
-fi
-
-# ---------- 8. Clean and build ----------
-echo -e "${YELLOW}🧹 Cleaning .next...${NC}"
-rm -rf .next
-
-echo -e "${YELLOW}🔨 Running build...${NC}"
-if npm run build; then
-  echo ""
-  echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-  echo -e "${GREEN}✅✅✅ BUILD SUCCESSFUL – SITE IS PRODUCTION READY ✅✅✅${NC}"
-  echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-  echo ""
-  echo "Next steps:"
-  echo "  npm run dev   (test locally)"
-  echo "  Deploy to Vercel and set environment variables"
-  echo "  Apply SQL migrations to Supabase"
-else
-  echo -e "${RED}❌ Build failed. Check errors above.${NC}"
-  exit 1
-fi
