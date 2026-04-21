@@ -1,0 +1,103 @@
+'use client';
+import { useRef } from 'react';
+import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import Link from 'next/link';
+import { useSound } from '@/features/shared/hooks/useSound';
+
+interface ServiceCard3DEnhancedProps {
+  title: string;
+  description: string;
+  icon: string; // kept for compatibility but not used
+  benefits: string[];
+  href: string;
+  colorGradient: string;
+  imagePlaceholder: string;
+}
+
+export default function ServiceCard3DEnhanced({
+  title,
+  description,
+  benefits,
+  href,
+  colorGradient,
+  imagePlaceholder,
+}: ServiceCard3DEnhancedProps) {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const { play, playSpatial } = useSound();
+  
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  const springX = useSpring(x, { stiffness: 100, damping: 20 });
+  const springY = useSpring(y, { stiffness: 100, damping: 20 });
+  const rotateX = useTransform(springY, [-0.5, 0.5], [10, -10]);
+  const rotateY = useTransform(springX, [-0.5, 0.5], [-10, 10]);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    x.set((e.clientX - centerX) / (rect.width / 2));
+    y.set((e.clientY - centerY) / (rect.height / 2));
+  };
+
+  const handleMouseEnter = () => { play('hoverCard'); };
+  const handleMouseLeave = () => { x.set(0); y.set(0); };
+
+  return (
+    <motion.div
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
+      className="relative w-full max-w-sm h-[480px] perspective-1000 group"
+    >
+      <div
+        className="absolute inset-0 rounded-3xl overflow-hidden shadow-2xl transition-shadow duration-300 group-hover:shadow-[0_30px_60px_-15px_rgba(200,138,93,0.5)]"
+        style={{ background: colorGradient }}
+      >
+        {/* Full Image Background – No Emoji Overlay */}
+        <div className="absolute inset-0">
+          <img loading="lazy" 
+            src={imagePlaceholder} 
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        
+        {/* Gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-nidra-indigo/70 via-nidra-indigo/30 to-transparent" />
+        
+        {/* Content */}
+        <div className="relative z-10 p-6 h-full flex flex-col justify-end text-white">
+          <h3 className="font-serif text-2xl mb-2 drop-shadow-lg">{title}</h3>
+          <p className="text-sm text-white/80 mb-4 drop-shadow-md">{description}</p>
+          
+          {/* Benefits */}
+          <div className="space-y-2 mb-6">
+            {benefits.map((benefit, i) => (
+              <div key={i} className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-prakash-gold" />
+                <span className="text-xs text-white/90 drop-shadow">{benefit}</span>
+              </div>
+            ))}
+          </div>
+          
+          <Link
+            href={href}
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/90 backdrop-blur-sm rounded-full text-nidra-indigo font-medium border border-prakash-gold/50 hover:bg-prakash-gold hover:text-white transition-all group/link"
+            onClick={() => play('clickPrimary')}
+          >
+            Learn More
+            <span className="group-hover/link:translate-x-1 transition-transform">→</span>
+          </Link>
+        </div>
+        
+        {/* Floating rings */}
+        <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full border border-prakash-gold/20 animate-spin-slow pointer-events-none" />
+        <div className="absolute -bottom-10 -left-10 w-24 h-24 rounded-full border border-sacred-saffron/20 animate-reverse-spin pointer-events-none" />
+      </div>
+    </motion.div>
+  );
+}

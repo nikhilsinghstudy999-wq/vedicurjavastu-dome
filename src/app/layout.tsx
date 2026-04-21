@@ -4,7 +4,6 @@ import { ThemeProvider } from "next-themes";
 import { LanguageProvider } from "@/features/shared/contexts/LanguageContext";
 import LenisSmoothScroll from "@/features/shared/components/global/LenisSmoothScroll";
 import { GlobalSoundProvider } from "@/features/shared/components/global/GlobalSoundProvider";
-import { TranslateLoader } from "@/features/shared/components/global/TranslateLoader";
 import { fontSerif, fontSans, fontMono } from "@/styles/fonts";
 import "./globals.css";
 
@@ -29,7 +28,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </GlobalSoundProvider>
           </LanguageProvider>
         </ThemeProvider>
-        <TranslateLoader />
         <Footer />
       </body>
     </html>
