@@ -1,5 +1,6 @@
 'use client';
 
+import GlobalLoader from '@/features/shared/components/ui/GlobalLoader';
 import { useAuth } from '@/features/auth/hooks/useAuth';
 import { useRouter, usePathname } from 'next/navigation';
 import { useEffect, ReactNode } from 'react';
@@ -34,11 +35,7 @@ export default function AuthGuard({
   }, [user, loading, requireAuth, redirectTo, router, pathname]);
 
   if (loading) {
-    return (
-      <div className="flex h-screen items-center justify-center">
-        <div className="w-12 h-12 border-4 border-prakash-gold border-t-transparent rounded-full animate-spin" />
-      </div>
-    );
+    return <GlobalLoader isLoading={true} message="Verifying session..." />;
   }
 
   return <>{children}</>;
