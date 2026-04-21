@@ -1,115 +1,104 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { supabase } from '@/lib/supabase/client';
-import { useAuth } from '@/features/auth/hooks/useAuth';
+import { useAuthStore } from '@/stores/authStore';
+
+type AuthMode = 'signin' | 'signup';
 
 export default function AuthGateway({ children }: { children: React.ReactNode }) {
-  const { user, profile, loading } = useAuth();
-  const [showAuth, setShowAuth] = useState(false);
-  const [showLanguage, setShowLanguage] = useState(false);
+  const { user, isLoading, isInitialized, initialize } = useAuthStore();
+  const [mode, setMode] = useState<'auth' | 'ready'>('ready');
+  const [authMode, setAuthMode] = useState<AuthMode>('signin');
+  const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
-  const [isSignUp, setIsSignUp] = useState(false);
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
 
+  useEffect(() => { if (!isInitialized) initialize(); }, [isInitialized, initialize]);
+
   useEffect(() => {
-    if (loading) return;
-    if (localStorage.getItem('vedicurja_skip_auth') === 'true') {
-      setShowAuth(false);
-      setShowLanguage(false);
+    if (isLoading || !isInitialized) return;
+    if (typeof window !== 'undefined' && localStorage.getItem('vedicurja_skip_auth') === 'true') {
+      setMode('ready');
       return;
     }
-    if (!user) {
-      setShowAuth(true);
-      setShowLanguage(false);
-    } else if (!localStorage.getItem('vedicurja_language')) {
-      setShowAuth(false);
-      setShowLanguage(true);
-    } else {
-      setShowAuth(false);
-      setShowLanguage(false);
-    }
-  }, [user, loading]);
+    if (!user) setMode('auth');
+    else setMode('ready');
+  }, [user, isLoading, isInitialized]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError('');
-    setBusy(true);
+  const handleSignIn = async (e: React.FormEvent) => {
+    e.preventDefault(); setError(''); setBusy(true);
     try {
-      if (isSignUp) {
-        const { error: err } = await supabase.auth.signUp({ email, password, options: { data: { full_name: name } } });
-        if (err) throw err;
-      } else {
-        const { error: err } = await supabase.auth.signInWithPassword({ email, password });
-        if (err) throw err;
-      }
-    } catch (err: any) {
-      setError(err.message);
-    } finally {
-      setBusy(false);
-    }
+      const identifier = email || phone;
+      if (!identifier) throw new Error('Email or phone is required');
+      const { error } = await supabase.auth.signInWithPassword({ 
+        email: email || `${phone}@phone.user`, 
+        password 
+      });
+      if (error) throw error;
+    } catch (err: any) { setError(err.message); } finally { setBusy(false); }
   };
 
-  const handleGoogle = async () => {
-    setBusy(true);
-    await supabase.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: `${window.location.origin}/auth/callback` } });
+  const handleSignUp = async (e: React.FormEvent) => {
+    e.preventDefault(); setError(''); setBusy(true);
+    try {
+      if (!name) throw new Error('Full name is required');
+      const identifier = email || phone;
+      if (!identifier) throw new Error('Email or phone is required');
+      const { error } = await supabase.auth.signUp({
+        email: email || `${phone}@phone.user`,
+        password,
+        options: { data: { full_name: name, phone } },
+      });
+      if (error) throw error;
+      setAuthMode('signin');
+      alert('Account created! Please sign in.');
+    } catch (err: any) { setError(err.message); } finally { setBusy(false); }
   };
 
-  const handleGuest = () => {
-    localStorage.setItem('vedicurja_skip_auth', 'true');
-    setShowAuth(false);
-  };
-
-  const handleLanguage = (lang: string) => {
-    localStorage.setItem('vedicurja_language', lang);
-    setShowLanguage(false);
-  };
-
-  if (loading) {
-    return <div className="fixed inset-0 z-50 flex items-center justify-center bg-vastu-parchment"><div className="w-8 h-8 border-3 border-prakash-gold border-t-transparent rounded-full animate-spin" /></div>;
+  if (isLoading || !isInitialized) {
+    return <div className="fixed inset-0 z-50 flex items-center justify-center bg-vastu-parchment"><div className="w-10 h-10 border-4 border-prakash-gold border-t-transparent rounded-full animate-spin" /></div>;
   }
 
-  return (
-    <>
-      {showAuth && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
-          <div className="bg-white w-full max-w-md rounded-3xl shadow-2xl p-6">
-            <h2 className="font-serif text-2xl text-center text-nidra-indigo mb-4">{isSignUp ? 'Create Account' : 'Sign In'}</h2>
-            <form onSubmit={handleSubmit} className="space-y-3">
-              {isSignUp && <input type="text" placeholder="Full Name" value={name} onChange={e => setName(e.target.value)} required className="w-full p-3 border rounded-xl" />}
-              <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} required className="w-full p-3 border rounded-xl" />
+  if (mode === 'auth') {
+    return (
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+        <div className="bg-white w-full max-w-md rounded-3xl shadow-2xl p-8">
+          <div className="flex mb-6 border-b">
+            <button onClick={() => setAuthMode('signin')} className={`flex-1 py-3 text-center font-medium transition ${authMode === 'signin' ? 'text-prakash-gold border-b-2 border-prakash-gold' : 'text-gray-400'}`}>Sign In</button>
+            <button onClick={() => setAuthMode('signup')} className={`flex-1 py-3 text-center font-medium transition ${authMode === 'signup' ? 'text-prakash-gold border-b-2 border-prakash-gold' : 'text-gray-400'}`}>Sign Up</button>
+          </div>
+
+          {authMode === 'signin' ? (
+            <form onSubmit={handleSignIn} className="space-y-4">
+              <input type="tel" placeholder="Phone Number" value={phone} onChange={e => setPhone(e.target.value)} className="w-full p-3 border rounded-xl" />
+              <div className="relative"><div className="absolute inset-0 flex items-center"><div className="w-full border-t" /></div><span className="relative flex justify-center"><span className="bg-white px-3 text-gray-400 text-sm">or</span></span></div>
+              <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} className="w-full p-3 border rounded-xl" />
               <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} required className="w-full p-3 border rounded-xl" />
               {error && <p className="text-red-500 text-sm text-center">{error}</p>}
-              <button type="submit" disabled={busy} className="w-full luxury-button py-3 disabled:opacity-50">
-                {busy ? <span className="flex items-center justify-center gap-2"><span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" /> Please wait...</span> : (isSignUp ? 'Sign Up' : 'Sign In')}
-              </button>
+              <button type="submit" disabled={busy} className="w-full luxury-button py-3">{busy ? 'Signing in...' : 'Sign In'}</button>
+              <p className="text-center text-sm text-gray-500">Don't have an account? <button type="button" onClick={() => setAuthMode('signup')} className="text-prakash-gold">Sign Up</button></p>
             </form>
-            <div className="relative my-4"><div className="absolute inset-0 flex items-center"><div className="w-full border-t" /></div><div className="relative flex justify-center"><span className="bg-white px-3 text-gray-500 text-sm">or</span></div></div>
-            <button onClick={handleGoogle} disabled={busy} className="w-full flex items-center justify-center gap-2 p-3 border rounded-xl hover:bg-gray-50">Google</button>
-            <p className="text-center mt-4 text-sm">
-              {isSignUp ? 'Already have an account?' : "Don't have an account?"} <button type="button" onClick={() => setIsSignUp(!isSignUp)} className="text-prakash-gold">{isSignUp ? 'Sign In' : 'Sign Up'}</button>
-            </p>
-            <button type="button" onClick={handleGuest} className="w-full mt-3 text-sm text-gray-500">Continue as Guest</button>
-          </div>
-        </div>
-      )}
+          ) : (
+            <form onSubmit={handleSignUp} className="space-y-4">
+              <input type="text" placeholder="Full Name *" value={name} onChange={e => setName(e.target.value)} required className="w-full p-3 border rounded-xl" />
+              <input type="tel" placeholder="Phone Number" value={phone} onChange={e => setPhone(e.target.value)} className="w-full p-3 border rounded-xl" />
+              <div className="relative"><div className="absolute inset-0 flex items-center"><div className="w-full border-t" /></div><span className="relative flex justify-center"><span className="bg-white px-3 text-gray-400 text-sm">or</span></span></div>
+              <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} className="w-full p-3 border rounded-xl" />
+              <input type="password" placeholder="Password *" value={password} onChange={e => setPassword(e.target.value)} required className="w-full p-3 border rounded-xl" />
+              {error && <p className="text-red-500 text-sm text-center">{error}</p>}
+              <button type="submit" disabled={busy} className="w-full luxury-button py-3">{busy ? 'Creating account...' : 'Sign Up'}</button>
+              <p className="text-center text-sm text-gray-500">Already have an account? <button type="button" onClick={() => setAuthMode('signin')} className="text-prakash-gold">Sign In</button></p>
+            </form>
+          )}
 
-      {showLanguage && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
-          <div className="bg-white w-full max-w-sm rounded-3xl shadow-2xl p-6">
-            <h2 className="font-serif text-2xl text-center mb-4">Choose Language</h2>
-            <div className="grid grid-cols-2 gap-3">
-              {['English', 'Hindi'].map(lang => (
-                <button key={lang} onClick={() => handleLanguage(lang === 'English' ? 'en' : 'hi')} className="p-4 border rounded-xl text-lg">{lang}</button>
-              ))}
-            </div>
-          </div>
+          <button onClick={() => { localStorage.setItem('vedicurja_skip_auth', 'true'); setMode('ready'); }} className="w-full mt-4 text-sm text-gray-400 hover:text-gray-600 transition">Continue as Guest</button>
         </div>
-      )}
+      </div>
+    );
+  }
 
-      {!showAuth && !showLanguage && children}
-    </>
-  );
+  return <>{children}</>;
 }

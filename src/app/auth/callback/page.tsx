@@ -11,29 +11,34 @@ export default function AuthCallbackPage() {
   useEffect(() => {
     const handleCallback = async () => {
       const code = searchParams.get('code');
-      
-      if (!code) {
-        setError('No authorization code found.');
-        return;
-      }
+      if (!code) { setError('No authorization code found.'); return; }
 
       try {
         const { error: exchangeError } = await supabase.auth.exchangeCodeForSession(code);
-        
-        if (exchangeError) {
-          console.error('Code exchange error:', exchangeError);
-          setError(exchangeError.message);
-          return;
-        }
+        if (exchangeError) throw exchangeError;
 
-        // Small delay to ensure session is fully persisted
-        await new Promise(resolve => setTimeout(resolve, 200));
+        let attempts = 0;
+        const maxAttempts = 15;
 
-        const next = searchParams.get('next') || '/';
-        router.replace(next);
+        const checkSession = async (): Promise<boolean> => {
+          const { data: { session } } = await supabase.auth.getSession();
+          if (session) { router.replace('/'); return true; }
+          return false;
+        };
+
+        if (await checkSession()) return;
+
+        const interval = setInterval(async () => {
+          attempts++;
+          if (await checkSession()) { clearInterval(interval); return; }
+          if (attempts >= maxAttempts) {
+            clearInterval(interval);
+            setError('Session not established after multiple attempts.');
+          }
+        }, 250);
       } catch (err: any) {
         console.error('Callback error:', err);
-        setError(err.message || 'Authentication failed.');
+        setError(err.message);
       }
     };
 
@@ -46,12 +51,7 @@ export default function AuthCallbackPage() {
         <div className="text-center p-8 bg-white rounded-2xl shadow-xl">
           <p className="text-red-600 mb-4">Authentication Error</p>
           <p className="text-nidra-indigo/70">{error}</p>
-          <button
-            onClick={() => router.push('/signin')}
-            className="mt-6 luxury-button"
-          >
-            Return to Sign In
-          </button>
+          <button onClick={() => router.push('/signin')} className="mt-6 luxury-button">Return to Sign In</button>
         </div>
       </div>
     );
@@ -60,8 +60,8 @@ export default function AuthCallbackPage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-vastu-parchment">
       <div className="text-center">
-        <div className="w-10 h-10 border-3 border-prakash-gold border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-        <p className="text-nidra-indigo font-serif">Signing you in...</p>
+        <div className="w-12 h-12 border-4 border-prakash-gold border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+        <p className="text-nidra-indigo font-serif">Completing sign in...</p>
       </div>
     </div>
   );

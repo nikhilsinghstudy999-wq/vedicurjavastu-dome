@@ -1,5 +1,4 @@
 import { supabase } from '@/lib/supabase/client';
-import { subscribeToTable } from '@/lib/realtime/channelManager';
 
 export interface AvailabilitySlot {
   id: string;
@@ -10,20 +9,20 @@ export interface AvailabilitySlot {
 }
 
 export const slotsService = {
-  async fetchAllSlots(): Promise<AvailabilitySlot[]> {
-    const { data, error } = await supabase
-      .from('consultation_availability')
-      .select('*')
-      .order('start_time', { ascending: true });
-    if (error) throw error;
-    return data as AvailabilitySlot[];
-  },
-
   async fetchAvailableSlots(): Promise<AvailabilitySlot[]> {
     const { data, error } = await supabase
       .from('consultation_availability')
       .select('*')
       .eq('is_booked', false)
+      .order('start_time', { ascending: true });
+    if (error) throw error;
+    return data as AvailabilitySlot[];
+  },
+
+  async fetchAllSlots(): Promise<AvailabilitySlot[]> {
+    const { data, error } = await supabase
+      .from('consultation_availability')
+      .select('*')
       .order('start_time', { ascending: true });
     if (error) throw error;
     return data as AvailabilitySlot[];
@@ -65,9 +64,5 @@ export const slotsService = {
       .update({ is_booked: false, consultation_id: null })
       .eq('id', slotId);
     if (error) throw error;
-  },
-
-  subscribeToChanges(callback: () => void) {
-    return subscribeToTable('consultation_availability', callback);
   },
 };

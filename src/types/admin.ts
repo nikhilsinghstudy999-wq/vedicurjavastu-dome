@@ -6,5 +6,5 @@ export interface BlogPost { id: string; title: string; slug: string; excerpt: st
 export interface Testimonial { id: string; client_name: string; location: string; project_type: string; rating: number; content: string; avatar_url: string | null; verified: boolean; order_index: number; is_published: boolean; }
 export interface Consultation { id: string; client_id: string; scheduled_at: string; duration_minutes: number; status: string; notes: string; meeting_url?: string | null; recording_url?: string | null; payment_status?: string; }
 export interface Payment { id: string; user_id: string; amount: number; status: string; created_at: string; }
-export interface Profile { id: string; full_name: string; role: string; coins: number; created_at: string; avatar_url?: string | null; language_preference?: string | null; }
+export interface Profile { id: string; full_name: string; email?: string | null; phone?: string | null; role: string; coins: number; created_at: string; avatar_url?: string | null; language_preference?: string | null; }
 export interface SiteSetting { key: string; value: string; }
