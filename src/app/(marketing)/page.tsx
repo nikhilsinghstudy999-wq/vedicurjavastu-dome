@@ -23,7 +23,7 @@ export default function HomePage() {
       <SoundController />
       <Header />
       <SmoothScroll>
-        <main className="relative bg-vastu-parchment">
+        <main style={{ position: "relative" }} className="relative bg-vastu-parchment">
           <CosmicHero />
           <TrustMarquee />
           <AcharyaVow />

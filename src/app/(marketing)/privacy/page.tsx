@@ -8,7 +8,7 @@ export default function PrivacyPage() {
   return (
     <>
       <LuxuryCursor /><SoundController /><Header /><SmoothScroll>
-        <main className="pt-32 pb-20 px-6 max-w-4xl mx-auto">
+        <main style={{ position: "relative" }} className="pt-32 pb-20 px-6 max-w-4xl mx-auto">
           <h1 className="font-serif text-4xl text-nidra-indigo mb-8">Privacy Policy</h1>
           <div className="prose prose-lg prose-stone">
             <p>Last updated: {new Date().toLocaleDateString()}</p>

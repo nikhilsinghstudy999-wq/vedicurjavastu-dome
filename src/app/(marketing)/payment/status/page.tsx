@@ -22,7 +22,7 @@ export default function PaymentStatusPage() {
     <>
       <Header />
       <SmoothScroll>
-        <main className="pt-32 pb-20 min-h-screen bg-vastu-parchment">
+        <main style={{ position: "relative" }} className="pt-32 pb-20 min-h-screen bg-vastu-parchment">
           <div className="max-w-lg mx-auto">
             <Suspense fallback={<div>Loading...</div>}>
               <StatusContent />

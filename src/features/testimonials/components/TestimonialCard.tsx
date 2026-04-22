@@ -1,16 +1,17 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Testimonial } from '@/types/admin';
+import Image from 'next/image';
+import { GoogleReview } from '@/data/googleReviews';
 
-export default function TestimonialCard({ testimonial, index }: { testimonial: Testimonial; index: number }) {
-  // Generate a unique gradient based on index
-  const gradients = [
-    'linear-gradient(135deg, #FF9933 0%, #C10000 100%)',
-    'linear-gradient(135deg, #C10000 0%, #E8B960 100%)',
-    'linear-gradient(135deg, #E8B960 0%, #FF9933 100%)',
-    'linear-gradient(135deg, #1A2A3A 0%, #C10000 100%)',
-  ];
-  const gradient = gradients[index % gradients.length];
+interface TestimonialCardProps {
+  review: GoogleReview;
+  index: number;
+}
+
+export default function TestimonialCard({ review, index }: TestimonialCardProps) {
+  const handleClick = () => {
+    window.open(review.link, '_blank');
+  };
 
   return (
     <motion.div
@@ -18,40 +19,47 @@ export default function TestimonialCard({ testimonial, index }: { testimonial: T
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.03, duration: 0.4 }}
       whileHover={{ y: -5, scale: 1.02 }}
-      className="h-full rounded-2xl p-[2px] shadow-lg hover:shadow-xl transition-shadow"
-      style={{ background: gradient }}
+      onClick={handleClick}
+      className="h-full rounded-2xl p-[2px] shadow-lg hover:shadow-xl transition-shadow cursor-pointer"
+      style={{ background: 'linear-gradient(135deg, #FF9933 0%, #C10000 100%)' }}
     >
       <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-5 h-full flex flex-col">
-        {/* Rating stars */}
-        <div className="flex items-center gap-1 mb-3">
-          {[...Array(5)].map((_, i) => (
-            <span
-              key={i}
-              className={`text-base ${i < testimonial.rating ? 'text-yellow-500' : 'text-gray-300'}`}
-            >
-              ★
-            </span>
-          ))}
-          {testimonial.verified && (
-            <span className="ml-auto text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">
-              ✓ Verified
-            </span>
-          )}
+        {/* Profile header */}
+        <div className="flex items-center gap-3 mb-3">
+          <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-prakash-gold/30">
+            <Image
+              src={review.photo}
+              alt={review.name}
+              fill
+              className="object-cover"
+              unoptimized // Google images are already optimized
+            />
+          </div>
+          <div>
+            <p className="font-medium text-nidra-indigo text-sm">{review.name}</p>
+            <div className="flex items-center gap-1">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className={`text-xs ${i < review.rating ? 'text-yellow-500' : 'text-gray-300'}`}>★</span>
+              ))}
+            </div>
+          </div>
+          <span className="ml-auto text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">✓ Verified</span>
         </div>
-
-        {/* Testimonial content */}
-        <p className="text-nidra-indigo/80 text-sm leading-relaxed italic flex-1 mb-4">
-          "{testimonial.content}"
+        {/* Review text */}
+        <p className="text-nidra-indigo/80 text-sm leading-relaxed italic flex-1 line-clamp-4">
+          "{review.text}"
         </p>
-
-        {/* Author info */}
-        <div className="border-t border-prakash-gold/20 pt-3">
-          <p className="font-serif font-bold text-nidra-indigo text-base">
-            {testimonial.client_name}
-          </p>
-          <p className="text-xs text-nidra-indigo/60 uppercase tracking-wider">
-            {testimonial.location}
-          </p>
+        {/* Google badge */}
+        <div className="mt-3 flex items-center justify-end">
+          <span className="text-xs text-nidra-indigo/40 flex items-center gap-1">
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+            </svg>
+            Google Review
+          </span>
         </div>
       </div>
     </motion.div>

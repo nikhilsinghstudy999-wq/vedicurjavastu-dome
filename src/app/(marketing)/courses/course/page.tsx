@@ -15,7 +15,7 @@ export default function CoursePage() {
     <>
       <Header />
       <SmoothScroll>
-        <main className="pt-32 pb-20 min-h-screen bg-vastu-parchment">
+        <main style={{ position: "relative" }} className="pt-32 pb-20 min-h-screen bg-vastu-parchment">
           <div className="container mx-auto px-6">
             <Suspense fallback={<div>Loading...</div>}>
               <CourseContent />

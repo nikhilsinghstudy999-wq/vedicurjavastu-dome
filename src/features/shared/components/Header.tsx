@@ -3,10 +3,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import LanguageSwitcher from './ui/LanguageSwitcher';
-import { useLanguage } from '@/features/shared/contexts/LanguageContext';
 
 export default function Header() {
-  const { t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [imgError, setImgError] = useState(false);
 
@@ -16,13 +14,13 @@ export default function Header() {
   }, [mobileMenuOpen]);
 
   const menuItems = [
-    { key: 'home', href: '/' },
-    { key: 'freeAITools', href: '/free-tools' },
-    { key: 'services', href: '/services' },
-    { key: 'bookings', href: '/bookings' },
-    { key: 'blogs', href: '/insights' },
-    { key: 'testimonials', href: '/client-stories' },
-    { key: 'about', href: '/about' },
+    { key: 'home', label: 'Home', href: '/' },
+    { key: 'freeAITools', label: 'Free AI Tools', href: '/free-tools' },
+    { key: 'services', label: 'Services', href: '/services' },
+    { key: 'bookings', label: 'Virtual Consult', href: '/bookings' },
+    { key: 'blogs', label: 'Blogs', href: '/insights' },
+    { key: 'testimonials', label: 'Testimonials', href: '/client-stories' },
+    { key: 'about', label: 'About', href: '/about' },
   ];
 
   return (
@@ -42,7 +40,7 @@ export default function Header() {
           <nav className="hidden lg:flex items-center space-x-2 xl:space-x-2.5 ml-4">
             {menuItems.map(item => (
               <Link key={item.key} href={item.href} className="pearl-btn">
-                <div className="wrap"><p><span>✦</span><span>✧</span>{t(`header.${item.key}`)}</p></div>
+                <div className="wrap"><p>{item.label}</p></div>
               </Link>
             ))}
           </nav>
@@ -50,7 +48,7 @@ export default function Header() {
             <LanguageSwitcher />
             <div className="hidden sm:block">
               <Link href="/contact" className="pearl-btn">
-                <div className="wrap"><p><span>✦</span><span>✧</span>{t('header.consult')}</p></div>
+                <div className="wrap"><p>Consult Acharya</p></div>
               </Link>
             </div>
             <button onClick={() => setMobileMenuOpen(true)} className="lg:hidden w-7 h-7 sm:w-8 sm:h-8 rounded-md flex items-center justify-center text-white border border-white/20 bg-white/5">
@@ -71,13 +69,13 @@ export default function Header() {
             <nav className="flex flex-col gap-3 mb-6">
               {menuItems.map(item => (
                 <Link key={item.key} href={item.href} onClick={() => setMobileMenuOpen(false)} className="pearl-btn w-full">
-                  <div className="wrap !text-center"><p className="!justify-center text-[15px]"><span>✦</span><span>✧</span>{t(`header.${item.key}`)}</p></div>
+                  <div className="wrap !text-center"><p className="!justify-center text-[15px]">{item.label}</p></div>
                 </Link>
               ))}
             </nav>
             <div className="mt-auto pt-6 border-t border-white/20">
               <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="pearl-btn w-full">
-                <div className="wrap !text-center !py-3"><p className="!justify-center text-lg uppercase"><span>✦</span><span>✧</span>{t('header.consult')}</p></div>
+                <div className="wrap !text-center !py-3"><p className="!justify-center text-lg uppercase">Consult Acharya</p></div>
               </Link>
             </div>
           </div>

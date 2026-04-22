@@ -40,11 +40,11 @@ export default function LuxuryHeroButton({
 
   const handleMouseEnter = () => play('hoverCard');
   const handleMouseLeave = () => { x.set(0); y.set(0); };
-  const handleClick = () => { play('clickPrimary'); play('clickPrimary'); play('clickPrimary'); if (onClick) onClick(); };
+  const handleClick = () => { play('clickPrimary'); if (onClick) onClick(); };
 
   const baseClasses = "relative inline-block px-10 sm:px-12 py-4 sm:py-5 text-base sm:text-lg font-medium rounded-full overflow-hidden transition-all duration-500 shadow-xl hover:shadow-2xl";
   const primaryClasses = "bg-gradient-to-r from-sacred-saffron via-kumkuma-red to-prakash-gold text-white";
-  const secondaryClasses = "bg-transparent border-2 border-prakash-gold text-nidra-indigo hover:bg-prakash-gold/10";
+  const secondaryClasses = "bg-transparent border-2 text-white border-white hover:bg-white/10";
 
   return (
     <motion.div
@@ -57,7 +57,7 @@ export default function LuxuryHeroButton({
       className="inline-block"
     >
       <Link href={href} className={`${baseClasses} ${variant === 'primary' ? primaryClasses : secondaryClasses} ${className}`}>
-        <span className="relative z-10 flex items-center justify-center gap-2 font-semibold tracking-wide">
+        <span className="relative z-10 flex items-center justify-center gap-2 font-semibold tracking-wide text-white">
           {children}
           {variant === 'primary' && (
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

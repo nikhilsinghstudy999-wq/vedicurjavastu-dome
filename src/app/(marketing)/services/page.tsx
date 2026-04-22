@@ -328,7 +328,7 @@ export default function ServicesPage() {
       <SoundController />
       <Header />
       <SmoothScroll>
-        <main className="relative bg-vastu-parchment">
+        <main style={{ position: "relative" }} className="relative bg-vastu-parchment">
           <HeroSection />
           <DifferenceSection />
           <ServiceGridSection />

@@ -8,13 +8,18 @@ export function LenisSmoothScroll({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   useEffect(() => {
+    // Ensure lenis is initialized only on client
+    if (typeof window === 'undefined') return;
+
     const lenis = new Lenis({
-      duration: 0.8,
-      easing: (t: number) => 1 - Math.pow(1 - t, 3),
+      duration: 1.2,              // Slower, smoother scroll
+      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smoother easing
       smoothWheel: true,
-      wheelMultiplier: 0.8,
+      wheelMultiplier: 0.8,       // More natural feel
       touchMultiplier: 1.5,
       infinite: false,
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
     });
 
     lenisRef.current = lenis;
@@ -25,6 +30,7 @@ export function LenisSmoothScroll({ children }: { children: React.ReactNode }) {
     }
     requestAnimationFrame(raf);
 
+    // Reset scroll position on route change
     lenis.scrollTo(0, { immediate: true });
 
     return () => {

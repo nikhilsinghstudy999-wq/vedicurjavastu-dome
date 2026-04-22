@@ -33,7 +33,7 @@ export default function CategoryFilter({ categories, activeCategory, onSelect, s
       <div className="max-w-md mx-auto">
         <input
           type="text"
-          placeholder="Search by name or location..."
+          placeholder="Search by name or keyword..."
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
           className="w-full px-6 py-3 rounded-full border border-prakash-gold/30 bg-white/50 backdrop-blur-sm text-nidra-indigo placeholder:text-nidra-indigo/40 focus:outline-none focus:border-prakash-gold"
