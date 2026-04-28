@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none">
+  <defs>
+    <linearGradient id="gg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#1a0000"/><stop offset="50%" stopColor="#3a0000"/><stop offset="100%" stopColor="#1a0000"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#gg)"/>
+  <!-- Earth cross-section with underground veins -->
+  <rect x="100" y="380" width="1000" height="120" rx="6" fill="rgba(139,90,43,0.15)" stroke="#8B5A2B" strokeWidth="1.5" opacity="0.6"/>
+  <path d="M200 320 Q350 420 500 320 Q650 420 800 320 Q950 420 1100 320" stroke="#06B6D4" strokeWidth="2" fill="none" opacity="0.5" strokeDasharray="8 4">
+    <animate attributeName="stroke-dashoffset" from="0" to="30" dur="2s" repeatCount="indefinite"/>
+  </path>
+  <path d="M150 340 Q300 440 450 340 Q600 440 750 340 Q900 440 1050 340" stroke="#06B6D4" strokeWidth="1.5" fill="none" opacity="0.3" strokeDasharray="6 3"/>
+  <!-- House on surface -->
+  <rect x="500" y="200" width="120" height="100" rx="8" stroke="#E8B960" strokeWidth="1.5" fill="rgba(26,42,58,0.6)"/>
+  <path d="M490 200 L560 150 L630 200" stroke="#E8B960" strokeWidth="1.5" fill="none"/>
+  <!-- Bed inside house -->
+  <rect x="530" y="240" width="60" height="30" rx="4" stroke="#EF4444" strokeWidth="1.5" fill="rgba(239,68,68,0.15)"/>
+  <!-- Rising stress waves from underground -->
+  <path d="M560 320 Q560 280 560 240" stroke="#EF4444" strokeWidth="1" fill="none" opacity="0.5" strokeDasharray="3 3">
+    <animate attributeName="opacity" values="0.2;0.8;0.2" dur="2s" repeatCount="indefinite"/>
+  </path>
+  <!-- Hartmann Grid overlay -->
+  <line x1="200" y1="100" x2="200" y2="550" stroke="#E8B960" strokeWidth="0.6" opacity="0.15"/>
+  <line x1="400" y1="100" x2="400" y2="550" stroke="#E8B960" strokeWidth="0.6" opacity="0.15"/>
+  <line x1="600" y1="100" x2="600" y2="550" stroke="#E8B960" strokeWidth="0.6" opacity="0.15"/>
+  <line x1="800" y1="100" x2="800" y2="550" stroke="#E8B960" strokeWidth="0.6" opacity="0.15"/>
+  <line x1="1000" y1="100" x2="1000" y2="550" stroke="#E8B960" strokeWidth="0.6" opacity="0.15"/>
+  <line x1="100" y1="130" x2="1100" y2="130" stroke="#E8B960" strokeWidth="0.6" opacity="0.15"/>
+  <line x1="100" y1="260" x2="1100" y2="260" stroke="#E8B960" strokeWidth="0.6" opacity="0.15"/>
+  <line x1="100" y1="390" x2="1100" y2="390" stroke="#E8B960" strokeWidth="0.6" opacity="0.15"/>
+  <!-- Copper rod remedy indicator -->
+  <line x1="660" y1="280" x2="660" y2="520" stroke="#FFD700" strokeWidth="3" strokeLinecap="round" filter="url(#glow)"/>
+  <text x="660" y="545" textAnchor="middle" fontSize="10" fill="#FFD700">Copper Rod</text>
+</svg>

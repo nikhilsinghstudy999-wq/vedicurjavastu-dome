@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none">
+  <defs>
+    <linearGradient id="kg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#0a0020"/><stop offset="50%" stopColor="#1a0050"/><stop offset="100%" stopColor="#0a0020"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#kg)"/>
+  <!-- Circular zodiac ring -->
+  <circle cx="600" cy="280" r="200" stroke="#FFD700" strokeWidth="1.5" fill="none" opacity="0.6"/>
+  <circle cx="600" cy="280" r="160" stroke="#FF9933" strokeWidth="0.8" fill="none" opacity="0.4" strokeDasharray="6 3"/>
+  <!-- Inner chart square -->
+  <rect x="400" y="80" width="400" height="400" stroke="#E8B960" strokeWidth="1" fill="none" opacity="0.5"/>
+  <line x1="400" y1="280" x2="800" y2="280" stroke="#E8B960" strokeWidth="0.6" opacity="0.3"/>
+  <line x1="600" y1="80" x2="600" y2="480" stroke="#E8B960" strokeWidth="0.6" opacity="0.3"/>
+  <line x1="400" y1="80" x2="800" y2="480" stroke="#E8B960" strokeWidth="0.4" opacity="0.2"/>
+  <line x1="800" y1="80" x2="400" y2="480" stroke="#E8B960" strokeWidth="0.4" opacity="0.2"/>
+  <!-- Central Sun -->
+  <circle cx="600" cy="280" r="25" fill="url(#kg)" stroke="#FFD700" strokeWidth="2" filter="url(#glow)"/>
+  <text x="600" y="288" textAnchor="middle" fontSize="18" fill="#FFD700" fontFamily="serif" fontWeight="bold">Om</text>
+  <!-- Planetary orbit dots -->
+  <circle cx="600" cy="140" r="6" fill="#FF9933" opacity="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/></circle>
+  <circle cx="720" cy="200" r="4" fill="#FFD700" opacity="0.7"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.5s" repeatCount="indefinite"/></circle>
+  <circle cx="740" cy="320" r="5" fill="#C10000" opacity="0.6"><animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite"/></circle>
+  <circle cx="660" cy="400" r="4" fill="#10B981" opacity="0.7"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.8s" repeatCount="indefinite"/></circle>
+  <circle cx="500" cy="420" r="5" fill="#6366F1" opacity="0.6"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.2s" repeatCount="indefinite"/></circle>
+  <circle cx="420" cy="320" r="4" fill="#EC4899" opacity="0.7"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="3.2s" repeatCount="indefinite"/></circle>
+  <circle cx="440" cy="200" r="6" fill="#F59E0B" opacity="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="2.4s" repeatCount="indefinite"/></circle>
+  <circle cx="560" cy="160" r="3" fill="#8B5CF6" opacity="0.5"><animate attributeName="opacity" values="0.2;0.8;0.2" dur="2.6s" repeatCount="indefinite"/></circle>
+</svg>

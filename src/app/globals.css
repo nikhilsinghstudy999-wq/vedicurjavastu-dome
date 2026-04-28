@@ -34,35 +34,3 @@
 }
 @import "../styles/animations.css";
 @import "../styles/luxury-ui.css";
-
-/* Hide Google Translate banner and all UI elements */
-.goog-te-banner-frame,
-.goog-te-gadget,
-.goog-te-gadget-simple,
-.goog-te-menu-value,
-.goog-te-menu-frame,
-.goog-te-balloon-frame,
-#google_translate_element,
-.goog-logo-link,
-.goog-te-spinner-pos {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  height: 0 !important;
-  width: 0 !important;
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important;
-}
-
-/* Prevent body offset caused by Google Translate */
-body {
-  top: 0 !important;
-  position: relative !important;
-}
-
-/* Remove any background highlighting from translated text */
-.goog-text-highlight {
-  background-color: transparent !important;
-  box-shadow: none !important;
-}

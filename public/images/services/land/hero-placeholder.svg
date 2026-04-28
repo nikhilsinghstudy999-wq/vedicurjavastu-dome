@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none">
+  <defs>
+    <linearGradient id="lg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#0a1a0a"/><stop offset="50%" stopColor="#1a3a1a"/><stop offset="100%" stopColor="#0a1a0a"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#lg)"/>
+  <!-- Plot outline with Vastu Purusha Mandala -->
+  <rect x="300" y="60" width="600" height="420" rx="8" stroke="#E8B960" strokeWidth="2" fill="none" opacity="0.7"/>
+  <!-- Grid lines -->
+  <line x1="300" y1="270" x2="900" y2="270" stroke="#E8B960" strokeWidth="0.8" opacity="0.3"/>
+  <line x1="600" y1="60" x2="600" y2="480" stroke="#E8B960" strokeWidth="0.8" opacity="0.3"/>
+  <line x1="300" y1="60" x2="900" y2="480" stroke="#E8B960" strokeWidth="0.6" opacity="0.2"/>
+  <line x1="900" y1="60" x2="300" y2="480" stroke="#E8B960" strokeWidth="0.6" opacity="0.2"/>
+  <!-- NE corner highlight -->
+  <rect x="300" y="60" width="200" height="210" rx="4" stroke="#10B981" strokeWidth="1.5" fill="rgba(16,185,129,0.06)"/>
+  <text x="400" y="150" textAnchor="middle" fontSize="14" fill="#10B981" fontFamily="serif">NE (Ishanya)</text>
+  <!-- SW corner highlight -->
+  <rect x="700" y="270" width="200" height="210" rx="4" stroke="#C88A5D" strokeWidth="1.5" fill="rgba(200,138,93,0.06)"/>
+  <text x="800" y="360" textAnchor="middle" fontSize="14" fill="#C88A5D" fontFamily="serif">SW (Nairutya)</text>
+  <!-- Soil testing icon -->
+  <rect x="50" y="200" width="140" height="140" rx="12" stroke="#FFD700" strokeWidth="1.5" fill="rgba(255,215,0,0.05)"/>
+  <text x="120" y="265" textAnchor="middle" fontSize="14" fill="#FFD700" fontFamily="serif">Soil Test</text>
+  <text x="120" y="285" textAnchor="middle" fontSize="11" fill="#FFD700" opacity="0.6">Kamadahana</text>
+  <!-- Slope indicator -->
+  <text x="1020" y="200" fontSize="12" fill="#06B6D4" fontFamily="serif">SW → NE Slope</text>
+  <line x1="980" y1="210" x2="1160" y2="150" stroke="#06B6D4" strokeWidth="2" markerEnd="url(#arrow)"/>
+  <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#06B6D4"/></marker></defs>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none">
+  <defs>
+    <linearGradient id="ncg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#1a0a00"/><stop offset="50%" stopColor="#3a1a00"/><stop offset="100%" stopColor="#1a0a00"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#ncg)"/>
+  <!-- Construction site with Vastu grid overlay -->
+  <rect x="200" y="100" width="800" height="400" rx="8" stroke="#E8B960" strokeWidth="2" fill="none" opacity="0.6"/>
+  <!-- 8x8 grid lines -->
+  <line x1="200" y1="300" x2="1000" y2="300" stroke="#E8B960" strokeWidth="0.6" opacity="0.3"/>
+  <line x1="600" y1="100" x2="600" y2="500" stroke="#E8B960" strokeWidth="0.6" opacity="0.3"/>
+  <!-- Foundation pit in NE -->
+  <rect x="220" y="120" width="180" height="180" rx="4" stroke="#10B981" strokeWidth="1.5" fill="rgba(16,185,129,0.08)"/>
+  <text x="310" y="205" textAnchor="middle" fontSize="14" fill="#10B981" fontFamily="serif">BHOOMI PUJA</text>
+  <text x="310" y="222" textAnchor="middle" fontSize="10" fill="#10B981">NE Corner Site</text>
+  <!-- Foundation stone SW -->
+  <rect x="700" y="320" width="200" height="120" rx="4" stroke="#C88A5D" strokeWidth="1.5" fill="rgba(200,138,93,0.08)"/>
+  <text x="800" y="370" textAnchor="middle" fontSize="14" fill="#C88A5D" fontFamily="serif">SHILANYAS</text>
+  <text x="800" y="387" textAnchor="middle" fontSize="10" fill="#C88A5D">Foundation Stone SW</text>
+  <!-- Center Garbh Vinyas -->
+  <circle cx="600" cy="300" r="70" stroke="#FFD700" strokeWidth="1.5" fill="none" opacity="0.5" strokeDasharray="6 3"/>
+  <text x="600" y="305" textAnchor="middle" fontSize="12" fill="#FFD700" fontFamily="serif">GARBH VINYAS</text>
+  <!-- Nav-Ratna gemstones around center -->
+  <circle cx="600" cy="240" r="5" fill="#EF4444" opacity="0.8"/><circle cx="660" cy="270" r="4" fill="#F59E0B" opacity="0.7"/>
+  <circle cx="660" cy="340" r="5" fill="#10B981" opacity="0.8"/><circle cx="600" cy="370" r="4" fill="#6366F1" opacity="0.7"/>
+  <circle cx="540" cy="340" r="5" fill="#EC4899" opacity="0.8"/><circle cx="540" cy="260" r="4" fill="#FFD700" opacity="0.7"/>
+  <circle cx="570" cy="280" r="3" fill="#8B5CF6" opacity="0.6"/><circle cx="630" cy="290" r="3" fill="#06B6D4" opacity="0.6"/><circle cx="590" cy="320" r="4" fill="#C10000" opacity="0.7"/>
+  <!-- Construction crane silhouette -->
+  <line x1="850" y1="90" x2="850" y2="280" stroke="#E8B960" strokeWidth="3"/><line x1="830" y1="90" x2="850" y2="90" stroke="#E8B960" strokeWidth="2"/>
+  <line x1="850" y1="90" x2="950" y2="180" stroke="#E8B960" strokeWidth="1.5"/><line x1="950" y1="180" x2="950" y2="240" stroke="#E8B960" strokeWidth="1"/>
+</svg>

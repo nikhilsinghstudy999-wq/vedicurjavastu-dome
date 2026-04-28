@@ -19,65 +19,61 @@ export default function KundaliPage() {
       <SoundController />
       <Header />
       <SmoothScroll>
-        <main className="pt-28 pb-20 px-6 min-h-screen bg-vastu-parchment">
-          <div className="max-w-6xl mx-auto">
-            <motion.h1
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="font-serif text-4xl md:text-5xl text-center text-nidra-indigo mb-4"
-            >
-              AI Kundali
-            </motion.h1>
-            <p className="text-center text-nidra-indigo/60 mb-12 max-w-2xl mx-auto">
-              Generate your Vedic birth chart instantly – no signup required.
-            </p>
+        <main className="pt-28 pb-20 px-4 sm:px-6 min-h-screen relative overflow-hidden"
+          style={{
+            background: 'radial-gradient(ellipse at 30% 50%, rgba(120,20,20,0.6) 0%, rgba(80,0,0,0.8) 50%, rgba(40,0,0,0.95) 100%)',
+            backdropFilter: 'blur(40px)',
+            WebkitBackdropFilter: 'blur(40px)',
+          }}
+        >
+          <div className="relative z-10 max-w-6xl mx-auto">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
+                style={{
+                  background: 'linear-gradient(135deg, #ff6b6b 0%, #ffd93d 50%, #ff6b6b 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  filter: 'drop-shadow(0 0 20px rgba(255,107,107,0.5))',
+                }}
+              >
+                AI Kundali
+              </h1>
+              <p className="text-white/60 text-lg max-w-2xl mx-auto">
+                Your Vedic birth chart generated instantly using authentic calculations.
+                <br />
+                <span className="text-white/80 font-medium">
+                  For a full, expert reading, consult <span className="text-gold-400">Vastuvid K.K. Nagaich</span>{' '}— the astrology expert.
+                </span>
+              </p>
+            </motion.div>
 
-            <KundaliForm onChartGenerated={setChart} />
+            <div className="glass-card p-6 sm:p-8 mb-12">
+              <KundaliForm onChartGenerated={setChart} />
+            </div>
 
             {chart && (
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-12 space-y-12">
-                <section>
-                  <h2 className="font-serif text-2xl text-nidra-indigo mb-6">Your Kundali Chart</h2>
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-12">
+                <div className="glass-card p-4 sm:p-8">
+                  <h2 className="text-2xl font-serif text-white mb-6">Birth Chart</h2>
                   <KundaliChart3D chart={chart} />
-                </section>
-                <section>
-                  <h2 className="font-serif text-2xl text-nidra-indigo mb-6">Planetary Positions</h2>
-                  <div className="overflow-x-auto">
-                    <table className="w-full border-collapse bg-white/50 rounded-2xl overflow-hidden shadow-md">
-                      <thead className="bg-nidra-indigo/5">
-                        <tr>
-                          <th className="py-3 px-4 text-left">Planet</th>
-                          <th className="py-3 px-4 text-left">Sign</th>
-                          <th className="py-3 px-4 text-left">House</th>
-                          <th className="py-3 px-4 text-left">Degree</th>
-                          <th className="py-3 px-4 text-left">Retrograde</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {chart.planets.map((p) => (
-                          <tr key={p.name} className="border-t border-prakash-gold/20">
-                            <td className="py-3 px-4 font-medium">{p.name}</td>
-                            <td className="py-3 px-4">{p.sign}</td>
-                            <td className="py-3 px-4">{p.house}</td>
-                            <td className="py-3 px-4">{p.degree.toFixed(1)}°</td>
-                            <td className="py-3 px-4">{p.retrograde ? 'Yes' : 'No'}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </section>
-                <section>
-                  <h2 className="font-serif text-2xl text-nidra-indigo mb-6">Planetary Strengths</h2>
+                </div>
+                <div className="glass-card p-4 sm:p-8">
+                  <h2 className="text-2xl font-serif text-white mb-6">Planetary Positions</h2>
+                  <table className="w-full text-left text-white/80 text-sm">
+                    <thead><tr><th>Planet</th><th>Sign</th><th>House</th><th>Degree</th><th>Retrograde</th></tr></thead>
+                    <tbody>{chart.planets.map(p=><tr key={p.name}><td>{p.name}</td><td>{p.sign}</td><td>{p.house}</td><td>{p.degree.toFixed(1)}°</td><td>{p.retrograde?'Yes':'No'}</td></tr>)}</tbody>
+                  </table>
+                </div>
+                <div className="glass-card p-4 sm:p-8">
+                  <h2 className="text-2xl font-serif text-white mb-6">Planetary Strengths</h2>
                   <PlanetaryStrengthBars planets={chart.planets} />
-                </section>
-                <section className="bg-white p-6 rounded-2xl shadow-md border border-prakash-gold/20">
-                  <h2 className="font-serif text-xl text-nidra-indigo mb-4">Want a Detailed Analysis?</h2>
-                  <p className="text-nidra-indigo/70 mb-4">
-                    For a full 20‑page report with Dasha predictions and personalized remedies, book a consultation with Acharya ji.
-                  </p>
-                  <a href="/bookings" className="luxury-button inline-block">Book Consultation</a>
-                </section>
+                </div>
+                <div className="glass-card p-6 sm:p-8 text-center">
+                  <h3 className="font-serif text-xl text-white mb-3">Need a Complete Reading?</h3>
+                  <a href="/bookings" className="inline-block px-8 py-4 bg-gradient-to-r from-red-700 to-maroon-900 text-white rounded-full font-medium hover:shadow-[0_0_30px_rgba(255,107,107,0.5)] transition-shadow">
+                    Book a Consultation
+                  </a>
+                </div>
               </motion.div>
             )}
           </div>

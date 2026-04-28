@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none">
+  <defs>
+    <linearGradient id="ig" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#1a1a2e"/><stop offset="50%" stopColor="#2d2d44"/><stop offset="100%" stopColor="#0f0f1a"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#ig)"/>
+  <!-- Factory outline -->
+  <rect x="200" y="80" width="800" height="380" rx="12" stroke="#E8B960" strokeWidth="2" fill="none" opacity="0.6"/>
+  <rect x="250" y="130" width="300" height="150" rx="6" stroke="#C88A5D" strokeWidth="1.5" fill="rgba(200,138,93,0.06)"/>
+  <text x="400" y="210" textAnchor="middle" fontSize="16" fill="#C88A5D" fontFamily="serif">HEAVY MACHINERY</text>
+  <rect x="650" y="130" width="300" height="150" rx="6" stroke="#10B981" strokeWidth="1.5" fill="rgba(16,185,129,0.06)"/>
+  <text x="800" y="210" textAnchor="middle" fontSize="16" fill="#10B981" fontFamily="serif">PRODUCTION ZONE</text>
+  <rect x="250" y="330" width="300" height="100" rx="6" stroke="#EF4444" strokeWidth="1.5" fill="rgba(239,68,68,0.06)"/>
+  <text x="400" y="385" textAnchor="middle" fontSize="16" fill="#EF4444" fontFamily="serif">BOILER / FURNACE</text>
+  <rect x="650" y="330" width="300" height="100" rx="6" stroke="#F59E0B" strokeWidth="1.5" fill="rgba(245,158,11,0.06)"/>
+  <text x="800" y="385" textAnchor="middle" fontSize="16" fill="#F59E0B" fontFamily="serif">FINISHED GOODS</text>
+  <!-- Compass rose -->
+  <circle cx="80" cy="80" r="40" stroke="#E8B960" strokeWidth="1" fill="none" opacity="0.5"/>
+  <text x="80" y="55" textAnchor="middle" fontSize="12" fill="#E8B960" fontFamily="serif">N</text>
+  <line x1="80" y1="46" x2="80" y2="60" stroke="#E8B960" strokeWidth="2"/>
+</svg>
