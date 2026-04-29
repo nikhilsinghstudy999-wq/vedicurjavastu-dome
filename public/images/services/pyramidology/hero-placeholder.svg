@@ -1,33 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none">
   <defs>
-    <linearGradient id="pg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stopColor="#0a0a1a"/><stop offset="50%" stopColor="#1a1a3a"/><stop offset="100%" stopColor="#0a0a1a"/>
+    <linearGradient id="gpyramidology" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#F59E0B20"/><stop offset="50%" stopColor="#F59E0B40"/><stop offset="100%" stopColor="#F59E0B10"/>
     </linearGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glowpyramidology"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
-  <rect width="1200" height="600" fill="url(#pg)"/>
-  <!-- Large central pyramid -->
-  <polygon points="600,80 720,320 480,320" stroke="#FFD700" strokeWidth="2" fill="none" opacity="0.8" filter="url(#glow)"/>
-  <polygon points="600,100 700,300 500,300" stroke="#FFD700" strokeWidth="1" fill="none" opacity="0.4"/>
-  <line x1="600" y1="80" x2="600" y2="320" stroke="#FFD700" strokeWidth="0.6" opacity="0.3"/>
-  <!-- 9-pyramid grid on floor -->
-  <g opacity="0.6">
-    <polygon points="200,400 240,460 160,460" fill="none" stroke="#FF9933" strokeWidth="1.5"/>
-    <polygon points="280,400 320,460 240,460" fill="none" stroke="#FF9933" strokeWidth="1.5"/>
-    <polygon points="360,400 400,460 320,460" fill="none" stroke="#FF9933" strokeWidth="1.5"/>
-    <polygon points="440,400 480,460 400,460" fill="none" stroke="#FF9933" strokeWidth="1.5"/>
-    <polygon points="520,400 560,460 480,460" fill="none" stroke="#FF9933" strokeWidth="1.5"/>
-    <polygon points="600,400 640,460 560,460" fill="none" stroke="#FF9933" strokeWidth="1.5"/>
-    <polygon points="680,400 720,460 640,460" fill="none" stroke="#FF9933" strokeWidth="1.5"/>
-    <polygon points="760,400 800,460 720,460" fill="none" stroke="#FF9933" strokeWidth="1.5"/>
-    <polygon points="840,400 880,460 800,460" fill="none" stroke="#FF9933" strokeWidth="1.5"/>
-  </g>
-  <!-- Energy waves from pyramid -->
-  <path d="M600 320 Q580 400 560 460" stroke="#FFD700" strokeWidth="1.5" fill="none" opacity="0.6" strokeDasharray="4 4"/>
-  <path d="M600 320 Q620 400 640 460" stroke="#FFD700" strokeWidth="1.5" fill="none" opacity="0.6" strokeDasharray="4 4"/>
-  <path d="M600 320 Q600 400 600 460" stroke="#FFD700" strokeWidth="1.5" fill="none" opacity="0.8" strokeDasharray="4 4"/>
-  <!-- Copper pyramid on desk -->
-  <rect x="920" y="220" width="200" height="120" rx="10" stroke="#C88A5D" strokeWidth="1.5" fill="rgba(200,138,93,0.08)"/>
-  <polygon points="1020,220 1100,300 940,300" stroke="#C88A5D" strokeWidth="1.5" fill="none"/>
-  <text x="1020" y="280" textAnchor="middle" fontSize="12" fill="#C88A5D">Copper Pyramid</text>
+  <rect width="1200" height="600" fill="url(#gpyramidology)"/>
+  <circle cx="600" cy="260" r="160" stroke="#F59E0B" strokeWidth="2" fill="none" opacity="0.5"/>
+  <circle cx="600" cy="260" r="100" stroke="#F59E0B" strokeWidth="1" fill="none" opacity="0.3" strokeDasharray="6 3"/>
+  <circle cx="600" cy="260" r="45" fill="#F59E0B" opacity="0.7" filter="url(#glowpyramidology)"/>
+  <text x="600" y="275" textAnchor="middle" fontSize="40" fill="white" fontFamily="serif">🔺</text>
+  <rect x="200" y="420" width="800" height="6" rx="3" fill="#F59E0B" opacity="0.3"/>
+  <rect x="350" y="450" width="500" height="4" rx="2" fill="#F59E0B" opacity="0.2"/>
 </svg>

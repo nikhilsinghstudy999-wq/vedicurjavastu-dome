@@ -1,25 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none">
   <defs>
-    <linearGradient id="ccg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stopColor="#1a0a2e"/><stop offset="50%" stopColor="#2d1050"/><stop offset="100%" stopColor="#1a0a2e"/>
+    <linearGradient id="gcrystal-color" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#7C3AED20"/><stop offset="50%" stopColor="#7C3AED40"/><stop offset="100%" stopColor="#7C3AED10"/>
     </linearGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glowcrystal-color"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
-  <rect width="1200" height="600" fill="url(#ccg)"/>
-  <!-- Crystal cluster centerpiece -->
-  <polygon points="600,120 640,220 560,220" stroke="#8B5CF6" strokeWidth="1.5" fill="rgba(139,92,246,0.15)" filter="url(#glow)"/>
-  <polygon points="580,180 620,280 540,280" stroke="#7C3AED" strokeWidth="1.5" fill="rgba(124,58,237,0.12)"/>
-  <polygon points="600,100 660,200 540,200" stroke="#A78BFA" strokeWidth="1" fill="none" opacity="0.5"/>
-  <!-- Scattered crystals -->
-  <polygon points="300,200 320,260 280,260" stroke="#10B981" strokeWidth="1.5" fill="rgba(16,185,129,0.15)"/><text x="300" y="245" textAnchor="middle" fontSize="10" fill="#10B981">Amethyst</text>
-  <polygon points="900,180 920,240 880,240" stroke="#EF4444" strokeWidth="1.5" fill="rgba(239,68,68,0.15)"/><text x="900" y="225" textAnchor="middle" fontSize="10" fill="#EF4444">Ruby</text>
-  <polygon points="200,380 220,440 180,440" stroke="#FFD700" strokeWidth="1.5" fill="rgba(255,215,0,0.15)"/><text x="200" y="425" textAnchor="middle" fontSize="10" fill="#FFD700">Citrine</text>
-  <polygon points="1000,350 1020,410 980,410" stroke="#06B6D4" strokeWidth="1.5" fill="rgba(6,182,212,0.15)"/><text x="1000" y="395" textAnchor="middle" fontSize="10" fill="#06B6D4">Turquoise</text>
-  <!-- Color spectrum arc -->
-  <path d="M100 500 Q600 400 1100 500" stroke="url(#rainbow)" strokeWidth="6" fill="none" opacity="0.6"/>
-  <defs><linearGradient id="rainbow"><stop offset="0%" stopColor="#EF4444"/><stop offset="20%" stopColor="#F59E0B"/><stop offset="40%" stopColor="#FFD700"/><stop offset="60%" stopColor="#10B981"/><stop offset="80%" stopColor="#06B6D4"/><stop offset="100%" stopColor="#8B5CF6"/></linearGradient></defs>
-  <!-- Color dots -->
-  <circle cx="250" cy="480" r="8" fill="#EF4444" filter="url(#glow)"/><circle cx="400" cy="490" r="8" fill="#F59E0B" filter="url(#glow)"/>
-  <circle cx="550" cy="495" r="8" fill="#FFD700" filter="url(#glow)"/><circle cx="700" cy="490" r="8" fill="#10B981" filter="url(#glow)"/>
-  <circle cx="850" cy="480" r="8" fill="#06B6D4" filter="url(#glow)"/><circle cx="950" cy="470" r="8" fill="#8B5CF6" filter="url(#glow)"/>
+  <rect width="1200" height="600" fill="url(#gcrystal-color)"/>
+  <circle cx="600" cy="260" r="160" stroke="#7C3AED" strokeWidth="2" fill="none" opacity="0.5"/>
+  <circle cx="600" cy="260" r="100" stroke="#7C3AED" strokeWidth="1" fill="none" opacity="0.3" strokeDasharray="6 3"/>
+  <circle cx="600" cy="260" r="45" fill="#7C3AED" opacity="0.7" filter="url(#glowcrystal-color)"/>
+  <text x="600" y="275" textAnchor="middle" fontSize="40" fill="white" fontFamily="serif">💎</text>
+  <rect x="200" y="420" width="800" height="6" rx="3" fill="#7C3AED" opacity="0.3"/>
+  <rect x="350" y="450" width="500" height="4" rx="2" fill="#7C3AED" opacity="0.2"/>
 </svg>

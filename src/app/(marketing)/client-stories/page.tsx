@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Header from '@/features/shared/components/Header';
 import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
 import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
+import PlanetaryLoader from '@/features/shared/components/ui/PlanetaryLoader';
 import { SoundController } from '@/features/shared/components/SoundController';
 
 /* ================================================================

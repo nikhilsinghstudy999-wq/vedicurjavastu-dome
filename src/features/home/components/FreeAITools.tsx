@@ -20,14 +20,14 @@ interface FreeTool {
 
 const fallbackTools: FreeTool[] = [
   { id: '1', tool_key: 'kundali', title: 'AI Kundali', tagline: 'Your Cosmic Blueprint', description: 'Vedic birth chart with nakshatra and planetary positions', features: [], icon: '🔮', color: '#FF9933', href: '/free-tools/kundali', is_published: true, order_index: 1 },
-  { id: '2', tool_key: 'vastu_scan', title: 'AI Vastu Scan', tagline: 'Optimize Your Space', description: '16‑zone energy analysis with personalized remedies', features: [], icon: '🏠', color: '#C10000', href: '/free-tools/vastu-scan', is_published: true, order_index: 2 },
+  { id: '2', tool_key: 'daily_horoscope', title: 'Daily Horoscope', tagline: 'Your 12‑Rashi Forecast', description: 'Updated every morning with real planetary transits', features: [], icon: '✦', color: '#7B2FBE', href: '/free-tools/daily-horoscope', is_published: true, order_index: 2 },
   { id: '3', tool_key: 'name_suggestion', title: 'Name Suggestion', tagline: 'Auspicious Names', description: 'Auspicious syllables based on 27 Nakshatras', features: [], icon: '✨', color: '#E8B960', href: '/free-tools/name-suggestion', is_published: true, order_index: 3 },
 ];
 
 export function FreeAITools() {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
   const [isMounted, setIsMounted] = useState(false);
-  useEffect(() => { setIsMounted(true); }, []);
+  useEffect(() => setIsMounted(true), []);
 
   const { scrollYProgress } = useScroll(
     isMounted && ref.current ? { target: ref, offset: ['start end', 'end start'] } : undefined
@@ -35,14 +35,22 @@ export function FreeAITools() {
   const y = useTransform(scrollYProgress, [0, 1], [40, -40]);
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.3, 1, 1, 0.3]);
 
-  const { items, loading, refetch } = useRealtimeContent<FreeTool>('free_tools', 'order_index');
+  const { items, loading } = useRealtimeContent<FreeTool>('free_tools', 'order_index');
   const tools = items.length > 0 ? items.filter(t => t.is_published) : fallbackTools;
 
-  if (loading) return <div className="py-24 text-center">Loading Tools...</div>;
+  if (loading) {
+    return (
+      <section className="py-24 md:py-32 bg-gradient-to-b from-vastu-parchment to-white">
+        <div className="container mx-auto px-6 flex justify-center">
+          <div className="w-12 h-12 border-4 border-prakash-gold border-t-transparent rounded-full animate-spin" />
+        </div>
+      </section>
+    );
+  }
 
   return (
-    <motion.section 
-      ref={ref} 
+    <motion.section
+      ref={ref}
       style={isMounted ? { opacity, y } : undefined}
       className="py-24 md:py-32 bg-gradient-to-b from-vastu-parchment to-white"
     >

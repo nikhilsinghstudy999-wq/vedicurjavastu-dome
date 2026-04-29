@@ -1,28 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none">
   <defs>
-    <linearGradient id="mpg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stopColor="#0a0a0a"/><stop offset="50%" stopColor="#1a1a1a"/><stop offset="100%" stopColor="#0a0a0a"/>
+    <linearGradient id="gmercury-parad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#6B728020"/><stop offset="50%" stopColor="#6B728040"/><stop offset="100%" stopColor="#6B728010"/>
     </linearGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="5"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="glowmercury-parad"><feGaussianBlur stdDeviation="4"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
-  <rect width="1200" height="600" fill="url(#mpg)"/>
-  <!-- Central Parad Shivling with silver glow -->
-  <ellipse cx="600" cy="380" rx="90" ry="30" fill="rgba(192,192,192,0.15)" filter="url(#glow)"/>
-  <ellipse cx="600" cy="320" rx="50" ry="70" fill="rgba(232,185,96,0.2)" filter="url(#glow)"/>
-  <path d="M560 290 Q600 150 640 290" stroke="#E8B960" strokeWidth="1.5" fill="none" opacity="0.7"/>
-  <!-- Silvery metallic shine lines -->
-  <line x1="570" y1="250" x2="570" y2="380" stroke="#C0C0C0" strokeWidth="0.8" opacity="0.4"/>
-  <line x1="600" y1="200" x2="600" y2="400" stroke="#C0C0C0" strokeWidth="1" opacity="0.5"/>
-  <line x1="630" y1="250" x2="630" y2="380" stroke="#C0C0C0" strokeWidth="0.8" opacity="0.4"/>
-  <!-- Floating liquid mercury drops -->
-  <circle cx="300" cy="250" r="12" fill="#C0C0C0" opacity="0.7" filter="url(#glow)"><animate attributeName="r" values="10;14;10" dur="3s" repeatCount="indefinite"/></circle>
-  <circle cx="850" cy="200" r="8" fill="#E8E8E8" opacity="0.6" filter="url(#glow)"><animate attributeName="r" values="7;11;7" dur="2.5s" repeatCount="indefinite"/></circle>
-  <circle cx="200" cy="380" r="6" fill="#D4D4D4" opacity="0.5" filter="url(#glow)"><animate attributeName="r" values="5;9;5" dur="2.8s" repeatCount="indefinite"/></circle>
-  <!-- Parad Pyramid silhouette -->
-  <polygon points="900,290 960,380 840,380" stroke="#E8B960" strokeWidth="1.5" fill="none" opacity="0.6"/>
-  <text x="900" y="310" textAnchor="middle" fontSize="11" fill="#E8B960">Parad</text>
-  <text x="900" y="325" textAnchor="middle" fontSize="11" fill="#E8B960">Pyramid</text>
-  <!-- Parad Keel/Nail -->
-  <line x1="150" y1="280" x2="150" y2="400" stroke="#C0C0C0" strokeWidth="3" strokeLinecap="round" opacity="0.7"/>
-  <text x="150" y="420" textAnchor="middle" fontSize="11" fill="#C0C0C0">Parad Keel</text>
+  <rect width="1200" height="600" fill="url(#gmercury-parad)"/>
+  <circle cx="600" cy="260" r="160" stroke="#6B7280" strokeWidth="2" fill="none" opacity="0.5"/>
+  <circle cx="600" cy="260" r="100" stroke="#6B7280" strokeWidth="1" fill="none" opacity="0.3" strokeDasharray="6 3"/>
+  <circle cx="600" cy="260" r="45" fill="#6B7280" opacity="0.7" filter="url(#glowmercury-parad)"/>
+  <text x="600" y="275" textAnchor="middle" fontSize="40" fill="white" fontFamily="serif">⚗</text>
+  <rect x="200" y="420" width="800" height="6" rx="3" fill="#6B7280" opacity="0.3"/>
+  <rect x="350" y="450" width="500" height="4" rx="2" fill="#6B7280" opacity="0.2"/>
 </svg>

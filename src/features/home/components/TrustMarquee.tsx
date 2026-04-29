@@ -2,21 +2,21 @@
 
 export function TrustMarquee() {
   const brands = [
-    { name: 'Mahindra', logo: '/images/trust/mahindra.svg' },
-    { name: 'TCS', logo: '/images/trust/tcs.svg' },
-    { name: 'Adani', logo: '/images/trust/adani.svg' },
-    { name: 'Times of India', logo: '/images/trust/toi.svg' },
-    { name: 'P&G', logo: '/images/trust/pg.svg' },
-    { name: 'Reliance', logo: '/images/trust/reliance.svg' },
-    { name: 'Haldiram', logo: '/images/trust/haldiram.svg' },
-    { name: 'Bajaj', logo: '/images/trust/bajaj.svg' },
+    { name: 'Mahindra', logo: '/images/trust/mahindra.png' },
+    { name: 'TCS', logo: '/images/trust/tcs.png' },
+    { name: 'Adani', logo: '/images/trust/adani.png' },
+    { name: 'Times of India', logo: '/images/trust/toi.png' },
+    { name: 'P&G', logo: '/images/trust/pg.png' },
+    { name: 'Reliance', logo: '/images/trust/reliance.png' },
+    { name: 'Haldiram', logo: '/images/trust/haldiram.png' },
+    { name: 'Bajaj', logo: '/images/trust/bajaj.png' },
   ];
 
   return (
     <section className="relative py-10 sm:py-14 overflow-hidden">
       {/* Slow looping gradient background */}
       <div className="absolute inset-0 bg-gradient-to-r from-nidra-indigo/5 via-prakash-gold/10 to-sacred-saffron/5 bg-[length:400%_400%] animate-[trustGradient_12s_ease-in-out_infinite] rounded-[60px] mx-4 sm:mx-8" />
-      
+
       <style>{`
         @keyframes trustGradient {
           0%, 100% { background-position: 0% 50%; }
@@ -53,7 +53,7 @@ export function TrustMarquee() {
           </p>
         </div>
 
-        {/* Logo Grid */}
+        {/* Logo Grid – Images only, no text labels */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
           {brands.map((brand, i) => (
             <div
@@ -65,25 +65,15 @@ export function TrustMarquee() {
                 perspective: 800,
               }}
             >
-              {/* Logo */}
-              <div className="w-16 h-16 sm:w-20 sm:h-20 mb-3 flex items-center justify-center">
-                {/* Fallback SVG if no image – simple letter logo */}
-                {brand.logo ? (
-                  <img
-                    src={brand.logo}
-                    alt={brand.name}
-                    className="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition"
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                      e.currentTarget.nextElementSibling?.classList.remove('hidden');
-                    }}
-                  />
-                ) : null}
-                <div className={`w-full h-full rounded-full bg-gradient-to-br from-nidra-indigo/10 to-prakash-gold/20 flex items-center justify-center text-xl sm:text-2xl font-bold text-nidra-indigo/70 ${brand.logo ? 'hidden' : ''}`}>
-                  {brand.name.charAt(0)}
-                </div>
+              {/* Only the PNG image, no text fallback */}
+              <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+                <img
+                  src={brand.logo}
+                  alt={brand.name}
+                  className="w-full h-full object-contain opacity-80 hover:opacity-100 transition"
+                />
               </div>
-              <span className="text-xs sm:text-sm font-medium text-nidra-indigo/70">{brand.name}</span>
+              {/* No text label – strictly image only */}
             </div>
           ))}
         </div>

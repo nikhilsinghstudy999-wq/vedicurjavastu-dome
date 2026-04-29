@@ -2,6 +2,7 @@
 import { Suspense, useState, useEffect, useCallback, useRef } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import { markTransition } from '@/lib/pageTransition';
 import { motion } from 'framer-motion';
 import Header from '@/features/shared/components/Header';
 import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
@@ -161,7 +162,7 @@ function RashiGrid() {
       <div className="flex flex-wrap justify-center gap-6 mb-12"><PremiumCalendar /><PremiumClock /></div>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
         {RASHIS.map((rashi, i) => (
-          <Link key={rashi.name} href={`/free-tools/daily-horoscope?rashi=${rashi.name.toLowerCase()}`}>
+          <Link key={rashi.name} onClick={markTransition} href={`/free-tools/daily-horoscope?rashi=${rashi.name.toLowerCase()}`}>
             <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.05 }} whileHover={{ scale: 1.05, rotateY: 5 }}
               className="group relative bg-gradient-to-br from-[#2a1040] to-[#1a0033] rounded-2xl p-4 sm:p-6 cursor-pointer border border-purple-500/30 shadow-[0_8px_30px_rgba(139,92,246,0.3)] hover:shadow-[0_12px_40px_rgba(139,92,246,0.5)] transition-all duration-500"
               style={{ transformStyle: 'preserve-3d', perspective: 1000 }}>
