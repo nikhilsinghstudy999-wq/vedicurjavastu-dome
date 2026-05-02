@@ -49,7 +49,7 @@ const insightsDropdown = [
 ];
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   NAV ITEM
+   NAV ITEM – mobile-friendly, white dropdown text
    ═══════════════════════════════════════════════════════════════════════════ */
 function NavItem({ label, href, dropdown, isMobile, onNavigate }: {
   label: string; href: string; dropdown?: { name: string; href: string }[]; isMobile: boolean; onNavigate: () => void;
@@ -71,9 +71,18 @@ function NavItem({ label, href, dropdown, isMobile, onNavigate }: {
       <AnimatePresence>
         {open && dropdown && (
           <motion.div initial={{ opacity: 0, y: -4, scale: 0.98 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -4, scale: 0.98 }} transition={{ duration: 0.15, ease: [0.23,1,0.32,1] }}
-            className={isMobile ? 'mt-2 space-y-1 bg-white/5 rounded-2xl p-3 border border-white/10' : 'absolute top-full left-1/2 -translate-x-1/2 mt-3 w-60 bg-white/98 backdrop-blur-2xl rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-prakash-gold/20 overflow-hidden z-50'}>
+            className={isMobile 
+              ? 'mt-2 space-y-1 bg-black/20 backdrop-blur-xl rounded-2xl p-3 border border-white/15'
+              : 'absolute top-full left-1/2 -translate-x-1/2 mt-3 w-60 bg-white/98 backdrop-blur-2xl rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.35)] border border-prakash-gold/20 overflow-hidden z-50'}>
             <div className="max-h-72 overflow-y-auto py-2">
-              {dropdown.map((item) => (<Link key={item.href} href={item.href} onClick={() => { onNavigate(); setOpen(false); }} className="block px-5 py-2.5 text-sm text-nidra-indigo hover:bg-prakash-gold/10 hover:text-sacred-saffron transition-colors font-medium whitespace-nowrap">{item.name}</Link>))}
+              {dropdown.map((item) => (
+                <Link key={item.href} href={item.href} onClick={() => { onNavigate(); setOpen(false); }} 
+                  className={isMobile
+                    ? 'block px-5 py-3 text-base text-white hover:bg-white/15 rounded-xl transition-colors font-medium'
+                    : 'block px-5 py-2.5 text-sm text-nidra-indigo hover:bg-prakash-gold/10 hover:text-sacred-saffron transition-colors font-medium whitespace-nowrap'}>
+                  {item.name}
+                </Link>
+              ))}
             </div>
           </motion.div>
         )}
@@ -115,7 +124,6 @@ export default function Header() {
         @keyframes headerGradient { 0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%} }
         @keyframes lineLoop { 0%{background-position:0% 50%}100%{background-position:300% 50%} }
 
-        /* Full‑width bar, no border‑radius, exactly 60px height (h-15) */
         .header-bar {
           position: fixed;
           top: 0;
@@ -131,7 +139,6 @@ export default function Header() {
           box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
 
-        /* Slim looping gradient line at the very bottom of the header */
         .header-bar::after {
           content: '';
           position: absolute;
@@ -144,12 +151,10 @@ export default function Header() {
           animation: lineLoop 6s linear infinite;
         }
 
-        /* Spacer to push page content exactly 60px down */
         .header-spacer {
           height: 60px;
         }
 
-        /* Navigation link styles */
         .nav-link {
           font-size: 13px;
           font-weight: 600;
@@ -165,7 +170,6 @@ export default function Header() {
           color: #FFD700;
         }
 
-        /* CTA button */
         .cta-btn {
           font-size: 13px;
           font-weight: 700;
@@ -186,23 +190,29 @@ export default function Header() {
           transform: translateY(-1px);
         }
 
-        @media (min-width: 1024px) {
-          .nav-link { font-size: 14px; padding: 9px 16px; }
-          .cta-btn { font-size: 14px; padding: 10px 24px; }
-        }
-
+        /* ── MOBILE OPTIMIZATIONS ── */
         @media (max-width: 640px) {
           .header-bar { height: 56px; }
           .header-spacer { height: 56px; }
-          .nav-link { font-size: 11px; padding: 7px 10px; }
-          .cta-btn { font-size: 11px; padding: 7px 14px; }
+          .nav-link { 
+            font-size: 14px;
+            padding: 10px 16px;
+          }
+          .cta-btn { 
+            font-size: 13px;
+            padding: 10px 20px;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .nav-link { font-size: 14px; padding: 9px 16px; }
+          .cta-btn { font-size: 14px; padding: 10px 24px; }
         }
       `}</style>
 
       {/* HEADER BAR */}
       <header className="header-bar">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
-          {/* Logo */}
+        <div className="w-full max-w-7xl mx-auto px-3 sm:px-6 flex items-center justify-between">
           <Link href="/" className="flex items-center flex-shrink-0 mr-3" onClick={handleNavigate}>
             {!imgError ? (
               <Image src="/logo/logo.png" alt="VedicUrja" width={120} height={30} className="h-6 sm:h-7 w-auto object-contain" onError={() => setImgError(true)} priority />
@@ -222,14 +232,14 @@ export default function Header() {
           <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0 ml-3">
             <LanguageSwitcher />
             <Link href="/contact" className="hidden sm:inline-flex cta-btn">Consult Vastuvid ji</Link>
-            <button onClick={() => setMobileMenuOpen(true)} className="lg:hidden w-8 h-8 rounded-lg flex items-center justify-center text-white border border-white/20 bg-white/10 hover:bg-white/20 transition">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h16"/></svg>
+            <button onClick={() => setMobileMenuOpen(true)} className="lg:hidden w-9 h-9 rounded-lg flex items-center justify-center text-white border border-white/20 bg-white/10 hover:bg-white/20 transition">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
           </div>
         </div>
       </header>
 
-      {/* EXACT HEIGHT SPACER – prevents white gap */}
+      {/* SPACER */}
       <div className="header-spacer" />
 
       {/* MOBILE MENU OVERLAY */}
