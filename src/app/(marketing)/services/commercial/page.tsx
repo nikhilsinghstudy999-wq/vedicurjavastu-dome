@@ -27,7 +27,7 @@ export default function CommercialVastuPage() {
         <section className="py-16 sm:py-24 bg-gradient-to-b from-white via-vastu-stone/10 to-white relative overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-prakash-gold/30 to-transparent" />
           <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-            <div className="text-center mb-12"><span className="text-sacred-saffron uppercase tracking-[0.2em] text-sm font-semibold">The Sacred Blueprint for Business</span><h2 className="font-serif text-3xl sm:text-4xl text-nidra-indigo mt-3 mb-4">The Vastu Purusha Mandala – 64‑Grid Commercial Architecture</h2><p className="text-nidra-indigo/60 max-w-3xl mx-auto text-sm">For offices and shops, the Manduka Mandala (8×8 grid) maps the Vastu Purusha. Each square is governed by a deity, each direction by an element.</p></div>
+            <div className="text-center mb-12"><span className="text-sacred-saffron uppercase tracking-[0.2em] text-sm font-semibold">The Sacred Blueprint for Business</span><h2 className="font-serif text-3xl sm:text-4xl text-nidra-indigo mt-3 mb-4">The Vastu Purusha Mandala – 81‑Grid Commercial Architecture</h2><p className="text-nidra-indigo/60 max-w-3xl mx-auto text-sm">For offices and shops, the Paramasayika Mandala (9×9 grid) maps the Vastu Purusha. Each square is governed by a deity, each direction by an element.</p></div>
           </div>
         </section>
 

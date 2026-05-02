@@ -28,8 +28,8 @@ export default function ResidentialVastuPage() {
           <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
             <div className="text-center mb-12">
               <span className="text-sacred-saffron uppercase tracking-[0.2em] text-sm font-semibold">The Sacred Blueprint</span>
-              <h2 className="font-serif text-3xl sm:text-4xl text-nidra-indigo mt-3 mb-4">The Vastu Purusha Mandala – 64‑Grid Residential Architecture</h2>
-              <p className="text-nidra-indigo/60 max-w-3xl mx-auto text-sm">Every residential Vastu consultation begins with the <strong>Vastu Purusha Mandala</strong> — the 8×8 grid of 64 squares. At VedicUrja, Vastuvid K.K. Nagaich overlays this ancient cosmic diagram onto your floor plan to identify doshas and prescribe precise remedies.</p>
+              <h2 className="font-serif text-3xl sm:text-4xl text-nidra-indigo mt-3 mb-4">The Vastu Purusha Mandala – 81‑Grid Residential Architecture</h2>
+              <p className="text-nidra-indigo/60 max-w-3xl mx-auto text-sm">Every residential Vastu consultation begins with the <strong>Vastu Purusha Mandala</strong> — the 9×9 grid of 81 squares. At VedicUrja, Vastuvid K.K. Nagaich overlays this ancient cosmic diagram onto your floor plan to identify doshas and prescribe precise remedies.</p>
             </div>
           </div>
         </section>
