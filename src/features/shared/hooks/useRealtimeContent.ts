@@ -3,7 +3,6 @@ import { useState, useEffect, useRef } from 'react';
 
 const staticData: Record<string, any[]> = {
   free_tools: [
-    { id: '1', tool_key: 'kundali', title: 'AI Kundali', description: 'Vedic birth chart with nakshatra and planetary positions', icon: '🔮', color: '#FF9933', is_published: true, order_index: 1 },
     { id: '2', tool_key: 'daily_horoscope', title: 'Daily Horoscope', description: 'Your 12‑Rashi forecast, updated every morning', icon: '✦', color: '#7B2FBE', icon_type: 'svg', is_published: true, order_index: 2 },
     { id: '3', tool_key: 'name_suggestion', title: 'Name Suggestion', description: 'Auspicious syllables based on 27 Nakshatras', icon: '✨', color: '#E8B960', is_published: true, order_index: 3 },
   ],

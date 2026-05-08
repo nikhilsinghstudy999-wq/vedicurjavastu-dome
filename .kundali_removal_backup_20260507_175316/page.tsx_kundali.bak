@@ -1,0 +1,75 @@
+'use client';
+import Header from '@/features/shared/components/Header';
+import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
+import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
+import { SoundController } from '@/features/shared/components/SoundController';
+import GuruAuthority from '@/features/shared/components/GuruAuthority';
+import PainPointCard from '@/features/shared/components/luxury/PainPointCard';
+import WhyChooseUs from '@/features/shared/components/luxury/WhyChooseUs';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+export default function KundaliAnalysisPage() {
+  return (<>
+    <LuxuryCursor /><SoundController /><Header /><SmoothScroll>
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0a0020] via-[#1a0050] to-[#0a0020] bg-[length:400%_400%] animate-[heroLoop_12s_ease_infinite]">
+        <div className="container mx-auto px-4 relative z-10 text-center mt-16">
+          <span className="text-prakash-gold uppercase tracking-[0.3em] text-sm mb-4 block font-semibold">Advance Treatment</span>
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 drop-shadow-2xl"><span className="bg-gradient-to-r from-violet-300 via-prakash-gold to-sacred-saffron bg-clip-text text-transparent">Kundali Analysis</span></h1>
+          <p className="text-lg text-white/70 max-w-3xl mx-auto mb-4">Vedic Nadi Jyotish · 120‑year Dasha · Shadbala · Gemstone & Rudraksha</p>
+          <p className="text-sm text-white/50 max-w-2xl mx-auto mb-10">Trained in Nadi Jyotish under direct Guru‑Shishya Parampara — 100M+ views, 80K+ followers.</p>
+          <Link href="/bookings" className="px-10 py-5 bg-gradient-to-r from-violet-500 via-prakash-gold to-sacred-saffron text-nidra-indigo font-bold rounded-full shadow-[0_10px_30px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_45px_rgba(255,153,51,0.5)] transition-all text-lg">Book Kundali Consultation</Link>
+        </div>
+      </section>
+      <GuruAuthority /><WhyChooseUs />
+
+      {/* JOURNEY */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} className="text-center mb-14">
+            <span className="text-sacred-saffron uppercase tracking-[0.2em] text-sm font-semibold">Your Journey</span>
+            <h2 className="font-serif text-3xl sm:text-4xl text-nidra-indigo mt-3 mb-4">Kundali Reading — <span className="bg-gradient-to-r from-sacred-saffron via-prakash-gold to-kumkuma-red bg-clip-text text-transparent">Your Cosmic Blueprint</span></h2>
+          </motion.div>
+          <div className="grid sm:grid-cols-4 gap-4 mb-16">
+            {[{step:'01',title:'Submit Birth Details',desc:'Exact date, time, and place of birth for precise chart generation'},{step:'02',title:'Chart Generated',desc:'15‑20 page Kundali: Lagna, Navamsa, planetary degrees, Vimshottari Dasha'},{step:'03',title:'Deep Analysis',desc:'Shadbala (6‑fold strength), 10 Raj & Dhana Yogas, all doshas identified'},{step:'04',title:'Personalized Remedies',desc:'Gemstone prescription, Rudraksha, mantra protocol, yantra guidance'}].map((s,i)=>(<motion.div key={i} initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*0.1}} className="text-center p-6 bg-vastu-stone/20 rounded-2xl"><div className="text-3xl font-bold text-prakash-gold mb-2">{s.step}</div><h3 className="font-serif text-lg text-nidra-indigo font-bold">{s.title}</h3><p className="text-sm text-nidra-indigo/60 mt-2">{s.desc}</p></motion.div>))}
+          </div>
+        </div>
+      </section>
+
+      {/* PAIN POINTS */}
+      <section className="py-20 bg-vastu-stone/10">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="font-serif text-3xl text-center text-nidra-indigo mb-12">🔮 What's Written in Your Stars?</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <PainPointCard title="Personal Life Kundali" accent="#FFD700" points={["Marriage delays despite everything being 'perfect'","Wrong relationships repeatedly — toxic pattern","Career confusion — multiple job changes","Feeling 'something is blocking me'","Health problems started at a specific age, never resolved","Financial instability despite good education","Children not being born — medical tests clear","Constant fear, anxiety, overthinking","Feeling unlucky — others get opportunities","Family astrologer's predictions never came true"]} />
+            <PainPointCard title="Business Kundali" accent="#10B981" points={["Business started on wrong muhurat — struggling since","Partnership conflicts despite compatible personalities","Investment timing always wrong — buy high, sell low","Expansion plans failing despite market demand","Legal problems erupting at specific planetary periods","Employee theft, fraud, deception","Competitor overtaking despite your advantage","Product launch failures despite market research","Unable to retain key talent","Business astrology predictions from others inaccurate"]} />
+            <PainPointCard title="Child Kundali" accent="#EC4899" points={["Child's behavior changed suddenly — aggression, withdrawal","Academic decline despite intelligence and tutoring","Wrong friend circle, bad influences","Health complaints doctors dismiss as 'growing pains'","Addiction risks — screen, substance, gambling","Unable to choose career path — confused","Fear of child's future — will they succeed?","Child's marriage prospects blocked","Sibling rivalry, jealousy, division","Child's kundali shows doshas — Mangalik, Shani"]} />
+          </div>
+        </div>
+      </section>
+
+      {/* PRICING */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 max-w-2xl">
+          <motion.div initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} className="text-center mb-14">
+            <span className="text-sacred-saffron uppercase tracking-[0.2em] text-sm font-semibold">Investment</span>
+            <h2 className="font-serif text-3xl sm:text-4xl text-nidra-indigo">Pricing Plans</h2>
+          </motion.div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[{plan:'Basic',price:'₹2,999',color:'#C0C0C0',features:['Janam Kundali + 12‑Bhava analysis','Shadbala calculation','Vimshottari Dasha overview','One 30‑minute call']},{plan:'Premium',price:'₹6,999',color:'#FFD700',features:['All Basic features','Detailed Gochar transit (5‑year)','10 Raj & Dhana Yogas','Gemstone & Rudraksha prescription','Mantra protocol (48‑day)','Kundali matching (Guna Milan)','PDF report (20+ pages)']}].map(p=>(<motion.div key={p.plan} whileHover={{y:-8,scale:1.03}} className="relative p-6 rounded-2xl bg-white/80 border border-prakash-gold/20 shadow-lg"><div className="absolute top-0 left-0 right-0 h-1.5 rounded-t-2xl" style={{backgroundColor:p.color}}/><h3 className="font-serif text-xl text-nidra-indigo font-bold mt-2">{p.plan}</h3><div className="text-3xl font-bold mt-2" style={{color:p.color}}>{p.price}</div><ul className="mt-4 space-y-2 text-sm text-nidra-indigo/70">{p.features.map((f,i)=><li key={i} className="flex items-start gap-2"><span className="mt-1 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{backgroundColor:p.color}}/>{f}</li>)}</ul></motion.div>))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a0020] via-[#1a0050] to-[#0a0020] bg-[length:400%_400%] animate-[heroLoop_12s_ease_infinite]" />
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <h2 className="font-serif text-3xl sm:text-4xl text-white mb-4">Read Your Cosmic Blueprint</h2>
+          <p className="text-white/70 max-w-xl mx-auto mb-8">100M+ views, 80K+ followers — personally read by Vastuvid KK Nagaich.</p>
+          <Link href="/bookings" className="luxury-button text-lg">Schedule Your Kundali Consultation →</Link>
+        </div>
+      </section>
+    </SmoothScroll>
+    <style>{`@keyframes heroLoop{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}`}</style>
+  </>);
+}

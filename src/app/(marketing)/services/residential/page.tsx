@@ -1,131 +1,291 @@
+'use client';
 import Header from '@/features/shared/components/Header';
 import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
 import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
 import { SoundController } from '@/features/shared/components/SoundController';
+import GuruAuthority from '@/features/shared/components/GuruAuthority';
+import WhyChooseUs from '@/features/shared/components/luxury/WhyChooseUs';
+import RemediesCTA from '@/features/shared/components/luxury/RemediesCTA';
+import VirtualConsultCTA from '@/features/shared/components/luxury/VirtualConsultCTA';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+/* ---- Reusable Components ---- */
+function PainPointCard({ title, accent, points, delay }: { title: string; accent: string; points: string[]; delay?: number }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: delay || 0, duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
+      whileHover={{ y: -6, scale: 1.02 }}
+      className="group relative"
+    >
+      <div className="absolute -inset-0.5 rounded-[28px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"
+        style={{ background: `linear-gradient(135deg, ${accent}40, transparent)` }} />
+      <div className="relative p-6 rounded-[28px] bg-white/80 backdrop-blur-xl border border-prakash-gold/20 shadow-[0_8px_32px_rgba(26,42,58,0.06)] hover:shadow-[0_20px_50px_rgba(200,138,93,0.15)] transition-shadow duration-500">
+        <div className="absolute top-0 left-0 right-0 h-1.5 rounded-t-[28px]" style={{ backgroundColor: accent }} />
+        <h3 className="font-serif text-xl text-nidra-indigo font-bold mb-5">{title}</h3>
+        <ul className="space-y-3">
+          {points.map((point, i) => (
+            <li key={i} className="flex items-start gap-3 text-sm text-nidra-indigo/70 leading-relaxed">
+              <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full" style={{ backgroundColor: accent }} />
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </motion.div>
+  );
+}
+
+function PricingCard({ plan, price, color, features, best }: { plan: string; price: string; color: string; features: string[]; best?: boolean }) {
+  return (
+    <motion.div whileHover={{ y: -8, scale: 1.03 }} className={`relative p-6 rounded-2xl border-2 shadow-lg hover:shadow-xl transition-all ${best ? 'border-prakash-gold bg-white' : 'bg-white/80 border-prakash-gold/20'}`}>
+      {best && <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-prakash-gold to-sacred-saffron text-white px-4 py-1 rounded-full text-xs font-bold">✦ Most Popular</div>}
+      <div className="absolute top-0 left-0 right-0 h-1.5 rounded-t-2xl" style={{ backgroundColor: color }} />
+      <h3 className="font-serif text-xl text-nidra-indigo font-bold mt-2">{plan}</h3>
+      <div className="text-3xl font-bold mt-2" style={{ color }}>{price}</div>
+      <ul className="mt-4 space-y-2 text-sm text-nidra-indigo/70">
+        {features.map((f, i) => <li key={i} className="flex items-start gap-2"><span className="mt-1 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: color }} />{f}</li>)}
+      </ul>
+    </motion.div>
+  );
+}
 
 export default function ResidentialVastuPage() {
-  return (
-    <>
-      <LuxuryCursor /><SoundController /><Header /><SmoothScroll>
-        {/* ── LOOPING GRADIENT HERO ── */}
-        <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1a0000] via-[#3a0a0a] to-[#0a0000] bg-[length:400%_400%] animate-[heroLoop_12s_ease_infinite]">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.04),transparent_60%)]" />
-          <div className="absolute top-20 left-[8%] w-80 h-80 rounded-full bg-gradient-to-br from-prakash-gold/8 to-transparent backdrop-blur-3xl border border-white/10 animate-[float_10s_ease-in-out_infinite]" />
-          <div className="absolute bottom-10 right-[5%] w-64 h-64 rounded-full bg-gradient-to-tl from-sacred-saffron/5 to-transparent backdrop-blur-2xl border border-white/10 animate-[float_12s_ease-in-out_infinite_reverse]" />
-          <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center mt-16">
-            <span className="text-prakash-gold uppercase tracking-[0.3em] text-xs sm:text-sm mb-4 block font-semibold">Extensive Framework · विस्तृत ढांचा</span>
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-2xl"><span className="bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red bg-clip-text text-transparent">Residential Vastu</span></h1>
-            <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl mx-auto mb-4 px-4 leading-relaxed">Brahmnabhi · Dehali Sthapna · Garbh Vinyas · Interior Vastu · Devata Vastu</p>
-            <p className="text-sm sm:text-base text-white/50 max-w-2xl mx-auto mb-10">11 authentic Vedic residential pujas — performed by Vastuvid K.K. Nagaich, 4th generation Guru, MBA, Ex‑CEO, 2 Lakh+ clients worldwide.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"><Link href="/bookings" className="px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_30px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_45px_rgba(255,153,51,0.5)] transition-all text-lg">Book Consultation</Link><Link href="#practices" className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-10 py-5 rounded-full text-lg font-medium">Explore Practices ↓</Link></div>
-          </div>
-        </section>
+  return (<>
+    <LuxuryCursor /><SoundController /><Header /><SmoothScroll>
+      {/* HERO */}
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1a0000] via-[#3a0a0a] to-[#0a0000] bg-[length:400%_400%] animate-[heroLoop_12s_ease_infinite]">
+        <div className="container mx-auto px-4 relative z-10 text-center mt-16">
+          <span className="text-prakash-gold uppercase tracking-[0.3em] text-sm mb-4 block font-semibold">Extensive Framework</span>
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-2xl">
+            <span className="bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red bg-clip-text text-transparent">Residential Vastu</span>
+          </h1>
+          <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-4">For flats, apartments, independent houses & government quarters.</p>
+          <p className="text-sm text-white/50 max-w-2xl mx-auto mb-10">100M+ views · 80K+ followers · Vastuvid KK Nagaich — Tantra‑trained, MBA, Ex‑CEO, 4th‑gen Guru.</p>
+          <Link href="/bookings" className="px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_30px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_45px_rgba(255,153,51,0.5)] transition-all text-lg">Book Consultation</Link>
+        </div>
+      </section>
 
-        {/* ── 64‑GRID MANDALA ── */}
-        <section className="py-16 sm:py-24 bg-gradient-to-b from-white via-vastu-stone/10 to-white relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-prakash-gold/30 to-transparent" />
-          <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-            <div className="text-center mb-12">
-              <span className="text-sacred-saffron uppercase tracking-[0.2em] text-sm font-semibold">The Sacred Blueprint</span>
-              <h2 className="font-serif text-3xl sm:text-4xl text-nidra-indigo mt-3 mb-4">The Vastu Purusha Mandala – 81‑Grid Residential Architecture</h2>
-              <p className="text-nidra-indigo/60 max-w-3xl mx-auto text-sm">Every residential Vastu consultation begins with the <strong>Vastu Purusha Mandala</strong> — the 9×9 grid of 81 squares. At VedicUrja, Vastuvid K.K. Nagaich overlays this ancient cosmic diagram onto your floor plan to identify doshas and prescribe precise remedies.</p>
+      <GuruAuthority />
+      <WhyChooseUs />
+
+      {/* ===== CATEGORIZATION SECTION ===== */}
+      <section className="py-20 sm:py-28 bg-gradient-to-b from-white via-vastu-stone/10 to-white relative overflow-hidden">
+        <div className="container mx-auto px-4 max-w-6xl relative z-10">
+          <div className="text-center mb-16">
+            <span className="text-sacred-saffron uppercase tracking-[0.2em] text-sm font-semibold">Your Journey</span>
+            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-nidra-indigo mt-3 mb-4">Find <span className="bg-gradient-to-r from-sacred-saffron via-prakash-gold to-kumkuma-red bg-clip-text text-transparent">Your Situation</span></h2>
+            <p className="text-nidra-indigo/60 max-w-2xl mx-auto text-sm sm:text-base">Every home tells a story. Select your reality — you are not alone in what you're experiencing.</p>
+          </div>
+
+          {/* --- FLATS & APARTMENTS --- */}
+          <div className="mb-16">
+            <h3 className="font-serif text-2xl sm:text-3xl text-nidra-indigo text-center mb-8">🏢 Flats & Apartments</h3>
+            <p className="text-center text-sm text-nidra-indigo/50 mb-6">Flats are pre‑built — you move into a space already constructed. Pain points relate to existing defects, builder compliance gaps, and limited renovation options.</p>
+            <div className="grid md:grid-cols-2 gap-8">
+              <PainPointCard title="New Possession (Recently Moved In)" accent="#E8B960" delay={0} points={[
+                "Health breakdown after possession — frequent illnesses with no medical diagnosis",
+                "Money drain despite higher income — savings never accumulate, loans pile up",
+                "Sleep destroyed since day one — insomnia, nightmares, waking exhausted at 3 AM",
+                "Family fighting constantly — arguments that never happened in previous home",
+                "Career stuck despite relocation — promotions blocked, business deals collapse",
+                "That gut feeling of 'something is wrong' — a specific room or corner feels heavy",
+                "Builder said '100% Vastu Compliant' but problems persist and multiply",
+                "Child's behavior changed after moving — aggression, academic decline, withdrawal",
+                "Unable to sell or rent despite prime location — multiple deals collapse at last moment",
+                "Business losses coinciding exactly with flat purchase timeline"
+              ]} />
+              <PainPointCard title="Living Here for Years (Ongoing Issues)" accent="#C88A5D" delay={0.1} points={[
+                "Years of hard work, zero savings — money vanishes, EMIs pile up, no financial growth",
+                "One family member always sick — the cycle rotates but never breaks",
+                "Marriage under constant strain — fighting over nothing, contemplating separation",
+                "Career/business rollercoaster — periods of success followed by sudden unexplained crashes",
+                "Feeling stuck — no forward movement for years despite all efforts",
+                "Children's future concerns — marriage delays, career confusion, addiction risks",
+                "Constant fear and anxiety at home — no peace of mind, hypervigilance",
+                "Repeated repair needs — plumbing leaks, electrical failures, wall cracks, termites",
+                "Bad dreams and disturbed sleep patterns — waking at 2‑4 AM, feeling watched",
+                "Addiction and mental health decline creeping into family members"
+              ]} />
             </div>
           </div>
-        </section>
 
-        {/* ── 11 SACRED PRACTICES ── */}
-        <section id="practices" className="py-16 sm:py-24 bg-white relative">
-          <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
-            <div className="text-center mb-14"><span className="text-sacred-saffron uppercase tracking-[0.2em] text-sm font-semibold">The 11 Sacred Practices</span><h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-nidra-indigo mt-3 mb-4">Authentic Vedic Pujas for Complete Home Energy Harmonisation</h2><p className="text-nidra-indigo/60 max-w-2xl mx-auto text-sm">Each puja is performed at an astrologically determined Muhurta.</p></div>
-            <div className="space-y-16">
-              {[
-                {num:'01',title:'Bhoomi Sanskar (Land Purification)',desc:'Panchgavya, Panchamrit, Sarvaushadhi used to consecrate land. Pit dug in NE corner. Best Nakshatras: Rohini, Uttara, Anuradha, Hastham, Pushya.',features:['Site cleansing & sanctification','Panchgavya & Panchamrit offering','Vastu Purusha invocation','Kalash Sthapana in NE','Muhurta selection'],color:'#E8B960'},
-                {num:'02',title:'Shilanyas (Foundation Stone Laying)',desc:'Consecrated stone laid in SW corner of trenches. Includes Sutra‑Pada, Ganesh Puja, Sankalpa, Kalash Sthapana.',features:['Foundation stone consecration','Sutra‑Pada site measurement','Ganesh Puja & Sankalpa','Kalash Sthapana & Navratna','SW corner placement'],color:'#C88A5D'},
-                {num:'03',title:'Brahmnabhi Sthapna (Central Energy Activation)',desc:'Divine Energy Tool installed at geometric centre (Brahmasthan) connecting home to cosmic Prana. EMF management included.',features:['Geometric centre identification','Divine Energy Tool installation','Cosmic Prana connection','EMF disruption neutralisation','8‑directional calibration'],color:'#FF9933'},
-                {num:'04',title:'Dehali Sthapna (Main Door Threshold Puja)',desc:'Invokes Maa Lakshmi, neutralises Rahu dosha, establishes threshold as guardian of prosperity. Decorated with Swastik, rangoli, flowers.',features:['Threshold sanctification','Maa Lakshmi invocation','Rahu dosha neutralisation','Swastik & auspicious symbols','Entrance energy calibration'],color:'#E25822'},
-                {num:'05',title:'Garbh Vinyas (Foundation Deposit / Womb Arrangement)',desc:'Seed bowl, gold plough, copper yoke, silver cow at cardinal points. Awakens Vastu Purusha. Described in Padmasaṃhitā.',features:['Seed bowl & gold plough','Cardinal silver cow','Vastu Purusha awakening','Creative energy connection','Agama‑prescribed sequence'],color:'#8B5A2B'},
-                {num:'06',title:'Interior Vastu (Room‑by‑Room Directional Alignment)',desc:'Audit of 12+ zones: entrance, living, kitchen, bedroom, children, pooja, dining, bathroom, staircase. Direction + furniture + colour + ventilation.',features:['12‑zone room‑by‑room audit','Kitchen SE, East‑facing cook','Bedroom SW, head South','Living N/E light tones','Pooja NE clean & sacred'],color:'#D4A373'},
-                {num:'07',title:'Devata Vastu (Deity Placement & Home Temple)',desc:'Mandir in NE, deities face West. Idols 2‑9 inches on raised platform. Brass/copper utensils. Daily ghee lamp. Never share toilet wall.',features:['NE corner temple','Deity West‑facing','Raised platform (6‑12\")','Brass/copper utensils','Daily ghee lamp'],color:'#FFD700'},
-                {num:'08',title:'Prateek Vastu (Sacred Symbol Placement)',desc:'Swastik, Om, Trishul, mandala patterns at entrance, N/E walls, pooja room. Brass pyramids for SW. Rangoli & diyas in SE.',features:['Swastik wealth activation','Om cosmic vibration','Trishul protection','Rangoli & diya in SE','Brass pyramid SW'],color:'#FF6347'},
-                {num:'09',title:'Ratna Sthapna (Nav‑Ratna Gemstone Embedment)',desc:'9 certified gemstones (Ruby to Cat\'s Eye) embedded under flooring per Mayamatam. Permanent Vastu correction.',features:['9 certified gemstones','Planetary correspondence','Directional embedment','Mayamatam placement','Permanent correction'],color:'#9370DB'},
-                {num:'10',title:'Divya Grah Pravesh (Grand Housewarming)',desc:'Ganesh Puja, Kalash Puja, Navagraha Shanti, Vastu Puja, Havan, coconut breaking, milk‑boiling ceremony.',features:['Ganesh & Kalash Puja','Navagraha Shanti Havan','Vastu Purusha Havan','Coconut breaking','Milk boiling abundance'],color:'#E8B960'},
-                {num:'11',title:'Vastu Shanti Puja (Ongoing Harmonisation)',desc:'Space cleansing, Gangajal sprinkling, Ashoka leaves, Kalash Sthapana, Havan. Balances five elements. Annual renewal recommended.',features:['Space cleansing & Gangajal','Ashoka leaf & Swastik','Vastu Purusha mantra','Ghee & herb Havan','Annual renewal'],color:'#C10000'},
-              ].map((p,i)=>(
-                <div key={i} className={`flex flex-col ${i%2===0?'lg:flex-row':'lg:flex-row-reverse'} gap-8 lg:gap-12 items-start`}>
-                  <div className="lg:w-1/3 flex-shrink-0">
-                    <div className="relative p-8 rounded-3xl bg-gradient-to-br from-white/90 via-white/70 to-white/50 backdrop-blur-md border border-prakash-gold/20 shadow-[0_10px_30px_rgba(0,0,0,0.06)] text-center">
-                      <div className="absolute top-0 left-0 right-0 h-1.5 rounded-t-3xl" style={{backgroundColor:p.color}}/>
-                      <div className="text-6xl font-bold mt-4 mb-2" style={{color:p.color}}>{p.num}</div>
-                      <h3 className="font-serif text-xl text-nidra-indigo font-bold">{p.title.split('(')[0].trim()}</h3>
-                      <p className="text-xs text-nidra-indigo/50 mt-1">{p.title.match(/\(.*?\)/)?.[0]?.replace(/[()]/g,'')}</p>
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-sm sm:text-base text-nidra-indigo/70 leading-relaxed mb-4">{p.desc}</p>
-                    <div className="flex flex-wrap gap-2">{p.features.map((f,j)=><span key={j} className="text-xs px-3 py-1.5 rounded-full border" style={{borderColor:p.color+'30',backgroundColor:p.color+'08',color:p.color}}>{f}</span>)}</div>
-                  </div>
-                </div>
-              ))}
+          {/* --- HOUSES --- */}
+          <div className="mb-16">
+            <h3 className="font-serif text-2xl sm:text-3xl text-nidra-indigo text-center mb-8">🏡 Independent Houses</h3>
+            <p className="text-center text-sm text-nidra-indigo/50 mb-6">Houses can be newly constructed or already lived in. New construction allows Vastu intervention at blueprint stage; existing homes require defect analysis and remedies.</p>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-10">
+              <PainPointCard title="Planning/Blueprint Stage" accent="#FF9933" delay={0.2} points={[
+                "Fear of lifetime regret — 'What if this house I'm building destroys my family?'",
+                "Investment of crores — every room placement decision feels permanent and terrifying",
+                "Architect‑Vastu conflict — modern design vs traditional wisdom, can't satisfy both",
+                "Land quality concerns — is the soil stable? Is there Bhoomi Dosh?",
+                "Slope direction fears — if east is low, will it drain wealth as the texts say?",
+                "Contractor keeps changing specifications — quality fears, material substitution",
+                "Loan approval nightmares despite good credit — documentation hurdles, delays",
+                "Family conflicts intensified during construction — every decision becomes an argument",
+                "Neighbor and legal disputes — boundary walls, municipal notices, encroachment claims",
+                "Fear of choosing wrong Vastu consultant — already spent money on multiple opinions"
+              ]} />
+              <PainPointCard title="Under Construction / Recently Completed" accent="#6366F1" delay={0.3} points={[
+                "Construction delays and budget explosions — 2 years for a 12‑month project, costs doubled",
+                "Accidents on site — workers injured, tools breaking, structural issues discovered during digging",
+                "Family health declining even while living in temporary accommodation",
+                "Partner pulling out of investment midway — financial collapse imminent",
+                "Political interference, local opposition, goonda elements demanding money",
+                "Material theft from site — cement, steel, sand disappearing",
+                "Builder abandoned project — now stuck with half‑finished structure",
+                "Weather destroying exposed construction — rains, heat, cracking",
+                "What was promised vs what's built — completely different quality",
+                "Every astrologer gave different muhurat — now doubting if construction started on right date"
+              ]} />
+            </div>
+
+            <h4 className="font-serif text-xl text-sacred-saffron text-center mb-6">Already Constructed (Living In)</h4>
+            <div className="grid md:grid-cols-2 gap-8">
+              <PainPointCard title="Inherited / Old Family Home" accent="#8B5A2B" delay={0.4} points={[
+                "The house feels 'heavy' and depressing — walking in doesn't feel like coming home",
+                "Pets keep dying or running away — documented sign of Bhoomi Dosh",
+                "Same disease pattern across generations — father had BP at 50, son has it at 35",
+                "Business declining despite market growth — competitors growing, you're shrinking",
+                "Children not settling — marriage delays, career confusion, no direction",
+                "Termites, dampness, structural decay — the house is physically deteriorating",
+                "Unable to sell despite reasonable pricing — multiple deals collapse",
+                "Neighbors prospering while your family struggles — same colony, same salary, different outcomes",
+                "Frequent thefts or robberies in your specific house — feels targeted",
+                "Ancestral property disputes — legal battles draining wealth and energy"
+              ]} />
+              <PainPointCard title="Recently Purchased / Renovated" accent="#D4A373" delay={0.5} points={[
+                "Renovation completed but problems increased — now worse than before",
+                "Bought a 'dream home' that's become a nightmare — hidden defects everywhere",
+                "Previous owners had terrible luck — now you're experiencing the same patterns",
+                "Invested in expensive interiors but can't enjoy the space — constant unease",
+                "Extended family refuses to visit — they say the house 'doesn't feel right'",
+                "House value depreciating despite renovations — bad investment compounding",
+                "Contractor who renovated has disappeared — warranty claims ignored",
+                "Hidden structural damage discovered after purchase — wasn't in inspection report",
+                "Neighbors warned you about previous owners' misfortunes — now you understand why",
+                "Wife wants to move out, husband refuses — the house has become a battleground"
+              ]} />
             </div>
           </div>
-        </section>
 
-        {/* ── ROOM‑BY‑ROOM CHECKLIST ── */}
-        <section className="py-16 sm:py-24 bg-vastu-stone/10 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-prakash-gold/30 to-transparent" />
-          <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-            <div className="text-center mb-12"><span className="text-sacred-saffron uppercase tracking-[0.2em] text-sm font-semibold">Quick Reference</span><h2 className="font-serif text-3xl sm:text-4xl text-nidra-indigo mt-3 mb-4">Room‑by‑Room Vastu Checklist</h2></div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {[
-                {room:'Main Entrance',dir:'NE, East, or North',tip:'Largest door; opens inward; Swastik/Om symbols; well‑lit',color:'#E8B960'},
-                {room:'Living Room',dir:'North or East',tip:'Heavy furniture S/W/SW; seating faces East/North; light colours',color:'#10B981'},
-                {room:'Kitchen',dir:'Southeast (Agni)',tip:'Cook facing East; sink NE corner; stove SE; warm colours',color:'#EF4444'},
-                {room:'Master Bedroom',dir:'Southwest',tip:'Head South for sleep; bed SW corner; avoid mirrors opposite bed',color:'#6366F1'},
-                {room:'Children\'s Room',dir:'Northwest or West',tip:'Bed head East; study desk facing East/North; green/blue colours',color:'#F59E0B'},
-                {room:'Pooja Room',dir:'Northeast (Ishanya)',tip:'Deities face West; raised platform; brass/copper; ghee lamp daily',color:'#FFD700'},
-                {room:'Bathroom',dir:'NW or SE only',tip:'Never NE or centre; door always closed; exhaust fan East/North',color:'#06B6D4'},
-                {room:'Dining Room',dir:'West or East',tip:'Near kitchen; face East/North while eating; square/rectangular table',color:'#8B5CF6'},
-                {room:'Staircase',dir:'South, West, or SW',tip:'Clockwise ascent; never NE or centre; odd number of steps',color:'#EC4899'},
-              ].map((item,idx)=>(<div key={idx} className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-prakash-gold/15 hover:shadow-lg"><div className="w-2 h-2 rounded-full mb-3" style={{backgroundColor:item.color}}/><h3 className="font-serif text-lg text-nidra-indigo font-bold">{item.room}</h3><p className="text-xs text-nidra-indigo/50 mt-1 mb-2"><strong>Best direction:</strong> {item.dir}</p><p className="text-xs text-nidra-indigo/60">{item.tip}</p></div>))}
+          {/* --- GOVERNMENT QUARTERS --- */}
+          <div>
+            <h3 className="font-serif text-2xl sm:text-3xl text-nidra-indigo text-center mb-8">🏛️ Government Quarters</h3>
+            <p className="text-center text-sm text-nidra-indigo/50 mb-6">Government quarters are assigned, not chosen. You cannot renovate structurally. Vastu defects are inherited and compounded by poor maintenance. Available only as already‑constructed.</p>
+            <div className="grid md:grid-cols-2 gap-8">
+              <PainPointCard title="Living in Government Quarters" accent="#059669" delay={0.6} points={[
+                "Poor maintenance compounding Vastu defects — crumbling infrastructure, leaks, cracks",
+                "Cannot renovate or change structure — it's government property",
+                "Transferred here for career growth but career is now stagnant",
+                "Family health declining since moving in — frequent hospital visits",
+                "Same quarter, different families — all struggling with similar issues",
+                "Unable to decorate or personalize — heavy furniture placement restricted",
+                "Neighbor's quarter is identical but they're prospering — why the difference?",
+                "Fear of requesting transfer — will new quarter be even worse?",
+                "Children's education suffering — concentration issues, poor grades since moving",
+                "Retirement approaching — fear of buying house after decades of Vastu struggle"
+              ]} />
+              <PainPointCard title="Post‑Retirement / Long‑Term Quarter" accent="#047857" delay={0.7} points={[
+                "Decades in the same quarter — problems became 'normal' but never resolved",
+                "Chronic illnesses that doctors attribute to 'age' but started at 40",
+                "Adult children refuse to visit — they say the quarter feels depressing",
+                "Pension and savings adequate but money never feels enough — constant financial anxiety",
+                "Watched juniors get promoted past you — career plateau despite seniority",
+                "Spouse's health declined rapidly after moving here — never recovered",
+                "Grandchildren getting sick whenever they stay over — family notices the pattern",
+                "Retirement plans disrupted — unable to settle peacefully",
+                "Memories of better times in previous postings — what changed?",
+                "The quarter was assigned — you never had a choice. Now seeking correction"
+              ]} />
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* ── REMEDIES WITHOUT DEMOLITION ── */}
-        <section className="py-16 sm:py-24 bg-white relative overflow-hidden">
-          <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-            <div className="text-center mb-12"><span className="text-sacred-saffron uppercase tracking-[0.2em] text-sm font-semibold">Non‑Invasive Corrections</span><h2 className="font-serif text-3xl sm:text-4xl text-nidra-indigo mt-3 mb-4">Remedies Without Demolition</h2></div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {[
-                {title:'Crystal Pyramids',desc:'Copper & brass pyramids at dosha points absorb negative energy.',color:'#E8B960'},
-                {title:'Yantras',desc:'Vastu Purush Yantra, Shri Yantra, Kuber Yantra, Mangal Yantra.',color:'#FF9933'},
-                {title:'Colour Therapy',desc:'Warm tones for SE; cool tones for N; peach for SW bedroom.',color:'#06B6D4'},
-                {title:'Mirror Placement',desc:'Mirrors on N/E walls amplify; dining mirror doubles food.',color:'#10B981'},
-                {title:'Salt & Water',desc:'Rock salt bowls absorb negativity; copper vessel in NE.',color:'#6366F1'},
-                {title:'Metal Strips',desc:'Brass/copper/silver strips under flooring create protective barrier.',color:'#C88A5D'},
-              ].map((item,idx)=>(<div key={idx} className="bg-white/80 backdrop-blur-sm rounded-2xl p-5 border border-prakash-gold/15 hover:shadow-lg"><div className="w-2 h-2 rounded-full mb-3" style={{backgroundColor:item.color}}/><h3 className="font-serif text-lg text-nidra-indigo font-bold mb-2">{item.title}</h3><p className="text-xs text-nidra-indigo/60">{item.desc}</p></div>))}
-            </div>
+      {/* ===== PROCESS JOURNEY ===== */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-4 max-w-5xl relative z-10">
+          <h2 className="font-serif text-3xl text-center text-nidra-indigo mb-12">Your Journey to a Harmonious Home</h2>
+          
+          {/* Already Constructed Process */}
+          <h3 className="font-serif text-xl text-sacred-saffron text-center mb-6">For Already Constructed Homes</h3>
+          <div className="grid sm:grid-cols-4 gap-4 mb-12">
+            {[
+              { step: '01', title: 'Submit Layout', desc: 'Fill form with mandatory computerized layout plan of your home sent to Acharya' },
+              { step: '02', title: 'Acharya Reviews', desc: 'Vastuvid KK Nagaich personally analyzes layout for Vastu defects & energy imbalances' },
+              { step: '03', title: 'Issue Identification', desc: 'Two possibilities found: Demolition necessary OR Non‑structural remedies sufficient' },
+              { step: '04', title: 'Remedies Delivered', desc: 'Personalized solutions — Yantras, rituals, color therapy, furniture adjustments provided' },
+            ].map((s, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                className="text-center p-6 bg-vastu-stone/20 rounded-2xl">
+                <div className="text-3xl font-bold text-prakash-gold mb-2">{s.step}</div>
+                <h3 className="font-serif text-base text-nidra-indigo font-bold">{s.title}</h3>
+                <p className="text-sm text-nidra-indigo/60 mt-2">{s.desc}</p>
+              </motion.div>
+            ))}
           </div>
-        </section>
 
-        {/* ── FINAL CTA ── */}
-        <section className="relative py-24 sm:py-32 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1a0000] via-[#3a0a0a] to-[#0a0000] bg-[length:400%_400%] animate-[heroLoop_12s_ease_infinite]" />
-          <div className="container mx-auto px-4 sm:px-6 relative z-10">
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="relative rounded-[40px] p-[2px] bg-gradient-to-br from-prakash-gold/30 via-white/10 to-sacred-saffron/30 shadow-[0_25px_60px_rgba(0,0,0,0.4)]">
-                <div className="rounded-[38px] bg-black/20 backdrop-blur-2xl p-8 sm:p-12 md:p-16 border border-white/10 shadow-inner">
-                  <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Let Vastuvid K.K. Nagaich Transform Your Home</h2>
-                  <p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10">Book a private residential Vastu consultation covering all 11 pujas.</p>
-                  <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">Schedule Your Residential Audit →</Link>
-                </div>
-              </div>
-            </div>
+          <div className="grid sm:grid-cols-4 gap-4">
+            {[
+              { step: '01', title: 'Send Land Details', desc: 'Computerized layout of land + photos (PDF) + location coordinates sent to Acharya' },
+              { step: '02', title: 'Acharya Audit', desc: 'Deep analysis of land orientation, slope, soil, surroundings via 81‑grid Vastu parameters' },
+              { step: '03', title: 'Clearance or Correction', desc: 'If layout correct → checkpoint cleared. If flaws found → solutions & corrections provided' },
+              { step: '04', title: 'Resubmit & Re‑audit', desc: 'Remake computerized layout with corrections, send back. Acharya re‑verifies for final clearance' },
+            ].map((s, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                className="text-center p-6 bg-emerald-50/30 rounded-2xl border border-emerald-200/30">
+                <div className="text-3xl font-bold text-emerald-600 mb-2">{s.step}</div>
+                <h3 className="font-serif text-base text-nidra-indigo font-bold">{s.title}</h3>
+                <p className="text-sm text-nidra-indigo/60 mt-2">{s.desc}</p>
+              </motion.div>
+            ))}
           </div>
-        </section>
-      </SmoothScroll>
-      <style>{`@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}@keyframes heroLoop{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}`}</style>
-    </>
-  );
+        </div>
+      </section>
+
+      {/* ===== PRICING PLANS ===== */}
+      <section className="py-20 bg-vastu-stone/10">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <h2 className="font-serif text-3xl text-center text-nidra-indigo mb-12">Pricing Plans</h2>
+          
+          <h3 className="font-serif text-xl text-sacred-saffron text-center mb-8">Already Constructed Homes</h3>
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            <PricingCard plan="Silver" price="₹4,999" color="#A0A0A0" features={["No physical visit","Computerized layout analysis","Remedies via upto 30‑minute call","One‑time delivery"]} />
+            <PricingCard plan="Gold" price="₹6,999" color="#FFD700" features={["All Silver features","2 follow‑up calls","Virtual meeting included","Extended remedy guidance"]} best />
+            <PricingCard plan="Luxury" price="₹9,999" color="#E8B960" features={["All Gold features","1 personal site visit","Complete Vastu audit","4 scheduled follow‑ups (30 min each)","Full ritual execution if needed"]} />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <PricingCard plan="Silver" price="₹4,999" color="#A0A0A0" features={["No physical visit","Layout suggestions & corrections","Remedies via upto 30‑minute call","One‑time audit (extra audits ₹2,199 each)"]} />
+            <PricingCard plan="Gold" price="₹6,999" color="#FFD700" features={["All Silver features","2 follow‑up calls","Virtual meeting","2 callbacks of audit included"]} best />
+            <PricingCard plan="Luxury" price="₹9,999" color="#E8B960" features={["All Gold features","1 personal site visit","Complete Vastu blueprint audit","Multiple follow‑up audits","Full ritual execution"]} />
+          </div>
+        </div>
+      </section>
+
+      <RemediesCTA />
+      <VirtualConsultCTA />
+
+      {/* FINAL CTA */}
+      <section className="relative py-24 sm:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a0000] via-[#3a0a0a] to-[#0a0000] bg-[length:400%_400%] animate-[heroLoop_12s_ease_infinite]" />
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Experience the VedicUrja Difference</h2>
+          <p className="text-white/70 text-lg max-w-2xl mx-auto mb-8">
+            Vastuvid KK Nagaich — <strong className="text-prakash-gold">100M+ views, 80K+ followers, MBA, Ex‑CEO, 4th‑generation Tantra‑trained Vastu Guru</strong> — personally performs every residential audit. No delegation. No generic reports.
+          </p>
+          <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">
+            Schedule Your Residential Audit →
+          </Link>
+        </div>
+      </section>
+    </SmoothScroll>
+    <style>{`@keyframes heroLoop{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}`}</style>
+  </>);
 }

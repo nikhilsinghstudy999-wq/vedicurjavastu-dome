@@ -1,13 +1,40 @@
 'use client';
-import { useRef, useState, useEffect } from 'react';
+
+import { useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRealtimeContent } from '@/features/shared/hooks/useRealtimeContent';
+
+interface HomeSection {
+  id: string;
+  section_key: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  button_text: string;
+  button_link: string;
+  is_published: boolean;
+}
+
+const fallbackData: HomeSection = {
+  id: 'luxury_vow_fallback',
+  section_key: 'acharya_vow',
+  title: 'Guided by an Unbroken Lineage, Delivering Unmatched Results',
+  subtitle: 'The Sacred Vow of a 4th Generation Vastu Guru',
+  description: 'Vastuvid KK Nagaich is the only Vastu authority in India who is a trained Tantra Sadhak, MBA, former CEO, and lineage‑certified across four generations. For over two decades, he has personally performed every ritual and guided 2 Lakh+ clients across 50+ countries. His Instagram reels have crossed 100 million views, making him the most‑watched Vastu expert globally.',
+  button_text: 'Discover Our Lineage',
+  button_link: '/about',
+  is_published: true,
+};
 
 export function AcharyaVow() {
   const ref = useRef<HTMLElement>(null);
   const [isMounted, setIsMounted] = useState(false);
-  useEffect(() => setIsMounted(true), []);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const { scrollYProgress } = useScroll(
     isMounted && ref.current ? { target: ref, offset: ['start end', 'end start'] } : undefined
@@ -16,102 +43,120 @@ export function AcharyaVow() {
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.2, 1, 1, 0.2]);
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1, 0.9]);
 
+  const { items, loading } = useRealtimeContent<HomeSection>('home_sections', 'order_index');
+  const data = items.find(item => item.section_key === 'acharya_vow') || fallbackData;
+
+  if (loading) return <div className="py-24 text-center" aria-label="Loading Acharya’s Vow"><div className="w-8 h-8 border-4 border-prakash-gold border-t-transparent rounded-full animate-spin mx-auto" /></div>;
+  if (!data.is_published) return null;
+
   return (
     <motion.section
       ref={ref}
       style={isMounted ? { opacity, y } : undefined}
-      className="relative py-20 sm:py-28 md:py-36 overflow-hidden bg-gradient-to-br from-vastu-parchment via-white to-vastu-stone/20"
+      className="py-20 sm:py-28 md:py-36 overflow-hidden bg-gradient-to-br from-[#FDFBF7] via-[#FFF9F0] to-[#F4EFE6] relative"
+      aria-labelledby="acharya-vow-title"
     >
-      {/* Connecting line top */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-16 sm:h-20 bg-gradient-to-b from-transparent via-prakash-gold to-prakash-gold/50 animate-pulse" />
+      {/* Subtle mandala outlines */}
+      <div className="absolute top-0 right-0 w-96 h-96 rounded-full border border-prakash-gold/10 -translate-y-1/2 translate-x-1/4 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full border border-sacred-saffron/10 translate-y-1/2 -translate-x-1/4 pointer-events-none" />
 
-      {/* Connecting line bottom */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-16 sm:h-20 bg-gradient-to-t from-transparent via-prakash-gold to-prakash-gold/50 animate-pulse" />
-
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        {/* Section heading */}
-        <motion.div
-          style={isMounted ? { scale } : undefined}
-          className="text-center mb-12 md:mb-16"
-        >
-          <span className="text-sacred-saffron uppercase tracking-[0.25em] text-xs sm:text-sm font-semibold">
-            Our Sacred Vow
-          </span>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-nidra-indigo mt-4 mb-4 leading-tight">
-            Where Ancient Vastu Meets{' '}
-            <span className="bg-gradient-to-r from-sacred-saffron via-prakash-gold to-kumkuma-red bg-clip-text text-transparent">
-              Modern Leadership
-            </span>
-          </h2>
-          <p className="text-base sm:text-lg text-nidra-indigo/70 max-w-2xl mx-auto leading-relaxed">
-            Vastuvid K.K. Nagaich – an MBA graduate, former CEO, and 4th‑generation Vastu Guru – brings
-            boardroom precision to the sacred science of spatial harmony.
-          </p>
-        </motion.div>
-
-        {/* Content grid: image + text */}
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto">
-          {/* Image card */}
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center max-w-7xl mx-auto">
+          {/* Left: Image + Stat Badges (stacked) */}
           <motion.div
             style={isMounted ? { scale } : undefined}
-            className="relative order-2 md:order-1"
+            className="relative order-2 md:order-1 flex flex-col items-center"
           >
-            <div className="relative h-[350px] sm:h-[420px] md:h-[500px] w-full rounded-[40px] overflow-hidden group">
-              {/* Golden glow border animation */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red rounded-[44px] opacity-60 blur-sm animate-[goldenGlow_3s_ease-in-out_infinite]" />
-              {/* Image */}
-              <div className="relative h-full w-full rounded-[40px] overflow-hidden border-2 border-white/20">
+            {/* Portrait card – original clear style */}
+            <div className="relative w-full max-w-md rounded-3xl overflow-hidden shadow-2xl border-4 border-prakash-gold/30">
+              <div className="relative h-[400px] sm:h-[500px] md:h-[550px] w-full">
                 <Image
                   src="/images/home/acharya-portrait.jpg"
-                  alt="Vastuvid K.K. Nagaich"
+                  alt="Vastuvid KK Nagaich - 4th Generation Vastu Guru, Tantra Sadhak, and MBA"
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover object-center"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-nidra-indigo/60 via-transparent to-transparent" />
-                {/* Overlay badge */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
-                  <p className="font-serif text-xl sm:text-2xl drop-shadow-lg">Vastuvid K.K. Nagaich</p>
-                  <p className="text-xs sm:text-sm opacity-90 mt-1">
-                    MBA • Former CEO • 4th Generation Vastu Guru
-                  </p>
-                </div>
+                {/* Original gradient overlay – darkens bottom only */}
+                <div className="absolute inset-0 bg-gradient-to-t from-nidra-indigo/40 via-transparent to-transparent" />
               </div>
-              {/* Tilt effect on hover */}
-              <style>{`
-                @keyframes goldenGlow {
-                  0%, 100% { opacity: 0.6; filter: blur(4px); }
-                  50% { opacity: 0.9; filter: blur(2px); }
-                }
-                .group:hover .golden-glow {
-                  animation-duration: 1.5s;
-                }
-              `}</style>
+              <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-white">
+                <p className="font-serif text-2xl sm:text-3xl lg:text-4xl drop-shadow-lg tracking-tight">
+                  Vastuvid K.K. Nagaich
+                </p>
+                <p className="text-sm sm:text-base opacity-90 drop-shadow mt-1 tracking-wider uppercase">
+                  4th Generation · Tantra Sadhak · MBA · Ex‑CEO
+                </p>
+              </div>
+            </div>
+
+            {/* Stat badges – now below the image, cleanly separated */}
+            <div className="flex flex-wrap gap-3 mt-6 justify-center">
+              {[
+                { icon: '🔥', text: '100M+ Views' },
+                { icon: '📱', text: '80K+ Followers' },
+                { icon: '👥', text: '2L+ Clients' },
+                { icon: '🌐', text: '50+ Countries' },
+              ].map((stat, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: idx * 0.1 }}
+                  className="inline-flex items-center gap-1.5 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 border border-prakash-gold/40 shadow-md text-sm font-bold text-nidra-indigo"
+                >
+                  <span className="text-lg">{stat.icon}</span>
+                  <span>{stat.text}</span>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
 
-          {/* Text block */}
+          {/* Right: Luxury Content */}
           <motion.div
             style={isMounted ? { y } : undefined}
-            className="order-1 md:order-2 text-left"
+            className="order-1 md:order-2"
           >
-            <p className="text-base sm:text-lg text-nidra-indigo/80 leading-relaxed mb-6">
-              For over four decades, our family has preserved authentic Vastu Shastra traditions.
-              Vastuvid K.K. Nagaich blends the strategic mindset of an MBA and ex‑CEO with the
-              spiritual depth of a 4th‑generation Guru, delivering precise, transformative Vastu
-              solutions for homes, businesses, and land.
+            <span className="text-sacred-saffron uppercase tracking-[0.25em] text-xs sm:text-sm font-bold">
+              {data.subtitle}
+            </span>
+            <h2
+              id="acharya-vow-title"
+              className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-nidra-indigo mt-4 mb-6 leading-tight"
+            >
+              {data.title}
+            </h2>
+            <p className="text-base sm:text-lg text-nidra-indigo/80 leading-relaxed mb-8 max-w-xl">
+              {data.description}
             </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              {[
+                'Tantra Sadhak – Performs Rituals Himself',
+                'MBA & Ex‑CEO – Business‑Oriented Vastu',
+                '4th Generation Lineage Certified',
+                'Trusted by 2 Lakh+ Clients Worldwide',
+              ].map((point, idx) => (
+                <div key={idx} className="flex items-start gap-3">
+                  <span className="text-prakash-gold text-xl mt-0.5">✦</span>
+                  <span className="text-nidra-indigo/80 text-sm sm:text-base">{point}</span>
+                </div>
+              ))}
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/about"
+                href={data.button_link || '/about'}
                 className="luxury-button text-center shadow-lg hover:shadow-xl transition-shadow"
               >
-                Discover Our Lineage
+                {data.button_text}
               </Link>
               <Link
                 href="/about"
-                className="border-b-2 border-prakash-gold text-nidra-indigo font-medium text-center sm:text-left pb-1 hover:text-sacred-saffron transition-colors"
+                className="border-b-2 border-prakash-gold text-nidra-indigo font-medium pb-1 hover:text-sacred-saffron transition-colors self-start"
               >
-                Read Acharya's Story →
+                Read Our Full Story →
               </Link>
             </div>
           </motion.div>
@@ -120,4 +165,5 @@ export function AcharyaVow() {
     </motion.section>
   );
 }
+
 export default AcharyaVow;

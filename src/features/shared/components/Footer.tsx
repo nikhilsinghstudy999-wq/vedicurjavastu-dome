@@ -27,22 +27,10 @@ const navigation = {
     { name: 'Commercial Vastu', href: '/services/commercial' },
     { name: 'Industrial Vastu', href: '/services/industrial' },
     { name: 'Land Selection', href: '/services/land' },
-    { name: 'Spiritual Spaces', href: '/services/spiritual' },
-    { name: 'Geopathic Stress', href: '/services/geopathic' },
-    { name: 'Kundali Analysis', href: '/services/kundali' },
-    { name: 'New Construction Vastu', href: '/services/new-construction' },
-    { name: 'Pyramidology', href: '/services/pyramidology' },
-    { name: 'Crystal & Color Therapy', href: '/services/crystal-color' },
-    { name: 'Mercury / Parad Therapy', href: '/services/mercury-parad' },
-    { name: 'Numerology & Namakaran', href: '/services/numerology-namakaran' },
-    { name: 'Mobile Numerology', href: '/services/mobile-numerology' },
-    { name: 'Mirrorology', href: '/services/mirrorology' },
-    { name: 'Yantra & Mantra Therapy', href: '/services/yantra-mantra' },
     { name: 'Virtual Consult', href: '/bookings' },
   ],
   learn: [
     { name: 'Free AI Tools', href: '/free-tools' },
-    { name: 'AI Kundali', href: '/free-tools/kundali' },
     { name: 'Daily Horoscope', href: '/free-tools/daily-horoscope' },
     { name: 'Name Suggestion', href: '/free-tools/name-suggestion' },
     { name: 'Insights / Blog', href: '/insights' },
@@ -123,9 +111,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* More Services + Learn Column */}
             <div>
-              <h3 className="font-serif text-prakash-gold text-sm uppercase tracking-wider mb-4 font-bold">More Services</h3>
               <ul className="space-y-1.5">
                 {navigation.services.slice(10).map((item) => (
                   <li key={item.name}><Link href={item.href} className="text-xs text-white/75 hover:text-white transition">{item.name}</Link></li>

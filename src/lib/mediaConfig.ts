@@ -6,7 +6,6 @@ export const media = {
     meditation: "/videos/meditation.mp4",
   },
   images: {
-    kundaliChart: "/images/kundali-chart.jpg",
     luxuryLivingRoom: "/images/luxury-living-room.jpg",
     vastuMandala: "/images/vastu-mandala.svg",
     avatarPlaceholder: "/images/avatar-placeholder.jpg",
@@ -23,7 +22,6 @@ export const media = {
       meditation: "https://videos.pexels.com/video-files/3196307/3196307-uhd_2560_1440_25fps.mp4",
     },
     images: {
-      kundaliChart: "https://images.pexels.com/photos/374044/pexels-photo-374044.jpeg",
       luxuryLivingRoom: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg",
       avatarPlaceholder: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg",
     },

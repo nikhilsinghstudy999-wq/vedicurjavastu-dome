@@ -15,6 +15,7 @@ import { SocialMediaFeed } from '@/features/home/components/SocialMediaFeed';
 import SocialCommunityShowcase from '@/features/home/components/SocialCommunityShowcase';
 import FAQSection from '@/features/testimonials/components/FAQSection';
 import { FinalCTA } from '@/features/home/components/FinalCTA';
+import AuthorityBar from '@/features/shared/components/AuthorityBar';
 
 export default function HomePage() {
   return (
@@ -25,6 +26,7 @@ export default function HomePage() {
       <SmoothScroll>
         <main style={{ position: "relative" }} className="relative bg-vastu-parchment">
           <CosmicHero />
+          <AuthorityBar />
           <TrustMarquee />
           <AcharyaVow />
           <SacredServices />
