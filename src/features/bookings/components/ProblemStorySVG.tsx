@@ -4,18 +4,6 @@ export default function ProblemStorySVG() {
     <svg viewBox="0 0 600 250" className="w-full h-auto max-w-2xl mx-auto" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stopColor="#2c3e50"/><stop offset="100%" stopColor="#1a252f"/></linearGradient>
-        <style>{`
-          @keyframes drive { 0%{transform:translateX(0)} 100%{transform:translateX(180px)} }
-          @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-2px)} 75%{transform:translateX(2px)} }
-          @keyframes pop { 0%{opacity:0;transform:scale(0)} 100%{opacity:1;transform:scale(1)} }
-          @keyframes fadeIn { 0%{opacity:0} 100%{opacity:1} }
-          @keyframes pulse { 0%,100%{opacity:0.5} 50%{opacity:1} }
-          .car { animation: drive 4s ease-in-out infinite alternate; }
-          .shake { animation: shake 0.3s ease-in-out infinite; }
-          .pop { animation: pop 0.5s ease-out forwards; }
-          .fadeIn { animation: fadeIn 1s ease-out forwards; }
-          .pulse { animation: pulse 2s ease-in-out infinite; }
-        `}</style>
       </defs>
 
       {/* Sky background */}

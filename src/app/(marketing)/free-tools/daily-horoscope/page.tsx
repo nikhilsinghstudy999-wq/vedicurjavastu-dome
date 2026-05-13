@@ -5,8 +5,6 @@ import Link from 'next/link';
 import { markTransition } from '@/lib/pageTransition';
 import { motion } from 'framer-motion';
 import Header from '@/features/shared/components/Header';
-import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
-import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
 import { SoundController } from '@/features/shared/components/SoundController';
 import { translatePage } from '@/lib/translationManager';
 
@@ -246,14 +244,13 @@ function HoroscopeContent() {
 export default function DailyHoroscopePage() {
   return (
     <>
-      <LuxuryCursor /><SoundController /><Header /><SmoothScroll>
         <main className="pt-28 pb-20 px-4 sm:px-6 min-h-screen bg-gradient-to-b from-[#0a001a] via-[#1a0033] to-[#0a001a]">
           <Starfield />
           <Suspense fallback={<div className="flex justify-center py-40"><div className="w-12 h-12 border-4 border-purple-500 border-t-transparent rounded-full animate-spin" /></div>}>
             <HoroscopeContent />
           </Suspense>
         </main>
-      </SmoothScroll>
+      
       <style>{`@keyframes twinkle{0%,100%{opacity:0.3}50%{opacity:1}}`}</style>
     </>
   );

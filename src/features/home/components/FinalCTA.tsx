@@ -148,29 +148,6 @@ export function FinalCTA() {
       </div>
 
       {/* Animations */}
-      <style>{`
-        @keyframes float-slow {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-15px); }
-        }
-        @keyframes float-medium {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-10px) rotate(3deg); }
-        }
-        @keyframes float-slow-reverse {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-12px) rotate(-2deg); }
-        }
-        @keyframes gradient-loop {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-        .animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
-        .animate-float-medium { animation: float-medium 10s ease-in-out infinite; }
-        .animate-float-slow-reverse { animation: float-slow-reverse 9s ease-in-out infinite; }
-        .animate-gradient-loop { animation: gradient-loop 12s ease infinite; }
-      `}</style>
     </motion.section>
   );
 }

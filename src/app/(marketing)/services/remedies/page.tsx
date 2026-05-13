@@ -4,8 +4,6 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Header from '@/features/shared/components/Header';
-import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
-import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
 import { SoundController } from '@/features/shared/components/SoundController';
 import GuruAuthority from '@/features/shared/components/GuruAuthority';
 import WhyChooseUs from '@/features/shared/components/luxury/WhyChooseUs';
@@ -87,10 +85,9 @@ const remediesReels = [
 export default function RemediesPage() {
   return (
     <>
-      <LuxuryCursor />
       <SoundController />
       <Header />
-      <SmoothScroll>
+      
         {/* HERO */}
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1a0a00] via-[#3a1a00] to-[#1a0a00] bg-[length:400%_400%] animate-[heroLoop_12s_ease_infinite]">
           <div className="container mx-auto px-4 relative z-10 text-center mt-16">
@@ -105,7 +102,6 @@ export default function RemediesPage() {
           </div>
         </section>
 
-        <GuruAuthority />
         <WhyChooseUs />
 
         {/* BIG FEATURED VIDEO – #1 ASTROLOGER ON INDIA NEWS */}
@@ -184,7 +180,7 @@ export default function RemediesPage() {
             </Link>
           </div>
         </section>
-      </SmoothScroll>
+      
       <style>{`@keyframes heroLoop{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}`}</style>
     </>
   );

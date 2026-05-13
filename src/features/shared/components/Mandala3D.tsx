@@ -9,56 +9,6 @@ export default function Mandala3D() {
 
   return (
     <div className="relative w-full h-full flex items-center justify-center">
-      <style>{`
-        @keyframes rotate-slow {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-        @keyframes rotate-reverse {
-          from { transform: rotate(360deg); }
-          to { transform: rotate(0deg); }
-        }
-        @keyframes float-mandala {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-6px); }
-        }
-        @keyframes pulse-glow {
-          0%, 100% { opacity: 0.6; filter: drop-shadow(0 0 15px rgba(232,185,96,0.5)); }
-          50% { opacity: 1; filter: drop-shadow(0 0 30px rgba(255,153,51,0.9)); }
-        }
-        .mandala-container {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          filter: drop-shadow(0 0 25px rgba(232,185,96,0.3));
-        }
-        .mandala-svg {
-          width: 100%;
-          height: 100%;
-          animation: rotate-slow 35s linear infinite;
-        }
-        .mandala-inner {
-          animation: rotate-reverse 25s linear infinite;
-          transform-origin: center;
-        }
-        .mandala-core {
-          animation: float-mandala 5s ease-in-out infinite;
-          transform-origin: center;
-        }
-        .mandala-glow {
-          animation: pulse-glow 3s ease-in-out infinite;
-        }
-        .depth-line {
-          stroke: url(#goldGradient);
-          stroke-width: 2;
-          filter: drop-shadow(0 0 4px rgba(232,185,96,0.6));
-        }
-        .depth-line-thick {
-          stroke: url(#goldGradient);
-          stroke-width: 3;
-          filter: drop-shadow(0 0 6px rgba(232,185,96,0.7));
-        }
-      `}</style>
 
       <div className="mandala-container">
         <svg viewBox="0 0 400 400" className="mandala-svg" xmlns="http://www.w3.org/2000/svg">

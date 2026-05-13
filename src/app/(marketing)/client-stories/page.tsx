@@ -3,8 +3,6 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Header from '@/features/shared/components/Header';
 import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
-import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
-import PlanetaryLoader from '@/features/shared/components/ui/PlanetaryLoader';
 import { SoundController } from '@/features/shared/components/SoundController';
 
 /* ================================================================
@@ -58,7 +56,7 @@ const gmbReviews = [
   { name: 'gunjan verma', text: 'Very accurate and practical scientific prediction. It really works!', rating: 5 },
   { name: 'Anas Khan', text: 'Best place for numerology. Thank you for name suggestions.', rating: 5 },
   { name: 'Shivam Sharma', text: 'The best numerologist.', rating: 5 },
-  { name: 'Gopal Krishna', text: 'Vedic Urja very great fully pooja & anusthan.', rating: 5 },
+  { name: 'Gopal Krishna', text: 'Vedic Urja very greatfully pooja & anusthan.', rating: 5 },
   { name: 'Vaishali Misra', text: 'Best for career and education.', rating: 5 },
   { name: 'Shailesh Bagdane', text: 'Awesome experience. Peaceful experience.', rating: 5 },
   { name: 'Simply dentists dental clinic', text: 'Very nice services.', rating: 5 },
@@ -90,9 +88,6 @@ const gmbReviews = [
   { name: 'gaurav awasthi', text: 'Very good service. Satisfied with the consultation.', rating: 5 },
 ];
 
-/* ================================================================
-   LUXURY HERO
-   ================================================================ */
 function HeroSection() {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
@@ -125,9 +120,6 @@ function HeroSection() {
   );
 }
 
-/* ================================================================
-   ANIMATED STATS
-   ================================================================ */
 function TrustStats() {
   const stats = [
     { value: '2 Lakh+', label: 'Clients Served', icon: '◆' },
@@ -162,9 +154,6 @@ function TrustStats() {
   );
 }
 
-/* ================================================================
-   INSTAGRAM VIDEO TESTIMONIALS – Horizontal Scroll Grid
-   ================================================================ */
 function VideoTestimonialsSection() {
   useEffect(() => {
     if (!document.querySelector('script[src="//www.instagram.com/embed.js"]')) {
@@ -183,8 +172,6 @@ function VideoTestimonialsSection() {
           <h2 className="font-serif text-3xl sm:text-4xl text-nidra-indigo mt-3 mb-4">Hear from Our Clients</h2>
           <p className="text-nidra-indigo/60 max-w-xl mx-auto text-sm">Real video reviews from families and businesses across India.</p>
         </motion.div>
-
-        {/* Single horizontal scrollable row */}
         <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
           {instagramReels.map((url, i) => (
             <motion.div
@@ -207,9 +194,6 @@ function VideoTestimonialsSection() {
   );
 }
 
-/* ================================================================
-   TEXT TESTIMONIALS – 65 GMB Reviews in 3D Cards
-   ================================================================ */
 function TextTestimonialsSection() {
   const [visibleCount, setVisibleCount] = useState(12);
 
@@ -222,7 +206,6 @@ function TextTestimonialsSection() {
           <h2 className="font-serif text-3xl sm:text-4xl text-nidra-indigo mt-3 mb-4">65+ Google Verified Client Reviews</h2>
           <p className="text-nidra-indigo/60 max-w-xl mx-auto text-sm">Authentic feedback from real clients who have experienced the power of VedicVastuUrja.</p>
         </motion.div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {gmbReviews.slice(0, visibleCount).map((review, i) => (
             <motion.div
@@ -235,16 +218,13 @@ function TextTestimonialsSection() {
               className="bg-white/70 backdrop-blur-sm rounded-2xl p-4 sm:p-5 border border-prakash-gold/15 shadow-[0_4px_15px_rgba(26,42,58,0.04)] hover:shadow-[0_10px_25px_rgba(200,138,93,0.12)] transition-all duration-300 flex flex-col h-full"
               style={{ transformStyle: 'preserve-3d', perspective: 800 }}
             >
-              {/* Stars Row */}
               <div className="flex items-center gap-1 mb-3">
                 {[...Array(5)].map((_, s) => (
                   <svg key={s} className="w-3.5 h-3.5 text-prakash-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
                 ))}
                 <span className="text-xs text-nidra-indigo/40 ml-1">GMB Verified</span>
               </div>
-              {/* Review Content */}
               <p className="text-sm text-nidra-indigo/70 leading-relaxed flex-1 mb-3 line-clamp-4">{review.text}</p>
-              {/* Reviewer Name */}
               <div className="flex items-center gap-3 pt-3 border-t border-prakash-gold/10">
                 <div className="w-8 h-8 rounded-full bg-gradient-to-br from-prakash-gold/30 to-sacred-saffron/30 flex items-center justify-center text-nidra-indigo font-bold text-sm">
                   {review.name.charAt(0)}
@@ -254,8 +234,6 @@ function TextTestimonialsSection() {
             </motion.div>
           ))}
         </div>
-
-        {/* Load More Button */}
         {visibleCount < gmbReviews.length && (
           <div className="text-center mt-8">
             <button
@@ -271,13 +249,12 @@ function TextTestimonialsSection() {
   );
 }
 
-/* ================================================================
-   MAIN PAGE
-   ================================================================ */
 export default function ClientStoriesPage() {
   return (
     <>
-      <LuxuryCursor /><SoundController /><Header /><SmoothScroll>
+      <SoundController />
+      <Header />
+      <SmoothScroll>
         <main className="relative bg-vastu-parchment">
           <HeroSection />
           <TrustStats />

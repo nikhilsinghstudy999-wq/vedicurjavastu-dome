@@ -1,7 +1,5 @@
 'use client';
 import Header from '@/features/shared/components/Header';
-import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
-import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
 import { SoundController } from '@/features/shared/components/SoundController';
 import GuruAuthority from '@/features/shared/components/GuruAuthority';
 import WhyChooseUs from '@/features/shared/components/luxury/WhyChooseUs';
@@ -11,7 +9,6 @@ import { motion } from 'framer-motion';
 export default function VirtualConsultPage() {
   const benefits = ['60‑Min Personalised Session','Screen‑Share Floor Plan Analysis','Post‑Session Written Report','Global Accessibility','Confidential & Secure','Flexible Scheduling'];
   return (<>
-    <LuxuryCursor /><SoundController /><Header /><SmoothScroll>
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#0a1a2e] via-[#1a2a4e] to-[#0f1a2a] bg-[length:400%_400%] animate-[heroLoop_12s_ease_infinite]">
         <div className="container mx-auto px-4 relative z-10 text-center mt-16">
           <span className="text-prakash-gold uppercase tracking-[0.3em] text-sm mb-4 block font-semibold">Vedic Application</span>
@@ -42,7 +39,7 @@ export default function VirtualConsultPage() {
           <Link href="/bookings" className="luxury-button text-lg">Schedule Now →</Link>
         </div>
       </section>
-    </SmoothScroll>
+    
     <style>{`@keyframes heroLoop{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}`}</style>
   </>);
 }

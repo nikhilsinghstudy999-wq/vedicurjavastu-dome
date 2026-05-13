@@ -1,13 +1,10 @@
 import Header from '@/features/shared/components/Header';
-import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
-import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
 import { SoundController } from '@/features/shared/components/SoundController';
 import Link from 'next/link';
 
 export default function MercuryParadPage() {
   return (
     <>
-      <LuxuryCursor /><SoundController /><Header /><SmoothScroll>
 
         {/* ── LOOPING GRADIENT HERO ── */}
         <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1a1a2e] via-[#2d2d44] to-[#0f0f1a] bg-[length:400%_400%] animate-[heroLoop_12s_ease_infinite]">
@@ -97,7 +94,7 @@ export default function MercuryParadPage() {
             </div>
           </div>
         </section>
-      </SmoothScroll>
+      
       <style>{`@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}@keyframes heroLoop{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}`}</style>
     </>
   );

@@ -5,12 +5,6 @@ export default function SolutionConnectionSVG() {
       <defs>
         <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stopColor="#1a1a2e"/><stop offset="100%" stopColor="#16213e"/></linearGradient>
         <filter id="glow"><feGaussianBlur stdDeviation="3"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        <style>{`
-          @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
-          @keyframes signal { 0%{opacity:0} 50%{opacity:1} 100%{opacity:0} }
-          .float { animation: float 4s ease-in-out infinite; }
-          .signal { animation: signal 1.5s ease-in-out infinite; }
-        `}</style>
       </defs>
 
       {/* Background */}

@@ -3,8 +3,6 @@ import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import Header from '@/features/shared/components/Header';
-import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
-import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
 import { SoundController } from '@/features/shared/components/SoundController';
 import AnimatedStatCard3D from '@/features/tools/shared/components/AnimatedStatCard3D';
 import PremiumComparison3D from '@/features/tools/shared/components/PremiumComparison3D';
@@ -145,10 +143,9 @@ function FinalCTASection() {
 export default function FreeToolsPage() {
   return (
     <>
-      <LuxuryCursor />
       <SoundController />
       <Header />
-      <SmoothScroll>
+      
         <main className="relative bg-vastu-parchment">
           <HeroSection />
           <ToolsGridSection />
@@ -156,7 +153,7 @@ export default function FreeToolsPage() {
           <PremiumComparison3D />
           <FinalCTASection />
         </main>
-      </SmoothScroll>
+      
       <style>{`
         @keyframes gradient-loop { 0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%} }
         .animate-gradient-loop{animation:gradient-loop 12s ease infinite}

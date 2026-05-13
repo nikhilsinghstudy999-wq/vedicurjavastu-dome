@@ -2,8 +2,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Header from '@/features/shared/components/Header';
-import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
-import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
 import { SoundController } from '@/features/shared/components/SoundController';
 import Mandala3D from '@/features/shared/components/Mandala3D';
 import FloatingParticles from '@/features/shared/components/svg/FloatingParticles';
@@ -35,7 +33,6 @@ export default function ContactPage() {
 
   return (
     <>
-      <LuxuryCursor /><SoundController /><Header /><SmoothScroll>
         <main style={{ position: "relative" }} className="relative min-h-screen flex items-center justify-center py-20 bg-gradient-to-b from-vastu-parchment via-white to-vastu-stone overflow-hidden">
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20"><Mandala3D /></div>
           <FloatingParticles />
@@ -65,7 +62,7 @@ export default function ContactPage() {
             </div>
           </motion.div>
         </main>
-      </SmoothScroll>
+      
     </>
   );
 }

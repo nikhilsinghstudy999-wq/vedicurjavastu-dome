@@ -2,7 +2,6 @@
 import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Header from '@/features/shared/components/Header';
-import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
 
 function CourseContent() {
   const searchParams = useSearchParams();
@@ -14,7 +13,7 @@ export default function CoursePage() {
   return (
     <>
       <Header />
-      <SmoothScroll>
+      <>
         <main style={{ position: "relative" }} className="pt-32 pb-20 min-h-screen bg-vastu-parchment">
           <div className="container mx-auto px-6">
             <Suspense fallback={<div>Loading...</div>}>
@@ -22,7 +21,7 @@ export default function CoursePage() {
             </Suspense>
           </div>
         </main>
-      </SmoothScroll>
+      </>
     </>
   );
 }

@@ -1,16 +1,13 @@
 import Header from '@/features/shared/components/Header';
-import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
-import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
 import { SoundController } from '@/features/shared/components/SoundController';
 import Link from 'next/link';
 
 export default function BlogPage() {
   return (
     <>
-      <LuxuryCursor />
       <SoundController />
       <Header />
-      <SmoothScroll>
+      
         <article className="pt-28 pb-20 min-h-screen">
 
           {/* ── Luxury Hero ── */}
@@ -197,7 +194,7 @@ export default function BlogPage() {
             </div>
           </div>
         </article>
-      </SmoothScroll>
+      
     </>
   );
 }

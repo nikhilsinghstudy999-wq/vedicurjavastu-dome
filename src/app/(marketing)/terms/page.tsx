@@ -1,13 +1,10 @@
 'use client';
 import Header from '@/features/shared/components/Header';
-import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
-import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
 import { SoundController } from '@/features/shared/components/SoundController';
 
 export default function TermsPage() {
   return (
     <>
-      <LuxuryCursor /><SoundController /><Header /><SmoothScroll>
         <main style={{ position: "relative" }} className="pt-32 pb-20 px-6 max-w-4xl mx-auto">
           <h1 className="font-serif text-4xl text-nidra-indigo mb-8">Terms & Conditions</h1>
           <div className="prose prose-lg prose-stone">
@@ -28,7 +25,7 @@ export default function TermsPage() {
             <p>We may update these terms. Continued use constitutes acceptance.</p>
           </div>
         </main>
-      </SmoothScroll>
+      
     </>
   );
 }

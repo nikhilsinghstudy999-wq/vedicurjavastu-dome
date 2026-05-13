@@ -2,12 +2,8 @@
 import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import Header from '@/features/shared/components/Header';
-import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
-import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
 import { SoundController } from '@/features/shared/components/SoundController';
 import AnimatedText, { GradientText } from '@/features/shared/components/AnimatedText';
-import Mandala3D from '@/features/shared/components/Mandala3D';
-import FloatingParticles from '@/features/shared/components/svg/FloatingParticles';
 import BlogCard from '@/features/blog/components/BlogCard';
 import CategoryFilter from '@/features/blog/components/CategoryFilter';
 import { useRealtimeContent } from '@/features/shared/hooks/useRealtimeContent';
@@ -22,43 +18,63 @@ export default function InsightsPage() {
 
   return (
     <>
-      <LuxuryCursor /><SoundController /><Header /><SmoothScroll>
-        <main className="relative bg-vastu-parchment">
-          <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-vastu-parchment via-white to-vastu-parchment">
-            <Mandala3D /><FloatingParticles />
-            <div className="container mx-auto px-6 relative z-10 text-center">
-              <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-sacred-saffron uppercase tracking-[0.3em] text-sm mb-4 block">Wisdom from the Vedic Tradition</motion.span>
-              <AnimatedText text="Sacred Archives" className="font-serif text-5xl md:text-7xl lg:text-8xl text-nidra-indigo mb-4" />
-              <GradientText text="Ancient Knowledge for Modern Living" className="font-serif text-2xl md:text-3xl mb-6 block" />
-              <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-lg text-nidra-indigo/70 max-w-2xl mx-auto">
-                Explore articles on Vastu Shastra, numerology, and Vedic astrology — written by Vastuvid KK Nagaich.
-              </motion.p>
-            </div>
-          </section>
-          <section className="py-12 bg-vastu-stone/20">
-            <div className="container mx-auto px-6">
-              <CategoryFilter categories={categories} activeCategory={activeCategory} onSelect={setActiveCategory} />
-            </div>
-          </section>
-          <section className="py-16 bg-white">
-            <div className="container mx-auto px-6">
-              {loading ? (
-                <div className="flex justify-center py-12">
-                  <div className="w-12 h-12 border-4 border-prakash-gold border-t-transparent rounded-full animate-spin" />
-                </div>
-              ) : filteredPosts.length === 0 ? (
-                <p className="text-center text-nidra-indigo/60 py-12">No articles found in this category.</p>
-              ) : (
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {filteredPosts.map((post, i) => (
-                    <BlogCard key={post.id} post={post} index={i} />
-                  ))}
-                </div>
-              )}
-            </div>
-          </section>
-        </main>
-      </SmoothScroll>
+      <SoundController />
+      <Header />
+      <main className="relative bg-vastu-parchment">
+        {/* Hero section – simple, elegant */}
+        <section className="relative py-20 sm:py-28 overflow-hidden bg-gradient-to-b from-white to-vastu-parchment">
+          <div className="container mx-auto px-6 text-center">
+            <motion.span 
+              initial={{ opacity: 0, y: 20 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              className="text-sacred-saffron uppercase tracking-[0.3em] text-sm font-semibold"
+            >
+              Wisdom from the Vedic Tradition
+            </motion.span>
+            <AnimatedText 
+              text="Sacred Archives" 
+              className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-nidra-indigo mt-4 mb-4" 
+            />
+            <GradientText 
+              text="Ancient Knowledge for Modern Living" 
+              className="font-serif text-xl sm:text-2xl md:text-3xl block" 
+            />
+            <p className="text-base text-nidra-indigo/60 max-w-2xl mx-auto mt-4">
+              Explore articles on Vastu Shastra, numerology, and Vedic astrology — written by Vastuvid KK Nagaich.
+            </p>
+          </div>
+        </section>
+
+        {/* Category filter – simple, elegant */}
+        <section className="py-8 border-b border-prakash-gold/10">
+          <div className="container mx-auto px-6">
+            <CategoryFilter 
+              categories={categories} 
+              activeCategory={activeCategory} 
+              onSelect={setActiveCategory} 
+            />
+          </div>
+        </section>
+
+        {/* Blog grid – elegant cards */}
+        <section className="py-16">
+          <div className="container mx-auto px-6">
+            {loading ? (
+              <div className="flex justify-center py-20">
+                <div className="w-12 h-12 border-4 border-prakash-gold border-t-transparent rounded-full animate-spin" />
+              </div>
+            ) : filteredPosts.length === 0 ? (
+              <p className="text-center text-nidra-indigo/60 py-20">No articles found in this category.</p>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredPosts.map((post, i) => (
+                  <BlogCard key={post.id} post={post} index={i} />
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
+      </main>
     </>
   );
 }

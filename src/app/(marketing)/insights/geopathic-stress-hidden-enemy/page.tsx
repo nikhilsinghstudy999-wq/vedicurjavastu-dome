@@ -1,16 +1,13 @@
 import Header from '@/features/shared/components/Header';
-import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
-import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
 import { SoundController } from '@/features/shared/components/SoundController';
 import Link from 'next/link';
 
 export default function BlogPage() {
   return (
     <>
-      <LuxuryCursor />
       <SoundController />
       <Header />
-      <SmoothScroll>
+      
         <article className="pt-28 pb-20 min-h-screen">
 
           <section className="relative py-16 sm:py-24 overflow-hidden bg-gradient-to-br from-[#1a0a0a] via-[#2d0a0a] to-nidra-indigo/95 mb-12">
@@ -85,4 +82,4 @@ export default function BlogPage() {
 <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
 <div className="w-14 h-14 rounded-full bg-gradient-to-br from-red-600 to-prakash-gold flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
 <div><p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p><p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide | Geopathic Stress Specialist</p></div>
-</div></div></article></SmoothScroll></>);}
+</div></div></article></>);}

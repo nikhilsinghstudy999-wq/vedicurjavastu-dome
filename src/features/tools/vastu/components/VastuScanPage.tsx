@@ -2,8 +2,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Header from '@/features/shared/components/Header';
-import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
-import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
 import { SoundController } from '@/features/shared/components/SoundController';
 import VastuScanProcessor from './VastuScanProcessor';
 import VastuBars3D from '@/features/tools/shared/components/VastuBars3D';
@@ -15,10 +13,9 @@ export default function VastuScanPage() {
 
   return (
     <>
-      <LuxuryCursor />
       <SoundController />
       <Header />
-      <SmoothScroll>
+      
         <main className="pt-28 pb-20 px-6 min-h-screen bg-vastu-parchment">
           <div className="max-w-6xl mx-auto">
             <motion.h1 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="font-serif text-4xl md:text-5xl text-center text-nidra-indigo mb-4">
@@ -40,7 +37,7 @@ export default function VastuScanPage() {
             )}
           </div>
         </main>
-      </SmoothScroll>
+      
     </>
   );
 }

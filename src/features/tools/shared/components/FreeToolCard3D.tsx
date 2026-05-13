@@ -7,7 +7,7 @@ import { useSound } from '@/features/shared/hooks/useSound';
 interface FreeToolCard3DProps {
   name: string;
   description: string;
-  icon: string;
+  icon: React.ReactNode;
   href: string;
   color: string;
 }

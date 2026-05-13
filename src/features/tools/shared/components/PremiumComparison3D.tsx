@@ -167,12 +167,6 @@ export default function PremiumComparison3D() {
         </div>
       </div>
 
-      <style>{`
-        @keyframes rotate-slow { from{transform:rotate(0)}to{transform:rotate(360deg)} }
-        @keyframes rotate-reverse { from{transform:rotate(360deg)}to{transform:rotate(0)} }
-        .animate-rotate-slow { animation:rotate-slow 35s linear infinite }
-        .animate-rotate-reverse { animation:rotate-reverse 30s linear infinite }
-      `}</style>
     </section>
   );
 }

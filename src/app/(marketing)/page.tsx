@@ -1,45 +1,42 @@
 'use client';
-import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
+import { lazy } from 'react';
 import { SoundController } from '@/features/shared/components/SoundController';
 import Header from '@/features/shared/components/Header';
-import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
 import { CosmicHero } from '@/features/home/components/CosmicHero';
-import { TrustMarquee } from '@/features/home/components/TrustMarquee';
+import InstagramReelsShowcase from '@/features/home/components/InstagramReelsShowcase';
 import { AcharyaVow } from '@/features/home/components/AcharyaVow';
 import { SacredServices } from '@/features/home/components/SacredServices';
 import { FreeAITools } from '@/features/home/components/FreeAITools';
 import { VirtualConsultCTA } from '@/features/home/components/VirtualConsultCTA';
-import { SacredArchives } from '@/features/home/components/SacredArchives';
-import { GlobalPresence } from '@/features/home/components/GlobalPresence';
-import { SocialMediaFeed } from '@/features/home/components/SocialMediaFeed';
-import SocialCommunityShowcase from '@/features/home/components/SocialCommunityShowcase';
-import FAQSection from '@/features/testimonials/components/FAQSection';
 import { FinalCTA } from '@/features/home/components/FinalCTA';
-import AuthorityBar from '@/features/shared/components/AuthorityBar';
+
+const GlobalPresence = lazy(() => import('@/features/home/components/GlobalPresence'));
+const SacredArchives = lazy(() => import('@/features/home/components/SacredArchives'));
+const SocialMediaFeed = lazy(() => import('@/features/home/components/SocialMediaFeed'));
+const SocialCommunityShowcase = lazy(() => import('@/features/home/components/SocialCommunityShowcase'));
+const FAQSection = lazy(() => import('@/features/testimonials/components/FAQSection'));
 
 export default function HomePage() {
   return (
     <>
-      <LuxuryCursor />
       <SoundController />
       <Header />
-      <SmoothScroll>
-        <main style={{ position: "relative" }} className="relative bg-vastu-parchment">
+      
+        <main style={{ position: 'relative' }} className="relative bg-vastu-parchment">
           <CosmicHero />
-          <AuthorityBar />
-          <TrustMarquee />
+          <InstagramReelsShowcase />
           <AcharyaVow />
           <SacredServices />
           <div id="free-tools"><FreeAITools /></div>
           <VirtualConsultCTA />
-          <SacredArchives />
           <GlobalPresence />
+          <SacredArchives />
           <SocialMediaFeed />
           <SocialCommunityShowcase />
           <FAQSection />
           <FinalCTA />
         </main>
-      </SmoothScroll>
+      
     </>
   );
 }

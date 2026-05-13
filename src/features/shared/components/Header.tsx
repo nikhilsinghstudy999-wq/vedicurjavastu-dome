@@ -13,13 +13,11 @@ const servicesDropdown = [
   { name: 'Commercial Vastu', href: '/services/commercial' },
   { name: 'Industrial Vastu', href: '/services/industrial' },
   { name: 'Land Selection', href: '/services/land' },
-  { name: 'New Construction', href: '/services/new-construction' },
   { name: 'Kundali Analysis', href: '/services/kundali' },
   { name: 'Numerology & Namakaran', href: '/services/numerology-namakaran' },
   { name: 'Virtual Consult', href: '/bookings' },
 ];
 const freeToolsDropdown = [
-  { name: 'AI Kundali', href: '/free-tools/kundali' },
   { name: 'Daily Horoscope', href: '/free-tools/daily-horoscope' },
   { name: 'Name Suggestion', href: '/free-tools/name-suggestion' },
 ];
@@ -82,7 +80,6 @@ export default function Header() {
   const [imgError, setImgError] = useState(false);
   const { startNavigation } = useNavigation();
 
-  /* ───── SCROLL LOCK (body + html + Lenis) ───── */
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = 'hidden';
@@ -105,23 +102,29 @@ export default function Header() {
   return (
     <>
       <style>{`
-        @keyframes headerGradient { 0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%} }
-        @keyframes lineLoop { 0%{background-position:0% 50%}100%{background-position:300% 50%} }
-        .header-bar { position:fixed;top:0;left:0;right:0;z-index:50;height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;
-          background:linear-gradient(135deg,rgba(74,14,78,0.95),rgba(193,0,0,0.95),rgba(6,182,212,0.95),rgba(255,140,0,0.95),rgba(74,14,78,0.95));background-size:400% 400%;animation:headerGradient 14s ease infinite;box-shadow:0 4px 30px rgba(0,0,0,0.5);}
-        .header-bar::after { content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#C10000,#06B6D4,#7C3AED,#FF8C00,#C10000);background-size:300% 100%;animation:lineLoop 6s linear infinite; }
-        .header-spacer { height:70px; }
+        .header-bar {
+          position: fixed; top: 0; left: 0; right: 0; z-index: 50; height: 70px;
+          display: flex; align-items: center; justify-content: space-between; padding: 0 20px;
+          background: linear-gradient(135deg, #2E0A0A 0%, #1A0A2E 100%);
+          box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .header-bar::after {
+          content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+          background: linear-gradient(90deg, #C10000, #E8B960, #C10000);
+        }
+        .header-spacer { height: 70px; }
         .menu-btn { width:44px;height:44px;border-radius:14px;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s ease; }
         .menu-btn:hover { background:rgba(255,255,255,0.2);border-color:rgba(255,255,255,0.4);transform:scale(1.05); }
         .menu-btn span { display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all 0.3s ease;position:relative; }
         .menu-btn span::before,.menu-btn span::after { content:'';position:absolute;width:22px;height:2px;background:#fff;border-radius:2px;transition:all 0.3s ease; }
         .menu-btn span::before { top:-7px; } .menu-btn span::after { top:7px; }
-        .cta-btn { font-size:14px;font-weight:700;padding:10px 24px;border-radius:50px;background:linear-gradient(135deg,#C10000,#FF8C00);color:#fff;white-space:nowrap;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.3);box-shadow:0 4px 20px rgba(193,0,0,0.5);transition:all 0.3s ease;text-decoration:none;display:inline-flex; }
+        .cta-btn { font-size:14px;font-weight:700;padding:10px 24px;border-radius:50px;background:linear-gradient(135deg,#C10000,#E8B960);color:#fff;white-space:nowrap;letter-spacing:0.02em;border:1px solid rgba(255,255,255,0.3);box-shadow:0 4px 20px rgba(193,0,0,0.5);transition:all 0.3s ease;text-decoration:none;display:inline-flex; }
         .cta-btn:hover { box-shadow:0 8px 30px rgba(193,0,0,0.7);transform:translateY(-2px); }
         .side-overlay { position:fixed;inset:0;z-index:90;background:rgba(0,0,0,0.6);backdrop-filter:blur(8px); }
         .side-drawer { position:fixed;top:0;right:0;z-index:95;width:400px;max-width:90vw;height:100vh;background:linear-gradient(180deg,rgba(10,0,30,0.98),rgba(30,0,60,0.98),rgba(10,0,30,0.98));backdrop-filter:blur(30px);border-left:1px solid rgba(232,185,96,0.3);box-shadow:-10px 0 60px rgba(0,0,0,0.5);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column; }
-        .side-drawer::-webkit-scrollbar { width:4px; } .side-drawer::-webkit-scrollbar-thumb { background:rgba(232,185,96,0.4);border-radius:4px; }
-        .side-drawer-header { display:flex;align-items:center;justify-content:space-between;padding:20px;border-bottom:1px solid rgba(255,255,255,0.1);flex-shrink:0; }
+        .side-drawer::-webkit-scrollbar { width: 8px; }
+        .side-drawer::-webkit-scrollbar-track { background: rgba(0,0,0,0.3); border-radius: 4px; box-shadow: inset 0 0 4px rgba(0,0,0,0.5); }
+        .side-drawer::-webkit-scrollbar-thumb { background: linear-gradient(135deg, #E8B960, #C88A5D); border-radius: 4px; box-shadow: 0 0 6px rgba(232,185,96,0.6), inset 0 1px 2px rgba(255,255,255,0.3); }
         .close-btn { width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.3s ease;color:#fff; }
         .close-btn:hover { background:rgba(255,255,255,0.2);transform:rotate(90deg); }
         .drawer-standalone { border-bottom:1px solid rgba(255,255,255,0.08); }
@@ -135,7 +138,7 @@ export default function Header() {
       <header className="header-bar">
         <div className="flex items-center flex-shrink-0"><LanguageSwitcher /></div>
         <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center" onClick={() => handleNav()}>
-          {!imgError ? <Image src="/logo/logo.png" alt="VedicUrja" width={160} height={40} className="h-8 sm:h-10 w-auto object-contain" onError={() => setImgError(true)} priority />
+          {!imgError ? <Image src="/logo/logo.png" alt="VedicUrja" width={180} height={45} className="h-9 sm:h-11 w-auto object-contain" onError={() => setImgError(true)} priority />
           : <span className="font-serif text-xl sm:text-2xl text-white font-bold tracking-wide drop-shadow-lg">VedicUrja<span className="text-yellow-400">.</span></span>}
         </Link>
         <div className="flex items-center gap-3 flex-shrink-0">
@@ -153,7 +156,7 @@ export default function Header() {
             <motion.div initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ duration: 0.4, ease: [0.23,1,0.32,1] }}
               className="side-drawer">
               <div className="side-drawer-header">
-                {!imgError ? <Image src="/logo/logo.png" alt="VedicUrja" width={120} height={30} className="h-6 w-auto object-contain" onError={() => setImgError(true)} />
+                {!imgError ? <Image src="/logo/logo.png" alt="VedicUrja" width={140} height={35} className="h-7 w-auto object-contain" onError={() => setImgError(true)} />
                 : <span className="font-serif text-lg text-white font-bold">VedicUrja<span className="text-yellow-400">.</span></span>}
                 <button onClick={() => setMenuOpen(false)} className="close-btn">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12"/></svg>
@@ -166,7 +169,6 @@ export default function Header() {
                 <DrawerItem label={t('header.freeAITools')||'Free AI Tools'} href="/free-tools" dropdown={freeToolsDropdown} onClose={() => setMenuOpen(false)} />
                 <DrawerItem label={t('header.bookings')||'Bookings'} href="/bookings" onClose={() => setMenuOpen(false)} />
                 <DrawerItem label={t('header.blogs')||'Blogs'} href="/insights" dropdown={insightsDropdown} onClose={() => setMenuOpen(false)} />
-                <DrawerItem label={t('header.collaborate')||'Collaborate'} href="/collaborate" onClose={() => setMenuOpen(false)} />
                 <DrawerItem label={t('header.testimonials')||'Testimonials'} href="/client-stories" onClose={() => setMenuOpen(false)} />
 
                 <div className="drawer-standalone">

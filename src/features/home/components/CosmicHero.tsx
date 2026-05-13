@@ -1,4 +1,5 @@
 'use client';
+
 import { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import LuxuryHeroButton from '@/features/shared/components/ui/LuxuryHeroButton';
@@ -21,47 +22,23 @@ interface HeroSection {
 const fallbackHero: HeroSection = {
   id: 'fallback',
   section_key: 'hero',
-  title: "India's Most‑Viewed Vastu Authority",
-  subtitle: '100M+ Views. 2 Lakh+ Clients. 50+ Countries.',
-  description: 'Vastuvid KK Nagaich — the only Vastu Guru who is a 4th‑generation lineage holder, Tantra Sadhak, MBA, and former CEO. His personal rituals and deep business acumen have transformed thousands of lives worldwide.',
-  button_text: 'Consult the Master',
+  title: 'प्राचीन ज्ञान · शाश्वत सद्भाव',
+  subtitle: 'Ancient Wisdom · Eternal Harmony',
+  description: 'Vastuvid K.K. Nagaich – 4th generation Vastu Guru, Tantra Sadhak, MBA, former CEO. Rooted in the Guru‑Shishya Parampara, he personally performs every ritual and has transformed over 2 Lakh lives across 50+ countries. Experience the divine science of Vedic architecture.',
+  button_text: 'Consult Vastuvid ji',
   button_link: '/contact',
-  secondary_button_text: 'Explore Free Tools',
+  secondary_button_text: 'Explore Sacred Tools',
   secondary_button_link: '/free-tools',
   is_published: true,
 };
 
 export function CosmicHero() {
   const ref = useRef<HTMLElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [shouldLoad, setShouldLoad] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
 
-  // IntersectionObserver: start loading video as soon as the hero is near the viewport
   useEffect(() => {
     setIsMounted(true);
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setShouldLoad(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: '200px' }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
   }, []);
-
-  // When shouldLoad turns true, we load and play the video
-  useEffect(() => {
-    if (shouldLoad && videoRef.current) {
-      videoRef.current.load();
-      videoRef.current.play().catch(() => {});
-    }
-  }, [shouldLoad]);
 
   const { scrollYProgress } = useScroll(
     isMounted && ref.current ? { target: ref, offset: ['start start', 'end start'] } : undefined
@@ -74,7 +51,7 @@ export function CosmicHero() {
 
   if (loading) {
     return (
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-nidra-indigo via-sacred-saffron/5 to-kumkuma-red/10">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: 'radial-gradient(ellipse at center, rgba(255,153,51,0.15) 0%, #1A0A2E 70%)' }}>
         <div className="text-white text-center">Loading...</div>
       </section>
     );
@@ -93,53 +70,42 @@ export function CosmicHero() {
       style={isMounted ? { opacity } : undefined}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Video background – no fallback image, just the video */}
+      {/* Elegant Vedic Gradient Background with Gold Vignette */}
       <div className="absolute inset-0 w-full h-full">
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="none"
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/videos/home/lucknow.webm" type="video/webm" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-br from-nidra-indigo/70 via-nidra-indigo/40 to-transparent" />
+        <div
+          className="absolute inset-0 w-full h-full"
+          style={{
+            background: 'radial-gradient(ellipse at center, rgba(255,153,51,0.15) 0%, rgba(26,10,46,0.98) 70%)',
+            backgroundColor: '#1A0A2E'
+          }}
+        />
+        {/* subtle sacred mandala glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(232,185,96,0.06),transparent_60%)]" />
       </div>
 
-      {/* Foreground content – responsive flex layout */}
-      <motion.div style={isMounted ? { y } : undefined} className="container mx-auto px-4 sm:px-6 relative z-10 mt-20">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-          <div className="flex-1 text-center lg:text-left max-w-2xl">
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-2xl">
-              <span className="bg-gradient-to-r from-sacred-saffron via-prakash-gold to-kumkuma-red bg-clip-text text-transparent">
-                {heroData.title || fallbackHero.title}
-              </span>
-              <br />
-              <span className="text-prakash-gold text-2xl sm:text-3xl md:text-4xl mt-2 block">
-                {heroData.subtitle || fallbackHero.subtitle}
-              </span>
-            </h1>
-            <p className="font-sans text-base sm:text-lg md:text-xl text-white/80 max-w-xl mx-auto lg:mx-0 mb-8">
-              {heroData.description || fallbackHero.description}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-              <LuxuryHeroButton href={primaryLink} variant="primary">
-                {primaryText}
-              </LuxuryHeroButton>
-              {secondaryText && secondaryLink && (
-                <LuxuryHeroButton href={secondaryLink} variant="secondary">
-                  {secondaryText}
-                </LuxuryHeroButton>
-              )}
-            </div>
-          </div>
-          <div className="flex-shrink-0 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 relative mx-auto lg:mx-0">
-            <CommunityCounter3D />
-          </div>
+      {/* Foreground Content */}
+      <motion.div style={isMounted ? { y } : undefined} className="container mx-auto px-4 sm:px-6 relative z-10 text-center mt-20">
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-2xl">
+          <span className="bg-gradient-to-r from-sacred-saffron via-prakash-gold to-kumkuma-red bg-clip-text text-transparent">
+            {heroData.title || fallbackHero.title}
+          </span>
+          <br />
+          <span className="text-prakash-gold">{heroData.subtitle || fallbackHero.subtitle}</span>
+        </h1>
+        <p className="font-sans text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 px-4">
+          {heroData.description || fallbackHero.description}
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <LuxuryHeroButton href={primaryLink} variant="primary">
+            {primaryText}
+          </LuxuryHeroButton>
+          {secondaryText && secondaryLink && (
+            <LuxuryHeroButton href={secondaryLink} variant="secondary">
+              {secondaryText}
+            </LuxuryHeroButton>
+          )}
         </div>
+        <CommunityCounter3D />
       </motion.div>
 
       {/* Scroll indicator */}

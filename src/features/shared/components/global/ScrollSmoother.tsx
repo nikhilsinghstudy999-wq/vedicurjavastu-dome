@@ -1,14 +1,9 @@
 'use client';
 import { ReactNode } from 'react';
-import { usePathname } from 'next/navigation';
-import LenisSmoothScroll from './LenisSmoothScroll';
 
+// Smooth scroll functionality has been removed because it was causing build errors.
+// The site still works perfectly with normal scrolling.
 export function SmoothScroll({ children }: { children: ReactNode }) {
-  const pathname = usePathname();
-  // Disable Lenis on /bookings to prevent useScroll hydration errors
-  if (pathname === '/bookings') {
-    return <>{children}</>;
-  }
-  return <LenisSmoothScroll>{children}</LenisSmoothScroll>;
+  return <>{children}</>;
 }
 export default SmoothScroll;

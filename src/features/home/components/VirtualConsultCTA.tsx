@@ -127,18 +127,6 @@ export function VirtualConsultCTA() {
       </div>
 
       {/* Custom animations */}
-      <style>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-15px) rotate(3deg); }
-        }
-        @keyframes float-reverse {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-10px) rotate(-2deg); }
-        }
-        .animate-float { animation: float 8s ease-in-out infinite; }
-        .animate-float-reverse { animation: float-reverse 10s ease-in-out infinite; }
-      `}</style>
     </motion.section>
   );
 }

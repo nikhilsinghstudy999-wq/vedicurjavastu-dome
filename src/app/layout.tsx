@@ -2,7 +2,6 @@ import Footer from '@/features/shared/components/Footer';
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { LanguageProvider } from "@/features/shared/contexts/LanguageContext";
-import LenisSmoothScroll from "@/features/shared/components/global/LenisSmoothScroll";
 import TranslationExecutor from "@/features/shared/components/global/TranslationExecutor";
 import PageTransition from "@/features/shared/components/global/PageTransition";
 import { GlobalSoundProvider } from "@/features/shared/components/global/GlobalSoundProvider";
@@ -22,18 +21,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
       <body className="bg-vastu-parchment text-nidra-indigo antialiased">
-            <AnimatedFavicon />
+        <AnimatedFavicon />
         <LanguageProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <GlobalSoundProvider>
-          <div style={{ position: "relative", minHeight: "100vh" }}>
-              <LenisSmoothScroll>
+              <div style={{ position: "relative", minHeight: "100vh" }}>
+                {/* LenisSmoothScroll removed – normal scrolling works fine */}
                 <PageTransition>
                   <TranslationExecutor />
                   {children}
                 </PageTransition>
-              </LenisSmoothScroll>
-          </div>
+              </div>
             </GlobalSoundProvider>
           </ThemeProvider>
         </LanguageProvider>

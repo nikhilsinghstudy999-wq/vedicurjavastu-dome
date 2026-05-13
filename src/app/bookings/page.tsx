@@ -3,8 +3,6 @@ import { useState, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import Header from '@/features/shared/components/Header';
-import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
-import { LuxuryCursor } from '@/features/shared/components/LuxuryCursor';
 import { SoundController } from '@/features/shared/components/SoundController';
 import ProblemStorySVG from '@/features/bookings/components/ProblemStorySVG';
 import SolutionConnectionSVG from '@/features/bookings/components/SolutionConnectionSVG';
@@ -205,7 +203,6 @@ export default function BookingsPage() {
 
   return (
     <>
-      <LuxuryCursor /><SoundController /><Header /><SmoothScroll>
         <main className="relative bg-vastu-parchment">
           <HeroSection onCtaClick={scrollToForm} />
           <ProblemSection />
@@ -215,7 +212,7 @@ export default function BookingsPage() {
             <div className="container mx-auto px-4"><BookingFormSection /></div>
           </section>
         </main>
-      </SmoothScroll>
+      
       <style>{`
         @keyframes gradient-loop { 0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%} }
         @keyframes spin-slow { from{transform:rotate(0)}to{transform:rotate(360deg)} }

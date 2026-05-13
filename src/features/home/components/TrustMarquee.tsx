@@ -17,27 +17,6 @@ export function TrustMarquee() {
       {/* Slow looping gradient background */}
       <div className="absolute inset-0 bg-gradient-to-r from-nidra-indigo/5 via-prakash-gold/10 to-sacred-saffron/5 bg-[length:400%_400%] animate-[trustGradient_12s_ease-in-out_infinite] rounded-[60px] mx-4 sm:mx-8" />
 
-      <style>{`
-        @keyframes trustGradient {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-        }
-        @keyframes trustFloat {
-          0%, 100% { transform: translateY(0px) rotateY(0deg); }
-          50% { transform: translateY(-5px) rotateY(3deg); }
-        }
-        .trust-card {
-          transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-          background: rgba(255, 255, 255, 0.8);
-          backdrop-filter: blur(8px);
-          border: 1px solid rgba(232, 185, 96, 0.3);
-          box-shadow: 0 8px 20px rgba(26, 42, 58, 0.1), 0 2px 6px rgba(232, 185, 96, 0.15);
-        }
-        .trust-card:hover {
-          transform: translateY(-6px) rotateY(5deg) scale(1.05);
-          box-shadow: 0 15px 30px rgba(26, 42, 58, 0.2), 0 6px 15px rgba(232, 185, 96, 0.3);
-        }
-      `}</style>
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6">
         {/* Headline */}
