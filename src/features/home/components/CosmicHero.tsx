@@ -1,120 +1,71 @@
 'use client';
 
-import { useRef, useState, useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import LuxuryHeroButton from '@/features/shared/components/ui/LuxuryHeroButton';
-import { CommunityCounter3D } from './CommunityCounter3D';
-import { useRealtimeContent } from '@/features/shared/hooks/useRealtimeContent';
-
-interface HeroSection {
-  id: string;
-  section_key: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  button_text: string;
-  button_link: string;
-  secondary_button_text?: string | null;
-  secondary_button_link?: string | null;
-  is_published: boolean;
-}
-
-const fallbackHero: HeroSection = {
-  id: 'fallback',
-  section_key: 'hero',
-  title: 'प्राचीन ज्ञान · शाश्वत सद्भाव',
-  subtitle: 'Ancient Wisdom · Eternal Harmony',
-  description: 'Vastuvid K.K. Nagaich – 4th generation Vastu Guru, Tantra Sadhak, MBA, former CEO. Rooted in the Guru‑Shishya Parampara, he personally performs every ritual and has transformed over 2 Lakh lives across 50+ countries. Experience the divine science of Vedic architecture.',
-  button_text: 'Consult Vastuvid ji',
-  button_link: '/contact',
-  secondary_button_text: 'Explore Sacred Tools',
-  secondary_button_link: '/free-tools',
-  is_published: true,
-};
+import Link from 'next/link';
 
 export function CosmicHero() {
-  const ref = useRef<HTMLElement>(null);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  const { scrollYProgress } = useScroll(
-    isMounted && ref.current ? { target: ref, offset: ['start start', 'end start'] } : undefined
-  );
-  const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
-  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [1, 1, 0, 0]);
-
-  const { items, loading } = useRealtimeContent<HeroSection>('home_sections', 'order_index');
-  const heroData = items.find(item => item.section_key === 'hero' && item.is_published) || fallbackHero;
-
-  if (loading) {
-    return (
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: 'radial-gradient(ellipse at center, rgba(255,153,51,0.15) 0%, #1A0A2E 70%)' }}>
-        <div className="text-white text-center">Loading...</div>
-      </section>
-    );
-  }
-
-  if (!heroData.is_published) return null;
-
-  const primaryText = heroData.button_text || fallbackHero.button_text;
-  const primaryLink = heroData.button_link || fallbackHero.button_link;
-  const secondaryText = heroData.secondary_button_text;
-  const secondaryLink = heroData.secondary_button_link;
+  // Static content – no API calls, no animations, no delays
+  const hero = {
+    title: 'प्राचीन ज्ञान · शाश्वत सद्भाव',
+    subtitle: 'Ancient Wisdom · Eternal Harmony',
+    description: 'Vastuvid K.K. Nagaich – 4th generation Vastu Guru, Tantra Sadhak, MBA, former CEO. Rooted in the Guru‑Shishya Parampara, he personally performs every ritual and has transformed over 2 Lakh lives across 50+ countries.',
+    buttonText: 'Consult Vastuvid ji',
+    buttonLink: '/contact',
+    secondaryButtonText: 'Explore Free Tools',
+    secondaryButtonLink: '/free-tools',
+  };
 
   return (
-    <motion.section
-      ref={ref}
-      style={isMounted ? { opacity } : undefined}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-    >
-      {/* Elegant Vedic Gradient Background with Gold Vignette */}
-      <div className="absolute inset-0 w-full h-full">
-        <div
-          className="absolute inset-0 w-full h-full"
-          style={{
-            background: 'radial-gradient(ellipse at center, rgba(255,153,51,0.15) 0%, rgba(26,10,46,0.98) 70%)',
-            backgroundColor: '#1A0A2E'
-          }}
-        />
-        {/* subtle sacred mandala glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(232,185,96,0.06),transparent_60%)]" />
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1A0A2E] to-[#2D0A3C]">
+      {/* Simple static background – no radial gradient, no animation */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(232,185,96,0.08),transparent_70%)]" />
 
-      {/* Foreground Content */}
-      <motion.div style={isMounted ? { y } : undefined} className="container mx-auto px-4 sm:px-6 relative z-10 text-center mt-20">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center mt-20">
         <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-2xl">
           <span className="bg-gradient-to-r from-sacred-saffron via-prakash-gold to-kumkuma-red bg-clip-text text-transparent">
-            {heroData.title || fallbackHero.title}
+            {hero.title}
           </span>
           <br />
-          <span className="text-prakash-gold">{heroData.subtitle || fallbackHero.subtitle}</span>
+          <span className="text-prakash-gold">{hero.subtitle}</span>
         </h1>
-        <p className="font-sans text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 px-4">
-          {heroData.description || fallbackHero.description}
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <LuxuryHeroButton href={primaryLink} variant="primary">
-            {primaryText}
-          </LuxuryHeroButton>
-          {secondaryText && secondaryLink && (
-            <LuxuryHeroButton href={secondaryLink} variant="secondary">
-              {secondaryText}
-            </LuxuryHeroButton>
-          )}
-        </div>
-        <CommunityCounter3D />
-      </motion.div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <span className="block w-6 h-10 border-2 border-prakash-gold rounded-full mx-auto">
-          <span className="block w-1 h-3 bg-prakash-gold rounded-full mx-auto mt-2 animate-bounce" />
-        </span>
+        <p className="font-sans text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 px-4">
+          {hero.description}
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <Link
+            href={hero.buttonLink}
+            className="px-8 py-4 bg-gradient-to-r from-prakash-gold to-sacred-saffron rounded-full font-semibold text-white hover:shadow-lg transition"
+          >
+            {hero.buttonText}
+          </Link>
+          <Link
+            href={hero.secondaryButtonLink}
+            className="px-8 py-4 border-2 border-white rounded-full font-semibold text-white hover:bg-white/10 transition"
+          >
+            {hero.secondaryButtonText}
+          </Link>
+        </div>
+
+        {/* Simple community counter – no animations */}
+        <div className="inline-block bg-white/10 backdrop-blur-md px-6 py-3 rounded-full border border-prakash-gold/40">
+          <div className="flex items-center gap-3">
+            <span className="text-prakash-gold text-xl">✦</span>
+            <span className="font-serif text-3xl sm:text-4xl font-bold text-white drop-shadow-2xl">80k+</span>
+            <span className="text-white/80 text-sm uppercase tracking-wider">Community</span>
+            <span className="text-prakash-gold text-xl">✦</span>
+          </div>
+        </div>
       </div>
-    </motion.section>
+
+      {/* Scroll indicator – minimal, no bounce animation */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <div className="w-6 h-10 border-2 border-prakash-gold rounded-full mx-auto">
+          <div className="w-1 h-3 bg-prakash-gold rounded-full mx-auto mt-2" />
+        </div>
+      </div>
+    </section>
   );
 }
+
 export default CosmicHero;
