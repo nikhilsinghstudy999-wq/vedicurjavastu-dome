@@ -1,4 +1,6 @@
 'use client';
+'use client';
+'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -274,7 +276,7 @@ export default function Header() {
         <Link href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center" onClick={() => handleNav()}>
           {!imgError ? (
             <Image
-              src="/logo/logo.png"
+              src="/logo/logo.webp"
               alt="VedicUrja"
               width={220}
               height={55}
@@ -319,7 +321,7 @@ export default function Header() {
             >
               <div className="side-drawer-header">
                 {!imgError ? (
-                  <Image src="/logo/logo.png" alt="VedicUrja" width={160} height={40} className="h-8 w-auto object-contain" onError={() => setImgError(true)} />
+                  <Image src="/logo/logo.webp" alt="VedicUrja" width={160} height={40} className="h-8 w-auto object-contain" onError={() => setImgError(true)} />
                 ) : (
                   <span className="font-serif text-lg text-white font-bold">VedicUrja<span className="text-yellow-400">.</span></span>
                 )}

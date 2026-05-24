@@ -1,4 +1,6 @@
 'use client';
+'use client';
+'use client';
 import { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
@@ -32,7 +34,7 @@ export function GlobalPresence() {
           </div>
           <div className="order-1 md:order-2 flex justify-center">
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-[0_0_60px_rgba(232,185,96,0.5)] border-4 border-prakash-gold">
-              <Image src="/images/home/globe-texture.jpg" alt="VedicUrja Global Presence" fill className="object-cover" />
+              <Image src="/images/home/globe-texture.webp" alt="VedicUrja Global Presence" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-nidra-indigo/30" />
             </div>
           </div>

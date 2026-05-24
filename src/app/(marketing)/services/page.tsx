@@ -1,4 +1,6 @@
 'use client';
+'use client';
+'use client';
 import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
@@ -62,7 +64,7 @@ function InstagramReviewsSection() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {instagramReels.map((url, i) => (
             <motion.div key={url} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }} whileHover={{ scale: 1.02, rotateY: 2 }} className="rounded-2xl overflow-hidden bg-white shadow-[0_8px_30px_rgba(26,42,58,0.08)] hover:shadow-[0_15px_40px_rgba(200,138,93,0.2)] border border-prakash-gold/10">
-              <iframe src={`${url}embed/`} width="100%" height="480" frameBorder="0" scrolling="no" className="w-full" style={{ minHeight: '400px' }} />
+              <iframe loading="lazy" src={`${url}embed/`} width="100%" height="480" frameBorder="0" scrolling="no" className="w-full" style={{ minHeight: '400px' }} />
             </motion.div>
           ))}
         </div>

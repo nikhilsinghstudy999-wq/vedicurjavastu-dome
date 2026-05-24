@@ -1,4 +1,6 @@
 'use client';
+'use client';
+'use client';
 import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Header from '@/features/shared/components/Header';
@@ -184,7 +186,7 @@ function VideoTestimonialsSection() {
               className="flex-shrink-0 w-[300px] sm:w-[360px] snap-start rounded-2xl overflow-hidden bg-white shadow-[0_8px_25px_rgba(26,42,58,0.06)] hover:shadow-[0_15px_35px_rgba(200,138,93,0.15)] border border-prakash-gold/10 transition-shadow duration-500"
               style={{ transformStyle: 'preserve-3d', perspective: 1000 }}
             >
-              <iframe src={`${url}embed/`} width="100%" height="460" frameBorder="0" scrolling="no" className="w-full" />
+              <iframe loading="lazy" src={`${url}embed/`} width="100%" height="460" frameBorder="0" scrolling="no" className="w-full" />
             </motion.div>
           ))}
         </div>
