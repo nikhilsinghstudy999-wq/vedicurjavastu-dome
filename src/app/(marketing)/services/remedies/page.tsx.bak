@@ -3,7 +3,6 @@
 'use client';
 
 import { useState } from 'react';
-import FeaturedBlogSection from "@/features/shared/components/FeaturedBlogSection";
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Header from '@/features/shared/components/Header';
@@ -104,9 +103,6 @@ export default function RemediesPage() {
             <Link href="/bookings" className="luxury-button text-lg px-10 py-5">Book a Remedy Consultation</Link>
           </div>
         </section>
-
-      <FeaturedBlogSection />
-
 
         <WhyChooseUs />
 
