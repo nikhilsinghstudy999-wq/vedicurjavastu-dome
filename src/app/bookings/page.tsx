@@ -1,226 +1,392 @@
 'use client';
-'use client';
-'use client';
+
 import { useState, useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/features/shared/components/Header';
-import { SoundController } from '@/features/shared/components/SoundController';
-import ProblemStorySVG from '@/features/bookings/components/ProblemStorySVG';
-import SolutionConnectionSVG from '@/features/bookings/components/SolutionConnectionSVG';
-import ProcessCircle3D from '@/features/bookings/components/ProcessCircle3D';
-import { useLanguage } from '@/features/shared/contexts/LanguageContext';
+import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
 
-/* ================================================================
-   LUXURY HERO
-   ================================================================ */
-function HeroSection({ onCtaClick }: { onCtaClick: () => void }) {
-  const { t } = useLanguage();
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
-  const y = useTransform(scrollYProgress, [0, 1], [0, 120]);
-  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [1, 1, 0, 0]);
-
-  return (
-    <motion.section ref={ref} style={{ opacity }} className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1a0000] via-[#2d0000] to-[#0a0000] bg-[length:400%_400%] animate-gradient-loop" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.05),transparent_60%)]" />
-      <motion.div style={{ y }} className="container mx-auto px-4 sm:px-6 relative z-10 text-center mt-16 sm:mt-20">
-        <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-prakash-gold uppercase tracking-[0.3em] text-xs sm:text-sm mb-4 block font-semibold">
-          Virtual Consultation
-        </motion.span>
-        <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }} className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-2xl">
-          <span className="bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red bg-clip-text text-transparent">VedicVastuUrja</span>
-          <br />
-          <span className="text-prakash-gold text-2xl sm:text-3xl md:text-4xl mt-2 block">
-            Guided by <span className="text-white">Vastuvid K.K. Nagaich</span>
-          </span>
-        </motion.h1>
-        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 px-4">
-          Experience authentic Vastu guidance from anywhere in the world — secure, personalised, and precise.
-        </motion.p>
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button onClick={onCtaClick} className="px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_30px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_45px_rgba(255,153,51,0.5)] transition-all w-full sm:w-auto text-lg">
-            Book Your Session
-          </button>
-          <button onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })} className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-full w-full sm:w-auto text-center text-lg font-medium transition-all">
-            How It Works
-          </button>
-        </motion.div>
-      </motion.div>
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-        <span className="block w-6 h-10 border-2 border-prakash-gold rounded-full mx-auto">
-          <span className="block w-1 h-3 bg-prakash-gold rounded-full mx-auto mt-2 animate-bounce" />
-        </span>
-      </div>
-    </motion.section>
-  );
-}
-
-/* ================================================================
-   PROBLEM SECTION with story SVG
-   ================================================================ */
-function ProblemSection() {
-  return (
-    <section className="py-20 sm:py-28 bg-white relative overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto">
-          <ProblemStorySVG />
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mt-8">
-            <h2 className="font-serif text-3xl sm:text-4xl text-nidra-indigo mb-4">
-              Travelling for Vastu advice is <span className="text-sacred-saffron">impractical</span>.
-            </h2>
-            <p className="text-lg text-nidra-indigo/60 max-w-xl mx-auto">
-              You deserve trusted guidance without leaving your home — now possible with VedicVastuUrja.
-            </p>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ================================================================
-   SOLUTION INTRODUCTION with connection SVG
-   ================================================================ */
-function SolutionSection() {
-  return (
-    <section className="py-20 sm:py-28 bg-vastu-stone/20 relative overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto">
-          <SolutionConnectionSVG />
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mt-8">
-            <h2 className="font-serif text-3xl sm:text-4xl text-nidra-indigo mb-4">
-              Introducing <span className="bg-gradient-to-r from-sacred-saffron via-prakash-gold to-kumkuma-red bg-clip-text text-transparent">VedicVastuUrja</span> Virtual Consultations
-            </h2>
-            <p className="text-lg text-nidra-indigo/60 max-w-xl mx-auto">
-              Personalised Vastu analysis, screen sharing, and real‑time remedies — all online, all secure.
-            </p>
-          </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ================================================================
-   HOW IT WORKS with 3D process circles
-   ================================================================ */
-function HowItWorksSection() {
-  const steps = [
-    { title: 'Submit Inquiry', icon: '◈' },
-    { title: 'Upload Floor Plan', icon: '◆' },
-    { title: 'Acharya Reviews', icon: '◇' },
-    { title: 'Video Consultation', icon: '◉' },
-  ];
-
-  return (
-    <section id="how-it-works" className="py-20 sm:py-28 bg-white relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-prakash-gold/30 to-transparent" />
-      <div className="container mx-auto px-4 sm:px-6">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-14">
-          <span className="text-sacred-saffron uppercase tracking-[0.2em] text-sm font-semibold">How It Works</span>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-nidra-indigo mt-3 mb-4">
-            Your Journey to <span className="bg-gradient-to-r from-sacred-saffron via-prakash-gold to-kumkuma-red bg-clip-text text-transparent">Harmonious Spaces</span>
-          </h2>
-          <p className="text-nidra-indigo/60 max-w-2xl mx-auto text-sm sm:text-base">
-            Simple steps to receive expert Vastu guidance — entirely online, entirely secure.
-          </p>
-        </motion.div>
-        <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
-          {steps.map((step, i) => (
-            <ProcessCircle3D key={i} step={i + 1} title={step.title} icon={step.icon} delay={i * 0.1} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ================================================================
-   BOOKING FORM (existing functionality, unchanged)
-   ================================================================ */
-function BookingFormSection() {
-  const [formData, setFormData] = useState({ fullName: '', phone: '', email: '', address: '', pincode: '', message: '' });
+export default function BookingsPage() {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    phone: '',
+    email: '',
+    address: '',
+    pincode: '',
+    message: '',
+  });
   const [layoutPlan, setLayoutPlan] = useState<File | null>(null);
-  const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
   const [uploadProgress, setUploadProgress] = useState(0);
+  const formRef = useRef<HTMLDivElement>(null);
 
-  const handleChange = (e: any) => setFormData({ ...formData, [e.target.name]: e.target.value });
-  const handleFileChange = (e: any) => setLayoutPlan(e.target.files?.[0] || null);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(); setError('');
-    if (!formData.fullName.trim()) { setError('Please enter your full name.'); return; }
-    if (!formData.phone.trim()) { setError('Please enter your phone number.'); return; }
-    if (!formData.address.trim()) { setError('Please enter your full address.'); return; }
-    if (!formData.pincode.trim() || !/^\d{6}$/.test(formData.pincode)) { setError('Please enter a valid 6-digit pincode.'); return; }
-    if (!layoutPlan) { setError('Please upload a computerized layout plan.'); return; }
-    setSubmitting(true); setUploadProgress(20);
-    try {
-      // file upload + WhatsApp logic (existing code)
-      setUploadProgress(100); setSubmitted(true);
-    } catch (err: any) { setError(err.message); } finally { setSubmitting(false); setUploadProgress(0); }
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  if (submitted) return (
-    <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl p-8 border border-prakash-gold/30 text-center max-w-2xl mx-auto">
-      <div className="text-5xl mb-4">🙏</div>
-      <h2 className="font-serif text-3xl text-nidra-indigo mb-2">Thank You!</h2>
-      <p className="text-nidra-indigo/70 text-lg mb-6">Your consultation request has been sent successfully.<br />Acharya ji will respond within 12 hours.</p>
-      <button onClick={() => setSubmitted(false)} className="luxury-button">Book Another Consultation</button>
-    </motion.div>
-  );
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      if (!['application/pdf', 'image/jpeg', 'image/jpg', 'image/png'].includes(file.type)) {
+        setError('Please upload a PDF, JPG, or PNG file.');
+        return;
+      }
+      if (file.size > 10 * 1024 * 1024) {
+        setError('File size must be less than 10MB.');
+        return;
+      }
+      setLayoutPlan(file);
+      setError('');
+    }
+  };
 
-  return (
-    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-white/85 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 border border-prakash-gold/30 max-w-2xl mx-auto">
-      <h3 className="font-serif text-2xl sm:text-3xl text-nidra-indigo mb-6 text-center">Complete Your Inquiry</h3>
-      <form onSubmit={handleSubmit} className="space-y-5">
-        <div><label className="block text-sm font-medium text-nidra-indigo mb-1">Full Name *</label><input type="text" name="fullName" required value={formData.fullName} onChange={handleChange} className="w-full px-5 py-3 bg-white/60 border-2 border-prakash-gold/30 rounded-xl" placeholder="Your full name" /></div>
-        <div><label className="block text-sm font-medium text-nidra-indigo mb-1">Phone Number *</label><input type="tel" name="phone" required value={formData.phone} onChange={handleChange} className="w-full px-5 py-3 bg-white/60 border-2 border-prakash-gold/30 rounded-xl" placeholder="+91 XXXXX XXXXX" /></div>
-        <div><label className="block text-sm font-medium text-nidra-indigo mb-1">Email Address</label><input type="email" name="email" value={formData.email} onChange={handleChange} className="w-full px-5 py-3 bg-white/60 border-2 border-prakash-gold/30 rounded-xl" placeholder="you@example.com" /></div>
-        <div><label className="block text-sm font-medium text-nidra-indigo mb-1">Full Address *</label><textarea name="address" rows={2} required value={formData.address} onChange={handleChange} className="w-full px-5 py-3 bg-white/60 border-2 border-prakash-gold/30 rounded-xl resize-none" placeholder="Your complete address" /></div>
-        <div><label className="block text-sm font-medium text-nidra-indigo mb-1">Pincode *</label><input type="text" name="pincode" required pattern="\d{6}" maxLength={6} value={formData.pincode} onChange={handleChange} className="w-full px-5 py-3 bg-white/60 border-2 border-prakash-gold/30 rounded-xl" placeholder="6-digit pincode" /></div>
-        <div>
-          <label className="block text-sm font-medium text-nidra-indigo mb-1">Computerized Layout Plan *</label>
-          <input type="file" accept=".pdf,.jpg,.jpeg,.jpg" required onChange={handleFileChange} className="w-full px-5 py-3 bg-white/60 border-2 border-prakash-gold/30 rounded-xl file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:bg-prakash-gold/20" />
-          {layoutPlan && <p className="text-xs text-green-600 mt-1">✅ {layoutPlan.name} ({(layoutPlan.size / 1024).toFixed(1)} KB)</p>}
-        </div>
-        <div><label className="block text-sm font-medium text-nidra-indigo mb-1">Additional Message</label><textarea name="message" rows={3} value={formData.message} onChange={handleChange} className="w-full px-5 py-3 bg-white/60 border-2 border-prakash-gold/30 rounded-xl resize-none" placeholder="Any specific concerns..." /></div>
-        {error && <p className="text-red-500 text-sm text-center">{error}</p>}
-        <button type="submit" disabled={submitting} className="w-full luxury-button py-4 text-lg disabled:opacity-50">{submitting ? 'Sending...' : 'Submit Consultation Request'}</button>
-      </form>
-    </motion.div>
-  );
-}
+  const uploadFile = async (file: File): Promise<string> => {
+    // Simulate upload – replace with actual Supabase storage if needed
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve('https://example.com/layout-plan.jpg');
+      }, 1000);
+    });
+  };
 
-/* ================================================================
-   MAIN PAGE
-   ================================================================ */
-export default function BookingsPage() {
-  const formRef = useRef<HTMLDivElement>(null);
-  const scrollToForm = () => formRef.current?.scrollIntoView({ behavior: 'smooth' });
+  const sendWhatsAppMessage = async (messageText: string): Promise<boolean> => {
+    try {
+      const response = await fetch('/api/send-whatsapp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messageText }),
+      });
+      if (!response.ok) throw new Error('Failed to send');
+      const data = await response.json();
+      return data.status === 'success' || data.success === true;
+    } catch {
+      return false;
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError('');
+
+    if (!formData.fullName.trim()) return setError('Please enter your full name.');
+    if (!formData.phone.trim()) return setError('Please enter your phone number.');
+    if (!formData.address.trim()) return setError('Please enter your address.');
+    if (!formData.pincode.trim() || !/^\d{6}$/.test(formData.pincode))
+      return setError('Please enter a valid 6-digit pincode.');
+    if (!layoutPlan) return setError('Please upload your layout plan.');
+
+    setSubmitting(true);
+    setUploadProgress(30);
+
+    try {
+      const fileUrl = await uploadFile(layoutPlan);
+      setUploadProgress(70);
+
+      const messageLines = [
+        `*🔔 New Consultation Request*`,
+        `──────────────────────────────`,
+        `👤 *Name:* ${formData.fullName}`,
+        `📞 *Phone:* ${formData.phone}`,
+        `📧 *Email:* ${formData.email || 'Not provided'}`,
+        `📍 *Address:* ${formData.address}`,
+        `📮 *Pincode:* ${formData.pincode}`,
+        `📎 *Layout Plan:* ${fileUrl}`,
+        `💬 *Message:* ${formData.message || 'No additional message'}`,
+        `──────────────────────────────`,
+        `_Sent via VedicUrja website_`,
+      ];
+      const messageText = messageLines.join('\n');
+
+      const sent = await sendWhatsAppMessage(messageText);
+      if (!sent) throw new Error('Message delivery failed.');
+
+      setUploadProgress(100);
+      setSubmitted(true);
+      setFormData({ fullName: '', phone: '', email: '', address: '', pincode: '', message: '' });
+      setLayoutPlan(null);
+    } catch (err: any) {
+      setError(err.message || 'Something went wrong. Please try again.');
+    } finally {
+      setSubmitting(false);
+      setUploadProgress(0);
+    }
+  };
+
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  if (submitted) {
+    return (
+      <>
+        <Header />
+        <SmoothScroll>
+          <main className="min-h-screen bg-gradient-to-b from-vastu-parchment to-white flex items-center justify-center px-4">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="max-w-md w-full bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl p-8 text-center border border-prakash-gold/30"
+            >
+              <div className="text-6xl mb-4 text-prakash-gold">✓</div>
+              <h2 className="font-serif text-3xl text-nidra-indigo mb-2">Request Received</h2>
+              <p className="text-nidra-indigo/70 mb-6">
+                Vastuvid KK Nagaich will contact you within 12 hours on WhatsApp.
+              </p>
+              <button onClick={() => setSubmitted(false)} className="luxury-button w-full">
+                Book Another Consultation
+              </button>
+            </motion.div>
+          </main>
+        </SmoothScroll>
+      </>
+    );
+  }
 
   return (
     <>
-        <main className="relative bg-vastu-parchment">
-          <HeroSection onCtaClick={scrollToForm} />
-          <ProblemSection />
-          <SolutionSection />
-          <HowItWorksSection />
-          <section ref={formRef} className="py-24 bg-vastu-parchment">
-            <div className="container mx-auto px-4"><BookingFormSection /></div>
+      <Header />
+      <SmoothScroll>
+        <main className="min-h-screen bg-gradient-to-b from-vastu-parchment via-white to-vastu-parchment">
+          {/* Hero Section */}
+          <section className="relative py-20 md:py-28 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-nidra-indigo/5 via-transparent to-prakash-gold/5" />
+            <div className="container mx-auto px-4 sm:px-6 relative z-10 text-center">
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-sacred-saffron uppercase tracking-[0.3em] text-sm font-semibold"
+              >
+                Begin Your Transformation
+              </motion.span>
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="font-serif text-4xl sm:text-5xl md:text-7xl text-nidra-indigo mt-4 mb-6 leading-tight"
+              >
+                Align Your Space,
+                <br />
+                <span className="text-prakash-gold">Elevate Your Life</span>
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-lg md:text-xl text-nidra-indigo/70 max-w-2xl mx-auto mb-8"
+              >
+                Book a one‑on‑one virtual consultation with Vastuvid KK Nagaich – India's most trusted Vastu expert.
+              </motion.p>
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                onClick={scrollToForm}
+                className="luxury-button text-lg px-10 py-4"
+              >
+                Start Your Journey
+              </motion.button>
+            </div>
+          </section>
+
+          {/* Trust Badges */}
+          <section className="py-12 border-y border-prakash-gold/20 bg-white/40">
+            <div className="container mx-auto px-4">
+              <div className="flex flex-wrap justify-center gap-8 md:gap-12 text-center">
+                <div className="flex flex-col items-center">
+                  <div className="text-3xl font-bold text-prakash-gold">20+</div>
+                  <div className="text-sm text-nidra-indigo/60">Years Experience</div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="text-3xl font-bold text-prakash-gold">2 Lakh+</div>
+                  <div className="text-sm text-nidra-indigo/60">Clients Served</div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="text-3xl font-bold text-prakash-gold">50+</div>
+                  <div className="text-sm text-nidra-indigo/60">Countries</div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="text-3xl font-bold text-prakash-gold">4.9 ★</div>
+                  <div className="text-sm text-nidra-indigo/60">Client Rating</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* How It Works */}
+          <section className="py-20 bg-white">
+            <div className="container mx-auto px-4">
+              <h2 className="font-serif text-3xl md:text-4xl text-center text-nidra-indigo mb-12">Simple 3‑Step Process</h2>
+              <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                {[
+                  { step: '01', title: 'Submit Details', desc: 'Fill the form and upload your layout plan.' },
+                  { step: '02', title: 'Acharya Reviews', desc: 'Vastuvid ji analyses your space and prepares remedies.' },
+                  { step: '03', title: 'Consultation', desc: 'Connect via WhatsApp video call for personalised guidance.' },
+                ].map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                    className="text-center p-6 rounded-2xl bg-vastu-stone/20 border border-prakash-gold/20"
+                  >
+                    <div className="text-5xl font-bold text-prakash-gold mb-4">{item.step}</div>
+                    <h3 className="font-serif text-xl text-nidra-indigo mb-2">{item.title}</h3>
+                    <p className="text-nidra-indigo/60">{item.desc}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Form Section */}
+          <section ref={formRef} className="py-20 bg-gradient-to-b from-white to-vastu-parchment">
+            <div className="container mx-auto px-4 max-w-3xl">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl p-6 sm:p-8 border border-prakash-gold/30"
+              >
+                <h2 className="font-serif text-3xl text-center text-nidra-indigo mb-2">Request Your Consultation</h2>
+                <p className="text-center text-nidra-indigo/60 mb-8">Fill the details below – Acharya ji will respond within 12 hours.</p>
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className="block text-sm font-medium text-nidra-indigo mb-1">Full Name *</label>
+                      <input
+                        type="text"
+                        name="fullName"
+                        required
+                        value={formData.fullName}
+                        onChange={handleChange}
+                        className="w-full px-5 py-3 bg-white/60 border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none transition"
+                        placeholder="Your name"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-nidra-indigo mb-1">Phone Number *</label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        required
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full px-5 py-3 bg-white/60 border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none transition"
+                        placeholder="+91 XXXXX XXXXX"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className="block text-sm font-medium text-nidra-indigo mb-1">Email Address</label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className="w-full px-5 py-3 bg-white/60 border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none transition"
+                        placeholder="you@example.com"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-nidra-indigo mb-1">Pincode *</label>
+                      <input
+                        type="text"
+                        name="pincode"
+                        required
+                        pattern="\d{6}"
+                        maxLength={6}
+                        value={formData.pincode}
+                        onChange={handleChange}
+                        className="w-full px-5 py-3 bg-white/60 border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none transition"
+                        placeholder="6-digit pincode"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-nidra-indigo mb-1">Full Address *</label>
+                    <textarea
+                      name="address"
+                      rows={2}
+                      required
+                      value={formData.address}
+                      onChange={handleChange}
+                      className="w-full px-5 py-3 bg-white/60 border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none resize-none"
+                      placeholder="Your complete address"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-nidra-indigo mb-1">Computerized Layout Plan *</label>
+                    <input
+                      type="file"
+                      accept=".pdf,.jpg,.jpeg,.png"
+                      required
+                      onChange={handleFileChange}
+                      className="w-full px-5 py-3 bg-white/60 border-2 border-prakash-gold/30 rounded-xl file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:bg-prakash-gold/20 file:text-nidra-indigo hover:file:bg-prakash-gold/30 transition"
+                    />
+                    {layoutPlan && (
+                      <p className="text-xs text-green-600 mt-1">Selected: {layoutPlan.name} ({(layoutPlan.size / 1024).toFixed(1)} KB)</p>
+                    )}
+                    <p className="text-xs text-nidra-indigo/50 mt-2">PDF, JPG or PNG (max 10MB). If you don't have one, consult an architect to get a layout plan.</p>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-nidra-indigo mb-1">Additional Message</label>
+                    <textarea
+                      name="message"
+                      rows={3}
+                      value={formData.message}
+                      onChange={handleChange}
+                      className="w-full px-5 py-3 bg-white/60 border-2 border-prakash-gold/30 rounded-xl focus:border-prakash-gold outline-none resize-none"
+                      placeholder="Any specific concerns or questions..."
+                    />
+                  </div>
+
+                  {error && <p className="text-red-500 text-sm text-center">{error}</p>}
+
+                  {uploadProgress > 0 && (
+                    <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+                      <div className="bg-prakash-gold h-2 rounded-full transition-all duration-300" style={{ width: `${uploadProgress}%` }} />
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={submitting}
+                    className="w-full luxury-button py-4 text-lg disabled:opacity-50 transition-all"
+                  >
+                    {submitting ? 'Submitting...' : 'Submit Consultation Request'}
+                  </button>
+
+                  <p className="text-xs text-center text-nidra-indigo/50">
+                    Your details are secure. We never share your information.
+                  </p>
+                </form>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* Final CTA */}
+          <section className="py-20 bg-gradient-to-r from-nidra-indigo to-nidra-indigo/90 text-white text-center">
+            <div className="container mx-auto px-4">
+              <h2 className="font-serif text-3xl md:text-4xl mb-4">Still Have Questions?</h2>
+              <p className="text-white/80 max-w-2xl mx-auto mb-6">
+                Contact us directly on WhatsApp or call our support team.
+              </p>
+              <Link href="/contact" className="bg-prakash-gold hover:bg-sacred-saffron text-nidra-indigo font-bold px-8 py-4 rounded-full inline-flex items-center gap-2 transition">
+                Contact Us Now
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
           </section>
         </main>
-      
-      <style>{`
-        @keyframes gradient-loop { 0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%} }
-        @keyframes spin-slow { from{transform:rotate(0)}to{transform:rotate(360deg)} }
-        .animate-gradient-loop{animation:gradient-loop 12s ease infinite}
-        .animate-spin-slow{animation:spin-slow 20s linear infinite}
-      `}</style>
+      </SmoothScroll>
     </>
   );
 }
