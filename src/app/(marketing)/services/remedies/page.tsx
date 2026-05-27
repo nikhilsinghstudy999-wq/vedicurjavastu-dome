@@ -1,193 +1,149 @@
-'use client';
-'use client';
-'use client';
-
-import { useState } from 'react';
-import FeaturedBlogSection from "@/features/shared/components/FeaturedBlogSection";
-import { motion } from 'framer-motion';
-import Link from 'next/link';
 import Header from '@/features/shared/components/Header';
-import { SoundController } from '@/features/shared/components/SoundController';
-import GuruAuthority from '@/features/shared/components/GuruAuthority';
-import WhyChooseUs from '@/features/shared/components/luxury/WhyChooseUs';
-import RemediesCTA from '@/features/shared/components/luxury/RemediesCTA';
-import VirtualConsultCTA from '@/features/shared/components/luxury/VirtualConsultCTA';
-
-/* ------------------------------------------------------------------ */
-/*  Instagram Reel 3D Card (no like/comment buttons – clean link)     */
-/* ------------------------------------------------------------------ */
-function ReelCard({ title, reelUrl }: { title: string; reelUrl: string }) {
-  return (
-    <motion.a
-      href={reelUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      whileHover={{ scale: 1.03, rotateY: 3, rotateX: -2 }}
-      style={{ transformStyle: 'preserve-3d', perspective: 1200 }}
-      className="group relative w-full max-w-sm mx-auto"
-    >
-      <div className="relative rounded-[40px] p-[2px] bg-gradient-to-br from-prakash-gold/40 via-white/20 to-sacred-saffron/30 shadow-[0_15px_40px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_60px_rgba(200,138,93,0.3)] transition-shadow duration-500">
-        <div className="relative rounded-[38px] bg-gradient-to-br from-white/90 via-white/70 to-white/50 backdrop-blur-xl p-8 h-[420px] flex flex-col items-center justify-center text-center overflow-hidden">
-          {/* Play icon */}
-          <div className="w-20 h-20 rounded-full bg-gradient-to-r from-prakash-gold to-sacred-saffron flex items-center justify-center mb-6 shadow-2xl">
-            <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z"/>
-            </svg>
-          </div>
-          <h3 className="font-serif text-2xl text-nidra-indigo font-bold mb-3 leading-snug">{title}</h3>
-          <p className="text-sm text-nidra-indigo/60 mb-8">Watch this Vedic remedy reel</p>
-          <span className="inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-prakash-gold to-sacred-saffron text-white rounded-full font-semibold shadow-lg group-hover/btn:shadow-xl transition-shadow">
-            Play Reel <svg className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-          </span>
-        </div>
-      </div>
-    </motion.a>
-  );
-}
-
-/* ------------------------------------------------------------------ */
-/*  YouTube Video Component (embedded iframe, 16:9 responsive)       */
-/* ------------------------------------------------------------------ */
-function YouTubeEmbed({ videoId, title }: { videoId: string; title?: string }) {
-  return (
-    <div className="relative w-full overflow-hidden rounded-3xl shadow-2xl border-4 border-prakash-gold/30 bg-black">
-      <div className="aspect-video">
-        <iframe
-          width="100%"
-          height="100%"
-          src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`}
-          title={title || 'YouTube video player'}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-          className="w-full h-full"
-        />
-      </div>
-    </div>
-  );
-}
-
-/* ------------------------------------------------------------------ */
-/*  Page Data                                                         */
-/* ------------------------------------------------------------------ */
-const remediesReels = [
-  { title: 'Pashchim Disha Darwaja Remedy', url: 'https://www.instagram.com/reel/DWYH597ErI6/' },
-  { title: 'Akshya Tritiya Upaaye', url: 'https://www.instagram.com/reel/DXOrKDikoHa/' },
-  { title: 'Vastu or Pitra Dosh', url: 'https://www.instagram.com/reel/DWs9XGoEpqi/' },
-  { title: 'Bhawan Ratna Sthapna', url: 'https://www.instagram.com/reel/DWduHguEuJe/' },
-  { title: 'Tree in House Vastu', url: 'https://www.instagram.com/reel/DWNlUQzkjD9/' },
-  { title: 'Industrial Vastu', url: 'https://www.instagram.com/reel/DVQFIebkmDt/' },
-  { title: 'North Facing Flat', url: 'https://www.instagram.com/reel/DT1uP3WktUf/' },
-  { title: 'Shani Rahu Ka Yog', url: 'https://www.instagram.com/reel/DTncgIEEtfr/' },
-];
+import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
+import Link from 'next/link';
 
 export default function RemediesPage() {
   return (
     <>
-      <SoundController />
       <Header />
-      
-        {/* HERO */}
-        <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#1a0a00] via-[#3a1a00] to-[#1a0a00] bg-[length:400%_400%] animate-[heroLoop_12s_ease_infinite]">
-          <div className="container mx-auto px-4 relative z-10 text-center mt-16">
-            <span className="text-prakash-gold uppercase tracking-[0.3em] text-sm mb-4 block font-semibold">5 Powerful Therapies</span>
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-2xl">
-              <span className="bg-gradient-to-r from-amber-300 via-prakash-gold to-sacred-saffron bg-clip-text text-transparent">Advanced Remedies</span>
+      <SmoothScroll>
+        <main className="min-h-screen bg-vastu-parchment">
+          {/* Header Strip */}
+          <div className="bg-gradient-to-r from-kumkuma-red to-sacred-saffron py-4 text-center">
+            <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-bold tracking-wide">
+              PITRA-DOSH SAMADHAN
             </h1>
-            <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-10">
-              Non‑destructive Vedic corrections for every direction, dosha, and energy – demonstrated personally by Vastuvid K.K. Nagaich.
-            </p>
-            <Link href="/bookings" className="luxury-button text-lg px-10 py-5">Book a Remedy Consultation</Link>
           </div>
-        </section>
 
-      <FeaturedBlogSection />
+          {/* Content Container */}
+          <div className="container mx-auto px-4 sm:px-6 py-12 max-w-4xl">
+            <article className="prose prose-lg prose-stone max-w-none">
+              <p>
+                घर की दीवारों पर स्वतः निकलने वाले पीपल के छोटे वृक्ष एक संकेत माने जाते हैं। 
+                सामान्यतः चिड़ियाँ अपने मुख में बीज लेकर इधर-उधर गिरा देती हैं, जिससे वे उग जाते हैं। 
+                लेकिन गौर करने वाली बात यह है कि ये हर भवन में नहीं उगते; कभी-कभी तो सीमेंट वाली दीवारों पर भी निकल आते हैं।
+              </p>
 
+              <p>
+                ऐसी मान्यता है कि पीपल के वृक्ष पर <strong>पितृ (दिवंगत आत्माएँ)</strong> तथा 
+                <strong> ब्रह्म देव</strong> का वास होता है।
+              </p>
 
-        <WhyChooseUs />
+              <p>
+                घर के दीवारों पर स्वतः पीपल बार बार निकलना इस बात का संकेत माना जाता है कि आपके पूर्वज, 
+                पितृ में से कोई मुक्ति हेतु आपसे सहायता चाहता है। यह एक सांकेतिक, निमित्त ज्ञान भर है।
+                आपके परिवार में पितृ दोष है या नहीं इसको आपके नाम, परिवारजन के नाम से, घर की वास्तु से, 
+                कुंडली से सभी प्रकार से देखा जाता है। 2 या 3 जगह दोष दिखने और घटनाओं के आधार पर यह संभावना 
+                व्यक्त की जा सकती है।
+              </p>
 
-        {/* BIG FEATURED VIDEO – #1 ASTROLOGER ON INDIA NEWS */}
-        <section className="py-20 sm:py-28 bg-gradient-to-b from-white via-vastu-stone/10 to-white">
-          <div className="container mx-auto px-4 max-w-6xl">
-            <motion.h2 className="font-serif text-3xl sm:text-4xl text-center text-nidra-indigo mb-10">
-              As Seen on <span className="text-prakash-gold">India News</span>
-            </motion.h2>
-            <div className="max-w-4xl mx-auto">
-              <YouTubeEmbed videoId="fjUP13uEUi0" title="#1 Astrologer on India News in India" />
-            </div>
-            <p className="text-center text-nidra-indigo/60 mt-6 text-sm">
-              Vastuvid K.K. Nagaich featured as the #1 Astrologer on national television
-            </p>
-          </div>
-        </section>
+              <p>
+                उदाहरण के तौर पर यह रेमेडी, उपाय जानने वालों के नाम या उनके बच्चों के नाम में 
+                <strong> “AIY” के साथ “DMT”</strong> लेटर्स पाए जायेंगे (90% केस में), आप भी अपना चेक कर लें।
+              </p>
 
-        {/* INSTAGRAM REELS GRID (3D cards) */}
-        <section className="py-20 sm:py-28 bg-gradient-to-b from-white to-vastu-parchment">
-          <div className="container mx-auto px-4">
-            <motion.h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-center text-nidra-indigo mb-6">
-              Remedy Reels – Watch & Apply
-            </motion.h2>
-            <p className="text-center text-nidra-indigo/60 mb-16 max-w-2xl mx-auto">
-              Short, actionable Vedic remedies that bring immediate positive change
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-              {remediesReels.map((reel, idx) => (
-                <ReelCard key={idx} title={reel.title} reelUrl={reel.url} />
-              ))}
-            </div>
+              <h2>★ उपाय ★</h2>
+
+              <p>
+                सबसे पहले, हिंदू मान्यताओं के अनुसार अपने पूर्वजों की मोक्ष और मुक्ति हेतु बताए गए 
+                विधि-विधान अवश्य करें।
+              </p>
+
+              <p>
+                यदि वर्तमान या पिछली दो पीढ़ियों में किसी की अकाल मृत्यु हुई हो और परिवार में रोग, शोक 
+                या आर्थिक कष्ट जैसे गंभीर लक्षण हों, तो <strong>त्रिपिंडी श्राद्ध</strong> या 
+                <strong> नारायण बलि</strong> जैसे विशेष पूजन कराए जा सकते हैं।
+              </p>
+
+              <p>
+                यदि आर्थिक अभाव हो, तो सामान्य तर्पण प्रतिदिन जल द्वारा किया जा सकता है।
+              </p>
+
+              <p>
+                अमावस्या के दिन घर के दक्षिण-पश्चिम कोने में सूखे नारियल के गोले को गाय के घी और कपूर के साथ 
+                प्रज्वलित करें तथा महाकाल या भगवान शिव के मंत्रों का जाप करें।
+              </p>
+
+              <p>
+                अमावस्या के दिन एक दोने में पाँच रंगों की मिठाई और जल रखकर दक्षिण-पश्चिम दिशा में 
+                पितरों के नाम अर्पित करें।
+              </p>
+
+              <p>
+                यदि कुछ और संभव न हो, तो प्रतिदिन पूजा, मंदिर या व्रत के समय केवल यह प्रार्थना करें:<br />
+                <em>“हे प्रभु, मेरी इस पूजा का पुण्य मेरे पूर्वजों को समर्पित है। कृपया उन्हें मोक्ष और मुक्ति प्रदान करें।”</em>
+              </p>
+
+              <p>
+                शनिवार या अमावस्या के दिन एक कटोरी जल में काले तिल डालें और निम्न मंत्र का 
+                <strong> 108 बार</strong> जाप करते हुए पितरों हेतु अर्पित करें:
+              </p>
+              <pre className="bg-gray-100 p-4 rounded-lg text-center">
+                ॐ सर्व पितृभ्यो नमः तर्पयामि
+              </pre>
+
+              <h2>★ पीपल के पौधे को हटाने की विधि ★</h2>
+
+              <p>
+                सबसे पहले ऊपर बताए गए किसी भी उपाय के माध्यम से अपने पूर्वजों से क्षमा याचना करें और उन्हें 
+                पूजन या तर्पण अर्पित करें।
+              </p>
+
+              <p>
+                इसके बाद पीपल के पौधे के पास जाकर जल वाला नारियल लें और प्रार्थना करें:
+              </p>
+              <blockquote className="italic border-l-4 border-prakash-gold pl-4">
+                “हे वृक्ष देव और इस वृक्ष में निवास करने वाले सभी देवगण, यह भवन मेरे जीवन-यापन हेतु है। 
+                यहाँ आपकी पवित्रता बनाए रखना कठिन है। आपसे विनम्र निवेदन है कि इस वृक्ष पर निवासरत सभी देवता 
+                कृपया अन्य स्थान पर प्रस्थान करें। आपकी आज्ञा से मैं इस पौधे को किसी अन्य स्थान पर स्थापित करूँगा। 
+                सम्मानपूर्वक आपके चरणों में यह श्रीफल अर्पित कर रहा हूँ, कृपया इसे स्वीकार करें।”
+              </blockquote>
+
+              <p>
+                पौधे के पास पीली सरसों के ऊपर नारियल को कम से कम 12 घंटे तक रखें। अगले दिन उसे किसी बड़े पीपल वृक्ष, 
+                नदी, सरोवर या मंदिर में प्रवाहित कर दें।
+              </p>
+
+              <p>
+                इसके बाद पौधे को इस प्रकार निकालने का प्रयास करें कि वह सुरक्षित रहे और उसे किसी अन्य स्थान पर लगा दें। 
+                यदि पितृ दोष अधिक हो, तो उसे श्मशान भूमि में लगाएँ, अन्यथा शिव मंदिर या पार्क में भी लगा सकते हैं।
+              </p>
+
+              <p>
+                यदि पौधा बार-बार उगता रहे, तो आप वहाँ लिक्विड मर्करी इंजेक्ट करने (सावधानी पूर्वक क्योंकि यह जहरीली होती है) 
+                या पीला गंधक, नमक तथा चूना छिड़क सकते हैं।
+              </p>
+
+              <p>
+                यदि किसी कारण पौधा नष्ट हो जाए, तो उसके स्थान पर शुभ नक्षत्र में तीन पीपल के वृक्ष श्मशान भूमि, 
+                मंदिर या पार्क में लगाएँ।
+              </p>
+
+              <p>
+                पौधे को निकालते समय इस मंत्र का जाप करें:
+              </p>
+              <pre className="bg-gray-100 p-4 rounded-lg text-center">
+                ॐ ह्रीं क्षौं फट् स्वाहा
+              </pre>
+
+              <p className="text-lg font-semibold text-center mt-8">
+                यदि आपको किसी भी प्रकार की सहायता – नारायण बलि पूजन, या घर के वास्तु दोष के बारे में चाहिए, 
+                तो हमारी टीम से <strong>6393570832</strong> पर संपर्क कर सकते हैं।
+              </p>
+            </article>
+
+            {/* CTA Button in Hindi */}
             <div className="text-center mt-12">
-              <a href="https://www.instagram.com/vedicurja/" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-prakash-gold to-sacred-saffron text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-shadow"
+              <Link
+                href="/bookings"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-sacred-saffron to-prakash-gold text-white font-bold rounded-full shadow-lg hover:shadow-xl transition text-lg"
               >
-                Follow for More on Instagram →
-              </a>
+                परामर्श के लिए आज ही बुक करें →
+              </Link>
             </div>
           </div>
-        </section>
-
-        {/* YOUTUBE VIDEOS SECTION (Remedy tutorials) */}
-        <section className="py-20 sm:py-28 bg-gradient-to-b from-vastu-parchment to-white">
-          <div className="container mx-auto px-4 max-w-6xl">
-            <motion.h2 className="font-serif text-3xl sm:text-4xl text-center text-nidra-indigo mb-8">
-              In‑Depth Remedy Tutorials
-            </motion.h2>
-            <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-              <YouTubeEmbed videoId="mn18MULD--s" title="Ghar par hawan kaise kare" />
-              <YouTubeEmbed videoId="Nd6F5smvORA" title="Sabse choti aur asan tarpan vidhi" />
-              <YouTubeEmbed videoId="oxp7olMJEm4" title="Stairs vastu without demolition" />
-            </div>
-            <div className="text-center mt-10">
-              <a href="https://www.youtube.com/@vedicurja1589?sub_confirmation=1" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-3 border-2 border-prakash-gold text-nidra-indigo rounded-full font-semibold hover:bg-prakash-gold/10 transition-colors"
-              >
-                Subscribe for More Videos →
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <RemediesCTA />
-        <VirtualConsultCTA />
-
-        {/* FINAL CTA */}
-        <section className="relative py-24 sm:py-32 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1a0000] via-[#3a0a0a] to-[#0a0000] bg-[length:400%_400%] animate-[heroLoop_12s_ease_infinite]" />
-          <div className="container mx-auto px-4 relative z-10 text-center">
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Experience the Power of Vedic Remedies</h2>
-            <p className="text-white/70 text-lg max-w-2xl mx-auto mb-8">
-              Vastuvid K.K. Nagaich – 100M+ views, 80K+ followers – personally prescribes every remedy.
-            </p>
-            <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">
-              Schedule Your Remedy Session →
-            </Link>
-          </div>
-        </section>
-      
-      <style>{`@keyframes heroLoop{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}`}</style>
+        </main>
+      </SmoothScroll>
     </>
   );
 }
