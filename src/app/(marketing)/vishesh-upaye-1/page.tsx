@@ -1,7 +1,6 @@
 import Header from '@/features/shared/components/Header';
 import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function VisheshUpayePage() {
   return (
@@ -24,15 +23,34 @@ export default function VisheshUpayePage() {
             </div>
           </div>
 
-          {/* Video Section */}
+          {/* Video Section – Mobile‑first, full width */}
           <div className="container mx-auto px-4 py-16 max-w-4xl">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-2xl border border-prakash-gold/30 bg-black">
+              {/* 
+                Poster image – a lightweight placeholder that appears before video loads.
+                You can replace with a custom image in public/images/vishesh-upaye-poster.jpg
+              */}
+              <img
+                src="/images/vishesh-upaye-poster.jpg"
+                alt="Video poster"
+                className="absolute inset-0 w-full h-full object-cover z-0"
+              />
               <video
-                className="absolute inset-0 w-full h-full object-contain"
+                className="absolute inset-0 w-full h-full object-contain z-10"
                 poster="/images/vishesh-upaye-poster.jpg"
                 controls
-                preload="none"
+                preload="metadata"
                 playsInline
+                onError={(e) => {
+                  console.error('Video failed to load:', e);
+                  // Show a fallback message if video fails
+                  const target = e.currentTarget;
+                  target.style.display = 'none';
+                  const fallback = document.createElement('div');
+                  fallback.className = 'absolute inset-0 flex items-center justify-center bg-nidra-indigo text-white';
+                  fallback.innerHTML = '<p>Video cannot be played. Please contact support.</p>';
+                  target.parentNode?.appendChild(fallback);
+                }}
               >
                 <source src="/videos/Vedicvastuurja.mp4" type="video/mp4" />
                 <source src="/videos/Vedicvastuurja.webm" type="video/webm" />
