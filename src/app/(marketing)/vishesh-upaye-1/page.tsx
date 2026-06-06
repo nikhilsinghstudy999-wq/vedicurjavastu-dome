@@ -7,9 +7,10 @@ export default function VisheshUpayePage() {
       <Header />
       <main className="min-h-screen bg-gradient-to-b from-[#FDF8F0] via-white to-[#FDF8F0]">
 
-        {/* ───── Hero ───── */}
+        {/* ───── Hero (clean gradient, no pattern) ───── */}
         <section className="relative overflow-hidden bg-gradient-to-br from-[#1A2A3A] via-[#2E3B4E] to-[#1A2A3A] py-24 sm:py-32">
-          <div className="absolute inset-0 bg-[url('/images/home/mandala-bg.webp')] bg-cover bg-center opacity-10" />
+          {/* Optional subtle radial glow for depth */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(232,185,96,0.15),transparent_70%)]" />
           <div className="relative container mx-auto px-4 text-center">
             <div className="inline-flex items-center gap-2 px-5 py-2 bg-[#E8B960]/20 rounded-full mb-6 border border-[#E8B960]/30 backdrop-blur-sm">
               <span className="w-2 h-2 bg-[#E8B960] rounded-full animate-pulse" />
@@ -67,7 +68,7 @@ export default function VisheshUpayePage() {
           </p>
         </section>
 
-        {/* ───── Benefits / Info ───── */}
+        {/* ───── Benefits ───── */}
         <section className="container mx-auto px-4 py-20 max-w-4xl">
           <div className="grid md:grid-cols-3 gap-8">
             {[
