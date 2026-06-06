@@ -18,7 +18,7 @@ export default function VisheshUpayePage() {
           </div>
         </div>
 
-        {/* Video player – using direct LimeWire link */}
+        {/* Video – raw GitHub URL always plays inline */}
         <div className="container mx-auto px-4 py-16 max-w-4xl">
           <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-2xl border border-prakash-gold/30 bg-black z-10">
             <video
@@ -29,7 +29,7 @@ export default function VisheshUpayePage() {
               playsInline
             >
               <source
-                src="https://limewire.com/d/lEgrk?download=1"
+                src="https://raw.githubusercontent.com/nikhilsinghstudy999-wq/vedicurjavastu-dome/main/public/videos/Vedicvastuurja.mp4"
                 type="video/mp4"
               />
               <p className="text-white text-center p-8">
