@@ -1,168 +1,124 @@
 #!/bin/bash
+set -e
 
-REMEDY_PAGE="src/app/(marketing)/services/remedies/page.tsx"
+echo "🚀 Creating hidden ultra‑luxury page: /vishesh-upaye-1 (fixed version)"
 
-if [ ! -f "$REMEDY_PAGE" ]; then
-    echo "❌ Remedy page not found at $REMEDY_PAGE"
-    exit 1
-fi
+PAGE_DIR="src/app/(marketing)/vishesh-upaye-1"
+mkdir -p "$PAGE_DIR"
 
-# Backup
-cp "$REMEDY_PAGE" "$REMEDY_PAGE.bak.hindi"
-echo "✅ Backup created: $REMEDY_PAGE.bak.hindi"
-
-# Overwrite with Hindi content
-cat > "$REMEDY_PAGE" << 'EOF'
+cat > "$PAGE_DIR/page.tsx" << 'EOF'
 import Header from '@/features/shared/components/Header';
-import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
+import Footer from '@/features/shared/components/Footer';
 import Link from 'next/link';
 
-export default function RemediesPage() {
+export default function VisheshUpayePage() {
   return (
     <>
       <Header />
-      <SmoothScroll>
-        <main className="min-h-screen bg-vastu-parchment">
-          {/* Header Strip */}
-          <div className="bg-gradient-to-r from-kumkuma-red to-sacred-saffron py-4 text-center">
-            <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-bold tracking-wide">
-              PITRA-DOSH SAMADHAN
-            </h1>
+      <main className="relative min-h-screen bg-gradient-to-b from-vastu-parchment via-white to-vastu-parchment overflow-hidden">
+        
+        {/* Hero Section */}
+        <section className="relative py-20 md:py-28 text-center">
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-prakash-gold/5 blur-3xl" />
+            <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-sacred-saffron/5 blur-3xl" />
           </div>
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
+            <span className="inline-block px-4 py-1 mb-4 text-xs font-semibold tracking-wider text-prakash-gold bg-prakash-gold/10 rounded-full">
+              विशेष प्रस्ताव
+            </span>
+            <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-nidra-indigo mb-6 leading-tight">
+              विशेष <span className="text-prakash-gold">उपाय</span>
+            </h1>
+            <p className="text-lg md:text-xl text-nidra-indigo/70 max-w-2xl mx-auto">
+              वैदिक ज्योतिष एवं वास्तु के अद्भुत समाधान – सीधे आपके सामने।
+            </p>
+          </div>
+        </section>
 
-          {/* Content Container */}
-          <div className="container mx-auto px-4 sm:px-6 py-12 max-w-4xl">
-            <article className="prose prose-lg prose-stone max-w-none">
-              <p>
-                घर की दीवारों पर स्वतः निकलने वाले पीपल के छोटे वृक्ष एक संकेत माने जाते हैं। 
-                सामान्यतः चिड़ियाँ अपने मुख में बीज लेकर इधर-उधर गिरा देती हैं, जिससे वे उग जाते हैं। 
-                लेकिन गौर करने वाली बात यह है कि ये हर भवन में नहीं उगते; कभी-कभी तो सीमेंट वाली दीवारों पर भी निकल आते हैं।
+        {/* Video Section – Wide 4:3 Aspect Ratio */}
+        <section className="py-12 md:py-16">
+          <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-prakash-gold/30 bg-black/5">
+              <div className="aspect-[4/3] w-full">
+                <video
+                  src="/videos/Vedicvastuurja.mp4"
+                  controls
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                  poster="/images/home/lucknow-fallback.webp"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section – Luxury Booking */}
+        <section className="py-20 md:py-28 text-center">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="max-w-3xl mx-auto bg-white/60 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-2xl border border-prakash-gold/30">
+              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-nidra-indigo mb-4">
+                पूर्ण समाधान के लिए
+              </h2>
+              <p className="text-lg text-nidra-indigo/70 mb-8">
+                व्यक्तिगत परामर्श और विस्तृत रिपोर्ट के लिए आज ही संपर्क करें।
               </p>
-
-              <p>
-                ऐसी मान्यता है कि पीपल के वृक्ष पर <strong>पितृ (दिवंगत आत्माएँ)</strong> तथा 
-                <strong> ब्रह्म देव</strong> का वास होता है।
-              </p>
-
-              <p>
-                घर के दीवारों पर स्वतः पीपल बार बार निकलना इस बात का संकेत माना जाता है कि आपके पूर्वज, 
-                पितृ में से कोई मुक्ति हेतु आपसे सहायता चाहता है। यह एक सांकेतिक, निमित्त ज्ञान भर है।
-                आपके परिवार में पितृ दोष है या नहीं इसको आपके नाम, परिवारजन के नाम से, घर की वास्तु से, 
-                कुंडली से सभी प्रकार से देखा जाता है। 2 या 3 जगह दोष दिखने और घटनाओं के आधार पर यह संभावना 
-                व्यक्त की जा सकती है।
-              </p>
-
-              <p>
-                उदाहरण के तौर पर यह रेमेडी, उपाय जानने वालों के नाम या उनके बच्चों के नाम में 
-                <strong> “AIY” के साथ “DMT”</strong> लेटर्स पाए जायेंगे (90% केस में), आप भी अपना चेक कर लें।
-              </p>
-
-              <h2>★ उपाय ★</h2>
-
-              <p>
-                सबसे पहले, हिंदू मान्यताओं के अनुसार अपने पूर्वजों की मोक्ष और मुक्ति हेतु बताए गए 
-                विधि-विधान अवश्य करें।
-              </p>
-
-              <p>
-                यदि वर्तमान या पिछली दो पीढ़ियों में किसी की अकाल मृत्यु हुई हो और परिवार में रोग, शोक 
-                या आर्थिक कष्ट जैसे गंभीर लक्षण हों, तो <strong>त्रिपिंडी श्राद्ध</strong> या 
-                <strong> नारायण बलि</strong> जैसे विशेष पूजन कराए जा सकते हैं।
-              </p>
-
-              <p>
-                यदि आर्थिक अभाव हो, तो सामान्य तर्पण प्रतिदिन जल द्वारा किया जा सकता है।
-              </p>
-
-              <p>
-                अमावस्या के दिन घर के दक्षिण-पश्चिम कोने में सूखे नारियल के गोले को गाय के घी और कपूर के साथ 
-                प्रज्वलित करें तथा महाकाल या भगवान शिव के मंत्रों का जाप करें।
-              </p>
-
-              <p>
-                अमावस्या के दिन एक दोने में पाँच रंगों की मिठाई और जल रखकर दक्षिण-पश्चिम दिशा में 
-                पितरों के नाम अर्पित करें।
-              </p>
-
-              <p>
-                यदि कुछ और संभव न हो, तो प्रतिदिन पूजा, मंदिर या व्रत के समय केवल यह प्रार्थना करें:<br />
-                <em>“हे प्रभु, मेरी इस पूजा का पुण्य मेरे पूर्वजों को समर्पित है। कृपया उन्हें मोक्ष और मुक्ति प्रदान करें।”</em>
-              </p>
-
-              <p>
-                शनिवार या अमावस्या के दिन एक कटोरी जल में काले तिल डालें और निम्न मंत्र का 
-                <strong> 108 बार</strong> जाप करते हुए पितरों हेतु अर्पित करें:
-              </p>
-              <pre className="bg-gray-100 p-4 rounded-lg text-center">
-                ॐ सर्व पितृभ्यो नमः तर्पयामि
-              </pre>
-
-              <h2>★ पीपल के पौधे को हटाने की विधि ★</h2>
-
-              <p>
-                सबसे पहले ऊपर बताए गए किसी भी उपाय के माध्यम से अपने पूर्वजों से क्षमा याचना करें और उन्हें 
-                पूजन या तर्पण अर्पित करें।
-              </p>
-
-              <p>
-                इसके बाद पीपल के पौधे के पास जाकर जल वाला नारियल लें और प्रार्थना करें:
-              </p>
-              <blockquote className="italic border-l-4 border-prakash-gold pl-4">
-                “हे वृक्ष देव और इस वृक्ष में निवास करने वाले सभी देवगण, यह भवन मेरे जीवन-यापन हेतु है। 
-                यहाँ आपकी पवित्रता बनाए रखना कठिन है। आपसे विनम्र निवेदन है कि इस वृक्ष पर निवासरत सभी देवता 
-                कृपया अन्य स्थान पर प्रस्थान करें। आपकी आज्ञा से मैं इस पौधे को किसी अन्य स्थान पर स्थापित करूँगा। 
-                सम्मानपूर्वक आपके चरणों में यह श्रीफल अर्पित कर रहा हूँ, कृपया इसे स्वीकार करें।”
-              </blockquote>
-
-              <p>
-                पौधे के पास पीली सरसों के ऊपर नारियल को कम से कम 12 घंटे तक रखें। अगले दिन उसे किसी बड़े पीपल वृक्ष, 
-                नदी, सरोवर या मंदिर में प्रवाहित कर दें।
-              </p>
-
-              <p>
-                इसके बाद पौधे को इस प्रकार निकालने का प्रयास करें कि वह सुरक्षित रहे और उसे किसी अन्य स्थान पर लगा दें। 
-                यदि पितृ दोष अधिक हो, तो उसे श्मशान भूमि में लगाएँ, अन्यथा शिव मंदिर या पार्क में भी लगा सकते हैं।
-              </p>
-
-              <p>
-                यदि पौधा बार-बार उगता रहे, तो आप वहाँ लिक्विड मर्करी इंजेक्ट करने (सावधानी पूर्वक क्योंकि यह जहरीली होती है) 
-                या पीला गंधक, नमक तथा चूना छिड़क सकते हैं।
-              </p>
-
-              <p>
-                यदि किसी कारण पौधा नष्ट हो जाए, तो उसके स्थान पर शुभ नक्षत्र में तीन पीपल के वृक्ष श्मशान भूमि, 
-                मंदिर या पार्क में लगाएँ।
-              </p>
-
-              <p>
-                पौधे को निकालते समय इस मंत्र का जाप करें:
-              </p>
-              <pre className="bg-gray-100 p-4 rounded-lg text-center">
-                ॐ ह्रीं क्षौं फट् स्वाहा
-              </pre>
-
-              <p className="text-lg font-semibold text-center mt-8">
-                यदि आपको किसी भी प्रकार की सहायता – नारायण बलि पूजन, या घर के वास्तु दोष के बारे में चाहिए, 
-                तो हमारी टीम से <strong>6393570832</strong> पर संपर्क कर सकते हैं।
-              </p>
-            </article>
-
-            {/* CTA Button in Hindi */}
-            <div className="text-center mt-12">
               <Link
                 href="/bookings"
-                className="inline-block px-8 py-4 bg-gradient-to-r from-sacred-saffron to-prakash-gold text-white font-bold rounded-full shadow-lg hover:shadow-xl transition text-lg"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-lg group"
               >
-                परामर्श के लिए आज ही बुक करें →
+                <span>परामर्श बुक करें</span>
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </Link>
             </div>
           </div>
-        </main>
-      </SmoothScroll>
+        </section>
+
+      </main>
+      <Footer />
     </>
   );
 }
 EOF
 
-echo "✅ Remedy page replaced with Hindi content (no hero, only header strip)."
-echo "Run 'npm run build' to verify."
+echo "✅ Page created without problematic imports (SmoothScroll, LuxuryCursor, SoundController)"
+
+# Ensure video directory
+VIDEO_DIR="public/videos"
+mkdir -p "$VIDEO_DIR"
+VIDEO_PATH="$VIDEO_DIR/Vedicvastuurja.mp4"
+
+if [ ! -f "$VIDEO_PATH" ]; then
+    echo "⚠️ Video file not found at $VIDEO_PATH"
+    echo "Please place your video file (Vedicvastuurja.mp4) in the public/videos/ folder."
+    echo "Creating a placeholder note..."
+    cat > "$VIDEO_PATH.txt" << EOF
+Place your high-quality 4:3 video named "Vedicvastuurja.mp4" here.
+The page will display it automatically.
+EOF
+else
+    echo "✅ Video file already exists at $VIDEO_PATH"
+fi
+
+echo ""
+echo "=============================================================="
+echo "✅ Hidden page created successfully (fixed for static export)!"
+echo "=============================================================="
+echo "📍 Page URL: /vishesh-upaye-1"
+echo "📁 Page file: src/app/(marketing)/vishesh-upaye-1/page.tsx"
+echo ""
+echo "➡️  Next steps:"
+echo "1. Place your video file at: $VIDEO_PATH"
+echo "2. Run 'npm run build' – the page should now compile without errors."
+echo "3. The page is NOT linked anywhere – share the URL directly."
+echo ""
+echo "🎉 Luxury page is ready for building!"
+echo "=============================================================="
