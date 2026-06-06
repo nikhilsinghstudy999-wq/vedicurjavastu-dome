@@ -18,7 +18,7 @@ export default function VisheshUpayePage() {
           </div>
         </div>
 
-        {/* Video – direct CDN source, no custom JS */}
+        {/* Video player – using direct LimeWire link */}
         <div className="container mx-auto px-4 py-16 max-w-4xl">
           <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-2xl border border-prakash-gold/30 bg-black z-10">
             <video
@@ -27,10 +27,9 @@ export default function VisheshUpayePage() {
               controls
               preload="auto"
               playsInline
-              disablePictureInPicture
             >
               <source
-                src="https://cdn.jsdelivr.net/gh/nikhilsinghstudy999-wq/vedicurjavastu-dome@main/public/videos/Vedicvastuurja.mp4"
+                src="https://limewire.com/d/lEgrk?download=1"
                 type="video/mp4"
               />
               <p className="text-white text-center p-8">
