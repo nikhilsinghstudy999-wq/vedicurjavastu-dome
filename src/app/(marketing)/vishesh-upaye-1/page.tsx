@@ -8,7 +8,6 @@ export default function VisheshUpayePage() {
       <Header />
       <SmoothScroll>
         <main className="min-h-screen bg-gradient-to-b from-vastu-parchment to-white">
-
           {/* Hero */}
           <div className="bg-gradient-to-r from-nidra-indigo via-sacred-saffron/20 to-nidra-indigo py-20">
             <div className="container mx-auto px-4 text-center">
@@ -21,7 +20,7 @@ export default function VisheshUpayePage() {
             </div>
           </div>
 
-          {/* Video player */}
+          {/* Video – works everywhere */}
           <div className="container mx-auto px-4 py-16 max-w-4xl">
             <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-2xl border border-prakash-gold/30 bg-black">
               <video
@@ -54,7 +53,6 @@ export default function VisheshUpayePage() {
               </Link>
             </div>
           </div>
-
         </main>
       </SmoothScroll>
     </>
