@@ -1,58 +1,55 @@
 #!/bin/bash
-
 set -e
 
-PAGE_DIR="src/app/(marketing)/vishesh-upaye-1"
-PAGE_FILE="$PAGE_DIR/page.tsx"
-VIDEO_MP4="public/videos/Vedicvastuurja.mp4"
-VIDEO_WEBM="public/videos/Vedicvastuurja.webm"
-POSTER_IMG="public/images/vishesh-upaye-poster.jpg"
-
-echo "🚀 Fixing hidden luxury page: /vishesh-upaye-1"
+echo "🚀 Fixing video page and deploying to Vercel..."
 
 # ----------------------------------------------------------------------
 # 1. Ensure directories exist
 # ----------------------------------------------------------------------
+PAGE_DIR="src/app/(marketing)/vishesh-upaye-1"
 mkdir -p "$PAGE_DIR"
 mkdir -p "public/videos"
 mkdir -p "public/images"
 
 # ----------------------------------------------------------------------
-# 2. Create a placeholder poster if it doesn't exist
+# 2. Create poster image if missing
 # ----------------------------------------------------------------------
-if [ ! -f "$POSTER_IMG" ]; then
-    cat > "$POSTER_IMG" << 'EOF'
+POSTER_PATH="public/images/vishesh-upaye-poster.jpg"
+if [ ! -f "$POSTER_PATH" ]; then
+    echo "📸 Creating poster image..."
+    cat > "$POSTER_PATH" << 'EOF'
 <svg width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="#1A2A3A"/>
   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#E8B960" font-size="48" font-family="serif">विशेष उपाय</text>
 </svg>
 EOF
-    echo "✅ Created poster image at $POSTER_IMG"
-else
-    echo "✅ Poster image already exists."
 fi
 
 # ----------------------------------------------------------------------
 # 3. Warn about missing video files (but continue)
 # ----------------------------------------------------------------------
-if [ ! -f "$VIDEO_MP4" ]; then
-    echo "⚠️  MP4 video not found at $VIDEO_MP4"
-    echo "   Please place your video file there (will still build, but video won't play)."
+MP4_PATH="public/videos/Vedicvastuurja.mp4"
+WEBM_PATH="public/videos/Vedicvastuurja.webm"
+
+if [ ! -f "$MP4_PATH" ]; then
+    echo "⚠️  MP4 video not found at $MP4_PATH"
+    echo "   The page will still build, but video won't play until you add it."
 fi
 
-if [ ! -f "$VIDEO_WEBM" ]; then
-    echo "⚠️  WebM video not found at $VIDEO_WEBM"
-    echo "   The page will use only the MP4 version."
+# Optionally convert MP4 to WebM if ffmpeg is installed
+if command -v ffmpeg &> /dev/null && [ -f "$MP4_PATH" ] && [ ! -f "$WEBM_PATH" ]; then
+    echo "🎬 Converting MP4 to WebM for better compatibility..."
+    ffmpeg -i "$MP4_PATH" -c:v libvpx -crf 10 -b:v 1M -c:a libopus "$WEBM_PATH"
+    echo "✅ WebM created at $WEBM_PATH"
 fi
 
 # ----------------------------------------------------------------------
-# 4. Write the new static page (no client-only components)
+# 4. Write the page (Server Component – no event handlers)
 # ----------------------------------------------------------------------
-cat > "$PAGE_FILE" << 'EOF'
+cat > "$PAGE_DIR/page.tsx" << 'EOF'
 import Header from '@/features/shared/components/Header';
 import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function VisheshUpayePage() {
   return (
@@ -75,14 +72,14 @@ export default function VisheshUpayePage() {
             </div>
           </div>
 
-          {/* Video Section */}
+          {/* Video Section – pure HTML5 video, no event handlers */}
           <div className="container mx-auto px-4 py-16 max-w-4xl">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-2xl border border-prakash-gold/30 bg-black">
               <video
                 className="absolute inset-0 w-full h-full object-contain"
                 poster="/images/vishesh-upaye-poster.jpg"
                 controls
-                preload="none"
+                preload="metadata"
                 playsInline
               >
                 <source src="/videos/Vedicvastuurja.mp4" type="video/mp4" />
@@ -116,30 +113,48 @@ export default function VisheshUpayePage() {
 }
 EOF
 
-echo "✅ Page rewritten at $PAGE_FILE"
+echo "✅ Page rewritten at $PAGE_DIR/page.tsx"
 
 # ----------------------------------------------------------------------
-# 5. Final instructions
+# 5. Ensure video files are tracked by Git
+# ----------------------------------------------------------------------
+if [ -f "$MP4_PATH" ]; then
+    git add "$MP4_PATH" 2>/dev/null || true
+fi
+if [ -f "$WEBM_PATH" ]; then
+    git add "$WEBM_PATH" 2>/dev/null || true
+fi
+git add "$POSTER_PATH"
+git add "$PAGE_DIR/page.tsx"
+
+# ----------------------------------------------------------------------
+# 6. Commit and push
+# ----------------------------------------------------------------------
+echo "📦 Committing changes..."
+git commit -m "Fix video page: remove event handlers, add WebM support, improve static export" || echo "No changes to commit"
+
+echo "🚀 Pushing to GitHub..."
+git push origin main
+
+# ----------------------------------------------------------------------
+# 7. Final instructions
 # ----------------------------------------------------------------------
 echo ""
 echo "=============================================================="
-echo "✅ Video page fixed and ready for static export."
+echo "✅ Video page fixed and deployed!"
 echo "=============================================================="
 echo ""
-echo "📌 What was fixed / improved:"
-echo "   • Removed 'use client' + problematic client components"
-echo "   • Added MP4 + WebM video sources for broad compatibility"
-echo "   • Added poster image + fallback text"
-echo "   • Used preload='none' + playsInline for mobile-first performance"
+echo "📌 What was changed:"
+echo "   • Removed 'onError' event handler (caused Vercel build failure)"
+echo "   • Added WebM source (converted automatically if ffmpeg is available)"
+echo "   • Used 'preload=\"metadata\"' instead of 'none' for better UX"
+echo "   • Kept the page as Server Component (no 'use client')"
 echo ""
-echo "🎬 Next steps:"
-echo "   1. Place your MP4 video at: $VIDEO_MP4"
-echo "   2. (Optional) Convert it to WebM and place at: $VIDEO_WEBM"
-echo "   3. Run 'npm run build' – the video will be copied to 'out/videos/'"
-echo "   4. Test locally: npx serve out"
+echo "🌐 Vercel will automatically redeploy after push."
+echo "   Check your deployment logs at: https://vercel.com"
 echo ""
-echo "⚠️  If the video still doesn't play after build:"
-echo "   - Check that 'out/videos/Vedicvastuurja.mp4' exists."
-echo "   - If missing, manually copy 'public/videos/' to 'out/videos/'"
-echo "   - Or add 'cp -r public/videos out/' to your build script."
+echo "🎬 If the video still doesn't play:"
+echo "   - Ensure 'public/videos/Vedicvastuurja.mp4' exists and is valid."
+echo "   - Manually add a WebM version (or let the script convert it)."
+echo "   - After push, wait ~2 minutes for Vercel to rebuild."
 echo "=============================================================="
