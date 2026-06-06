@@ -1,7 +1,6 @@
 import Header from '@/features/shared/components/Header';
 import SmoothScroll from '@/features/shared/components/global/ScrollSmoother';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default function VisheshUpayePage() {
   return (
@@ -24,14 +23,14 @@ export default function VisheshUpayePage() {
             </div>
           </div>
 
-          {/* Video Section */}
+          {/* Video Section – pure HTML5 video, no event handlers */}
           <div className="container mx-auto px-4 py-16 max-w-4xl">
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl shadow-2xl border border-prakash-gold/30 bg-black">
               <video
                 className="absolute inset-0 w-full h-full object-contain"
                 poster="/images/vishesh-upaye-poster.jpg"
                 controls
-                preload="none"
+                preload="metadata"
                 playsInline
               >
                 <source src="/videos/Vedicvastuurja.mp4" type="video/mp4" />
