@@ -20,22 +20,56 @@ export default function VisheshUpayePage() {
             </div>
           </div>
 
-          {/* Video – works everywhere */}
+          {/* Video player – local first, jsDelivr fallback */}
           <div className="container mx-auto px-4 py-16 max-w-4xl">
             <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden shadow-2xl border border-prakash-gold/30 bg-black">
               <video
+                id="vishesh-video"
                 className="absolute inset-0 w-full h-full"
                 poster="/images/vishesh-upaye-poster.jpg"
                 controls
                 preload="metadata"
                 playsInline
               >
+                {/* 1st source: local Vercel file (works if deployed correctly) */}
                 <source src="/videos/Vedicvastuurja.mp4" type="video/mp4" />
-                <source src="/videos/Vedicvastuurja.webm" type="video/webm" />
+                {/* 2nd source: jsDelivr CDN (always works, no signup) */}
+                <source
+                  src="https://cdn.jsdelivr.net/gh/nikhilsinghstudy999-wq/vedicurjavastu-dome@main/public/videos/Vedicvastuurja.mp4"
+                  type="video/mp4"
+                  data-fallback="true"
+                />
                 <p className="text-white text-center p-8">
                   आपका ब्राउज़र वीडियो का समर्थन नहीं करता।
                 </p>
               </video>
+
+              {/* Automatic fallback to CDN if local fails */}
+              <script
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    const video = document.getElementById('vishesh-video');
+                    const localSource = video.querySelector('source:not([data-fallback])');
+                    const cdnSource = video.querySelector('source[data-fallback]');
+
+                    // If the local source fails, switch to CDN immediately
+                    localSource.addEventListener('error', () => {
+                      console.log('Local video unavailable – switching to jsDelivr CDN');
+                      localSource.remove();
+                      video.load();
+                    });
+
+                    // Prefer CDN if local is slow (optional)
+                    video.addEventListener('canplay', () => {
+                      if (video.networkState === 3 && !video.currentSrc.includes('jsdelivr')) {
+                        // Loading stalled; try CDN
+                        localSource.remove();
+                        video.load();
+                      }
+                    });
+                  `,
+                }}
+              />
             </div>
           </div>
 
