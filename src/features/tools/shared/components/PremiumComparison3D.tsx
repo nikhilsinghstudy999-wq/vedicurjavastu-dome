@@ -27,7 +27,7 @@ const comparisons = [
       'Detailed Yogas identification (Raj Yoga, Dhana Yoga, etc.)',
       'Personalised gemstone & Rudraksha recommendation',
       'Mantra, Yantra, and remedial puja prescription',
-      'One‑on‑one consultation with Vastuvid K.K. Nagaich',
+      'One‑on‑one consultation with AstroVastu Expert K.K. Nagaich',
       'Suitable for life decisions – career, marriage, health, investments',
     ],
     serviceLink: '/bookings',
@@ -54,7 +54,7 @@ const comparisons = [
       'Meaning analysis in Sanskrit and native language',
       'Guna‑dosha evaluation of each suggested name',
       'Muhurat for naming ceremony if required',
-      'Direct consultation with Vastuvid K.K. Nagaich',
+      'Direct consultation with AstroVastu Expert K.K. Nagaich',
     ],
     serviceLink: '/bookings',
   },
@@ -99,7 +99,7 @@ function ComparisonCard({ item, index }: { item: typeof comparisons[0]; index: n
             {/* Acharya Service column */}
             <div className="rounded-2xl bg-gradient-to-br from-sacred-saffron/5 via-prakash-gold/10 to-white/80 p-5 sm:p-6 border border-prakash-gold/30 relative overflow-hidden">
               <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-gradient-to-r from-sacred-saffron to-prakash-gold text-white text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap shadow-lg">
-                Performed by Vastuvid K.K. Nagaich
+                Performed by AstroVastu Expert K.K. Nagaich
               </div>
               <div className="mt-4">
                 <div className="flex items-center gap-3 mb-4">
@@ -158,7 +158,7 @@ export default function PremiumComparison3D() {
             <span className="bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red bg-clip-text text-transparent">Consult the Acharya</span>
           </h2>
           <p className="text-nidra-indigo/60 max-w-2xl mx-auto text-sm sm:text-base">
-            Our free AI tools run on predefined algorithms. For personalised, in‑depth analysis with lifelong remedies, Vastuvid K.K. Nagaich personally performs each expert service.
+            Our free AI tools run on predefined algorithms. For personalised, in‑depth analysis with lifelong remedies, AstroVastu Expert K.K. Nagaich personally performs each expert service.
           </p>
         </motion.div>
 

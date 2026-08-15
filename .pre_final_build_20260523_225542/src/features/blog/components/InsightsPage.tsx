@@ -42,7 +42,7 @@ export default function InsightsPage() {
               className="font-serif text-xl sm:text-2xl md:text-3xl block" 
             />
             <p className="text-base text-nidra-indigo/60 max-w-2xl mx-auto mt-4">
-              Explore articles on Vastu Shastra, numerology, and Vedic astrology — written by Vastuvid KK Nagaich.
+              Explore articles on Vastu Shastra, numerology, and Vedic astrology — written by AstroVastu Expert KK Nagaich.
             </p>
           </div>
         </section>

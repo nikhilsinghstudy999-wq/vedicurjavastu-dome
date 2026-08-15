@@ -16,7 +16,7 @@ export default function VirtualConsultPage() {
           <span className="text-prakash-gold uppercase tracking-[0.3em] text-sm mb-4 block font-semibold">Vedic Application</span>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 drop-shadow-2xl"><span className="bg-gradient-to-r from-cyan-300 via-prakash-gold to-sacred-saffron bg-clip-text text-transparent">Virtual Consult</span></h1>
           <p className="text-lg text-white/70 max-w-3xl mx-auto mb-4">Live one‑on‑one video consultation — the full depth of Vastu guidance, from anywhere in the world.</p>
-          <p className="text-sm text-white/50 max-w-2xl mx-auto mb-10">100M+ views, 80K+ followers — Vastuvid KK Nagaich personally conducts every session.</p>
+          <p className="text-sm text-white/50 max-w-2xl mx-auto mb-10">100M+ views, 80K+ followers — AstroVastu Expert KK Nagaich personally conducts every session.</p>
           <Link href="/bookings" className="px-10 py-5 bg-gradient-to-r from-cyan-500 via-prakash-gold to-sacred-saffron text-nidra-indigo font-bold rounded-full shadow-[0_10px_30px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_45px_rgba(255,153,51,0.5)] transition-all text-lg">Book Virtual Session</Link>
         </div>
       </section>
@@ -37,7 +37,7 @@ export default function VirtualConsultPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a1a2e] via-[#1a2a4e] to-[#0f1a2a] bg-[length:400%_400%] animate-[heroLoop_12s_ease_infinite]" />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h2 className="font-serif text-3xl sm:text-4xl text-white mb-4">Book Your Virtual Session</h2>
-          <p className="text-white/70 max-w-xl mx-auto mb-8">100M+ views, 80K+ followers — personally conducted by Vastuvid KK Nagaich.</p>
+          <p className="text-white/70 max-w-xl mx-auto mb-8">100M+ views, 80K+ followers — personally conducted by AstroVastu Expert KK Nagaich.</p>
           <Link href="/bookings" className="luxury-button text-lg">Schedule Now →</Link>
         </div>
       </section>

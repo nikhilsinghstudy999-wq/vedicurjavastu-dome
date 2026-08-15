@@ -41,7 +41,7 @@ export default function BlogPage() {
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
                 <span>10 min read</span>
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
-                <span>By Vastuvid KK Nagaich</span>
+                <span>By AstroVastu Expert KK Nagaich</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
@@ -242,7 +242,7 @@ export default function BlogPage() {
                   <h2 className="font-serif text-2xl text-nidra-indigo">Conclusion — Your Kitchen Is Your Family's Engine</h2>
                 </div>
                 <p>The kitchen is not merely where food is prepared — it is where the fire element that drives your family's metabolism, ambition, and financial vitality is generated and sustained. The 325‑household survey provides undeniable data: when the SE fire zone is compromised, acidity (85%), unproductive expenses (74%), and work obstacles (83%) follow with statistical predictability. The remedies exist, the colours are available, the rituals are simple. Aligning your kitchen with Vastu principles is not a matter of superstition — it is a matter of family health and financial prudence.</p>
-                <p className="font-medium">Vastuvid K.K. Nagaich provides comprehensive kitchen Vastu audits — including directional analysis, elemental balancing, and personalised remedy prescriptions — as part of every residential consultation.</p>
+                <p className="font-medium">AstroVastu Expert K.K. Nagaich provides comprehensive kitchen Vastu audits — including directional analysis, elemental balancing, and personalised remedy prescriptions — as part of every residential consultation.</p>
               </div>
 
             </div>
@@ -251,7 +251,7 @@ export default function BlogPage() {
             <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-orange-500 to-sacred-saffron flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
               <div>
-                <p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p>
+                <p className="font-serif text-lg text-nidra-indigo font-bold">AstroVastu Expert KK Nagaich</p>
                 <p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide</p>
               </div>
             </div>

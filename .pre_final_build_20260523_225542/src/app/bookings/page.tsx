@@ -33,7 +33,7 @@ function HeroSection({ onCtaClick }: { onCtaClick: () => void }) {
           <span className="bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red bg-clip-text text-transparent">VedicVastuUrja</span>
           <br />
           <span className="text-prakash-gold text-2xl sm:text-3xl md:text-4xl mt-2 block">
-            Guided by <span className="text-white">Vastuvid K.K. Nagaich</span>
+            Guided by <span className="text-white">AstroVastu Expert K.K. Nagaich</span>
           </span>
         </motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 px-4">

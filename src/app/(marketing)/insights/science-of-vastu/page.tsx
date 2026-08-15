@@ -42,7 +42,7 @@ export default function BlogPage() {
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
                 <span>12 min read</span>
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
-                <span>By Vastuvid KK Nagaich</span>
+                <span>By AstroVastu Expert KK Nagaich</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
@@ -164,7 +164,7 @@ export default function BlogPage() {
                   <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-green-400 to-emerald-600" />
                   <h2 className="font-serif text-2xl sm:text-3xl text-nidra-indigo">The Empirical Evidence — Client Outcomes</h2>
                 </div>
-                <p>Beyond theoretical validation, real‑world data supports Vastu&apos;s effectiveness. Across over 500 clients in 15+ countries, Vastuvid K.K. Nagaich has documented that Vastu corrections lead to a 20–30% improvement in self‑reported well‑being, measured through standardised health questionnaires. Commercial spaces aligned with Vastu principles report a 15% increase in footfall and a 10% reduction in employee absenteeism.<sup>[reference:14]</sup></p>
+                <p>Beyond theoretical validation, real‑world data supports Vastu&apos;s effectiveness. Across over 500 clients in 15+ countries, AstroVastu Expert K.K. Nagaich has documented that Vastu corrections lead to a 20–30% improvement in self‑reported well‑being, measured through standardised health questionnaires. Commercial spaces aligned with Vastu principles report a 15% increase in footfall and a 10% reduction in employee absenteeism.<sup>[reference:14]</sup></p>
               </div>
 
               {/* ── Conclusion ── */}
@@ -174,7 +174,7 @@ export default function BlogPage() {
                   <h2 className="font-serif text-2xl text-nidra-indigo">Conclusion — Ancient Wisdom, Modern Proof</h2>
                 </div>
                 <p>The science is converging. Vastu Shastra is not a collection of random superstitions — it is an empirically grounded system of environmental design that anticipated by millennia what modern building physics is now confirming. From CFD‑validated ventilation patterns to geomagnetic sleep alignment, from passive solar geometry to thermal mass placement, each principle finds its echo in peer‑reviewed research.</p>
-                <p className="font-medium">Vastuvid K.K. Nagaich combines this ancient wisdom with modern diagnostics — EMF meters, geomagnetic compasses, and thermal imaging — to provide a holistic, scientifically grounded Vastu analysis for every client.</p>
+                <p className="font-medium">AstroVastu Expert K.K. Nagaich combines this ancient wisdom with modern diagnostics — EMF meters, geomagnetic compasses, and thermal imaging — to provide a holistic, scientifically grounded Vastu analysis for every client.</p>
               </div>
 
             </div>
@@ -183,7 +183,7 @@ export default function BlogPage() {
             <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-prakash-gold to-sacred-saffron flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
               <div>
-                <p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p>
+                <p className="font-serif text-lg text-nidra-indigo font-bold">AstroVastu Expert KK Nagaich</p>
                 <p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | Served 2 Lakh+ Clients Worldwide | Researcher & Author</p>
               </div>
             </div>

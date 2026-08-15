@@ -113,7 +113,7 @@ function QuoteSection() {
           <p className="font-serif text-3xl md:text-4xl italic leading-relaxed">
             "The soul of VedicUrja is not an algorithm. It is a living lineage, a direct and sacred inheritance from masters whose wisdom transcends the limitations of textbooks."
           </p>
-          <p className="mt-6 text-prakash-gold uppercase tracking-wider">— Vastuvid KK Nagaich</p>
+          <p className="mt-6 text-prakash-gold uppercase tracking-wider">— AstroVastu Expert KK Nagaich</p>
         </motion.div>
       </div>
     </section>
@@ -138,7 +138,7 @@ function FinalCTASection() {
             href="/contact"
             className="bg-prakash-gold hover:bg-sacred-saffron text-nidra-indigo font-bold px-10 py-5 rounded-full text-lg shadow-xl hover:shadow-2xl transition"
           >
-            Consult Vastuvid KK Nagaich
+            Consult AstroVastu Expert KK Nagaich
           </Link>
           <Link
             href="/free-tools"
@@ -176,7 +176,7 @@ export default function AboutPage() {
             subtitle="Chapter Two"
             title="The Custodian's Pilgrimage"
             description={[
-              "Our custodian and Vastuvid began his personal pilgrimage into these profound sciences not as a professional endeavor, but as a silent, inner calling in the year 2008. For a full decade, this journey was one of intense personal experimentation, deep meditative absorption, and the quiet cultivation of a connection to the subtle energies that underpin Vastu Shastra, Nadi Jyotish, and Vedic Numerology.",
+              "Our custodian and AstroVastu Expert began his personal pilgrimage into these profound sciences not as a professional endeavor, but as a silent, inner calling in the year 2008. For a full decade, this journey was one of intense personal experimentation, deep meditative absorption, and the quiet cultivation of a connection to the subtle energies that underpin Vastu Shastra, Nadi Jyotish, and Vedic Numerology.",
               "It was a period of rigorous inner preparation—a decade of testing, learning, observing the cosmic pulse, and aligning oneself with the rhythms of the universe before daring to offer guidance to another soul.",
               "It was only after this extensive and demanding period that the professional mantle was formally and respectfully assumed in 2018, marking the moment when private sadhana blossomed into public service."
             ]}

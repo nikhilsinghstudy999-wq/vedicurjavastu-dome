@@ -40,7 +40,7 @@ export default function BlogPage() {
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
                 <span>9 min read</span>
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
-                <span>By Vastuvid KK Nagaich</span>
+                <span>By AstroVastu Expert KK Nagaich</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
@@ -115,7 +115,7 @@ export default function BlogPage() {
                 <div className="mt-4 space-y-4">
                   <div className="p-4 bg-white/70 rounded-2xl border border-prakash-gold/15">
                     <h3 className="font-serif text-base text-nidra-indigo font-bold mb-2">Why It Happens</h3>
-                    <p className="text-sm text-nidra-indigo/70">When you see your sleeping reflection, your subconscious mind perceives another person — a shadow self — sharing the marital space. Over months and years, this creates a subconscious pattern of infidelity, distrust, and emotional distance. Vastuvid K.K. Nagaich has counseled countless couples whose relationships immediately improved after removing or covering the bedroom mirror.</p>
+                    <p className="text-sm text-nidra-indigo/70">When you see your sleeping reflection, your subconscious mind perceives another person — a shadow self — sharing the marital space. Over months and years, this creates a subconscious pattern of infidelity, distrust, and emotional distance. AstroVastu Expert K.K. Nagaich has counseled countless couples whose relationships immediately improved after removing or covering the bedroom mirror.</p>
                   </div>
                   <div className="p-4 bg-white/70 rounded-2xl border border-prakash-gold/15">
                     <h3 className="font-serif text-base text-nidra-indigo font-bold mb-2">The Fix</h3>
@@ -170,7 +170,7 @@ export default function BlogPage() {
                   <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-sacred-saffron to-kumkuma-red" />
                   <h2 className="font-serif text-2xl sm:text-3xl text-nidra-indigo">Case Study — The Couple Who Removed a Mirror and Saved Their Marriage</h2>
                 </div>
-                <p>A couple in their early 40s, married 15 years, consulted Vastuvid K.K. Nagaich after three years of escalating conflict that neither could explain. They had a successful business, healthy children, and no external stressors. The Vastu audit revealed three bedroom doshas: a full‑length mirror directly opposite the bed, an SE‑corner master bedroom (fire zone, inducing nightly agitation), and both partners sleeping head‑north.</p>
+                <p>A couple in their early 40s, married 15 years, consulted AstroVastu Expert K.K. Nagaich after three years of escalating conflict that neither could explain. They had a successful business, healthy children, and no external stressors. The Vastu audit revealed three bedroom doshas: a full‑length mirror directly opposite the bed, an SE‑corner master bedroom (fire zone, inducing nightly agitation), and both partners sleeping head‑north.</p>
                 <p>The remedies were applied in a single day: the mirror was covered with a curtain, the bed was rotated 180 degrees (head‑south), and a heavy earth‑element crystal grid was placed in the SW of the room to stabilise the fire energy. Within <strong>two weeks</strong>, the couple reported that their nightly arguments — which had become a predictable ritual — simply stopped. Within three months, they described their marriage as stronger than it had been in a decade. The husband's chronic insomnia, which he had treated with medication for five years, resolved completely within the first month.</p>
               </div>
 
@@ -181,7 +181,7 @@ export default function BlogPage() {
                   <h2 className="font-serif text-2xl text-nidra-indigo">Conclusion — Your Bedroom Is Your Sanctuary</h2>
                 </div>
                 <p>The bedroom is where your body heals, your marriage deepens, and your subconscious processes the emotional residue of the day. Every element — the direction of the room, the orientation of your head, the presence or absence of mirrors, the colours on the walls, the devices on your nightstand — contributes to a cumulative energetic effect that either supports or sabotages your most fundamental needs. The remedies are simple, the science is clear, and the results — as thousands of clients have discovered — are often immediate.</p>
-                <p className="font-medium">Vastuvid K.K. Nagaich provides comprehensive bedroom Vastu audits as part of every residential consultation — including directional analysis, dosha identification, mirror placement correction, and personalised remedy prescriptions.</p>
+                <p className="font-medium">AstroVastu Expert K.K. Nagaich provides comprehensive bedroom Vastu audits as part of every residential consultation — including directional analysis, dosha identification, mirror placement correction, and personalised remedy prescriptions.</p>
               </div>
 
             </div>
@@ -190,7 +190,7 @@ export default function BlogPage() {
             <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-sacred-saffron flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
               <div>
-                <p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p>
+                <p className="font-serif text-lg text-nidra-indigo font-bold">AstroVastu Expert KK Nagaich</p>
                 <p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide</p>
               </div>
             </div>

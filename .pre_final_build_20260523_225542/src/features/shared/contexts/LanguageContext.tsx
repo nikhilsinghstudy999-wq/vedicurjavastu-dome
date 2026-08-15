@@ -22,8 +22,8 @@ const headerDict: Record<string, Record<Language, string>> = {
 const heroDict: Record<string, Record<Language, string>> = {
   'hero.title1': { en: 'Ancient Wisdom.', hi: 'प्राचीन ज्ञान।' },
   'hero.title2': { en: 'Modern Precision.', hi: 'आधुनिक परिशुद्धता।' },
-  'hero.subtitle': { en: 'Guided by Vastuvid KK Nagaich.', hi: 'वास्तुविद केके नागाइच द्वारा निर्देशित।' },
-  'hero.cta1': { en: 'Consult Vastuvid', hi: 'वास्तुविद से परामर्श' },
+  'hero.subtitle': { en: 'Guided by AstroVastu Expert KK Nagaich.', hi: 'वास्तुविद केके नागाइच द्वारा निर्देशित।' },
+  'hero.cta1': { en: 'Consult AstroVastu Expert', hi: 'वास्तुविद से परामर्श' },
   'hero.cta2': { en: 'Explore Free Tools', hi: 'मुफ्त उपकरण देखें' },
 };
 

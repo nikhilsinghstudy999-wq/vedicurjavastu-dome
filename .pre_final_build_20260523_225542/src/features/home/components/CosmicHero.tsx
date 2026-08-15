@@ -25,7 +25,7 @@ const fallbackHero: HeroSection = {
   section_key: 'hero',
   title: "India's Most‑Viewed Vastu Authority",
   subtitle: '100M+ Views. 2 Lakh+ Clients. 50+ Countries.',
-  description: 'Vastuvid KK Nagaich — the only Vastu Guru who is a 4th‑generation lineage holder, Tantra Sadhak, MBA, and former CEO. His personal rituals and deep business acumen have transformed thousands of lives worldwide.',
+  description: 'AstroVastu Expert KK Nagaich — the only Vastu Guru who is a 4th‑generation lineage holder, Tantra Sadhak, MBA, and former CEO. His personal rituals and deep business acumen have transformed thousands of lives worldwide.',
   button_text: 'Consult the Master',
   button_link: '/contact',
   secondary_button_text: 'Explore Free Tools',
@@ -97,7 +97,7 @@ export function CosmicHero() {
               </span>
             </h1>
             <p className="font-sans text-base sm:text-lg md:text-xl text-nidra-indigo/80 max-w-xl mx-auto lg:mx-0 mb-8">
-              Vastuvid K.K. Nagaich – 4th generation Vastu Guru, Tantra Sadhak, MBA, former CEO. Rooted in the Guru‑Shishya Parampara, he personally performs every ritual and has transformed over 2 Lakh lives across 50+ countries.
+              AstroVastu Expert K.K. Nagaich – 4th generation Vastu Guru, Tantra Sadhak, MBA, former CEO. Rooted in the Guru‑Shishya Parampara, he personally performs every ritual and has transformed over 2 Lakh lives across 50+ countries.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
               <LuxuryHeroButton href={primaryLink} variant="primary">{primaryText}</LuxuryHeroButton>

@@ -169,7 +169,7 @@ function WhyChooseVedicUrja() {
             {' '}No Other Expert Possesses
           </h2>
           <p className="text-nidra-indigo/60 max-w-2xl mx-auto text-sm sm:text-base">
-            Vastuvid KK Nagaich uniquely combines Tantra mastery, MBA‑grade investment insight, and 4th‑generation Vedic lineage – a trio unmatched by any other land selection consultant.
+            AstroVastu Expert KK Nagaich uniquely combines Tantra mastery, MBA‑grade investment insight, and 4th‑generation Vedic lineage – a trio unmatched by any other land selection consultant.
           </p>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -213,7 +213,7 @@ function YourJourneySection() {
     {
       step: '02',
       title: 'Acharya Audit',
-      desc: 'Vastuvid KK Nagaich personally reviews orientation, slope, soil quality, and surrounding Bhoomi Doshas.',
+      desc: 'AstroVastu Expert KK Nagaich personally reviews orientation, slope, soil quality, and surrounding Bhoomi Doshas.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" strokeLinecap="round" strokeLinejoin="round"/>
@@ -369,7 +369,7 @@ export default function LandSelectionPage() {
           <div className="container mx-auto px-4 relative z-10 text-center">
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Secure Your Land's Future</h2>
             <p className="text-white/70 text-lg max-w-2xl mx-auto mb-8">
-              Vastuvid KK Nagaich – <strong className="text-prakash-gold">100M+ views, 80K+ followers, MBA, Ex‑CEO, 4th‑generation Tantra‑trained Vastu Guru</strong> – personally audits every plot. No delegation. No generic reports.
+              AstroVastu Expert KK Nagaich – <strong className="text-prakash-gold">100M+ views, 80K+ followers, MBA, Ex‑CEO, 4th‑generation Tantra‑trained Vastu Guru</strong> – personally audits every plot. No delegation. No generic reports.
             </p>
             <a href="https://wa.me/916393570832?text=Hi%20VedicUrja,%20I%20want%20to%20book%20a%20Land%20Selection%20consultation" target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">
               Schedule Your Land Audit →

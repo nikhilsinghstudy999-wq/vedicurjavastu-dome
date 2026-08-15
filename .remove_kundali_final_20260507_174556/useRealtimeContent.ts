@@ -13,9 +13,9 @@ const staticData: Record<string, any[]> = {
     { id: '3', title: 'Land & Plot Selection', description: 'Auspicious foundations', benefits: ['Ideal Orientation','Soil Analysis','Future Prospects'], icon: '🌍', color_gradient: '', is_published: true, order_index: 3 },
   ],
   blog_posts: [
-    { id: '1', title: 'The Science of Vastu', slug: 'science-of-vastu', excerpt: 'Ancient principles meet modern science.', category: 'Vastu Science', read_time: 5, author_name: 'Vastuvid KK Nagaich', is_published: true, featured_image: '/images/blog/vastu-science.svg', content: '' },
-    { id: '2', title: 'Numerology for Beginners', slug: 'numerology-beginners', excerpt: 'Secrets of numbers.', category: 'Numerology', read_time: 4, author_name: 'Vastuvid KK Nagaich', is_published: true, content: '' },
-    { id: '3', title: 'Remedies Without Demolition', slug: 'remedies-without-demolition', excerpt: 'Simple corrections.', category: 'Remedies', read_time: 6, author_name: 'Vastuvid KK Nagaich', is_published: true, content: '' },
+    { id: '1', title: 'The Science of Vastu', slug: 'science-of-vastu', excerpt: 'Ancient principles meet modern science.', category: 'Vastu Science', read_time: 5, author_name: 'AstroVastu Expert KK Nagaich', is_published: true, featured_image: '/images/blog/vastu-science.svg', content: '' },
+    { id: '2', title: 'Numerology for Beginners', slug: 'numerology-beginners', excerpt: 'Secrets of numbers.', category: 'Numerology', read_time: 4, author_name: 'AstroVastu Expert KK Nagaich', is_published: true, content: '' },
+    { id: '3', title: 'Remedies Without Demolition', slug: 'remedies-without-demolition', excerpt: 'Simple corrections.', category: 'Remedies', read_time: 6, author_name: 'AstroVastu Expert KK Nagaich', is_published: true, content: '' },
   ],
   testimonials: [
     { id: '1', client_name: 'Priya Malhotra', location: 'London, UK', content: 'Acharya\'s guidance transformed our home.', rating: 5, verified: true, is_published: true, order_index: 1 },

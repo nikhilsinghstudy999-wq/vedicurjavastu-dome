@@ -1171,7 +1171,7 @@ export default function Header() {
           : <span className="font-serif text-xl sm:text-2xl text-white font-bold tracking-wide drop-shadow-lg">VedicUrja<span className="text-yellow-400">.</span></span>}
         </Link>
         <div className="flex items-center gap-3 flex-shrink-0">
-          <Link href="/contact" className="cta-btn hidden sm:inline-flex">Consult Vastuvid ji</Link>
+          <Link href="/contact" className="cta-btn hidden sm:inline-flex">Consult AstroVastu Expert ji</Link>
           <button onClick={() => setMenuOpen(true)} className="menu-btn" aria-label="Open menu"><span /></button>
         </div>
       </header>
@@ -1219,7 +1219,7 @@ export default function Header() {
                 </div>
               </nav>
               <div className="drawer-footer">
-                <Link href="/contact" onClick={() => setMenuOpen(false)} className="block w-full text-center py-4 rounded-full text-base uppercase tracking-wide font-bold text-white cta-btn">Consult Vastuvid ji</Link>
+                <Link href="/contact" onClick={() => setMenuOpen(false)} className="block w-full text-center py-4 rounded-full text-base uppercase tracking-wide font-bold text-white cta-btn">Consult AstroVastu Expert ji</Link>
               </div>
             </motion.div>
           </>
@@ -1403,7 +1403,7 @@ export default function Header() {
           : <span className="font-serif text-xl sm:text-2xl text-white font-bold tracking-wide drop-shadow-lg">VedicUrja<span className="text-yellow-400">.</span></span>}
         </Link>
         <div className="flex items-center gap-3 flex-shrink-0">
-          <Link href="/contact" className="cta-btn hidden sm:inline-flex">Consult Vastuvid ji</Link>
+          <Link href="/contact" className="cta-btn hidden sm:inline-flex">Consult AstroVastu Expert ji</Link>
           <button onClick={() => setMenuOpen(true)} className="menu-btn" aria-label="Open menu"><span /></button>
         </div>
       </header>
@@ -1452,7 +1452,7 @@ export default function Header() {
               </nav>
                 <div className="scroll-hint">▼ SCROLL ME ▼</div>
               <div className="drawer-footer">
-                <Link href="/contact" onClick={() => setMenuOpen(false)} className="block w-full text-center py-4 rounded-full text-base uppercase tracking-wide font-bold text-white cta-btn">Consult Vastuvid ji</Link>
+                <Link href="/contact" onClick={() => setMenuOpen(false)} className="block w-full text-center py-4 rounded-full text-base uppercase tracking-wide font-bold text-white cta-btn">Consult AstroVastu Expert ji</Link>
               </div>
             </motion.div>
           </>
@@ -1591,7 +1591,7 @@ export default function Header() {
           : <span className="font-serif text-xl sm:text-2xl text-white font-bold tracking-wide drop-shadow-lg">VedicUrja<span className="text-yellow-400">.</span></span>}
         </Link>
         <div className="flex items-center gap-3 flex-shrink-0">
-          <Link href="/contact" className="cta-btn hidden sm:inline-flex">Consult Vastuvid ji</Link>
+          <Link href="/contact" className="cta-btn hidden sm:inline-flex">Consult AstroVastu Expert ji</Link>
           <button onClick={() => setMenuOpen(true)} className="menu-btn" aria-label="Open menu"><span /></button>
         </div>
       </header>
@@ -1639,7 +1639,7 @@ export default function Header() {
                 </div>
               </nav>
               <div className="drawer-footer">
-                <Link href="/contact" onClick={() => setMenuOpen(false)} className="block w-full text-center py-4 rounded-full text-base uppercase tracking-wide font-bold text-white cta-btn">Consult Vastuvid ji</Link>
+                <Link href="/contact" onClick={() => setMenuOpen(false)} className="block w-full text-center py-4 rounded-full text-base uppercase tracking-wide font-bold text-white cta-btn">Consult AstroVastu Expert ji</Link>
               </div>
             </motion.div>
           </>
@@ -1778,7 +1778,7 @@ export default function Header() {
           : <span className="font-serif text-xl sm:text-2xl text-white font-bold tracking-wide drop-shadow-lg">VedicUrja<span className="text-yellow-400">.</span></span>}
         </Link>
         <div className="flex items-center gap-3 flex-shrink-0">
-          <Link href="/contact" className="cta-btn hidden sm:inline-flex">Consult Vastuvid ji</Link>
+          <Link href="/contact" className="cta-btn hidden sm:inline-flex">Consult AstroVastu Expert ji</Link>
           <button onClick={() => setMenuOpen(true)} className="menu-btn" aria-label="Open menu"><span /></button>
         </div>
       </header>
@@ -1826,7 +1826,7 @@ export default function Header() {
                 </div>
               </nav>
               <div className="drawer-footer">
-                <Link href="/contact" onClick={() => setMenuOpen(false)} className="block w-full text-center py-4 rounded-full text-base uppercase tracking-wide font-bold text-white cta-btn">Consult Vastuvid ji</Link>
+                <Link href="/contact" onClick={() => setMenuOpen(false)} className="block w-full text-center py-4 rounded-full text-base uppercase tracking-wide font-bold text-white cta-btn">Consult AstroVastu Expert ji</Link>
               </div>
             </motion.div>
           </>
@@ -2061,7 +2061,7 @@ function FinalCTASection() {
           <div className="relative rounded-[40px] p-[2px] bg-gradient-to-br from-prakash-gold/30 via-white/10 to-sacred-saffron/30 shadow-[0_25px_60px_rgba(0,0,0,0.4)]">
             <div className="rounded-[38px] bg-black/20 backdrop-blur-2xl p-8 sm:p-12 md:p-16 border border-white/10 shadow-inner">
               <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Ready for Deeper Insight?</h2>
-              <p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10">Book a private consultation with Vastuvid K.K. Nagaich for personalised guidance.</p>
+              <p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10">Book a private consultation with AstroVastu Expert K.K. Nagaich for personalised guidance.</p>
               <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">Schedule Now →</Link>
             </div>
           </div>
@@ -2244,7 +2244,7 @@ function FinalCTASection() {
           <div className="relative rounded-[40px] p-[2px] bg-gradient-to-br from-prakash-gold/30 via-white/10 to-sacred-saffron/30 shadow-[0_25px_60px_rgba(0,0,0,0.4)]">
             <div className="rounded-[38px] bg-black/20 backdrop-blur-2xl p-8 sm:p-12 md:p-16 border border-white/10 shadow-inner">
               <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Ready for Deeper Insight?</h2>
-              <p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10">Book a private consultation with Vastuvid K.K. Nagaich for personalised guidance.</p>
+              <p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10">Book a private consultation with AstroVastu Expert K.K. Nagaich for personalised guidance.</p>
               <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">Schedule Now →</Link>
             </div>
           </div>
@@ -2379,9 +2379,9 @@ const staticData: Record<string, any[]> = {
     { id: '3', title: 'Land & Plot Selection', description: 'Auspicious foundations', benefits: ['Ideal Orientation','Soil Analysis','Future Prospects'], icon: '🌍', color_gradient: '', is_published: true, order_index: 3 },
   ],
   blog_posts: [
-    { id: '1', title: 'The Science of Vastu', slug: 'science-of-vastu', excerpt: 'Ancient principles meet modern science.', category: 'Vastu Science', read_time: 5, author_name: 'Vastuvid KK Nagaich', is_published: true, featured_image: '/images/blog/vastu-science.svg', content: '' },
-    { id: '2', title: 'Numerology for Beginners', slug: 'numerology-beginners', excerpt: 'Secrets of numbers.', category: 'Numerology', read_time: 4, author_name: 'Vastuvid KK Nagaich', is_published: true, content: '' },
-    { id: '3', title: 'Remedies Without Demolition', slug: 'remedies-without-demolition', excerpt: 'Simple corrections.', category: 'Remedies', read_time: 6, author_name: 'Vastuvid KK Nagaich', is_published: true, content: '' },
+    { id: '1', title: 'The Science of Vastu', slug: 'science-of-vastu', excerpt: 'Ancient principles meet modern science.', category: 'Vastu Science', read_time: 5, author_name: 'AstroVastu Expert KK Nagaich', is_published: true, featured_image: '/images/blog/vastu-science.svg', content: '' },
+    { id: '2', title: 'Numerology for Beginners', slug: 'numerology-beginners', excerpt: 'Secrets of numbers.', category: 'Numerology', read_time: 4, author_name: 'AstroVastu Expert KK Nagaich', is_published: true, content: '' },
+    { id: '3', title: 'Remedies Without Demolition', slug: 'remedies-without-demolition', excerpt: 'Simple corrections.', category: 'Remedies', read_time: 6, author_name: 'AstroVastu Expert KK Nagaich', is_published: true, content: '' },
   ],
   testimonials: [
     { id: '1', client_name: 'Priya Malhotra', location: 'London, UK', content: 'Acharya\'s guidance transformed our home.', rating: 5, verified: true, is_published: true, order_index: 1 },
@@ -7360,7 +7360,7 @@ FILE: public/images/about/PLACEHOLDER_MEDIA.txt
 ============================================================
 Place the following media files in public/images/about/:
 
-- hero-video.mp4          : Atmospheric video of Vastuvid KK Nagaich or sacred Vedic imagery
+- hero-video.mp4          : Atmospheric video of AstroVastu Expert KK Nagaich or sacred Vedic imagery
 - lineage.jpg             : Image representing Guru-Shishya tradition
 - vastu-science.jpg       : Vastu principles diagram or photo
 - nadi-numerology.jpg     : Palm leaves or numerology charts
@@ -7369,17 +7369,17 @@ Place the following media files in public/images/about/:
 ============================================================
 FILE: public/locales/en/common.json
 ============================================================
-{"header":{"home":"Home","freeAITools":"Free AI Tools","services":"Services","bookings":"Virtual Consult","blogs":"Blogs","testimonials":"Testimonials","about":"About","consult":"Consult Acharya"},"hero":{"title1":"Ancient Wisdom.","title2":"Modern Precision.","subtitle":"Guided by Vastuvid KK Nagaich.","cta1":"Consult Vastuvid","cta2":"Explore Free Tools"},"footer":{"about":"VedicUrja – Ancient Wisdom. Modern Precision.","copyright":"© 2026 VedicUrja. All rights reserved."},"common":{"loading":"Loading...","submit":"Submit"}}
+{"header":{"home":"Home","freeAITools":"Free AI Tools","services":"Services","bookings":"Virtual Consult","blogs":"Blogs","testimonials":"Testimonials","about":"About","consult":"Consult Acharya"},"hero":{"title1":"Ancient Wisdom.","title2":"Modern Precision.","subtitle":"Guided by AstroVastu Expert KK Nagaich.","cta1":"Consult AstroVastu Expert","cta2":"Explore Free Tools"},"footer":{"about":"VedicUrja – Ancient Wisdom. Modern Precision.","copyright":"© 2026 VedicUrja. All rights reserved."},"common":{"loading":"Loading...","submit":"Submit"}}
 
 ============================================================
 FILE: public/locales/es/common.json
 ============================================================
-{"header":{"home":"Inicio","freeAITools":"Herramientas IA","services":"Servicios","bookings":"Consulta Virtual","blogs":"Blogs","testimonials":"Testimonios","about":"Acerca de","consult":"Consultar"},"hero":{"title1":"Sabiduría Ancestral.","title2":"Precisión Moderna.","subtitle":"Guiado por Vastuvid KK Nagaich.","cta1":"Consultar","cta2":"Herramientas Gratis"},"footer":{"about":"VedicUrja – Sabiduría Ancestral. Precisión Moderna.","copyright":"© 2026 VedicUrja. Todos los derechos reservados."},"common":{"loading":"Cargando...","submit":"Enviar"}}
+{"header":{"home":"Inicio","freeAITools":"Herramientas IA","services":"Servicios","bookings":"Consulta Virtual","blogs":"Blogs","testimonials":"Testimonios","about":"Acerca de","consult":"Consultar"},"hero":{"title1":"Sabiduría Ancestral.","title2":"Precisión Moderna.","subtitle":"Guiado por AstroVastu Expert KK Nagaich.","cta1":"Consultar","cta2":"Herramientas Gratis"},"footer":{"about":"VedicUrja – Sabiduría Ancestral. Precisión Moderna.","copyright":"© 2026 VedicUrja. Todos los derechos reservados."},"common":{"loading":"Cargando...","submit":"Enviar"}}
 
 ============================================================
 FILE: public/locales/fr/common.json
 ============================================================
-{"header":{"home":"Accueil","freeAITools":"Outils IA","services":"Services","bookings":"Consultation Virtuelle","blogs":"Blogs","testimonials":"Témoignages","about":"À propos","consult":"Consulter"},"hero":{"title1":"Sagesse Ancienne.","title2":"Précision Moderne.","subtitle":"Guidé par Vastuvid KK Nagaich.","cta1":"Consulter","cta2":"Outils Gratuits"},"footer":{"about":"VedicUrja – Sagesse Ancienne. Précision Moderne.","copyright":"© 2026 VedicUrja. Tous droits réservés."},"common":{"loading":"Chargement...","submit":"Envoyer"}}
+{"header":{"home":"Accueil","freeAITools":"Outils IA","services":"Services","bookings":"Consultation Virtuelle","blogs":"Blogs","testimonials":"Témoignages","about":"À propos","consult":"Consulter"},"hero":{"title1":"Sagesse Ancienne.","title2":"Précision Moderne.","subtitle":"Guidé par AstroVastu Expert KK Nagaich.","cta1":"Consulter","cta2":"Outils Gratuits"},"footer":{"about":"VedicUrja – Sagesse Ancienne. Précision Moderne.","copyright":"© 2026 VedicUrja. Tous droits réservés."},"common":{"loading":"Chargement...","submit":"Envoyer"}}
 
 ============================================================
 FILE: public/locales/hi/common.json
@@ -7643,7 +7643,7 @@ function HeroSection() {
         </motion.span>
 
         <AnimatedText
-          text="Vastuvid K.K. Nagaich"
+          text="AstroVastu Expert K.K. Nagaich"
           className="font-serif text-6xl md:text-8xl lg:text-9xl mb-6 text-white drop-shadow-2xl"
         />
 
@@ -7787,7 +7787,7 @@ function WhyChooseSection() {
   const reasons = [
     {
       title: 'He Performs Every Ritual',
-      desc: 'Unlike consultants who only give remedies, Vastuvid ji personally conducts each Havan, Yantra energisation, and Pooja – the true secret behind lasting transformations.',
+      desc: 'Unlike consultants who only give remedies, AstroVastu Expert ji personally conducts each Havan, Yantra energisation, and Pooja – the true secret behind lasting transformations.',
       icon: '🔥',
     },
     {
@@ -7807,7 +7807,7 @@ function WhyChooseSection() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <AnimatedText
-            text="Why Vastuvid KK Nagaich?"
+            text="Why AstroVastu Expert KK Nagaich?"
             className="font-serif text-5xl md:text-6xl text-nidra-indigo mb-4"
           />
         </div>
@@ -7918,7 +7918,7 @@ function ReelsSection() {
           className="font-serif text-5xl md:text-6xl text-center text-nidra-indigo mb-6"
         />
         <p className="text-center text-nidra-indigo/60 mb-12 max-w-2xl mx-auto">
-          Witness the real Vastuvid in action – rituals, remedies, and wisdom that millions watch daily.
+          Witness the real AstroVastu Expert in action – rituals, remedies, and wisdom that millions watch daily.
         </p>
 
         <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
@@ -7971,7 +7971,7 @@ function QuoteSection() {
           <p className="font-serif text-3xl md:text-4xl italic leading-relaxed">
             "The soul of VedicUrja is not an algorithm. It is a living lineage, a direct and sacred inheritance from masters whose wisdom transcends the limitations of textbooks."
           </p>
-          <p className="mt-6 text-prakash-gold uppercase tracking-wider">— Vastuvid K.K. Nagaich</p>
+          <p className="mt-6 text-prakash-gold uppercase tracking-wider">— AstroVastu Expert K.K. Nagaich</p>
         </motion.div>
       </div>
     </section>
@@ -8004,7 +8004,7 @@ function FinalCTASection() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/contact" className="luxury-button text-lg px-12 py-5">
-            Consult Vastuvid K.K. Nagaich
+            Consult AstroVastu Expert K.K. Nagaich
           </Link>
           <Link href="/free-tools" className="border-2 border-prakash-gold text-nidra-indigo px-10 py-5 rounded-full text-lg font-medium hover:bg-prakash-gold/10 transition">
             Explore Free Tools
@@ -8459,7 +8459,7 @@ const collaborationTypes = [
   {
     title: 'Podcast Guest Appearances',
     icon: '◔',
-    description: 'Vastuvid K.K. Nagaich appears as an expert guest on podcasts discussing Vastu, numerology, astrology, and spiritual entrepreneurship.',
+    description: 'AstroVastu Expert K.K. Nagaich appears as an expert guest on podcasts discussing Vastu, numerology, astrology, and spiritual entrepreneurship.',
     category: 'Audio',
     color: '#06B6D4',
     features: ['Expert interview format', '40‑60 minute episodes', 'Audience Q&A segments', 'Cross‑promotion to both audiences'],
@@ -8483,7 +8483,7 @@ const collaborationTypes = [
   {
     title: 'Live Session Collaborations',
     icon: '◗',
-    description: 'Real‑time Instagram/YouTube/Facebook live streams co‑hosted by Vastuvid K.K. Nagaich and a creator, answering audience Vastu questions interactively.',
+    description: 'Real‑time Instagram/YouTube/Facebook live streams co‑hosted by AstroVastu Expert K.K. Nagaich and a creator, answering audience Vastu questions interactively.',
     category: 'Live',
     color: '#7C3AED',
     features: ['Dual‑host live streams', 'Real‑time Q&A', 'Audience interaction tools', 'Recorded replay distribution'],
@@ -9721,7 +9721,7 @@ function FinalCTASection() {
           <div className="relative rounded-[40px] p-[2px] bg-gradient-to-br from-prakash-gold/30 via-white/10 to-sacred-saffron/30 shadow-[0_25px_60px_rgba(0,0,0,0.4)]">
             <div className="rounded-[38px] bg-black/20 backdrop-blur-2xl p-8 sm:p-12 md:p-16 border border-white/10 shadow-inner">
               <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Ready for Deeper Insight?</h2>
-              <p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10">Book a private consultation with Vastuvid K.K. Nagaich for personalised guidance.</p>
+              <p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10">Book a private consultation with AstroVastu Expert K.K. Nagaich for personalised guidance.</p>
               <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">Schedule Now →</Link>
             </div>
           </div>
@@ -9803,7 +9803,7 @@ export default function BlogPage() {
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
                 <span>9 min read</span>
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
-                <span>By Vastuvid KK Nagaich</span>
+                <span>By AstroVastu Expert KK Nagaich</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
@@ -9878,7 +9878,7 @@ export default function BlogPage() {
                 <div className="mt-4 space-y-4">
                   <div className="p-4 bg-white/70 rounded-2xl border border-prakash-gold/15">
                     <h3 className="font-serif text-base text-nidra-indigo font-bold mb-2">Why It Happens</h3>
-                    <p className="text-sm text-nidra-indigo/70">When you see your sleeping reflection, your subconscious mind perceives another person — a shadow self — sharing the marital space. Over months and years, this creates a subconscious pattern of infidelity, distrust, and emotional distance. Vastuvid K.K. Nagaich has counseled countless couples whose relationships immediately improved after removing or covering the bedroom mirror.</p>
+                    <p className="text-sm text-nidra-indigo/70">When you see your sleeping reflection, your subconscious mind perceives another person — a shadow self — sharing the marital space. Over months and years, this creates a subconscious pattern of infidelity, distrust, and emotional distance. AstroVastu Expert K.K. Nagaich has counseled countless couples whose relationships immediately improved after removing or covering the bedroom mirror.</p>
                   </div>
                   <div className="p-4 bg-white/70 rounded-2xl border border-prakash-gold/15">
                     <h3 className="font-serif text-base text-nidra-indigo font-bold mb-2">The Fix</h3>
@@ -9933,7 +9933,7 @@ export default function BlogPage() {
                   <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-sacred-saffron to-kumkuma-red" />
                   <h2 className="font-serif text-2xl sm:text-3xl text-nidra-indigo">Case Study — The Couple Who Removed a Mirror and Saved Their Marriage</h2>
                 </div>
-                <p>A couple in their early 40s, married 15 years, consulted Vastuvid K.K. Nagaich after three years of escalating conflict that neither could explain. They had a successful business, healthy children, and no external stressors. The Vastu audit revealed three bedroom doshas: a full‑length mirror directly opposite the bed, an SE‑corner master bedroom (fire zone, inducing nightly agitation), and both partners sleeping head‑north.</p>
+                <p>A couple in their early 40s, married 15 years, consulted AstroVastu Expert K.K. Nagaich after three years of escalating conflict that neither could explain. They had a successful business, healthy children, and no external stressors. The Vastu audit revealed three bedroom doshas: a full‑length mirror directly opposite the bed, an SE‑corner master bedroom (fire zone, inducing nightly agitation), and both partners sleeping head‑north.</p>
                 <p>The remedies were applied in a single day: the mirror was covered with a curtain, the bed was rotated 180 degrees (head‑south), and a heavy earth‑element crystal grid was placed in the SW of the room to stabilise the fire energy. Within <strong>two weeks</strong>, the couple reported that their nightly arguments — which had become a predictable ritual — simply stopped. Within three months, they described their marriage as stronger than it had been in a decade. The husband's chronic insomnia, which he had treated with medication for five years, resolved completely within the first month.</p>
               </div>
 
@@ -9944,7 +9944,7 @@ export default function BlogPage() {
                   <h2 className="font-serif text-2xl text-nidra-indigo">Conclusion — Your Bedroom Is Your Sanctuary</h2>
                 </div>
                 <p>The bedroom is where your body heals, your marriage deepens, and your subconscious processes the emotional residue of the day. Every element — the direction of the room, the orientation of your head, the presence or absence of mirrors, the colours on the walls, the devices on your nightstand — contributes to a cumulative energetic effect that either supports or sabotages your most fundamental needs. The remedies are simple, the science is clear, and the results — as thousands of clients have discovered — are often immediate.</p>
-                <p className="font-medium">Vastuvid K.K. Nagaich provides comprehensive bedroom Vastu audits as part of every residential consultation — including directional analysis, dosha identification, mirror placement correction, and personalised remedy prescriptions.</p>
+                <p className="font-medium">AstroVastu Expert K.K. Nagaich provides comprehensive bedroom Vastu audits as part of every residential consultation — including directional analysis, dosha identification, mirror placement correction, and personalised remedy prescriptions.</p>
               </div>
 
             </div>
@@ -9953,7 +9953,7 @@ export default function BlogPage() {
             <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-sacred-saffron flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
               <div>
-                <p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p>
+                <p className="font-serif text-lg text-nidra-indigo font-bold">AstroVastu Expert KK Nagaich</p>
                 <p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide</p>
               </div>
             </div>
@@ -10011,7 +10011,7 @@ export default function BlogPage() {
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
                 <span>11 min read</span>
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
-                <span>By Vastuvid KK Nagaich</span>
+                <span>By AstroVastu Expert KK Nagaich</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
@@ -10031,7 +10031,7 @@ export default function BlogPage() {
             <div className="prose prose-lg prose-stone max-w-none">
 
               <p className="lead text-xl text-nidra-indigo/70 leading-relaxed">
-                Every business owner understands that location, product quality, and team talent drive success. But according to Vastu Shastra — the ancient Indian science of spatial energy — there is a fourth, invisible factor that can either amplify or sabotage all three: <strong>office layout</strong>. Research published by AECO Design &amp; Architecture Insights reports that businesses in Bengaluru following Vastu‑compliant office layouts experience <strong>up to 30% higher productivity and revenue</strong> compared to those in Vastu‑neutral configurations. Coohom&apos;s 2026 workspace survey found that strategic entry positioning alone boosts reported team satisfaction by over 23%. The Times of India, Financial Express, and Dwello have all published extensive guidelines confirming that office Vastu is not superstition — it is applied energy management. This article presents the definitive Vastu framework for commercial spaces, grounded in published research and two decades of clinical practice by Vastuvid K.K. Nagaich.
+                Every business owner understands that location, product quality, and team talent drive success. But according to Vastu Shastra — the ancient Indian science of spatial energy — there is a fourth, invisible factor that can either amplify or sabotage all three: <strong>office layout</strong>. Research published by AECO Design &amp; Architecture Insights reports that businesses in Bengaluru following Vastu‑compliant office layouts experience <strong>up to 30% higher productivity and revenue</strong> compared to those in Vastu‑neutral configurations. Coohom&apos;s 2026 workspace survey found that strategic entry positioning alone boosts reported team satisfaction by over 23%. The Times of India, Financial Express, and Dwello have all published extensive guidelines confirming that office Vastu is not superstition — it is applied energy management. This article presents the definitive Vastu framework for commercial spaces, grounded in published research and two decades of clinical practice by AstroVastu Expert K.K. Nagaich.
               </p>
 
               {/* ── Section 1: Entrance ── */}
@@ -10139,7 +10139,7 @@ export default function BlogPage() {
                   <h2 className="font-serif text-2xl text-nidra-indigo">Conclusion — Your Office Is Your Profit Engine</h2>
                 </div>
                 <p>Every element of commercial Vastu — from the direction your entrance faces, to the zone your CEO occupies, to the wall against which your cash locker rests — contributes to a cumulative energetic effect that either attracts or repels business success. The Bengaluru study showing up to 30% higher productivity in Vastu‑compliant firms is not an anomaly — it is the predictable result of aligning workspace energy with cosmic principles that have been empirically validated for over 5,000 years. Whether you run a small consultancy, a mid‑sized agency, or a large factory, the principles are the same: North for wealth, East for growth, Southwest for stability, and Northeast for clarity. The remedies exist for every dosha — often without structural demolition. The question is not whether your office has Vastu defects — it is whether you are ready to correct them.</p>
-                <p className="font-medium">Vastuvid K.K. Nagaich provides comprehensive commercial Vastu audits — entrance analysis, department zoning, CEO cabin optimisation, cash‑counter energy correction, and industrial workflow alignment — for businesses across India and 50+ countries worldwide.</p>
+                <p className="font-medium">AstroVastu Expert K.K. Nagaich provides comprehensive commercial Vastu audits — entrance analysis, department zoning, CEO cabin optimisation, cash‑counter energy correction, and industrial workflow alignment — for businesses across India and 50+ countries worldwide.</p>
               </div>
 
             </div>
@@ -10147,7 +10147,7 @@ export default function BlogPage() {
             <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-green-600 to-prakash-gold flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
               <div>
-                <p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p>
+                <p className="font-serif text-lg text-nidra-indigo font-bold">AstroVastu Expert KK Nagaich</p>
                 <p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide</p>
               </div>
             </div>
@@ -10197,7 +10197,7 @@ export default function BlogPage() {
               <div className="flex items-center gap-3 text-sm text-white/50 mb-4">
                 <span className="bg-red-500/20 text-red-300 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Geopathic Stress</span>
                 <span className="w-1 h-1 bg-white/30 rounded-full" /><span>11 min read</span>
-                <span className="w-1 h-1 bg-white/30 rounded-full" /><span>By Vastuvid KK Nagaich</span>
+                <span className="w-1 h-1 bg-white/30 rounded-full" /><span>By AstroVastu Expert KK Nagaich</span>
               </div>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
                 Geopathic Stress —{' '}
@@ -10209,7 +10209,7 @@ export default function BlogPage() {
 
           <div className="container mx-auto px-4 sm:px-6 max-w-4xl"><div className="prose prose-lg prose-stone max-w-none">
 
-<p className="lead text-xl text-nidra-indigo/70 leading-relaxed">You have moved into a beautiful home. The Vastu directions are correct. The colours are balanced. The clutter is cleared. And yet — you sleep poorly, wake exhausted, fall ill more often than seems normal, and cannot explain why. The children are repeatedly sick. The couple struggles to conceive. Doctors find nothing wrong. The answer may lie not in the visible structure of your home but in the invisible forces beneath it — a phenomenon known as <strong>geopathic stress</strong>. First identified in Europe in the 1920s by German dowser Baron Gustav von Pohl, who mapped cancer clusters in the Bavarian town of Vilsbiburg and found that every single cancer patient in the town slept above an underground water vein intersection, geopathic stress is now studied by the International Association of Geopathology and the Geo‑Environmental Research Institute. This article presents the complete framework for understanding, detecting, and neutralising geopathic stress — grounded in European research, Vedic Bhumi Dosha science, and two decades of clinical practice by Vastuvid K.K. Nagaich.</p>
+<p className="lead text-xl text-nidra-indigo/70 leading-relaxed">You have moved into a beautiful home. The Vastu directions are correct. The colours are balanced. The clutter is cleared. And yet — you sleep poorly, wake exhausted, fall ill more often than seems normal, and cannot explain why. The children are repeatedly sick. The couple struggles to conceive. Doctors find nothing wrong. The answer may lie not in the visible structure of your home but in the invisible forces beneath it — a phenomenon known as <strong>geopathic stress</strong>. First identified in Europe in the 1920s by German dowser Baron Gustav von Pohl, who mapped cancer clusters in the Bavarian town of Vilsbiburg and found that every single cancer patient in the town slept above an underground water vein intersection, geopathic stress is now studied by the International Association of Geopathology and the Geo‑Environmental Research Institute. This article presents the complete framework for understanding, detecting, and neutralising geopathic stress — grounded in European research, Vedic Bhumi Dosha science, and two decades of clinical practice by AstroVastu Expert K.K. Nagaich.</p>
 
 <div className="mt-12 mb-8"><div className="flex items-center gap-3 mb-6"><div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-red-500 to-kumkuma-red" /><h2 className="font-serif text-2xl sm:text-3xl text-nidra-indigo">What Is Geopathic Stress? The Science of Underground Energy Disturbance</h2></div>
 <p>Geopathic stress refers to natural or man‑made radiation emanating from the earth that disrupts the human body's electromagnetic field when a person spends prolonged periods above the source. The term comes from the Greek words <em>geo</em> (earth) and <em>pathos</em> (suffering) — literally "earth suffering." The Geo‑Environmental Research Institute defines it as "the study of the impact of earth radiation on the health of all living organisms." Baron von Pohl's 1929 Vilsbiburg study was groundbreaking: he identified underground water vein crossings with nothing but a dowsing rod, and when the town's medical records were subsequently checked, every one of the 54 cancer deaths in the town had occurred in beds located precisely above the crossings he had mapped. The German medical doctor Ernst Hartmann later confirmed these findings and developed the Hartmann Grid theory — a global network of electromagnetic field lines running north‑south and east‑west, with intersections creating measurable zones of geopathic disturbance.</p>
@@ -10228,9 +10228,9 @@ export default function BlogPage() {
 <p className="mt-3 text-xs text-nidra-indigo/40">Sources: International Association of Geopathology (2025); Geo‑Environmental Research Institute; VAASTU International "Geopathic Stress Analysis" (2025); Baron von Pohl, "Earth Currents as Pathogenic Agents" (1932); WHO Radon and Health Fact Sheet (2025).</p></div>
 
 <div className="mt-12 mb-8"><div className="flex items-center gap-3 mb-6"><div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-emerald-400 to-green-600" /><h2 className="font-serif text-2xl sm:text-3xl text-nidra-indigo">Detection Methods — How to Know If Your Home Is Affected</h2></div>
-<p>Detecting geopathic stress requires a combination of traditional Vedic techniques and modern electronic instruments. Vastuvid K.K. Nagaich employs a multi‑modal detection protocol refined over two decades:</p>
+<p>Detecting geopathic stress requires a combination of traditional Vedic techniques and modern electronic instruments. AstroVastu Expert K.K. Nagaich employs a multi‑modal detection protocol refined over two decades:</p>
 <div className="mt-4 space-y-4">
-{[{method:'Copper L‑Rod Dowsing',desc:'The oldest and most reliable method. Two copper L‑shaped rods, held loosely in each hand, cross involuntarily when passing over underground water veins, fault lines, or mineral deposits. Baron von Pohl used this exact technique to map the Vilsbiburg cancer clusters. Vastuvid K.K. Nagaich has trained in dowsing under three separate Guru‑Shishya lineages.'},{method:'Geomagnetometer (Gauss Meter)',desc:'Measures local magnetic field strength in microtesla (µT). Normal background fields are 25‑65 µT. Geopathic stress zones typically show readings above 100 µT or sharp fluctuations within a small area. The instrument provides quantitative data that validates traditional dowsing results.'},{method:'EMF Meter',desc:'Measures electromagnetic field radiation from man‑made sources: power lines, electrical wiring, Wi‑Fi routers, mobile towers. Readings above 0.4 µT for prolonged exposure are considered potentially harmful by the WHO\'s International Agency for Research on Cancer. Combined with a Gauss meter, this provides a complete picture of both natural and man‑made geopathic radiation.'},{method:'Radon Detector',desc:'Radon is a colourless, odourless radioactive gas that seeps from geological fault lines and certain rock types. Granite‑rich regions are particularly susceptible. The WHO identifies radon as the second leading cause of lung cancer globally. Radon detectors placed for 48‑72 hours provide accurate readings for basement and ground‑floor rooms.'},{method:'Thermal Imaging',desc:'Geopathic stress zones often appear as temperature anomalies in walls and floors due to underground water flow. Thermal imaging cameras detect these anomalies and provide visual confirmation of disturbance zones that correlate with dowsing and magnetometer readings.'},].map((r,i)=>(<div key={i} className="p-5 bg-gradient-to-r from-white to-vastu-stone/20 rounded-2xl border border-prakash-gold/10"><div className="flex items-center gap-2 mb-2"><div className="w-2 h-2 rounded-full bg-prakash-gold"/><h3 className="font-serif text-lg text-nidra-indigo font-bold">{r.method}</h3></div><p className="text-sm text-nidra-indigo/70 leading-relaxed">{r.desc}</p></div>))}</div></div>
+{[{method:'Copper L‑Rod Dowsing',desc:'The oldest and most reliable method. Two copper L‑shaped rods, held loosely in each hand, cross involuntarily when passing over underground water veins, fault lines, or mineral deposits. Baron von Pohl used this exact technique to map the Vilsbiburg cancer clusters. AstroVastu Expert K.K. Nagaich has trained in dowsing under three separate Guru‑Shishya lineages.'},{method:'Geomagnetometer (Gauss Meter)',desc:'Measures local magnetic field strength in microtesla (µT). Normal background fields are 25‑65 µT. Geopathic stress zones typically show readings above 100 µT or sharp fluctuations within a small area. The instrument provides quantitative data that validates traditional dowsing results.'},{method:'EMF Meter',desc:'Measures electromagnetic field radiation from man‑made sources: power lines, electrical wiring, Wi‑Fi routers, mobile towers. Readings above 0.4 µT for prolonged exposure are considered potentially harmful by the WHO\'s International Agency for Research on Cancer. Combined with a Gauss meter, this provides a complete picture of both natural and man‑made geopathic radiation.'},{method:'Radon Detector',desc:'Radon is a colourless, odourless radioactive gas that seeps from geological fault lines and certain rock types. Granite‑rich regions are particularly susceptible. The WHO identifies radon as the second leading cause of lung cancer globally. Radon detectors placed for 48‑72 hours provide accurate readings for basement and ground‑floor rooms.'},{method:'Thermal Imaging',desc:'Geopathic stress zones often appear as temperature anomalies in walls and floors due to underground water flow. Thermal imaging cameras detect these anomalies and provide visual confirmation of disturbance zones that correlate with dowsing and magnetometer readings.'},].map((r,i)=>(<div key={i} className="p-5 bg-gradient-to-r from-white to-vastu-stone/20 rounded-2xl border border-prakash-gold/10"><div className="flex items-center gap-2 mb-2"><div className="w-2 h-2 rounded-full bg-prakash-gold"/><h3 className="font-serif text-lg text-nidra-indigo font-bold">{r.method}</h3></div><p className="text-sm text-nidra-indigo/70 leading-relaxed">{r.desc}</p></div>))}</div></div>
 
 <div className="mt-12 mb-8"><div className="flex items-center gap-3 mb-6"><div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-blue-400 to-cyan-600" /><h2 className="font-serif text-2xl sm:text-3xl text-nidra-indigo">Remedies — Neutralising Geopathic Stress Without Moving Your Home</h2></div>
 <p>Once geopathic stress zones have been identified and mapped, several precise remedies are available — all non‑invasive, none requiring structural demolition. The VAASTU International portal and Vedic texts converge on the following techniques:</p>
@@ -10238,16 +10238,16 @@ export default function BlogPage() {
 {[{remedy:'Copper Rod Installation (Geopathic Stress Neutraliser)',detail:'This is the primary Vedic remedy. A copper rod of precise length (typically 18‑24 inches), energised through specific mantras, is driven into the ground at the exact point of the geopathic stress zone. Copper\'s high electrical conductivity effectively creates a Faraday‑type effect, redirecting the harmful radiation. Multiple rods may be required for large zones or intersecting veins.'},{remedy:'Copper Pyramid Placement',detail:'Copper pyramids (typically 3×3 or 5×5 inches), when placed directly above a mapped geopathic stress zone, create a geometric energy field that neutralises harmful radiation. The pyramid shape itself is a proven energy‑amplification structure — the same principle that has been studied by institutions worldwide. Energised copper pyramids are placed under beds, desks, or chairs where people spend the most time.'},{remedy:'Crystal Grid Therapy',detail:'A grid of amethyst, black tourmaline, clear quartz, and rose quartz crystals, arranged in a specific geometric pattern and energised through mantras, absorbs and transmutes geopathic radiation. Black tourmaline is particularly effective for EMF absorption; amethyst calms neurological effects; clear quartz amplifies the corrective energy; rose quartz restores emotional balance.'},{remedy:'Furniture Relocation',detail:'The simplest and most immediate remedy: move the bed, work desk, or favourite chair 3‑5 feet away from the mapped geopathic stress zone. This alone — moving the body\'s nightly resting position by just a meter — has produced dramatic health improvements in multiple documented cases. Children\'s beds are particularly critical to relocate immediately upon detection.'},{remedy:'Brass / Copper Strips Under Flooring',detail:'In new constructions or during renovations, thin strips of brass or copper laid in a grid pattern beneath flooring create a conductive barrier that disperses geopathic radiation across a wider area, reducing its intensity at any single point. This technique, derived from the Vedic practice of Dhatu Sthapna (metal foundation), is the most permanent non‑invasive remedy.'},{remedy:'EMF Shielding',detail:'For man‑made technopathic stress: EMF‑shielding curtains, bed canopies, and paint (containing nickel or copper particles). Switching off Wi‑Fi at night, using wired connections where possible, and keeping mobile phones at least 6 feet from beds reduce the cumulative electromagnetic burden. The EMF Research Foundation recommends a "digital sunset" — switching off all wireless devices 60 minutes before sleep.'},].map((r,i)=>(<div key={i} className="p-4 bg-white/70 rounded-2xl border border-prakash-gold/15"><h3 className="font-serif text-base text-nidra-indigo font-bold mb-2">{r.remedy}</h3><p className="text-sm text-nidra-indigo/70 leading-relaxed">{r.detail}</p></div>))}</div></div>
 
 <div className="mt-12 mb-8"><div className="flex items-center gap-3 mb-6"><div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-purple-400 to-fuchsia-500" /><h2 className="font-serif text-2xl sm:text-3xl text-nidra-indigo">Case Study — The Family Whose Children Were Always Sick</h2></div>
-<p>In 2019, a family in Noida consulted Vastuvid K.K. Nagaich after three consecutive years in which their two children (aged 5 and 8) were repeatedly hospitalised for respiratory infections. The parents were healthy; the home was new; the Vastu directions were largely correct. Blood tests, allergy panels, and immunological workups revealed nothing abnormal. During the geopathic stress audit, Vastuvid deployed a copper L‑rod dowsing survey and a Gauss meter. Within minutes, a sharp underground water vein crossing was identified directly beneath the children's bedroom — a point where two separate underground streams intersected at approximately 12 feet depth. The Gauss meter reading at the exact intersection point was 143 µT — nearly three times the background level. Both children's beds were positioned directly above this zone. The remedy was precise: a 22‑inch energised copper rod driven into the garden soil at the exact outdoor projection point, a copper pyramid placed under each bed, and both beds shifted 4‑feet northwest — away from the intersection but still within the children's bedroom. Within <strong>six weeks</strong>, both children stopped falling ill. Within <strong>six months</strong>, neither child had been hospitalised — the first time in three years. The family's paediatrician, initially sceptical, acknowledged the outcome and now refers patients with unexplained recurrent illness for geopathic assessment. This case is one of over 200 documented in Vastuvid's clinical records demonstrating that geopathic stress neutralisation produces measurable, often dramatic, health improvements.</p></div>
+<p>In 2019, a family in Noida consulted AstroVastu Expert K.K. Nagaich after three consecutive years in which their two children (aged 5 and 8) were repeatedly hospitalised for respiratory infections. The parents were healthy; the home was new; the Vastu directions were largely correct. Blood tests, allergy panels, and immunological workups revealed nothing abnormal. During the geopathic stress audit, AstroVastu Expert deployed a copper L‑rod dowsing survey and a Gauss meter. Within minutes, a sharp underground water vein crossing was identified directly beneath the children's bedroom — a point where two separate underground streams intersected at approximately 12 feet depth. The Gauss meter reading at the exact intersection point was 143 µT — nearly three times the background level. Both children's beds were positioned directly above this zone. The remedy was precise: a 22‑inch energised copper rod driven into the garden soil at the exact outdoor projection point, a copper pyramid placed under each bed, and both beds shifted 4‑feet northwest — away from the intersection but still within the children's bedroom. Within <strong>six weeks</strong>, both children stopped falling ill. Within <strong>six months</strong>, neither child had been hospitalised — the first time in three years. The family's paediatrician, initially sceptical, acknowledged the outcome and now refers patients with unexplained recurrent illness for geopathic assessment. This case is one of over 200 documented in AstroVastu Expert's clinical records demonstrating that geopathic stress neutralisation produces measurable, often dramatic, health improvements.</p></div>
 
 <div className="mt-12 p-8 bg-gradient-to-br from-vastu-stone/30 to-white rounded-3xl border border-prakash-gold/20"><div className="flex items-center gap-3 mb-4"><div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-red-500 to-sacred-saffron" /><h2 className="font-serif text-2xl text-nidra-indigo">Conclusion — The Invisible Can Be Neutralised</h2></div>
 <p>Geopathic stress is not visible to the naked eye. It will not appear on an X‑ray or a blood panel. But its effects — on sleep, on immunity, on fertility, on the developing bodies of children — are as real as any visible pathogen. From Baron von Pohl's 1929 Vilsbiburg findings to the modern International Association of Geopathology's global database, the evidence converges on a single conclusion: where you sleep matters — not just in terms of comfort, but in terms of the invisible radiation that passes through your body for eight hours every night. The remedies — copper rods, pyramids, crystal grids, strategic furniture relocation — are simple, affordable, and permanently effective. The question is not whether geopathic stress exists. The question is whether it exists beneath your bed.</p>
-<p className="font-medium">Vastuvid K.K. Nagaich provides comprehensive geopathic stress audits — including dowsing, Gauss meter mapping, EMF detection, and personalised neutralisation protocols — as part of every residential Vastu consultation. With over 200 documented cases of health transformation following geopathic stress correction, this service has become one of the most requested components of his Vedic practice.</p></div>
+<p className="font-medium">AstroVastu Expert K.K. Nagaich provides comprehensive geopathic stress audits — including dowsing, Gauss meter mapping, EMF detection, and personalised neutralisation protocols — as part of every residential Vastu consultation. With over 200 documented cases of health transformation following geopathic stress correction, this service has become one of the most requested components of his Vedic practice.</p></div>
 
 </div>
 <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
 <div className="w-14 h-14 rounded-full bg-gradient-to-br from-red-600 to-prakash-gold flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
-<div><p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p><p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide | Geopathic Stress Specialist</p></div>
+<div><p className="font-serif text-lg text-nidra-indigo font-bold">AstroVastu Expert KK Nagaich</p><p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide | Geopathic Stress Specialist</p></div>
 </div></div></article></SmoothScroll></>);}
 
 ============================================================
@@ -10297,7 +10297,7 @@ export default function BlogPage() {
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
                 <span>10 min read</span>
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
-                <span>By Vastuvid KK Nagaich</span>
+                <span>By AstroVastu Expert KK Nagaich</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
@@ -10498,7 +10498,7 @@ export default function BlogPage() {
                   <h2 className="font-serif text-2xl text-nidra-indigo">Conclusion — Your Kitchen Is Your Family's Engine</h2>
                 </div>
                 <p>The kitchen is not merely where food is prepared — it is where the fire element that drives your family's metabolism, ambition, and financial vitality is generated and sustained. The 325‑household survey provides undeniable data: when the SE fire zone is compromised, acidity (85%), unproductive expenses (74%), and work obstacles (83%) follow with statistical predictability. The remedies exist, the colours are available, the rituals are simple. Aligning your kitchen with Vastu principles is not a matter of superstition — it is a matter of family health and financial prudence.</p>
-                <p className="font-medium">Vastuvid K.K. Nagaich provides comprehensive kitchen Vastu audits — including directional analysis, elemental balancing, and personalised remedy prescriptions — as part of every residential consultation.</p>
+                <p className="font-medium">AstroVastu Expert K.K. Nagaich provides comprehensive kitchen Vastu audits — including directional analysis, elemental balancing, and personalised remedy prescriptions — as part of every residential consultation.</p>
               </div>
 
             </div>
@@ -10507,7 +10507,7 @@ export default function BlogPage() {
             <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-orange-500 to-sacred-saffron flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
               <div>
-                <p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p>
+                <p className="font-serif text-lg text-nidra-indigo font-bold">AstroVastu Expert KK Nagaich</p>
                 <p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide</p>
               </div>
             </div>
@@ -10567,7 +10567,7 @@ export default function BlogPage() {
               <div className="flex items-center gap-3 text-sm text-white/50 mb-4">
                 <span className="bg-violet-500/20 text-violet-300 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Numerology</span>
                 <span className="w-1 h-1 bg-white/30 rounded-full" /><span>10 min read</span>
-                <span className="w-1 h-1 bg-white/30 rounded-full" /><span>By Vastuvid KK Nagaich</span>
+                <span className="w-1 h-1 bg-white/30 rounded-full" /><span>By AstroVastu Expert KK Nagaich</span>
               </div>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
                 Nakshatra and Name Suggestions —{' '}
@@ -10579,7 +10579,7 @@ export default function BlogPage() {
 
           <div className="container mx-auto px-4 sm:px-6 max-w-4xl"><div className="prose prose-lg prose-stone max-w-none">
 
-<p className="lead text-xl text-nidra-indigo/70 leading-relaxed">For over 5,000 years, Indian families have not chosen their children's names arbitrarily. They have consulted the Nakshatra — the precise lunar mansion in which the child was born — to identify the sacred syllable with which the name must begin. This practice, codified in the Brihat Parashara Hora Shastra, is among the most enduring and scientifically intriguing naming systems in human history. Unlike Western numerology, which operates on a limited 9‑number system, the Nakshatra system divides the zodiac into 27 precise lunar mansions, each spanning 13 degrees and 20 minutes of the ecliptic. Every mansion is further divided into four padas (quarters), and each pada is associated with a specific auspicious syllable — providing 108 unique starting sounds, each with distinct cosmic resonance. The Cycle.in astrology portal confirms: "The 27 Nakshatras form the backbone of Vedic astrology, with each Nakshatra having a specific starting syllable that is traditionally used to name a child born under that star." This article presents the complete Nakshatra naming framework, the 27‑star syllable list, business naming applications, and documented transformations achieved through name correction — all grounded in the Brihat Parashara Hora Shastra and two decades of clinical practice by Vastuvid K.K. Nagaich.</p>
+<p className="lead text-xl text-nidra-indigo/70 leading-relaxed">For over 5,000 years, Indian families have not chosen their children's names arbitrarily. They have consulted the Nakshatra — the precise lunar mansion in which the child was born — to identify the sacred syllable with which the name must begin. This practice, codified in the Brihat Parashara Hora Shastra, is among the most enduring and scientifically intriguing naming systems in human history. Unlike Western numerology, which operates on a limited 9‑number system, the Nakshatra system divides the zodiac into 27 precise lunar mansions, each spanning 13 degrees and 20 minutes of the ecliptic. Every mansion is further divided into four padas (quarters), and each pada is associated with a specific auspicious syllable — providing 108 unique starting sounds, each with distinct cosmic resonance. The Cycle.in astrology portal confirms: "The 27 Nakshatras form the backbone of Vedic astrology, with each Nakshatra having a specific starting syllable that is traditionally used to name a child born under that star." This article presents the complete Nakshatra naming framework, the 27‑star syllable list, business naming applications, and documented transformations achieved through name correction — all grounded in the Brihat Parashara Hora Shastra and two decades of clinical practice by AstroVastu Expert K.K. Nagaich.</p>
 
 <div className="mt-12 mb-8"><div className="flex items-center gap-3 mb-6"><div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-violet-400 to-purple-600" /><h2 className="font-serif text-2xl sm:text-3xl text-nidra-indigo">What Are Nakshatras? The 27 Lunar Mansions of Vedic Astrology</h2></div>
 <p>A Nakshatra is a lunar mansion — a specific 13‑degree‑20‑minute segment of the ecliptic through which the Moon travels during its 27.3‑day sidereal cycle. The Moon spends approximately one day in each Nakshatra, and the specific mansion occupied by the Moon at the moment of birth is the individual's Janma Nakshatra (birth star). DrikPanchang, one of India's most comprehensive Vedic astrology portals, maintains detailed current Nakshatra transit data and emphasises that "Nakshatra is the primary consideration for Muhurta (auspicious timing) and naming." The RVA Astrologers portal adds: "Naming a child based on their Nakshatra has been a Vedic tradition for thousands of years. Each Nakshatra resonates with certain sounds that harmonise with the child's cosmic blueprint."</p>
@@ -10597,28 +10597,28 @@ export default function BlogPage() {
 
 <div className="mt-12 mb-8"><div className="flex items-center gap-3 mb-6"><div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-emerald-400 to-green-600" /><h2 className="font-serif text-2xl sm:text-3xl text-nidra-indigo">Business Naming — How Corporate Names Align with Stars</h2></div>
 <p>The Nakshatra naming system extends beyond personal names to businesses and brands. A company incorporated on a specific date has its own Janma Nakshatra — and the same syllable rules apply to its name. Cycle.in confirms: "Just as personal names align individuals with their Nakshatra, business names can be harmonised with the Nakshatra of the business's founding moment, supporting financial stability and long‑term success."</p>
-<p>The process involves calculating the Nakshatra of the incorporation date (or the date of the Muhurta ceremony performed at the business launch), identifying the four auspicious syllables for that Nakshatra's padas, and either naming the business directly with one of those syllables or — if the brand already exists — adjusting the spelling to incorporate the syllable. Vastuvid K.K. Nagaich has performed Namakaran for hundreds of businesses, including a Delhi‑based manufacturing firm whose founding Nakshatra was Jyeshtha (Pada 2: "Ya"). After changing the brand prefix to begin with "Ya," the company reported a 35% increase in order volume within six months — a result consistent across multiple documented Namakaran cases.</p></div>
+<p>The process involves calculating the Nakshatra of the incorporation date (or the date of the Muhurta ceremony performed at the business launch), identifying the four auspicious syllables for that Nakshatra's padas, and either naming the business directly with one of those syllables or — if the brand already exists — adjusting the spelling to incorporate the syllable. AstroVastu Expert K.K. Nagaich has performed Namakaran for hundreds of businesses, including a Delhi‑based manufacturing firm whose founding Nakshatra was Jyeshtha (Pada 2: "Ya"). After changing the brand prefix to begin with "Ya," the company reported a 35% increase in order volume within six months — a result consistent across multiple documented Namakaran cases.</p></div>
 
 <div className="mt-12 mb-8"><div className="flex items-center gap-3 mb-6"><div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-amber-400 to-orange-600" /><h2 className="font-serif text-2xl sm:text-3xl text-nidra-indigo">The Navamsha Connection — Beyond the Birth Star</h2></div>
 <p>Advanced Nakshatra naming goes beyond the Janma Nakshatra alone. The Navamsha (D‑9 chart) — the most important divisional chart in Vedic astrology — reveals the Nakshatra of the Atmakaraka (soul significator planet). Some families, particularly in traditional Brahmin communities, name the child according to the Navamsha Nakshatra rather than the birth Nakshatra, believing it aligns the name with the soul's deeper spiritual purpose rather than the physical birth moment. This dual‑layer system — Janma Nakshatra for worldly identity and Navamsha Nakshatra for spiritual alignment — is one of the most sophisticated naming frameworks ever developed. DrikPanchang and RVA Astrologers both provide tools for calculating both Nakshatras, enabling families to make informed decisions about which system to prioritise.</p></div>
 
 <div className="mt-12 mb-8"><div className="flex items-center gap-3 mb-6"><div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-pink-400 to-rose-500" /><h2 className="font-serif text-2xl sm:text-3xl text-nidra-indigo">Case Study — The Child Whose Name Was Corrected at Age 7</h2></div>
-<p>In 2018, a family from Jaipur consulted Vastuvid K.K. Nagaich regarding their 7‑year‑old son, who was experiencing severe attention difficulties at school and frequent health complaints. The child's birth Nakshatra was Mrigashira (Pada 3: "Ka"), but his given name began with "R" — corresponding to Chitra Nakshatra, entirely misaligned with his cosmic blueprint. The Times of India has reported extensively on how incorrect name alignment affects children's development. Vastuvid recommended a simplified Namakaran ceremony — the child was given a new official name beginning with "Ka" (the correct syllable), while his original name was retained as a middle name. Within three months, his teachers reported significant improvement in concentration. Within one year, his health complaints had reduced by approximately 70%. The family described the change as "transformative." This case is one of dozens documented in Vastuvid's clinical records demonstrating that name correction — when properly calculated and ritually performed — produces measurable changes in behaviour, health, and well‑being.</p></div>
+<p>In 2018, a family from Jaipur consulted AstroVastu Expert K.K. Nagaich regarding their 7‑year‑old son, who was experiencing severe attention difficulties at school and frequent health complaints. The child's birth Nakshatra was Mrigashira (Pada 3: "Ka"), but his given name began with "R" — corresponding to Chitra Nakshatra, entirely misaligned with his cosmic blueprint. The Times of India has reported extensively on how incorrect name alignment affects children's development. AstroVastu Expert recommended a simplified Namakaran ceremony — the child was given a new official name beginning with "Ka" (the correct syllable), while his original name was retained as a middle name. Within three months, his teachers reported significant improvement in concentration. Within one year, his health complaints had reduced by approximately 70%. The family described the change as "transformative." This case is one of dozens documented in AstroVastu Expert's clinical records demonstrating that name correction — when properly calculated and ritually performed — produces measurable changes in behaviour, health, and well‑being.</p></div>
 
 <div className="mt-12 mb-8"><div className="flex items-center gap-3 mb-6"><div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-blue-500 to-indigo-600" /><h2 className="font-serif text-2xl sm:text-3xl text-nidra-indigo">The Namakaran Ceremony — A Sacred Rite of Passage</h2></div>
-<p>In Vedic tradition, name assignment is not a casual decision — it is a sacred samskara (rite of passage) called Namakaran, one of the 16 essential Hindu sacraments. The ceremony is traditionally performed on the 10th, 11th, or 12th day after birth, conducted by a qualified priest who calculates the Janma Nakshatra precisely, selects the appropriate syllable, chants specific mantras, and formally whispers the chosen name into the child's right ear. Havan (sacred fire) is lit, offerings are made to the Nakshatra deity, and the family commits to using the name in all official and social contexts. For adults seeking name correction, the ceremony is adapted — the original name is retained as a middle or secondary name, while the new Nakshatra‑aligned name is used as the primary identity. The transition is gradual, allowing social and professional networks to adapt. Vastuvid K.K. Nagaich has conducted Namakaran ceremonies for newborns and adults alike, integrating the ancient Vedic ritual with practical modern name‑change guidance.</p></div>
+<p>In Vedic tradition, name assignment is not a casual decision — it is a sacred samskara (rite of passage) called Namakaran, one of the 16 essential Hindu sacraments. The ceremony is traditionally performed on the 10th, 11th, or 12th day after birth, conducted by a qualified priest who calculates the Janma Nakshatra precisely, selects the appropriate syllable, chants specific mantras, and formally whispers the chosen name into the child's right ear. Havan (sacred fire) is lit, offerings are made to the Nakshatra deity, and the family commits to using the name in all official and social contexts. For adults seeking name correction, the ceremony is adapted — the original name is retained as a middle or secondary name, while the new Nakshatra‑aligned name is used as the primary identity. The transition is gradual, allowing social and professional networks to adapt. AstroVastu Expert K.K. Nagaich has conducted Namakaran ceremonies for newborns and adults alike, integrating the ancient Vedic ritual with practical modern name‑change guidance.</p></div>
 
 <div className="mt-12 mb-8"><div className="flex items-center gap-3 mb-6"><div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-teal-400 to-cyan-600" /><h2 className="font-serif text-2xl sm:text-3xl text-nidra-indigo">The AI Tool vs the Acharya — When to Trust Technology and When to Trust the Expert</h2></div>
-<p>The VedicUrja AI Name Suggestion tool provides instant, free syllable recommendations for all 27 Nakshatras — the first syllable of each pada. The tool is built directly on the Brihat Parashara Hora Shastra's data and is 100% accurate for pada‑specific syllable identification. However, the tool cannot perform a full Namakaran analysis. It cannot calculate your Janma Nakshatra from your birth details. It cannot determine which pada your Moon occupies. It cannot assess whether your existing name is aligned or misaligned. It cannot evaluate Navamsha Nakshatra for deeper spiritual alignment. And it cannot perform the sacred Namakaran ceremony that ritually seals the name into your destiny. For all these functions — the complete, personalised, and sacred practice of Vedic naming — a one‑on‑one consultation with Vastuvid K.K. Nagaich is required. The AI tool is the map. The Acharya is the guide who reads it.</p></div>
+<p>The VedicUrja AI Name Suggestion tool provides instant, free syllable recommendations for all 27 Nakshatras — the first syllable of each pada. The tool is built directly on the Brihat Parashara Hora Shastra's data and is 100% accurate for pada‑specific syllable identification. However, the tool cannot perform a full Namakaran analysis. It cannot calculate your Janma Nakshatra from your birth details. It cannot determine which pada your Moon occupies. It cannot assess whether your existing name is aligned or misaligned. It cannot evaluate Navamsha Nakshatra for deeper spiritual alignment. And it cannot perform the sacred Namakaran ceremony that ritually seals the name into your destiny. For all these functions — the complete, personalised, and sacred practice of Vedic naming — a one‑on‑one consultation with AstroVastu Expert K.K. Nagaich is required. The AI tool is the map. The Acharya is the guide who reads it.</p></div>
 
 <div className="mt-12 p-8 bg-gradient-to-br from-vastu-stone/30 to-white rounded-3xl border border-prakash-gold/20"><div className="flex items-center gap-3 mb-4"><div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-violet-400 to-sacred-saffron" /><h2 className="font-serif text-2xl text-nidra-indigo">Conclusion — Your Name Is Your Vibration</h2></div>
 <p>You hear your name more than any other word. It is spoken by parents, partners, colleagues, and strangers. It is the word you associate most deeply with your own identity. When that word vibrates in harmony with the cosmic forces encoded in your birth star, you experience less internal friction, greater self‑acceptance, and a deeper alignment with your life purpose. When it vibrates against those forces — even subtly — the dissonance accumulates across a lifetime. The Nakshatra naming system is not superstition. It is vibrational science encoded in sound — a technology for human alignment that has operated continuously for over 5,000 years. Whether you are naming a newborn, contemplating a name correction, or launching a business, the 108 sacred syllables of the 27 Nakshatras offer a precise, personalised framework for choosing a name that sings in harmony with the stars.</p>
-<p className="font-medium">Vastuvid K.K. Nagaich provides complete Namakaran services — Janma Nakshatra calculation, pada identification, syllable selection, Navamsha analysis, business naming, and the sacred Namakaran ceremony — as part of his comprehensive Vedic consultation practice.</p></div>
+<p className="font-medium">AstroVastu Expert K.K. Nagaich provides complete Namakaran services — Janma Nakshatra calculation, pada identification, syllable selection, Navamsha analysis, business naming, and the sacred Namakaran ceremony — as part of his comprehensive Vedic consultation practice.</p></div>
 
 </div>
 <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
 <div className="w-14 h-14 rounded-full bg-gradient-to-br from-violet-600 to-prakash-gold flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
-<div><p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p><p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide</p></div>
+<div><p className="font-serif text-lg text-nidra-indigo font-bold">AstroVastu Expert KK Nagaich</p><p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide</p></div>
 </div></div></article></SmoothScroll></>);}
 
 ============================================================
@@ -10669,7 +10669,7 @@ export default function BlogPage() {
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
                 <span>10 min read</span>
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
-                <span>By Vastuvid KK Nagaich</span>
+                <span>By AstroVastu Expert KK Nagaich</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
@@ -10725,7 +10725,7 @@ export default function BlogPage() {
                   </div>
                   <p>Your Name Number is calculated from the letters of your full name using either the <strong>Chaldean</strong> or <strong>Pythagorean</strong> system. Chaldean numerology, the older system originating in Babylonia approximately 4,500 years ago, assigns values 1–8 based on sound vibration (the number 9 is considered sacred and not assigned to letters). Pythagorean numerology, developed in ancient Greece around 2,500 years ago, uses a simpler sequential mapping (A=1, B=2, C=3… I=9, J=1, etc.).</p>
                   <p>Most Vedic numerologists prefer <strong>Chaldean for name analysis</strong> — especially business names — because its sound‑vibration basis aligns naturally with Vedic phonetic principles. The two systems often produce different numbers for the same name; neither is &quot;wrong&quot; — they reveal different vibrational layers.</p>
-                  <p>Vastuvid K.K. Nagaich often recommends <strong>subtle name adjustments</strong> — adding or removing a single letter — to harmonise the Name Number with the Psychic and Destiny Numbers, a practice that has transformed businesses and personal lives alike.</p>
+                  <p>AstroVastu Expert K.K. Nagaich often recommends <strong>subtle name adjustments</strong> — adding or removing a single letter — to harmonise the Name Number with the Psychic and Destiny Numbers, a practice that has transformed businesses and personal lives alike.</p>
                 </div>
               </div>
 
@@ -10834,7 +10834,7 @@ export default function BlogPage() {
                   <h2 className="font-serif text-2xl text-nidra-indigo">Conclusion — Numbers Are a Language, Not Superstition</h2>
                 </div>
                 <p>Vedic numerology is not fortune‑telling — it is a system of profound self‑awareness. The numbers derived from your birth date and name are not random. They form a code that, when properly understood, reveals your strengths, illuminates your challenges, and guides your most important life decisions. From JC Chaudhry&apos;s ₹7,300 crore success to Radhika Jain&apos;s boutique transformation, the evidence is compelling: when humans align their identity with their numerical blueprint, remarkable things happen.</p>
-                <p className="font-medium">Vastuvid K.K. Nagaich provides comprehensive numerological analysis as part of his Vedic consultation services — combining Driver Number, Destiny Number, Name Number, and Nakshatra analysis into a complete personal blueprint.</p>
+                <p className="font-medium">AstroVastu Expert K.K. Nagaich provides comprehensive numerological analysis as part of his Vedic consultation services — combining Driver Number, Destiny Number, Name Number, and Nakshatra analysis into a complete personal blueprint.</p>
               </div>
 
             </div>
@@ -10843,7 +10843,7 @@ export default function BlogPage() {
             <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 to-prakash-gold flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
               <div>
-                <p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p>
+                <p className="font-serif text-lg text-nidra-indigo font-bold">AstroVastu Expert KK Nagaich</p>
                 <p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | Numerologist | Served 2 Lakh+ Clients Worldwide</p>
               </div>
             </div>
@@ -10903,7 +10903,7 @@ export default function BlogPage() {
               <div className="flex items-center gap-3 text-sm text-white/50 mb-4">
                 <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Vastu Science</span>
                 <span className="w-1 h-1 bg-white/30 rounded-full" /><span>10 min read</span>
-                <span className="w-1 h-1 bg-white/30 rounded-full" /><span>By Vastuvid KK Nagaich</span>
+                <span className="w-1 h-1 bg-white/30 rounded-full" /><span>By AstroVastu Expert KK Nagaich</span>
               </div>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
                 Understanding the Panch Mahabhutas —{' '}
@@ -10915,7 +10915,7 @@ export default function BlogPage() {
 
           <div className="container mx-auto px-4 sm:px-6 max-w-4xl"><div className="prose prose-lg prose-stone max-w-none">
 
-<p className="lead text-xl text-nidra-indigo/70 leading-relaxed">The Taittiriya Upanishad (1.1.1) declares: "Earth, Water, Fire, Air, and Space — these are the five great elements." Long before Dmitri Mendeleev organised the periodic table in 1869, and millennia before quantum field theory described energy condensing into matter, the Vedic Rishis had already mapped the universe into five fundamental states of existence called the <strong>Pancha Mahabhutas</strong>. These are not simplistic physical substances. As the Sanatana &amp; Science research portal explains, they are "states of existence, vibrational fields, and layers of consciousness" that map remarkably well to modern atomic theory — with Akasha (Space) corresponding to the quantum vacuum, Vayu (Air) to electromagnetic fields, Agni (Fire) to thermodynamic transformations, Jala (Water) to fluid dynamics and plasma states, and Prithvi (Earth) to solid‑state matter and crystalline lattices. This article presents the definitive Vastu framework for understanding and balancing the five elements — grounded in peer‑reviewed science, ancient Sanskrit texts, and two decades of clinical practice by Vastuvid K.K. Nagaich.</p>
+<p className="lead text-xl text-nidra-indigo/70 leading-relaxed">The Taittiriya Upanishad (1.1.1) declares: "Earth, Water, Fire, Air, and Space — these are the five great elements." Long before Dmitri Mendeleev organised the periodic table in 1869, and millennia before quantum field theory described energy condensing into matter, the Vedic Rishis had already mapped the universe into five fundamental states of existence called the <strong>Pancha Mahabhutas</strong>. These are not simplistic physical substances. As the Sanatana &amp; Science research portal explains, they are "states of existence, vibrational fields, and layers of consciousness" that map remarkably well to modern atomic theory — with Akasha (Space) corresponding to the quantum vacuum, Vayu (Air) to electromagnetic fields, Agni (Fire) to thermodynamic transformations, Jala (Water) to fluid dynamics and plasma states, and Prithvi (Earth) to solid‑state matter and crystalline lattices. This article presents the definitive Vastu framework for understanding and balancing the five elements — grounded in peer‑reviewed science, ancient Sanskrit texts, and two decades of clinical practice by AstroVastu Expert K.K. Nagaich.</p>
 
 {/* SECTION 1 */}
 <div className="mt-12 mb-8"><div className="flex items-center gap-3 mb-6"><div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-purple-400 to-indigo-500" /><h2 className="font-serif text-2xl sm:text-3xl text-nidra-indigo">The Pancha Mahabhutas — A Complete Reference Table</h2></div>
@@ -10992,12 +10992,12 @@ export default function BlogPage() {
 {/* CONCLUSION */}
 <div className="mt-12 p-8 bg-gradient-to-br from-vastu-stone/30 to-white rounded-3xl border border-prakash-gold/20"><div className="flex items-center gap-3 mb-4"><div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-purple-400 to-sacred-saffron" /><h2 className="font-serif text-2xl text-nidra-indigo">Conclusion — Balance the Five, Balance Your Life</h2></div>
 <p>The Pancha Mahabhutas are not abstract philosophy. They are the operating system of the universe — the same five forces that shape galaxies, govern human physiology, and determine whether you sleep peacefully or fitfully in your own bedroom. The peer‑reviewed Panchamahabhuta Siddhanta study (2025) confirms that these five elements form the bridge between ancient Vedic wisdom and modern biochemistry, anatomy, and pharmacology. The Sanatana &amp; Science portal demonstrates their alignment with quantum field theory. The JyotishGram research (2026) catalogues precisely what happens — in measurable life terms — when each element is imbalanced. And the MahaVastu institute, drawing on over 5,000 case studies, has documented the health transformations that occur when Vastu elements are restored to equilibrium. The question is not whether your home has five‑element imbalances. Every home does. The question is whether you choose to correct them.</p>
-<p className="font-medium">Vastuvid K.K. Nagaich provides comprehensive Pancha Mahabhuta analysis as part of every residential and commercial Vastu consultation — identifying elemental imbalances, mapping them to specific health and life outcomes, and prescribing precise, non‑invasive remedies refined over two decades of clinical practice.</p></div>
+<p className="font-medium">AstroVastu Expert K.K. Nagaich provides comprehensive Pancha Mahabhuta analysis as part of every residential and commercial Vastu consultation — identifying elemental imbalances, mapping them to specific health and life outcomes, and prescribing precise, non‑invasive remedies refined over two decades of clinical practice.</p></div>
 
 </div>
 <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
 <div className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 to-prakash-gold flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
-<div><p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p><p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide</p></div>
+<div><p className="font-serif text-lg text-nidra-indigo font-bold">AstroVastu Expert KK Nagaich</p><p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide</p></div>
 </div></div></article></SmoothScroll></>);}
 
 ============================================================
@@ -11046,7 +11046,7 @@ export default function BlogPage() {
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
                 <span>11 min read</span>
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
-                <span>By Vastuvid KK Nagaich</span>
+                <span>By AstroVastu Expert KK Nagaich</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
@@ -11264,7 +11264,7 @@ export default function BlogPage() {
                   <h2 className="font-serif text-2xl text-nidra-indigo">Conclusion — Your Home Does Not Need to Be Torn Down</h2>
                 </div>
                 <p>Every Vastu dosha — from a toilet in the Northeast to a kitchen in the North, from a South‑facing entrance to a cluttered Brahmasthan — has a documented, effective, and non‑destructive remedy. The ancient science of Vastu Shastra never demanded demolition. It demanded understanding. When you know which element to strengthen, which direction to activate, and which tool to deploy — a salt bowl, a copper pyramid, a red bulb, a crystal, a yantra, or simply decluttering — you can transform your living space without ever lifting a hammer.</p>
-                <p className="font-medium">Vastuvid K.K. Nagaich has spent over 20 years applying these precise, non‑invasive remedies for over 2 lakh clients across 50+ countries — proving every day that the most powerful Vastu corrections are also the simplest.</p>
+                <p className="font-medium">AstroVastu Expert K.K. Nagaich has spent over 20 years applying these precise, non‑invasive remedies for over 2 lakh clients across 50+ countries — proving every day that the most powerful Vastu corrections are also the simplest.</p>
               </div>
 
             </div>
@@ -11273,7 +11273,7 @@ export default function BlogPage() {
             <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-prakash-gold to-sacred-saffron flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
               <div>
-                <p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p>
+                <p className="font-serif text-lg text-nidra-indigo font-bold">AstroVastu Expert KK Nagaich</p>
                 <p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide</p>
               </div>
             </div>
@@ -11332,7 +11332,7 @@ export default function BlogPage() {
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
                 <span>12 min read</span>
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
-                <span>By Vastuvid KK Nagaich</span>
+                <span>By AstroVastu Expert KK Nagaich</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
@@ -11454,7 +11454,7 @@ export default function BlogPage() {
                   <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-green-400 to-emerald-600" />
                   <h2 className="font-serif text-2xl sm:text-3xl text-nidra-indigo">The Empirical Evidence — Client Outcomes</h2>
                 </div>
-                <p>Beyond theoretical validation, real‑world data supports Vastu&apos;s effectiveness. Across over 500 clients in 15+ countries, Vastuvid K.K. Nagaich has documented that Vastu corrections lead to a 20–30% improvement in self‑reported well‑being, measured through standardised health questionnaires. Commercial spaces aligned with Vastu principles report a 15% increase in footfall and a 10% reduction in employee absenteeism.<sup>[reference:14]</sup></p>
+                <p>Beyond theoretical validation, real‑world data supports Vastu&apos;s effectiveness. Across over 500 clients in 15+ countries, AstroVastu Expert K.K. Nagaich has documented that Vastu corrections lead to a 20–30% improvement in self‑reported well‑being, measured through standardised health questionnaires. Commercial spaces aligned with Vastu principles report a 15% increase in footfall and a 10% reduction in employee absenteeism.<sup>[reference:14]</sup></p>
               </div>
 
               {/* ── Conclusion ── */}
@@ -11464,7 +11464,7 @@ export default function BlogPage() {
                   <h2 className="font-serif text-2xl text-nidra-indigo">Conclusion — Ancient Wisdom, Modern Proof</h2>
                 </div>
                 <p>The science is converging. Vastu Shastra is not a collection of random superstitions — it is an empirically grounded system of environmental design that anticipated by millennia what modern building physics is now confirming. From CFD‑validated ventilation patterns to geomagnetic sleep alignment, from passive solar geometry to thermal mass placement, each principle finds its echo in peer‑reviewed research.</p>
-                <p className="font-medium">Vastuvid K.K. Nagaich combines this ancient wisdom with modern diagnostics — EMF meters, geomagnetic compasses, and thermal imaging — to provide a holistic, scientifically grounded Vastu analysis for every client.</p>
+                <p className="font-medium">AstroVastu Expert K.K. Nagaich combines this ancient wisdom with modern diagnostics — EMF meters, geomagnetic compasses, and thermal imaging — to provide a holistic, scientifically grounded Vastu analysis for every client.</p>
               </div>
 
             </div>
@@ -11473,7 +11473,7 @@ export default function BlogPage() {
             <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-prakash-gold to-sacred-saffron flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
               <div>
-                <p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p>
+                <p className="font-serif text-lg text-nidra-indigo font-bold">AstroVastu Expert KK Nagaich</p>
                 <p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | Served 2 Lakh+ Clients Worldwide | Researcher & Author</p>
               </div>
             </div>
@@ -11527,7 +11527,7 @@ export default function BlogPage() {
               <div className="flex items-center gap-3 text-sm text-white/50 mb-4">
                 <span className="bg-amber-400/20 text-amber-300 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">Spiritual Vastu</span>
                 <span className="w-1 h-1 bg-white/30 rounded-full" /><span>9 min read</span>
-                <span className="w-1 h-1 bg-white/30 rounded-full" /><span>By Vastuvid KK Nagaich</span>
+                <span className="w-1 h-1 bg-white/30 rounded-full" /><span>By AstroVastu Expert KK Nagaich</span>
               </div>
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
                 Spiritual Vastu —{' '}
@@ -11539,7 +11539,7 @@ export default function BlogPage() {
 
           <div className="container mx-auto px-4 sm:px-6 max-w-4xl"><div className="prose prose-lg prose-stone max-w-none">
 
-<p className="lead text-xl text-nidra-indigo/70 leading-relaxed">The pooja room is not a decorative afterthought. It is the spiritual battery of the Indian home — the one space where the family collectively connects with the divine, performs daily rituals, and recharges the emotional and energetic atmosphere of the entire household. In Vastu Shastra, the design of this sacred space is governed by principles that are at once astronomically precise and spiritually profound. A landmark 2025 study published by Springer Nature found that architectural forms rooted in sacred geometry — including domes, pyramids, and mandala‑based layouts — produced a <strong>30–40% self‑reported increase in relaxation and emotional clarity</strong> among participants. Coohom's 2026 Vastu guide confirms that homes with northeast prayer rooms "consistently report a sense of tranquility and spiritual uplift." Housing.com, NoBrokerHood, Bajaj Finserv, and Livspace have all published comprehensive guides on pooja room Vastu — converging on identical principles that have been validated across thousands of homes. This article presents the definitive Vastu framework for pooja room design, grounded in published research and over two decades of clinical practice by Vastuvid K.K. Nagaich.</p>
+<p className="lead text-xl text-nidra-indigo/70 leading-relaxed">The pooja room is not a decorative afterthought. It is the spiritual battery of the Indian home — the one space where the family collectively connects with the divine, performs daily rituals, and recharges the emotional and energetic atmosphere of the entire household. In Vastu Shastra, the design of this sacred space is governed by principles that are at once astronomically precise and spiritually profound. A landmark 2025 study published by Springer Nature found that architectural forms rooted in sacred geometry — including domes, pyramids, and mandala‑based layouts — produced a <strong>30–40% self‑reported increase in relaxation and emotional clarity</strong> among participants. Coohom's 2026 Vastu guide confirms that homes with northeast prayer rooms "consistently report a sense of tranquility and spiritual uplift." Housing.com, NoBrokerHood, Bajaj Finserv, and Livspace have all published comprehensive guides on pooja room Vastu — converging on identical principles that have been validated across thousands of homes. This article presents the definitive Vastu framework for pooja room design, grounded in published research and over two decades of clinical practice by AstroVastu Expert K.K. Nagaich.</p>
 
 {/* SECTION 1: Why NE */}
 <div className="mt-12 mb-8"><div className="flex items-center gap-3 mb-6"><div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-amber-400 to-prakash-gold" /><h2 className="font-serif text-2xl sm:text-3xl text-nidra-indigo">Why the Northeast? The Physics of Ishanya — the Sacred Corner</h2></div>
@@ -11589,12 +11589,12 @@ export default function BlogPage() {
 {/* CONCLUSION */}
 <div className="mt-12 p-8 bg-gradient-to-br from-vastu-stone/30 to-white rounded-3xl border border-prakash-gold/20"><div className="flex items-center gap-3 mb-4"><div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-amber-400 to-sacred-saffron" /><h2 className="font-serif text-2xl text-nidra-indigo">Conclusion — Your Pooja Room Is the Spiritual Engine of Your Home</h2></div>
 <p>Jayshree Dhamani's metaphor is worth repeating: the northeast corner is "like the engine of a train, which pulls the entire train." When your pooja room is correctly placed, designed, and maintained — idols facing East, a brass diya lit at sunrise, fresh flowers daily, a copper Kalash in the northeast, and the space kept exclusively for worship — it becomes a generator of positive energy that radiates through every room. The Springer 2025 study's finding of 30–40% increased relaxation is not an anomaly. It is the predictable result of aligning a sacred space with the same cosmic principles that have governed Vedic architecture for over 5,000 years. Whether you have a dedicated room, a corner mandir, or a small wall‑mounted unit, the principles are the same: northeast for divine energy, east or north as alternatives, brass and copper for conductivity, light colours for serenity, ghee lamp for fire activation, and daily rituals to sustain the energy. The remedies exist for every dosha — often without structural change.</p>
-<p className="font-medium">Vastuvid K.K. Nagaich provides comprehensive pooja room Vastu audits — directional analysis, idol placement optimisation, elemental balancing, dosha identification and remedy prescription, and guidance on daily rituals — as part of every residential Vastu consultation.</p></div>
+<p className="font-medium">AstroVastu Expert K.K. Nagaich provides comprehensive pooja room Vastu audits — directional analysis, idol placement optimisation, elemental balancing, dosha identification and remedy prescription, and guidance on daily rituals — as part of every residential Vastu consultation.</p></div>
 
 </div>
 <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
 <div className="w-14 h-14 rounded-full bg-gradient-to-br from-amber-500 to-prakash-gold flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
-<div><p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p><p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide | Pooja Room & Spiritual Vastu Specialist</p></div>
+<div><p className="font-serif text-lg text-nidra-indigo font-bold">AstroVastu Expert KK Nagaich</p><p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide | Pooja Room & Spiritual Vastu Specialist</p></div>
 </div></div></article></SmoothScroll></>);}
 
 ============================================================
@@ -11644,7 +11644,7 @@ export default function BlogPage() {
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
                 <span>9 min read</span>
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
-                <span>By Vastuvid KK Nagaich</span>
+                <span>By AstroVastu Expert KK Nagaich</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
@@ -11792,7 +11792,7 @@ export default function BlogPage() {
                   <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-purple-400 to-pink-500" />
                   <h2 className="font-serif text-2xl sm:text-3xl text-nidra-indigo">Case Study — The South‑Facing Entrance That Doubled Revenue</h2>
                 </div>
-                <p>A family‑run textile business in Surat operated from a south‑facing shop for 12 years with consistently declining sales. The south entrance, receiving intense afternoon radiation, made the shop uncomfortably hot by 2 PM — driving customers away during peak shopping hours. Vastuvid K.K. Nagaich was called in. Rather than relocating, he prescribed: a Vastu Purush Yantra buried at the threshold, the door colour changed from black to a warm dark brown, a water feature installed in the northeast corner, and a brass Swastik placed above the door frame.</p>
+                <p>A family‑run textile business in Surat operated from a south‑facing shop for 12 years with consistently declining sales. The south entrance, receiving intense afternoon radiation, made the shop uncomfortably hot by 2 PM — driving customers away during peak shopping hours. AstroVastu Expert K.K. Nagaich was called in. Rather than relocating, he prescribed: a Vastu Purush Yantra buried at the threshold, the door colour changed from black to a warm dark brown, a water feature installed in the northeast corner, and a brass Swastik placed above the door frame.</p>
                 <p>Within <strong>four months</strong>, footfall increased by approximately 40%, and the average customer dwell time doubled — because the shop was now thermally comfortable during afternoon hours. The business, which had been considering closure, went on to open a second location within two years. This case demonstrates that even the most "inauspicious" entrance direction can be corrected without demolition — when the remedies are precise and the principles are understood.</p>
               </div>
 
@@ -11803,7 +11803,7 @@ export default function BlogPage() {
                   <h2 className="font-serif text-2xl text-nidra-indigo">Conclusion — Your Door Is Your Destiny</h2>
                 </div>
                 <p>The main entrance is not merely the point where you enter your home. It is where opportunity enters your life. Every element — direction, size, material, colour, threshold, and surrounding environment — contributes to a cumulative energetic effect that shapes your family's prosperity, health, and harmony. The 2024 CFD study confirmed scientifically what Vedic architects encoded into scripture: door placement is not arbitrary. It is a measurable, optimisable variable in the physics of human habitation. Whether your door faces North, East, West, or South — there is always a correct configuration and a proven remedy. The question is not whether your entrance is perfect — it is whether you have applied the right corrections.</p>
-                <p className="font-medium">Vastuvid K.K. Nagaich provides comprehensive entrance Vastu analysis as part of every residential and commercial consultation — including exact pada measurement, dosha identification, and personalised remedy prescription.</p>
+                <p className="font-medium">AstroVastu Expert K.K. Nagaich provides comprehensive entrance Vastu analysis as part of every residential and commercial consultation — including exact pada measurement, dosha identification, and personalised remedy prescription.</p>
               </div>
 
             </div>
@@ -11812,7 +11812,7 @@ export default function BlogPage() {
             <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-prakash-gold to-sacred-saffron flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
               <div>
-                <p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p>
+                <p className="font-serif text-lg text-nidra-indigo font-bold">AstroVastu Expert KK Nagaich</p>
                 <p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide</p>
               </div>
             </div>
@@ -12197,7 +12197,7 @@ export default function CommercialVastuPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#1a3a5c] to-[#0a1628] bg-[length:400%_400%] animate-[heroLoop_12s_ease_infinite]" />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h2 className="font-serif text-3xl sm:text-4xl text-white mb-4">Grow Your Business with Vedic Precision</h2>
-          <p className="text-white/70 max-w-xl mx-auto mb-8">100M+ views, 80K+ followers — personally audited by Vastuvid KK Nagaich.</p>
+          <p className="text-white/70 max-w-xl mx-auto mb-8">100M+ views, 80K+ followers — personally audited by AstroVastu Expert KK Nagaich.</p>
           <Link href="/bookings" className="luxury-button text-lg">Schedule Your Commercial Audit →</Link>
         </div>
       </section>
@@ -12229,7 +12229,7 @@ export default function CrystalColorTherapyPage() {
             <span className="text-prakash-gold uppercase tracking-[0.3em] text-xs sm:text-sm mb-4 block font-semibold">Advance Treatments · उन्नत उपचार</span>
             <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-2xl"><span className="bg-gradient-to-r from-violet-300 via-emerald-300 to-prakash-gold bg-clip-text text-transparent">Crystal & Color Therapy</span></h1>
             <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl mx-auto mb-4 px-4 leading-relaxed">Crystal Grids (Amethyst, Clear Quartz, Black Tourmaline, Rose Quartz, Citrine) · Colour Directional Therapy · Elemental Balancing · Chakra‑Aligned Placement · Room‑by‑Room Colour Prescriptions · EMF Absorption · Emotional & Physical Harmonisation</p>
-            <p className="text-sm sm:text-base text-white/50 max-w-2xl mx-auto mb-10">Sacred crystal and colour energy correction — performed by Vastuvid K.K. Nagaich, 4th generation Guru, MBA, Ex‑CEO — for homes, offices, healing spaces, and spiritual sanctuaries.</p>
+            <p className="text-sm sm:text-base text-white/50 max-w-2xl mx-auto mb-10">Sacred crystal and colour energy correction — performed by AstroVastu Expert K.K. Nagaich, 4th generation Guru, MBA, Ex‑CEO — for homes, offices, healing spaces, and spiritual sanctuaries.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"><Link href="/bookings" className="px-10 py-5 bg-gradient-to-r from-violet-500 via-emerald-500 to-prakash-gold text-nidra-indigo font-bold rounded-full shadow-[0_10px_30px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_45px_rgba(255,153,51,0.5)] transition-all text-lg">Book Crystal & Colour Consultation</Link><Link href="#practices" className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-10 py-5 rounded-full text-lg font-medium">Explore Practices ↓</Link></div>
           </div>
         </section>
@@ -12245,7 +12245,7 @@ export default function CrystalColorTherapyPage() {
         {/* ── 9 SACRED PRACTICES ── */}
         <section id="practices" className="py-16 sm:py-24 bg-white relative">
           <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
-            <div className="text-center mb-14"><span className="text-sacred-saffron uppercase tracking-[0.2em] text-sm font-semibold">Sacred Crystal & Colour Practices</span><h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-nidra-indigo mt-3 mb-4">Authentic Crystal Grid & Colour Therapy for Elemental Harmony</h2><p className="text-nidra-indigo/60 max-w-2xl mx-auto text-sm">Each practice deploys specific crystals and precise colour wavelengths selected by Vastuvid K.K. Nagaich.</p></div>
+            <div className="text-center mb-14"><span className="text-sacred-saffron uppercase tracking-[0.2em] text-sm font-semibold">Sacred Crystal & Colour Practices</span><h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-nidra-indigo mt-3 mb-4">Authentic Crystal Grid & Colour Therapy for Elemental Harmony</h2><p className="text-nidra-indigo/60 max-w-2xl mx-auto text-sm">Each practice deploys specific crystals and precise colour wavelengths selected by AstroVastu Expert K.K. Nagaich.</p></div>
             <div className="space-y-16">
               {[
                 {num:'01',title:'The 5‑Element Crystal Grid (Pancha Mahabhuta Crystal Array)',desc:'5 crystals for 5 elements at 5 directional zones: Clear Quartz NE (Water, spiritual amplification), Citrine SE (Fire, abundance), Black Tourmaline SW (Earth, grounding), Aquamarine NW (Air, communication), Amethyst Centre (Space, universal harmony). Each geometrically cut and planetary mantra energised. Annual re‑energisation only.',features:['5 crystals for 5 elements','Clear Quartz NE, Citrine SE, Black Tourmaline SW','Aquamarine NW, Amethyst Centre','Geometrically cut & mantra energised','Annual re‑energisation only'],color:'#8B5CF6'},
@@ -12305,7 +12305,7 @@ export default function CrystalColorTherapyPage() {
             <div className="max-w-3xl mx-auto text-center">
               <div className="relative rounded-[40px] p-[2px] bg-gradient-to-br from-prakash-gold/30 via-white/10 to-violet-400/30 shadow-[0_25px_60px_rgba(0,0,0,0.4)]">
                 <div className="rounded-[38px] bg-black/20 backdrop-blur-2xl p-8 sm:p-12 md:p-16 border border-white/10 shadow-inner">
-                  <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Let Vastuvid K.K. Nagaich Design Your Crystal & Colour Grid</h2>
+                  <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Let AstroVastu Expert K.K. Nagaich Design Your Crystal & Colour Grid</h2>
                   <p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10">Every space has a unique elemental signature. Book a private Crystal & Color Therapy consultation — performed personally by a 4th‑generation Vastu Guru, MBA, Ex‑CEO with 20+ years of clinical practice and 2 Lakh+ clients worldwide.</p>
                   <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-violet-500 via-emerald-500 to-prakash-gold text-nidra-indigo font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">Schedule Your Crystal & Colour Consultation →</Link>
                 </div>
@@ -12342,7 +12342,7 @@ export default function GeopathicStressPage() {
             <span className="text-prakash-gold uppercase tracking-[0.3em] text-xs sm:text-sm mb-4 block font-semibold">Advance Treatments · उन्नत उपचार</span>
             <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-2xl"><span className="bg-gradient-to-r from-red-400 via-prakash-gold to-sacred-saffron bg-clip-text text-transparent">Geopathic Stress</span></h1>
             <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl mx-auto mb-4 px-4 leading-relaxed">Geology · EMF & Geomagnetic Scanning · Copper Rod Installation · Pyramid & Crystal Therapy · Furniture Relocation · Plant‑Based Purification · Radon Detection · Hartmann & Curry Grid Mapping</p>
-            <p className="text-sm sm:text-base text-white/50 max-w-2xl mx-auto mb-10">9 sacred geopathic stress practices — performed by Vastuvid K.K. Nagaich, 4th generation Guru, MBA, Ex‑CEO — for homes, offices, factories & institutions.</p>
+            <p className="text-sm sm:text-base text-white/50 max-w-2xl mx-auto mb-10">9 sacred geopathic stress practices — performed by AstroVastu Expert K.K. Nagaich, 4th generation Guru, MBA, Ex‑CEO — for homes, offices, factories & institutions.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"><Link href="/bookings" className="px-10 py-5 bg-gradient-to-r from-red-500 via-prakash-gold to-sacred-saffron text-white font-bold rounded-full shadow-[0_10px_30px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_45px_rgba(255,153,51,0.5)] transition-all text-lg">Book Geopathic Audit</Link><Link href="#practices" className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-10 py-5 rounded-full text-lg font-medium">Explore Practices ↓</Link></div>
           </div>
         </section>
@@ -12358,11 +12358,11 @@ export default function GeopathicStressPage() {
         {/* ── 9 SACRED PRACTICES ── */}
         <section id="practices" className="py-16 sm:py-24 bg-white relative">
           <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
-            <div className="text-center mb-14"><span className="text-sacred-saffron uppercase tracking-[0.2em] text-sm font-semibold">The 9 Sacred Practices</span><h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-nidra-indigo mt-3 mb-4">Authentic Vedic Practices for Geopathic Stress Detection & Neutralisation</h2><p className="text-nidra-indigo/60 max-w-2xl mx-auto text-sm">Each practice uses specialised instruments and traditional dowsing techniques refined by Vastuvid K.K. Nagaich.</p></div>
+            <div className="text-center mb-14"><span className="text-sacred-saffron uppercase tracking-[0.2em] text-sm font-semibold">The 9 Sacred Practices</span><h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-nidra-indigo mt-3 mb-4">Authentic Vedic Practices for Geopathic Stress Detection & Neutralisation</h2><p className="text-nidra-indigo/60 max-w-2xl mx-auto text-sm">Each practice uses specialised instruments and traditional dowsing techniques refined by AstroVastu Expert K.K. Nagaich.</p></div>
             <div className="space-y-16">
               {[
                 {num:'01',title:'The Vilsbiburg Protocol — Baron von Pohl\'s 1929 Cancer Mapping',desc:'In 1929, von Pohl mapped geopathic stress lines in Vilsbiburg and found 100% correlation between cancer deaths and underground water vein crossings. Dr. Hans Nieper found 92% of cancer patients and 75% of MS patients were geopathically stressed. Over 85% of cancer deaths are linked to GS exposure.',features:['1929 Vilsbiburg 100% cancer correlation','Dr. Nieper: 92% cancer, 75% MS GS+','Dr. Hartmann: cancer = location disease','85%+ cancer deaths linked to GS','200ft underground vein mapping'],color:'#C10000'},
-                {num:'02',title:'Copper L‑Rod Dowsing (Geopathic Zone Detection & Mapping)',desc:'Dowsing with copper L‑rods remains the oldest and most reliable detection method. Rods cross involuntarily over underground water veins, fault lines, or grid intersections. Von Pohl scale (0‑16) quantifies intensity. Vastuvid trained under three Guru‑Shishya lineages.',features:['Copper L‑rod dowsing','Von Pohl scale 0‑16','Hartmann & Curry grid mapping','Underground water vein depth','Full property zone mapping'],color:'#E8B960'},
+                {num:'02',title:'Copper L‑Rod Dowsing (Geopathic Zone Detection & Mapping)',desc:'Dowsing with copper L‑rods remains the oldest and most reliable detection method. Rods cross involuntarily over underground water veins, fault lines, or grid intersections. Von Pohl scale (0‑16) quantifies intensity. AstroVastu Expert trained under three Guru‑Shishya lineages.',features:['Copper L‑rod dowsing','Von Pohl scale 0‑16','Hartmann & Curry grid mapping','Underground water vein depth','Full property zone mapping'],color:'#E8B960'},
                 {num:'03',title:'Gauss Meter & EMF Detection (Quantitative Measurement)',desc:'Normal background: 25‑65 µT. Geopathic stress zones: 100+ µT. Trifield TF2 multi‑spectrum EMF detection. Man‑made radiation from power lines, Wi‑Fi, mobile towers compounds natural GS — termed technopathic stress.',features:['Gauss meter: 25‑65 µT normal','100+ µT = GS zone','Trifield TF2 EMF detection','Technopathic stress identification','Wi‑Fi, tower & power line mapping'],color:'#FF9933'},
                 {num:'04',title:'Biomedical Validation — GDV Gas Discharge Visualization (2025)',desc:'Randomised, double‑blinded trial with 52 persons. Statistically significant differences in physical area of glow between geopathic vs neutral zones. Deficits in lymphatic, cardiovascular, and pineal systems were documented. Peer‑reviewed biomedical journal publication.',features:['52‑person double‑blinded trial','Statistically significant glow reduction','Lymphatic, cardiovascular, pineal deficits','Geowave harmonization demonstrated','Peer‑reviewed publication'],color:'#6366F1'},
                 {num:'05',title:'Copper Rod Installation (Geopathic Stress Neutraliser)',desc:'18‑24 inch energised copper rods driven at stress‑line entry points. Faraday‑type effect redirects harmful radiation. South corner placement for intersecting veins. Mantra‑energised before installation. Multiple rods for large zones.',features:['18‑24 inch energised copper rods','Faraday‑type radiation redirection','South corner & entry placement','Multiple rods for intersecting veins','Mantra‑energised installation'],color:'#10B981'},
@@ -12453,7 +12453,7 @@ export default function GeopathicStressPage() {
             <div className="max-w-3xl mx-auto text-center">
               <div className="relative rounded-[40px] p-[2px] bg-gradient-to-br from-prakash-gold/30 via-white/10 to-red-400/30 shadow-[0_25px_60px_rgba(0,0,0,0.4)]">
                 <div className="rounded-[38px] bg-black/20 backdrop-blur-2xl p-8 sm:p-12 md:p-16 border border-white/10 shadow-inner">
-                  <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Let Vastuvid K.K. Nagaich Detect & Neutralise Your Geopathic Stress</h2>
+                  <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Let AstroVastu Expert K.K. Nagaich Detect & Neutralise Your Geopathic Stress</h2>
                   <p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10">Book a private geopathic stress audit covering all 9 sacred practices — performed personally by a 4th‑generation Vastu Guru with 20+ years of clinical practice and 2 Lakh+ clients worldwide.</p>
                   <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-red-500 via-prakash-gold to-sacred-saffron text-white font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">Schedule Your Geopathic Audit →</Link>
                 </div>
@@ -12552,7 +12552,7 @@ export default function IndustrialVastuPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0f0f1a] via-[#1a1a2e] to-[#0f0f1a] bg-[length:400%_400%] animate-[heroLoop_12s_ease_infinite]" />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h2 className="font-serif text-3xl sm:text-4xl text-white mb-4">Optimize Your Industrial Operations</h2>
-          <p className="text-white/70 max-w-xl mx-auto mb-8">100M+ views, 80K+ followers — personally audited by Vastuvid KK Nagaich.</p>
+          <p className="text-white/70 max-w-xl mx-auto mb-8">100M+ views, 80K+ followers — personally audited by AstroVastu Expert KK Nagaich.</p>
           <Link href="/bookings" className="luxury-button text-lg">Schedule Your Industrial Audit →</Link>
         </div>
       </section>
@@ -12630,7 +12630,7 @@ export default function KundaliAnalysisPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a0020] via-[#1a0050] to-[#0a0020] bg-[length:400%_400%] animate-[heroLoop_12s_ease_infinite]" />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h2 className="font-serif text-3xl sm:text-4xl text-white mb-4">Read Your Cosmic Blueprint</h2>
-          <p className="text-white/70 max-w-xl mx-auto mb-8">100M+ views, 80K+ followers — personally read by Vastuvid KK Nagaich.</p>
+          <p className="text-white/70 max-w-xl mx-auto mb-8">100M+ views, 80K+ followers — personally read by AstroVastu Expert KK Nagaich.</p>
           <Link href="/bookings" className="luxury-button text-lg">Schedule Your Kundali Consultation →</Link>
         </div>
       </section>
@@ -12688,7 +12688,7 @@ export default function LandSelectionPage() {
             <h2 className="font-serif text-3xl sm:text-4xl text-nidra-indigo mt-3 mb-4">Land Audit — <span className="bg-gradient-to-r from-sacred-saffron via-prakash-gold to-kumkuma-red bg-clip-text text-transparent">Secure Your Foundation</span></h2>
           </motion.div>
           <div className="grid sm:grid-cols-4 gap-4 mb-16">
-            {[{step:'01',title:'Submit Details',desc:'Computerized layout + photos (PDF) + location coordinates sent to Acharya'},{step:'02',title:'Deep Land Audit',desc:'Bhoomi Dosh check, Kamadahana soil test, slope & elevation, surroundings analysis'},{step:'03',title:'Clearance or Fix',desc:'Auspicious → Checkpoint passed. Doshas → Remedies & corrections provided'},{step:'04',title:'Bhoomi Puja',desc:'If needed, Vastuvid KK Nagaich performs Bhoomi Sanskar to purify & energize the land'}].map((s,i)=>(<motion.div key={i} initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*0.1}} className="text-center p-6 bg-vastu-stone/20 rounded-2xl"><div className="text-3xl font-bold text-prakash-gold mb-2">{s.step}</div><h3 className="font-serif text-lg text-nidra-indigo font-bold">{s.title}</h3><p className="text-sm text-nidra-indigo/60 mt-2">{s.desc}</p></motion.div>))}
+            {[{step:'01',title:'Submit Details',desc:'Computerized layout + photos (PDF) + location coordinates sent to Acharya'},{step:'02',title:'Deep Land Audit',desc:'Bhoomi Dosh check, Kamadahana soil test, slope & elevation, surroundings analysis'},{step:'03',title:'Clearance or Fix',desc:'Auspicious → Checkpoint passed. Doshas → Remedies & corrections provided'},{step:'04',title:'Bhoomi Puja',desc:'If needed, AstroVastu Expert KK Nagaich performs Bhoomi Sanskar to purify & energize the land'}].map((s,i)=>(<motion.div key={i} initial={{opacity:0,y:20}} whileInView={{opacity:1,y:0}} viewport={{once:true}} transition={{delay:i*0.1}} className="text-center p-6 bg-vastu-stone/20 rounded-2xl"><div className="text-3xl font-bold text-prakash-gold mb-2">{s.step}</div><h3 className="font-serif text-lg text-nidra-indigo font-bold">{s.title}</h3><p className="text-sm text-nidra-indigo/60 mt-2">{s.desc}</p></motion.div>))}
           </div>
         </div>
       </section>
@@ -12724,7 +12724,7 @@ export default function LandSelectionPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a1a0a] via-[#1a3a1a] to-[#0a1a0a] bg-[length:400%_400%] animate-[heroLoop_12s_ease_infinite]" />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h2 className="font-serif text-3xl sm:text-4xl text-white mb-4">Secure Your Land's Future</h2>
-          <p className="text-white/70 max-w-xl mx-auto mb-8">100M+ views, 80K+ followers — Vastuvid KK Nagaich personally audits every plot.</p>
+          <p className="text-white/70 max-w-xl mx-auto mb-8">100M+ views, 80K+ followers — AstroVastu Expert KK Nagaich personally audits every plot.</p>
           <Link href="/bookings" className="luxury-button text-lg">Schedule Your Land Audit →</Link>
         </div>
       </section>
@@ -12756,7 +12756,7 @@ export default function MercuryParadPage() {
             <span className="text-prakash-gold uppercase tracking-[0.3em] text-xs sm:text-sm mb-4 block font-semibold">Advance Treatments · उन्नत उपचार</span>
             <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-2xl"><span className="bg-gradient-to-r from-silver-300 via-prakash-gold to-sacred-saffron bg-clip-text text-transparent">Mercury / Parad Therapy</span></h1>
             <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl mx-auto mb-4 px-4 leading-relaxed">Parad Shivling Sthapna · Parad Pyramid Placement · Parad Keel Installation · Parad Gutika & Bracelet · Siddh Parad Ashtasanskar · Parad Yantra Energization · Parad Dhatu Adhyay · Parad Kavach Strips · Parad Lakshmi‑Ganesh Idols</p>
-            <p className="text-sm sm:text-base text-white/50 max-w-2xl mx-auto mb-10">9 sacred Parad (Mercury) practices — performed by Vastuvid K.K. Nagaich, 4th generation Guru, MBA, Ex‑CEO. Parad, revered as the seed of Lord Shiva, is the most potent and auspicious metal in Vedic spiritual science.</p>
+            <p className="text-sm sm:text-base text-white/50 max-w-2xl mx-auto mb-10">9 sacred Parad (Mercury) practices — performed by AstroVastu Expert K.K. Nagaich, 4th generation Guru, MBA, Ex‑CEO. Parad, revered as the seed of Lord Shiva, is the most potent and auspicious metal in Vedic spiritual science.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"><Link href="/bookings" className="px-10 py-5 bg-gradient-to-r from-silver-500 via-prakash-gold to-sacred-saffron text-nidra-indigo font-bold rounded-full shadow-[0_10px_30px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_45px_rgba(255,153,51,0.5)] transition-all text-lg">Book Parad Consultation</Link><Link href="#practices" className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-10 py-5 rounded-full text-lg font-medium">Explore Practices ↓</Link></div>
           </div>
         </section>
@@ -12828,7 +12828,7 @@ export default function MercuryParadPage() {
               <div className="relative rounded-[40px] p-[2px] bg-gradient-to-br from-silver-400/30 via-white/10 to-prakash-gold/30 shadow-[0_25px_60px_rgba(0,0,0,0.4)]">
                 <div className="rounded-[38px] bg-black/20 backdrop-blur-2xl p-8 sm:p-12 md:p-16 border border-white/10 shadow-inner">
                   <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Experience the Power of Parad</h2>
-                  <p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10">Book a consultation with Vastuvid K.K. Nagaich for a personalised Parad prescription and sacred installation — performed personally by a 4th‑generation Vastu Guru with 20+ years of clinical practice and 2 Lakh+ clients worldwide.</p>
+                  <p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10">Book a consultation with AstroVastu Expert K.K. Nagaich for a personalised Parad prescription and sacred installation — performed personally by a 4th‑generation Vastu Guru with 20+ years of clinical practice and 2 Lakh+ clients worldwide.</p>
                   <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-silver-500 via-prakash-gold to-sacred-saffron text-white font-bold rounded-full shadow-[0_10px_40px_rgba(192,192,192,0.3)] hover:shadow-[0_20px_50px_rgba(218,165,32,0.5)] transition-all text-lg">Book Your Parad Consultation</Link>
                 </div>
               </div>
@@ -12911,7 +12911,7 @@ export default function NumerologyNamakaranPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a2e] via-[#1a1a4e] to-[#0f0f2a] bg-[length:400%_400%] animate-[heroLoop_12s_ease_infinite]" />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h2 className="font-serif text-3xl sm:text-4xl text-white mb-4">Discover Your Auspicious Name & Number</h2>
-          <p className="text-white/70 max-w-xl mx-auto mb-8">100M+ views, 80K+ followers — personally analyzed by Vastuvid KK Nagaich.</p>
+          <p className="text-white/70 max-w-xl mx-auto mb-8">100M+ views, 80K+ followers — personally analyzed by AstroVastu Expert KK Nagaich.</p>
           <Link href="/bookings" className="luxury-button text-lg">Schedule Your Consultation →</Link>
         </div>
       </section>
@@ -12959,7 +12959,7 @@ function HeroSection() {
         <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-prakash-gold uppercase tracking-[0.3em] text-xs sm:text-sm mb-4 block font-semibold">Sacred Services</motion.span>
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2 }} className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-2xl">
           <span className="bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red bg-clip-text text-transparent">VedicUrja</span><br />
-          <span className="text-prakash-gold text-2xl sm:text-3xl md:text-4xl mt-2 block">Guided by Vastuvid K.K. Nagaich</span>
+          <span className="text-prakash-gold text-2xl sm:text-3xl md:text-4xl mt-2 block">Guided by AstroVastu Expert K.K. Nagaich</span>
         </motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 px-4">Complete Vastu solutions rooted in authentic Vedic lineage — from residential sanctuaries to industrial empires.</motion.p>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -13038,7 +13038,7 @@ function FinalCTASection() {
   return (
     <motion.section ref={ref} style={{ scale }} className="relative py-28 md:py-36 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-[#4a0000] via-[#2d0000] to-[#1a0000] bg-[length:400%_400%] animate-gradient-loop" />
-      <div className="container mx-auto px-4 sm:px-6 relative z-10"><div className="max-w-3xl mx-auto text-center"><motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative rounded-[40px] p-[2px] bg-gradient-to-br from-prakash-gold/30 via-white/10 to-sacred-saffron/30 shadow-[0_25px_60px_rgba(0,0,0,0.4)]"><div className="rounded-[38px] bg-black/20 backdrop-blur-2xl p-8 sm:p-12 md:p-16 border border-white/10 shadow-inner"><motion.h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Let VedicUrja Guide Your Space</motion.h2><motion.p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10">Book a private consultation with Vastuvid K.K. Nagaich — trusted by 2 lakh+ clients worldwide.</motion.p><Link href="/bookings"><motion.div whileHover={{ scale: 1.08 }} className="inline-block px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red rounded-full font-bold text-white text-lg shadow-[0_10px_40px_rgba(232,185,96,0.4)]">Schedule Now →</motion.div></Link></div></motion.div></div></div>
+      <div className="container mx-auto px-4 sm:px-6 relative z-10"><div className="max-w-3xl mx-auto text-center"><motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative rounded-[40px] p-[2px] bg-gradient-to-br from-prakash-gold/30 via-white/10 to-sacred-saffron/30 shadow-[0_25px_60px_rgba(0,0,0,0.4)]"><div className="rounded-[38px] bg-black/20 backdrop-blur-2xl p-8 sm:p-12 md:p-16 border border-white/10 shadow-inner"><motion.h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Let VedicUrja Guide Your Space</motion.h2><motion.p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10">Book a private consultation with AstroVastu Expert K.K. Nagaich — trusted by 2 lakh+ clients worldwide.</motion.p><Link href="/bookings"><motion.div whileHover={{ scale: 1.08 }} className="inline-block px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red rounded-full font-bold text-white text-lg shadow-[0_10px_40px_rgba(232,185,96,0.4)]">Schedule Now →</motion.div></Link></div></motion.div></div></div>
     </motion.section>
   );
 }
@@ -13083,7 +13083,7 @@ export default function PyramidologyPage() {
             <span className="text-prakash-gold uppercase tracking-[0.3em] text-xs sm:text-sm mb-4 block font-semibold">Advance Treatments · उन्नत उपचार</span>
             <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-2xl"><span className="bg-gradient-to-r from-amber-300 via-prakash-gold to-sacred-saffron bg-clip-text text-transparent">Pyramidology</span></h1>
             <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl mx-auto mb-4 px-4 leading-relaxed">Copper Pyramid Grids · Brass Pyramid Arrays · Crystal Pyramid Placement · 9‑Pyramid Cosmic Energy Array · Bedroom & Workplace Installations · Dosha Zone Correction · Health & Wealth Amplification</p>
-            <p className="text-sm sm:text-base text-white/50 max-w-2xl mx-auto mb-10">Sacred pyramid energy correction — performed by Vastuvid K.K. Nagaich, 4th generation Guru, MBA, Ex‑CEO — for homes, offices, factories, and spiritual spaces.</p>
+            <p className="text-sm sm:text-base text-white/50 max-w-2xl mx-auto mb-10">Sacred pyramid energy correction — performed by AstroVastu Expert K.K. Nagaich, 4th generation Guru, MBA, Ex‑CEO — for homes, offices, factories, and spiritual spaces.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"><Link href="/bookings" className="px-10 py-5 bg-gradient-to-r from-amber-500 via-prakash-gold to-sacred-saffron text-nidra-indigo font-bold rounded-full shadow-[0_10px_30px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_45px_rgba(255,153,51,0.5)] transition-all text-lg">Book Pyramid Consultation</Link><Link href="#practices" className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-10 py-5 rounded-full text-lg font-medium">Explore Practices ↓</Link></div>
           </div>
         </section>
@@ -13173,7 +13173,7 @@ export default function PyramidologyPage() {
             <div className="max-w-3xl mx-auto text-center">
               <div className="relative rounded-[40px] p-[2px] bg-gradient-to-br from-prakash-gold/30 via-white/10 to-amber-400/30 shadow-[0_25px_60px_rgba(0,0,0,0.4)]">
                 <div className="rounded-[38px] bg-black/20 backdrop-blur-2xl p-8 sm:p-12 md:p-16 border border-white/10 shadow-inner">
-                  <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Let Vastuvid K.K. Nagaich Design Your Pyramid Energy Grid</h2>
+                  <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Let AstroVastu Expert K.K. Nagaich Design Your Pyramid Energy Grid</h2>
                   <p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10">Book a private Pyramidology consultation — performed personally by a 4th‑generation Vastu Guru, MBA, Ex‑CEO with 20+ years of clinical practice and 2 Lakh+ clients worldwide.</p>
                   <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-amber-500 via-prakash-gold to-sacred-saffron text-nidra-indigo font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">Schedule Your Pyramid Consultation →</Link>
                 </div>
@@ -13291,7 +13291,7 @@ export default function RemediesPage() {
               <span className="bg-gradient-to-r from-amber-300 via-prakash-gold to-sacred-saffron bg-clip-text text-transparent">Advanced Remedies</span>
             </h1>
             <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-10">
-              Non‑destructive Vedic corrections for every direction, dosha, and energy – demonstrated personally by Vastuvid K.K. Nagaich.
+              Non‑destructive Vedic corrections for every direction, dosha, and energy – demonstrated personally by AstroVastu Expert K.K. Nagaich.
             </p>
             <Link href="/bookings" className="luxury-button text-lg px-10 py-5">Book a Remedy Consultation</Link>
           </div>
@@ -13310,7 +13310,7 @@ export default function RemediesPage() {
               <YouTubeEmbed videoId="fjUP13uEUi0" title="#1 Astrologer on India News in India" />
             </div>
             <p className="text-center text-nidra-indigo/60 mt-6 text-sm">
-              Vastuvid K.K. Nagaich featured as the #1 Astrologer on national television
+              AstroVastu Expert K.K. Nagaich featured as the #1 Astrologer on national television
             </p>
           </div>
         </section>
@@ -13369,7 +13369,7 @@ export default function RemediesPage() {
           <div className="container mx-auto px-4 relative z-10 text-center">
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Experience the Power of Vedic Remedies</h2>
             <p className="text-white/70 text-lg max-w-2xl mx-auto mb-8">
-              Vastuvid K.K. Nagaich – 100M+ views, 80K+ followers – personally prescribes every remedy.
+              AstroVastu Expert K.K. Nagaich – 100M+ views, 80K+ followers – personally prescribes every remedy.
             </p>
             <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">
               Schedule Your Remedy Session →
@@ -13451,7 +13451,7 @@ export default function ResidentialVastuPage() {
             <span className="bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red bg-clip-text text-transparent">Residential Vastu</span>
           </h1>
           <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-4">For flats, apartments, independent houses & government quarters.</p>
-          <p className="text-sm text-white/50 max-w-2xl mx-auto mb-10">100M+ views · 80K+ followers · Vastuvid KK Nagaich — Tantra‑trained, MBA, Ex‑CEO, 4th‑gen Guru.</p>
+          <p className="text-sm text-white/50 max-w-2xl mx-auto mb-10">100M+ views · 80K+ followers · AstroVastu Expert KK Nagaich — Tantra‑trained, MBA, Ex‑CEO, 4th‑gen Guru.</p>
           <Link href="/bookings" className="px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_30px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_45px_rgba(255,153,51,0.5)] transition-all text-lg">Book Consultation</Link>
         </div>
       </section>
@@ -13605,7 +13605,7 @@ export default function ResidentialVastuPage() {
           <div className="grid sm:grid-cols-4 gap-4 mb-12">
             {[
               { step: '01', title: 'Submit Layout', desc: 'Fill form with mandatory computerized layout plan of your home sent to Acharya' },
-              { step: '02', title: 'Acharya Reviews', desc: 'Vastuvid KK Nagaich personally analyzes layout for Vastu defects & energy imbalances' },
+              { step: '02', title: 'Acharya Reviews', desc: 'AstroVastu Expert KK Nagaich personally analyzes layout for Vastu defects & energy imbalances' },
               { step: '03', title: 'Issue Identification', desc: 'Two possibilities found: Demolition necessary OR Non‑structural remedies sufficient' },
               { step: '04', title: 'Remedies Delivered', desc: 'Personalized solutions — Yantras, rituals, color therapy, furniture adjustments provided' },
             ].map((s, i) => (
@@ -13665,7 +13665,7 @@ export default function ResidentialVastuPage() {
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Experience the VedicUrja Difference</h2>
           <p className="text-white/70 text-lg max-w-2xl mx-auto mb-8">
-            Vastuvid KK Nagaich — <strong className="text-prakash-gold">100M+ views, 80K+ followers, MBA, Ex‑CEO, 4th‑generation Tantra‑trained Vastu Guru</strong> — personally performs every residential audit. No delegation. No generic reports.
+            AstroVastu Expert KK Nagaich — <strong className="text-prakash-gold">100M+ views, 80K+ followers, MBA, Ex‑CEO, 4th‑generation Tantra‑trained Vastu Guru</strong> — personally performs every residential audit. No delegation. No generic reports.
           </p>
           <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">
             Schedule Your Residential Audit →
@@ -13776,7 +13776,7 @@ export default function RitualsPage() {
               <span className="bg-gradient-to-r from-purple-300 via-prakash-gold to-sacred-saffron bg-clip-text text-transparent">Vedic Rituals</span>
             </h1>
             <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-10">
-              Personalised Yantra Pran Pratishtha, Navagraha Shanti, Havan, and Anushthan – performed by Vastuvid K.K. Nagaich himself.
+              Personalised Yantra Pran Pratishtha, Navagraha Shanti, Havan, and Anushthan – performed by AstroVastu Expert K.K. Nagaich himself.
             </p>
             <Link href="/bookings" className="luxury-button text-lg px-10 py-5">Book a Ritual Consultation</Link>
           </div>
@@ -13795,7 +13795,7 @@ export default function RitualsPage() {
               <YouTubeEmbed videoId="fjUP13uEUi0" title="#1 Astrologer on India News in India" />
             </div>
             <p className="text-center text-nidra-indigo/60 mt-6 text-sm">
-              Vastuvid K.K. Nagaich – the #1 Astrologer on national television
+              AstroVastu Expert K.K. Nagaich – the #1 Astrologer on national television
             </p>
           </div>
         </section>
@@ -13853,7 +13853,7 @@ export default function RitualsPage() {
           <div className="container mx-auto px-4 relative z-10 text-center">
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Experience the Transformative Power of Vedic Rituals</h2>
             <p className="text-white/70 text-lg max-w-2xl mx-auto mb-8">
-              Book a personal ritual with Vastuvid K.K. Nagaich – 100M+ views, 80K+ followers.
+              Book a personal ritual with AstroVastu Expert K.K. Nagaich – 100M+ views, 80K+ followers.
             </p>
             <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">
               Schedule Your Ritual Session →
@@ -13889,7 +13889,7 @@ export default function SpiritualSpacesPage() {
             <span className="text-prakash-gold uppercase tracking-[0.3em] text-xs sm:text-sm mb-4 block font-semibold">Extensive Framework · विस्तृत ढांचा</span>
             <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-2xl"><span className="bg-gradient-to-r from-violet-300 via-prakash-gold to-sacred-saffron bg-clip-text text-transparent">Spiritual Spaces</span></h1>
             <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl mx-auto mb-4 px-4 leading-relaxed">Pratima Vastu · Prateek Vastu · Poojan & Havan · Havanlogy · Devata Vastu · Vastu Shanti · Meditation & Yoga Space Design · Temple Architecture</p>
-            <p className="text-sm sm:text-base text-white/50 max-w-2xl mx-auto mb-10">9 sacred spiritual Vastu practices for temples, meditation halls, pooja rooms, yoga studios & retreats — performed by Vastuvid K.K. Nagaich, 4th generation Guru, MBA, Ex‑CEO.</p>
+            <p className="text-sm sm:text-base text-white/50 max-w-2xl mx-auto mb-10">9 sacred spiritual Vastu practices for temples, meditation halls, pooja rooms, yoga studios & retreats — performed by AstroVastu Expert K.K. Nagaich, 4th generation Guru, MBA, Ex‑CEO.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"><Link href="/bookings" className="px-10 py-5 bg-gradient-to-r from-violet-500 via-prakash-gold to-sacred-saffron text-nidra-indigo font-bold rounded-full shadow-[0_10px_30px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_45px_rgba(255,153,51,0.5)] transition-all text-lg">Book Spiritual Audit</Link><Link href="#practices" className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-10 py-5 rounded-full text-lg font-medium">Explore Practices ↓</Link></div>
           </div>
         </section>
@@ -14000,7 +14000,7 @@ export default function SpiritualSpacesPage() {
             <div className="max-w-3xl mx-auto text-center">
               <div className="relative rounded-[40px] p-[2px] bg-gradient-to-br from-prakash-gold/30 via-white/10 to-violet-400/30 shadow-[0_25px_60px_rgba(0,0,0,0.4)]">
                 <div className="rounded-[38px] bg-black/20 backdrop-blur-2xl p-8 sm:p-12 md:p-16 border border-white/10 shadow-inner">
-                  <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Let Vastuvid K.K. Nagaich Consecrate Your Sacred Space</h2>
+                  <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Let AstroVastu Expert K.K. Nagaich Consecrate Your Sacred Space</h2>
                   <p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10">Book a private spiritual Vastu consultation covering all 9 sacred practices — performed personally by a 4th‑generation Vastu Guru with 20+ years of clinical practice and 2 Lakh+ clients worldwide.</p>
                   <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-violet-500 via-prakash-gold to-sacred-saffron text-nidra-indigo font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">Schedule Your Spiritual Audit →</Link>
                 </div>
@@ -14036,7 +14036,7 @@ export default function VirtualConsultPage() {
           <span className="text-prakash-gold uppercase tracking-[0.3em] text-sm mb-4 block font-semibold">Vedic Application</span>
           <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 drop-shadow-2xl"><span className="bg-gradient-to-r from-cyan-300 via-prakash-gold to-sacred-saffron bg-clip-text text-transparent">Virtual Consult</span></h1>
           <p className="text-lg text-white/70 max-w-3xl mx-auto mb-4">Live one‑on‑one video consultation — the full depth of Vastu guidance, from anywhere in the world.</p>
-          <p className="text-sm text-white/50 max-w-2xl mx-auto mb-10">100M+ views, 80K+ followers — Vastuvid KK Nagaich personally conducts every session.</p>
+          <p className="text-sm text-white/50 max-w-2xl mx-auto mb-10">100M+ views, 80K+ followers — AstroVastu Expert KK Nagaich personally conducts every session.</p>
           <Link href="/bookings" className="px-10 py-5 bg-gradient-to-r from-cyan-500 via-prakash-gold to-sacred-saffron text-nidra-indigo font-bold rounded-full shadow-[0_10px_30px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_45px_rgba(255,153,51,0.5)] transition-all text-lg">Book Virtual Session</Link>
         </div>
       </section>
@@ -14057,7 +14057,7 @@ export default function VirtualConsultPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a1a2e] via-[#1a2a4e] to-[#0f1a2a] bg-[length:400%_400%] animate-[heroLoop_12s_ease_infinite]" />
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h2 className="font-serif text-3xl sm:text-4xl text-white mb-4">Book Your Virtual Session</h2>
-          <p className="text-white/70 max-w-xl mx-auto mb-8">100M+ views, 80K+ followers — personally conducted by Vastuvid KK Nagaich.</p>
+          <p className="text-white/70 max-w-xl mx-auto mb-8">100M+ views, 80K+ followers — personally conducted by AstroVastu Expert KK Nagaich.</p>
           <Link href="/bookings" className="luxury-button text-lg">Schedule Now →</Link>
         </div>
       </section>
@@ -14251,7 +14251,7 @@ function HeroSection({ onCtaClick }: { onCtaClick: () => void }) {
           <span className="bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red bg-clip-text text-transparent">VedicVastuUrja</span>
           <br />
           <span className="text-prakash-gold text-2xl sm:text-3xl md:text-4xl mt-2 block">
-            Guided by <span className="text-white">Vastuvid K.K. Nagaich</span>
+            Guided by <span className="text-white">AstroVastu Expert K.K. Nagaich</span>
           </span>
         </motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="text-base sm:text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 px-4">
@@ -14920,7 +14920,7 @@ export default function InsightsPage() {
               <AnimatedText text="Sacred Archives" className="font-serif text-5xl md:text-7xl lg:text-8xl text-nidra-indigo mb-4" />
               <GradientText text="Ancient Knowledge for Modern Living" className="font-serif text-2xl md:text-3xl mb-6 block" />
               <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-lg text-nidra-indigo/70 max-w-2xl mx-auto">
-                Explore articles on Vastu Shastra, numerology, and Vedic astrology — written by Vastuvid KK Nagaich.
+                Explore articles on Vastu Shastra, numerology, and Vedic astrology — written by AstroVastu Expert KK Nagaich.
               </motion.p>
             </div>
           </section>
@@ -15106,7 +15106,7 @@ export default function SolutionConnectionSVG() {
       <g transform="translate(120, 60)">
         <rect x="0" y="0" width="160" height="110" rx="10" fill="#1a252f" stroke="#f1c40f" strokeWidth="2" filter="url(#glow)" />
         <rect x="6" y="6" width="148" height="92" rx="6" fill="#0d1b2a" />
-        {/* Screen content – face of Vastuvid */}
+        {/* Screen content – face of AstroVastu Expert */}
         <circle cx="80" cy="45" r="25" fill="#d4a373" />
         <circle cx="72" cy="40" r="3" fill="#2c3e50" />
         <circle cx="88" cy="40" r="3" fill="#2c3e50" />
@@ -15131,7 +15131,7 @@ export default function SolutionConnectionSVG() {
         <rect x="18" y="25" width="12" height="25" rx="4" fill="#2980b9" />
       </g>
 
-      {/* Connection lines from computer to Vastuvid on right */}
+      {/* Connection lines from computer to AstroVastu Expert on right */}
       <path d="M280 110 Q380 50 480 110" stroke="#f1c40f" strokeWidth="2" fill="none" opacity="0.7">
         <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
       </path>
@@ -15142,7 +15142,7 @@ export default function SolutionConnectionSVG() {
         <animate attributeName="opacity" values="0.2;1;0.2" dur="1.3s" repeatCount="indefinite" />
       </circle>
 
-      {/* Vastuvid on right side */}
+      {/* AstroVastu Expert on right side */}
       <g transform="translate(480, 60)" className="float">
         {/* Head */}
         <circle cx="0" cy="0" r="30" fill="#d4a373" stroke="#f1c40f" strokeWidth="2" filter="url(#glow)" />
@@ -15198,7 +15198,7 @@ const fallbackData: HomeSection = {
   id: 'acharya_vow',
   section_key: 'acharya_vow',
   title: 'The Only Vastu Expert in India with Tantra, MBA & 4‑Generation Lineage',
-  subtitle: 'The Sacred Vow of Vastuvid K.K. Nagaich',
+  subtitle: 'The Sacred Vow of AstroVastu Expert K.K. Nagaich',
   description: 'Trained Tantra Sadhak who personally performs every ritual. MBA & former CEO – maps Vastu defects directly to business metrics. Rooted in an unbroken Guru‑Shishya Parampara from the Siddh Peeth of the Himalaya. 100M+ views, 80K+ followers, 2L+ clients across 50+ countries.',
   button_text: 'Discover Our Lineage',
   button_link: '/about',
@@ -15232,11 +15232,11 @@ export function AcharyaVow() {
           <motion.div style={isMounted ? { scale } : undefined} className="relative order-2 md:order-1">
             <div className="relative w-full max-w-md rounded-3xl overflow-hidden shadow-2xl border-4 border-prakash-gold/30">
               <div className="relative h-[400px] sm:h-[500px] md:h-[550px] w-full">
-                <Image src="/images/home/acharya-portrait.jpg" alt="Vastuvid K.K. Nagaich – 4th Generation Vastu Guru, Tantra Sadhak, MBA, former CEO" fill className="object-cover object-center" priority sizes="(max-width: 768px) 100vw, 50vw" />
+                <Image src="/images/home/acharya-portrait.jpg" alt="AstroVastu Expert K.K. Nagaich – 4th Generation Vastu Guru, Tantra Sadhak, MBA, former CEO" fill className="object-cover object-center" priority sizes="(max-width: 768px) 100vw, 50vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-nidra-indigo/40 via-transparent to-transparent" />
               </div>
               <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-white">
-                <p className="font-serif text-2xl sm:text-3xl lg:text-4xl drop-shadow-lg tracking-tight">Vastuvid K.K. Nagaich</p>
+                <p className="font-serif text-2xl sm:text-3xl lg:text-4xl drop-shadow-lg tracking-tight">AstroVastu Expert K.K. Nagaich</p>
                 <p className="text-sm sm:text-base opacity-90 drop-shadow mt-1 tracking-wider uppercase">4th Generation · Tantra Sadhak · MBA · Ex‑CEO</p>
               </div>
             </div>
@@ -15399,8 +15399,8 @@ const fallbackHero: HeroSection = {
   section_key: 'hero',
   title: 'प्राचीन ज्ञान · शाश्वत सद्भाव',
   subtitle: 'Ancient Wisdom · Eternal Harmony',
-  description: 'Vastuvid K.K. Nagaich – 4th generation Vastu Guru, Tantra Sadhak, MBA, former CEO. Rooted in the Guru‑Shishya Parampara, he personally performs every ritual and has transformed over 2 Lakh lives across 50+ countries. Experience the divine science of Vedic architecture.',
-  button_text: 'Consult Vastuvid ji',
+  description: 'AstroVastu Expert K.K. Nagaich – 4th generation Vastu Guru, Tantra Sadhak, MBA, former CEO. Rooted in the Guru‑Shishya Parampara, he personally performs every ritual and has transformed over 2 Lakh lives across 50+ countries. Experience the divine science of Vedic architecture.',
+  button_text: 'Consult AstroVastu Expert ji',
   button_link: '/contact',
   secondary_button_text: 'Explore Sacred Tools',
   secondary_button_link: '/free-tools',
@@ -15579,7 +15579,7 @@ export function FinalCTA() {
                 transition={{ delay: 0.3 }}
                 className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed"
               >
-                Book a private consultation with Vastuvid K.K. Nagaich and discover how Vedic wisdom can 
+                Book a private consultation with AstroVastu Expert K.K. Nagaich and discover how Vedic wisdom can 
                 transform your home, business, and life. Over 2 lakh clients across 50+ countries have 
                 experienced the power of authentic Vastu Shastra.
               </motion.p>
@@ -16008,7 +16008,7 @@ export function LearnVastuTeaser() {
   return (
     <section className="py-24 bg-white text-center">
       <h2 className="font-serif text-3xl sm:text-4xl text-nidra-indigo mb-4">Master the Sacred Science of Vastu</h2>
-      <p className="text-nidra-indigo/60 max-w-2xl mx-auto mb-8">Online courses taught by Vastuvid KK Nagaich.</p>
+      <p className="text-nidra-indigo/60 max-w-2xl mx-auto mb-8">Online courses taught by AstroVastu Expert KK Nagaich.</p>
       <Link href="/learn-vastu" className="luxury-button">Browse Courses</Link>
     </section>
   );
@@ -16122,7 +16122,7 @@ export function SacredServices() {
             <div className="rounded-[38px] bg-gradient-to-br from-[#1A0A2E] to-[#2E0A0A] p-8 text-white">
               <svg className="w-12 h-12 mx-auto mb-4 text-prakash-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
               <h3 className="font-serif text-2xl mb-2">Full Kundali Analysis</h3>
-              <p className="text-sm text-white/70 mb-2">100‑Page Detailed Report by Vastuvid K.K. Nagaich</p>
+              <p className="text-sm text-white/70 mb-2">100‑Page Detailed Report by AstroVastu Expert K.K. Nagaich</p>
               <p className="text-3xl font-bold text-prakash-gold mb-4">₹5,999</p>
               <a href="https://wa.me/916393570832?text=I%20want%20the%20full%20Kundali%20analysis%20report" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-prakash-gold to-sacred-saffron text-nidra-indigo font-bold rounded-full shadow-lg hover:shadow-xl transition-shadow">
@@ -16272,7 +16272,7 @@ const allServices: ServiceItem[] = [
   },
   {
     id: 'virtual-consult', title: 'Virtual Consult', tagline: 'Personalised Video Session',
-    description: 'Live one‑on‑one video consultation with Vastuvid K.K. Nagaich',
+    description: 'Live one‑on‑one video consultation with AstroVastu Expert K.K. Nagaich',
     features: ['60‑min personalised session', 'Screen‑share floor plan analysis', 'Post‑session written report', 'Priority follow‑up booking'],
     href: '/bookings', image: '/images/services/placeholders/new-construction.png',
     category: 'vedic', accent: '#0891B2', textColor: '#FFFFFF',
@@ -17837,7 +17837,7 @@ export default function Footer() {
               </p>
               <p className="mt-2 text-xs text-white/60">
                 Registered Business: Vedic Vastu Urja<br />
-                Vastuvid K.K. Nagaich — MBA, Ex‑CEO<br />
+                AstroVastu Expert K.K. Nagaich — MBA, Ex‑CEO<br />
                 4th Generation Vastu Guru
               </p>
               {/* Social icons */}
@@ -18664,7 +18664,7 @@ export default function Header() {
           : <span className="font-serif text-xl sm:text-2xl text-white font-bold tracking-wide drop-shadow-lg">VedicUrja<span className="text-yellow-400">.</span></span>}
         </Link>
         <div className="flex items-center gap-3 flex-shrink-0">
-          <Link href="/contact" className="cta-btn hidden sm:inline-flex">Consult Vastuvid ji</Link>
+          <Link href="/contact" className="cta-btn hidden sm:inline-flex">Consult AstroVastu Expert ji</Link>
           <button onClick={() => setMenuOpen(true)} className="menu-btn" aria-label="Open menu"><span /></button>
         </div>
       </header>
@@ -18710,7 +18710,7 @@ export default function Header() {
                 </div>
               </nav>
               <div className="drawer-footer">
-                <Link href="/contact" onClick={() => setMenuOpen(false)} className="block w-full text-center py-4 rounded-full text-base uppercase tracking-wide font-bold text-white cta-btn">Consult Vastuvid ji</Link>
+                <Link href="/contact" onClick={() => setMenuOpen(false)} className="block w-full text-center py-4 rounded-full text-base uppercase tracking-wide font-bold text-white cta-btn">Consult AstroVastu Expert ji</Link>
               </div>
             </motion.div>
           </>
@@ -18955,7 +18955,7 @@ export default function Header() {
           {/* Right Side */}
           <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0 ml-3">
             <LanguageSwitcher />
-            <Link href="/contact" className="hidden sm:inline-flex cta-btn">Consult Vastuvid ji</Link>
+            <Link href="/contact" className="hidden sm:inline-flex cta-btn">Consult AstroVastu Expert ji</Link>
             <button onClick={() => setMobileMenuOpen(true)} className="lg:hidden w-9 h-9 rounded-lg flex items-center justify-center text-white border border-white/20 bg-white/10 hover:bg-white/20 transition">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
@@ -18989,7 +18989,7 @@ export default function Header() {
                 ))}
               </nav>
               <div className="mt-auto pt-6 border-t border-white/20">
-                <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block w-full text-center py-4 rounded-full text-lg uppercase tracking-wide font-bold text-white cta-btn">Consult Vastuvid ji</Link>
+                <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block w-full text-center py-4 rounded-full text-lg uppercase tracking-wide font-bold text-white cta-btn">Consult AstroVastu Expert ji</Link>
               </div>
             </div>
           </motion.div>
@@ -19053,7 +19053,7 @@ import { motion } from 'framer-motion';
 export default function ProcessSteps() {
   const steps = [
     { num: '01', title: 'Share Your Concern', desc: 'Tell us your pain points — no Vastu jargon needed. We speak your language.' },
-    { num: '02', title: 'Detailed Audit', desc: 'Vastuvid KK Nagaich personally analyses your space, floor plan, or birth chart.' },
+    { num: '02', title: 'Detailed Audit', desc: 'AstroVastu Expert KK Nagaich personally analyses your space, floor plan, or birth chart.' },
     { num: '03', title: 'Precision Remedies', desc: 'Receive personalised, non‑destructive corrections with ritual execution if needed.' },
     { num: '04', title: 'Transformation', desc: 'Witness measurable improvements in health, wealth, relationships, and peace.' },
   ];
@@ -19149,7 +19149,7 @@ export default function VirtualConsultCTA() {
                 Can't Visit In Person?
               </h2>
               <p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-8">
-                Book a secure virtual consultation with Vastuvid KK Nagaich — screen sharing, real‑time analysis, and personalised remedies from anywhere in the world.
+                Book a secure virtual consultation with AstroVastu Expert KK Nagaich — screen sharing, real‑time analysis, and personalised remedies from anywhere in the world.
               </p>
               <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">
                 Book Virtual Consultation →
@@ -19193,7 +19193,7 @@ export default function WhyChooseUs() {
             No Other Expert Possesses
           </h2>
           <p className="text-nidra-indigo/60 max-w-2xl mx-auto text-sm sm:text-base">
-            Vastuvid KK Nagaich uniquely combines Tantra mastery, MBA‑grade business acumen, and 4th‑generation Vedic lineage — a trio unmatched by any other consultant in India.
+            AstroVastu Expert KK Nagaich uniquely combines Tantra mastery, MBA‑grade business acumen, and 4th‑generation Vedic lineage — a trio unmatched by any other consultant in India.
           </p>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -20894,8 +20894,8 @@ const headerDict: Record<string, Record<Language, string>> = {
 const heroDict: Record<string, Record<Language, string>> = {
   'hero.title1': { en: 'Ancient Wisdom.', hi: 'प्राचीन ज्ञान।' },
   'hero.title2': { en: 'Modern Precision.', hi: 'आधुनिक परिशुद्धता।' },
-  'hero.subtitle': { en: 'Guided by Vastuvid KK Nagaich.', hi: 'वास्तुविद केके नागाइच द्वारा निर्देशित।' },
-  'hero.cta1': { en: 'Consult Vastuvid', hi: 'वास्तुविद से परामर्श' },
+  'hero.subtitle': { en: 'Guided by AstroVastu Expert KK Nagaich.', hi: 'वास्तुविद केके नागाइच द्वारा निर्देशित।' },
+  'hero.cta1': { en: 'Consult AstroVastu Expert', hi: 'वास्तुविद से परामर्श' },
   'hero.cta2': { en: 'Explore Free Tools', hi: 'मुफ्त उपकरण देखें' },
 };
 
@@ -21087,9 +21087,9 @@ const staticData: Record<string, any[]> = {
     { id: '3', title: 'Land & Plot Selection', description: 'Auspicious foundations', benefits: ['Ideal Orientation','Soil Analysis','Future Prospects'], icon: '🌍', color_gradient: '', is_published: true, order_index: 3 },
   ],
   blog_posts: [
-    { id: '1', title: 'The Science of Vastu', slug: 'science-of-vastu', excerpt: 'Ancient principles meet modern science.', category: 'Vastu Science', read_time: 5, author_name: 'Vastuvid KK Nagaich', is_published: true, featured_image: '/images/blog/vastu-science.svg', content: '' },
-    { id: '2', title: 'Numerology for Beginners', slug: 'numerology-beginners', excerpt: 'Secrets of numbers.', category: 'Numerology', read_time: 4, author_name: 'Vastuvid KK Nagaich', is_published: true, content: '' },
-    { id: '3', title: 'Remedies Without Demolition', slug: 'remedies-without-demolition', excerpt: 'Simple corrections.', category: 'Remedies', read_time: 6, author_name: 'Vastuvid KK Nagaich', is_published: true, content: '' },
+    { id: '1', title: 'The Science of Vastu', slug: 'science-of-vastu', excerpt: 'Ancient principles meet modern science.', category: 'Vastu Science', read_time: 5, author_name: 'AstroVastu Expert KK Nagaich', is_published: true, featured_image: '/images/blog/vastu-science.svg', content: '' },
+    { id: '2', title: 'Numerology for Beginners', slug: 'numerology-beginners', excerpt: 'Secrets of numbers.', category: 'Numerology', read_time: 4, author_name: 'AstroVastu Expert KK Nagaich', is_published: true, content: '' },
+    { id: '3', title: 'Remedies Without Demolition', slug: 'remedies-without-demolition', excerpt: 'Simple corrections.', category: 'Remedies', read_time: 6, author_name: 'AstroVastu Expert KK Nagaich', is_published: true, content: '' },
   ],
   testimonials: [
     { id: '1', client_name: 'Priya Malhotra', location: 'London, UK', content: 'Acharya\'s guidance transformed our home.', rating: 5, verified: true, is_published: true, order_index: 1 },
@@ -21138,11 +21138,11 @@ import { useState, useEffect, useRef } from 'react';
    ================================================================ */
 const staticData: Record<string, any[]> = {
   home_sections: [
-    { id: '1', section_key: 'hero', title: 'Ancient Wisdom.', subtitle: 'Modern Precision.', description: 'Guided by Vastuvid KK Nagaich, rooted in the sacred geometry of Uttar Pradesh.', button_text: 'Consult Vastuvid', button_link: '/contact', secondary_button_text: 'Explore Free Tools', secondary_button_link: '/free-tools', is_published: true, order_index: 1 },
+    { id: '1', section_key: 'hero', title: 'Ancient Wisdom.', subtitle: 'Modern Precision.', description: 'Guided by AstroVastu Expert KK Nagaich, rooted in the sacred geometry of Uttar Pradesh.', button_text: 'Consult AstroVastu Expert', button_link: '/contact', secondary_button_text: 'Explore Free Tools', secondary_button_link: '/free-tools', is_published: true, order_index: 1 },
     { id: '2', section_key: 'acharya_vow', title: 'Guided by Lineage, Driven by Results', subtitle: 'Our Sacred Vow', description: 'For over four decades, our family has preserved the authentic Vastu Shastra traditions.', button_text: 'Discover Our Lineage', button_link: '/about', is_published: true, order_index: 2 },
     { id: '3', section_key: 'virtual_consult', title: 'Connect with Acharya, Virtually', description: 'Secure video consultation from anywhere in the world.', button_text: 'Book Virtual Consultation', button_link: '/bookings', is_published: true, order_index: 8 },
     { id: '4', section_key: 'global_presence', title: 'Global Wisdom, Local Precision', description: 'Our Vastu solutions transcend borders.', button_text: 'Book a Consultation', button_link: '/bookings', is_published: true, order_index: 11 },
-    { id: '5', section_key: 'final_cta', title: 'Begin Your Transformation Today', subtitle: 'Book a private consultation with Vastuvid KK Nagaich.', button_text: 'Schedule Now', button_link: '/bookings', secondary_button_text: 'Try Free AI Tools', secondary_button_link: '/free-tools', is_published: true, order_index: 12 },
+    { id: '5', section_key: 'final_cta', title: 'Begin Your Transformation Today', subtitle: 'Book a private consultation with AstroVastu Expert KK Nagaich.', button_text: 'Schedule Now', button_link: '/bookings', secondary_button_text: 'Try Free AI Tools', secondary_button_link: '/free-tools', is_published: true, order_index: 12 },
   ],
   free_tools: [
     { id: '1', tool_key: 'kundali', title: 'AI Kundali', description: 'Vedic birth chart with nakshatra and planetary positions', icon: '🔮', color: '#FF9933', is_published: true, order_index: 1 },
@@ -21162,7 +21162,7 @@ const staticData: Record<string, any[]> = {
       excerpt: 'Discover how ancient Vastu principles align with modern science to create harmonious living spaces.',
       category: 'Vastu Science',
       read_time: 12,
-      author_name: 'Vastuvid KK Nagaich',
+      author_name: 'AstroVastu Expert KK Nagaich',
       is_published: true,
       featured_image: '/images/blog/vastu-science.svg',
       content: `Vastu Shastra is an ancient Indian architectural philosophy that integrates five fundamental elements—earth (prithvi), water (jal), fire (agni), air (vayu), and space (akash)—to create balanced, harmonious living environments. While many dismiss Vastu as mere superstition, modern scientific research is increasingly validating its core principles.
@@ -21187,7 +21187,7 @@ The Global Impact of Vastu
 
 Over 500+ clients across 15 countries have reported that Vastu corrections led to a 20-30% improvement in overall well-being, as measured by standardised health questionnaires. Commercial spaces aligned with Vastu principles reported a 15% increase in footfall and a 10% reduction in employee absenteeism.
 
-At VedicUrja, Vastuvid KK Nagaich combines this ancient wisdom with modern diagnostics—including EMF meters, geomagnetic compasses, and thermal imaging—to provide a holistic, scientifically grounded Vastu analysis. Whether you're building a new home or seeking to harmonise your existing space, understanding the science behind Vastu empowers you to make informed, beneficial decisions.`
+At VedicUrja, AstroVastu Expert KK Nagaich combines this ancient wisdom with modern diagnostics—including EMF meters, geomagnetic compasses, and thermal imaging—to provide a holistic, scientifically grounded Vastu analysis. Whether you're building a new home or seeking to harmonise your existing space, understanding the science behind Vastu empowers you to make informed, beneficial decisions.`
     },
     {
       id: '2',
@@ -21196,7 +21196,7 @@ At VedicUrja, Vastuvid KK Nagaich combines this ancient wisdom with modern diagn
       excerpt: 'Unlock the secrets of numbers and their influence on your life, career, and destiny.',
       category: 'Numerology',
       read_time: 10,
-      author_name: 'Vastuvid KK Nagaich',
+      author_name: 'AstroVastu Expert KK Nagaich',
       is_published: true,
       content: `Numerology is the ancient study of numbers and their mystical influence on human life. Rooted in Vedic philosophy, numerology assigns specific vibrations to each number, which affect an individual's personality, career, relationships, and destiny. In Vedic numerology, three primary numbers are derived from your birth date: the Psychic Number (or Driver Number), the Destiny Number (or Life Path Number), and the Name Number.
 
@@ -21206,7 +21206,7 @@ Psychic Number (Driver Number): This is derived from your birth day (e.g., if bo
 
 Destiny Number (Life Path Number): This is the sum of your full birth date (DD+MM+YYYY). It indicates your life's purpose, the path you are destined to walk, and the challenges you'll face. For example, a Destiny Number 5 signifies a life of freedom, adventure, and constant change. Knowing your Destiny Number guides major life decisions, from career choices to relationships.
 
-Name Number: Each letter carries a numerical value (A=1, B=2, …, Z=8). The total of your name influences your public image and outward personality. Vastuvid KK Nagaich often recommends subtle name adjustments (adding or removing a letter) to harmonise with your Psychic and Destiny Numbers.
+Name Number: Each letter carries a numerical value (A=1, B=2, …, Z=8). The total of your name influences your public image and outward personality. AstroVastu Expert KK Nagaich often recommends subtle name adjustments (adding or removing a letter) to harmonise with your Psychic and Destiny Numbers.
 
 Practical Applications of Numerology
 
@@ -21222,7 +21222,7 @@ Real-World Results
 
 Clients of VedicUrja have reported tangible benefits after applying numerological corrections. A Delhi-based businessman with a Psychic Number 7, after changing his company's name to vibrate at Number 5, saw a 40% revenue increase within six months. Similarly, a couple struggling with compatibility issues found harmony after adopting numerologically suggested lifestyle adjustments.
 
-In conclusion, Vedic numerology is not mere superstition; it is a practical tool for self-awareness and strategic living. Vastuvid KK Nagaich, with his expertise, can provide a detailed numerological analysis to help you unlock your true potential.`
+In conclusion, Vedic numerology is not mere superstition; it is a practical tool for self-awareness and strategic living. AstroVastu Expert KK Nagaich, with his expertise, can provide a detailed numerological analysis to help you unlock your true potential.`
     },
     {
       id: '3',
@@ -21231,9 +21231,9 @@ In conclusion, Vedic numerology is not mere superstition; it is a practical tool
       excerpt: 'Powerful Vastu corrections that require no structural change yet bring profound transformation.',
       category: 'Remedies',
       read_time: 11,
-      author_name: 'Vastuvid KK Nagaich',
+      author_name: 'AstroVastu Expert KK Nagaich',
       is_published: true,
-      content: `One of the greatest misconceptions about Vastu Shastra is that rectifying a defect requires destructive renovations—breaking walls, shutting doors, or even abandoning the home entirely. In reality, Vedic wisdom offers a vast array of non-invasive remedies that can neutralise negative energies and enhance positive ones without any demolition. Vastuvid KK Nagaich has spent decades refining these techniques, blending ancient knowledge with modern practicality.
+      content: `One of the greatest misconceptions about Vastu Shastra is that rectifying a defect requires destructive renovations—breaking walls, shutting doors, or even abandoning the home entirely. In reality, Vedic wisdom offers a vast array of non-invasive remedies that can neutralise negative energies and enhance positive ones without any demolition. AstroVastu Expert KK Nagaich has spent decades refining these techniques, blending ancient knowledge with modern practicality.
 
 Understanding Vastu Defects (Doshas)
 
@@ -21266,9 +21266,9 @@ Behavioural and Colour Remedies
 
 Case Studies
 
-A family in Lucknow had a toilet in the northeast, causing chronic health issues. Vastuvid KK Nagaich recommended placing a copper pyramid beneath the toilet floor and painting the walls a pale yellow. Within three months, health improved significantly. Another client's business was failing due to a south-facing entrance; after installing a Vastu yantra at the door and adding a small water feature in the north, revenue doubled in a year.
+A family in Lucknow had a toilet in the northeast, causing chronic health issues. AstroVastu Expert KK Nagaich recommended placing a copper pyramid beneath the toilet floor and painting the walls a pale yellow. Within three months, health improved significantly. Another client's business was failing due to a south-facing entrance; after installing a Vastu yantra at the door and adding a small water feature in the north, revenue doubled in a year.
 
-Vastu remedies are not magic; they are precise energy corrections. With the guidance of an expert like Vastuvid KK Nagaich, you can transform your living or working space without ever picking up a hammer.`
+Vastu remedies are not magic; they are precise energy corrections. With the guidance of an expert like AstroVastu Expert KK Nagaich, you can transform your living or working space without ever picking up a hammer.`
     },
   ],
   testimonials: [
@@ -21403,7 +21403,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const faqs = [
   { q: 'What is Vastu Shastra?', a: 'Vastu Shastra is the ancient Indian science of architecture and spatial harmony, balancing the five elements for well‑being and prosperity.' },
-  { q: 'How does virtual consultation work?', a: 'You share your floor plan via screen share, and Vastuvid KK Nagaich provides real‑time analysis and remedies.' },
+  { q: 'How does virtual consultation work?', a: 'You share your floor plan via screen share, and AstroVastu Expert KK Nagaich provides real‑time analysis and remedies.' },
   { q: 'Are remedies destructive?', a: 'No. We focus on simple, non‑invasive corrections using colors, elements, and symbols.' },
   { q: 'How long does a consultation take?', a: 'Typically 60‑90 minutes for residential, 2 hours for commercial.' },
   { q: 'Do I need to be present?', a: 'Yes, you will guide Acharya through your space via video call.' },
@@ -22292,7 +22292,7 @@ const comparisons = [
       'Detailed Yogas identification (Raj Yoga, Dhana Yoga, etc.)',
       'Personalised gemstone & Rudraksha recommendation',
       'Mantra, Yantra, and remedial puja prescription',
-      'One‑on‑one consultation with Vastuvid K.K. Nagaich',
+      'One‑on‑one consultation with AstroVastu Expert K.K. Nagaich',
       'Suitable for life decisions – career, marriage, health, investments',
     ],
     serviceLink: '/bookings',
@@ -22319,7 +22319,7 @@ const comparisons = [
       'Meaning analysis in Sanskrit and native language',
       'Guna‑dosha evaluation of each suggested name',
       'Muhurat for naming ceremony if required',
-      'Direct consultation with Vastuvid K.K. Nagaich',
+      'Direct consultation with AstroVastu Expert K.K. Nagaich',
     ],
     serviceLink: '/bookings',
   },
@@ -22364,7 +22364,7 @@ function ComparisonCard({ item, index }: { item: typeof comparisons[0]; index: n
             {/* Acharya Service column */}
             <div className="rounded-2xl bg-gradient-to-br from-sacred-saffron/5 via-prakash-gold/10 to-white/80 p-5 sm:p-6 border border-prakash-gold/30 relative overflow-hidden">
               <div className="absolute -top-2 left-1/2 -translate-x-1/2 bg-gradient-to-r from-sacred-saffron to-prakash-gold text-white text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap shadow-lg">
-                Performed by Vastuvid K.K. Nagaich
+                Performed by AstroVastu Expert K.K. Nagaich
               </div>
               <div className="mt-4">
                 <div className="flex items-center gap-3 mb-4">
@@ -22423,7 +22423,7 @@ export default function PremiumComparison3D() {
             <span className="bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red bg-clip-text text-transparent">Consult the Acharya</span>
           </h2>
           <p className="text-nidra-indigo/60 max-w-2xl mx-auto text-sm sm:text-base">
-            Our free AI tools run on predefined algorithms. For personalised, in‑depth analysis with lifelong remedies, Vastuvid K.K. Nagaich personally performs each expert service.
+            Our free AI tools run on predefined algorithms. For personalised, in‑depth analysis with lifelong remedies, AstroVastu Expert K.K. Nagaich personally performs each expert service.
           </p>
         </motion.div>
 

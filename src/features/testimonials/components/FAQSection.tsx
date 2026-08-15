@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const faqs = [
   { q: 'What is Vastu Shastra?', a: 'Vastu Shastra is the ancient Indian science of architecture and spatial harmony, balancing the five elements for well‑being and prosperity.' },
-  { q: 'How does virtual consultation work?', a: 'You share your floor plan via screen share, and Vastuvid KK Nagaich provides real‑time analysis and remedies.' },
+  { q: 'How does virtual consultation work?', a: 'You share your floor plan via screen share, and AstroVastu Expert KK Nagaich provides real‑time analysis and remedies.' },
   { q: 'Are remedies destructive?', a: 'No. We focus on simple, non‑invasive corrections using colors, elements, and symbols.' },
   { q: 'How long does a consultation take?', a: 'Typically 60‑90 minutes for residential, 2 hours for commercial.' },
   { q: 'Do I need to be present?', a: 'Yes, you will guide Acharya through your space via video call.' },

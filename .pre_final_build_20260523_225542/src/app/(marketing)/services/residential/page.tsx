@@ -171,7 +171,7 @@ function WhyChooseVedicUrja() {
             {' '}No Other Expert Possesses
           </h2>
           <p className="text-nidra-indigo/60 max-w-2xl mx-auto text-sm sm:text-base">
-            Vastuvid KK Nagaich uniquely combines Tantra mastery, MBA‑grade business acumen, and 4th‑generation Vedic lineage – a trio unmatched by any other consultant in India, especially in Uttar Pradesh.
+            AstroVastu Expert KK Nagaich uniquely combines Tantra mastery, MBA‑grade business acumen, and 4th‑generation Vedic lineage – a trio unmatched by any other consultant in India, especially in Uttar Pradesh.
           </p>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -215,7 +215,7 @@ function YourJourneySection() {
     {
       step: '02',
       title: 'Acharya Reviews',
-      desc: 'Vastuvid KK Nagaich personally analyzes every layout for Vastu defects & energy imbalances.',
+      desc: 'AstroVastu Expert KK Nagaich personally analyzes every layout for Vastu defects & energy imbalances.',
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" strokeLinecap="round" strokeLinejoin="round"/>
@@ -298,7 +298,7 @@ export default function ResidentialVastuPage() {
               <span className="bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red bg-clip-text text-transparent">Residential Vastu</span>
             </h1>
             <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-4">For flats, apartments, independent houses & government quarters.</p>
-            <p className="text-sm text-white/50 max-w-2xl mx-auto mb-10">100M+ views · 80K+ followers · Vastuvid KK Nagaich — Tantra‑trained, MBA, Ex‑CEO, 4th‑gen Guru, Best Vastu Expert in Uttar Pradesh.</p>
+            <p className="text-sm text-white/50 max-w-2xl mx-auto mb-10">100M+ views · 80K+ followers · AstroVastu Expert KK Nagaich — Tantra‑trained, MBA, Ex‑CEO, 4th‑gen Guru, Best Vastu Expert in Uttar Pradesh.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="https://wa.me/916393570832?text=Hi%20VedicUrja,%20I%20want%20to%20book%20a%20Residential%20Vastu%20consultation" target="_blank" rel="noopener noreferrer" className="px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_30px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_45px_rgba(255,153,51,0.5)] transition-all text-lg">
                 Book via WhatsApp
@@ -434,7 +434,7 @@ export default function ResidentialVastuPage() {
           <div className="container mx-auto px-4 relative z-10 text-center">
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Experience the VedicUrja Difference</h2>
             <p className="text-white/70 text-lg max-w-2xl mx-auto mb-8">
-              Vastuvid KK Nagaich – <strong className="text-prakash-gold">100M+ views, 80K+ followers, MBA, Ex‑CEO, 4th‑generation Tantra‑trained Vastu Guru</strong> – personally performs every residential audit. No delegation. No generic reports.
+              AstroVastu Expert KK Nagaich – <strong className="text-prakash-gold">100M+ views, 80K+ followers, MBA, Ex‑CEO, 4th‑generation Tantra‑trained Vastu Guru</strong> – personally performs every residential audit. No delegation. No generic reports.
             </p>
             <a href="https://wa.me/916393570832?text=Hi%20VedicUrja,%20I%20want%20to%20book%20a%20Residential%20Vastu%20consultation" target="_blank" rel="noopener noreferrer" className="inline-block px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">
               Schedule Your Residential Audit →

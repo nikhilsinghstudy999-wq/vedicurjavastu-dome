@@ -38,7 +38,7 @@ export default function InstagramReelsShowcase() {
             Viral Wisdom
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-nidra-indigo mt-3 mb-4">
-            Watch Vastuvid in Action
+            Watch AstroVastu Expert in Action
           </h2>
           <p className="text-nidra-indigo/60 max-w-2xl mx-auto text-sm sm:text-base">
             Real remedies, rituals and insights – seen by millions

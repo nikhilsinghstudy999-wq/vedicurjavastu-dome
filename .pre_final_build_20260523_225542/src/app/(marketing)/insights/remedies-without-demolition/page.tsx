@@ -40,7 +40,7 @@ export default function BlogPage() {
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
                 <span>11 min read</span>
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
-                <span>By Vastuvid KK Nagaich</span>
+                <span>By AstroVastu Expert KK Nagaich</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
@@ -258,7 +258,7 @@ export default function BlogPage() {
                   <h2 className="font-serif text-2xl text-nidra-indigo">Conclusion — Your Home Does Not Need to Be Torn Down</h2>
                 </div>
                 <p>Every Vastu dosha — from a toilet in the Northeast to a kitchen in the North, from a South‑facing entrance to a cluttered Brahmasthan — has a documented, effective, and non‑destructive remedy. The ancient science of Vastu Shastra never demanded demolition. It demanded understanding. When you know which element to strengthen, which direction to activate, and which tool to deploy — a salt bowl, a copper pyramid, a red bulb, a crystal, a yantra, or simply decluttering — you can transform your living space without ever lifting a hammer.</p>
-                <p className="font-medium">Vastuvid K.K. Nagaich has spent over 20 years applying these precise, non‑invasive remedies for over 2 lakh clients across 50+ countries — proving every day that the most powerful Vastu corrections are also the simplest.</p>
+                <p className="font-medium">AstroVastu Expert K.K. Nagaich has spent over 20 years applying these precise, non‑invasive remedies for over 2 lakh clients across 50+ countries — proving every day that the most powerful Vastu corrections are also the simplest.</p>
               </div>
 
             </div>
@@ -267,7 +267,7 @@ export default function BlogPage() {
             <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-prakash-gold to-sacred-saffron flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
               <div>
-                <p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p>
+                <p className="font-serif text-lg text-nidra-indigo font-bold">AstroVastu Expert KK Nagaich</p>
                 <p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide</p>
               </div>
             </div>

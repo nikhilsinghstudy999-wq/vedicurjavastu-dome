@@ -42,7 +42,7 @@ export default function BlogPage() {
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
                 <span>10 min read</span>
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
-                <span>By Vastuvid KK Nagaich</span>
+                <span>By AstroVastu Expert KK Nagaich</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
@@ -98,7 +98,7 @@ export default function BlogPage() {
                   </div>
                   <p>Your Name Number is calculated from the letters of your full name using either the <strong>Chaldean</strong> or <strong>Pythagorean</strong> system. Chaldean numerology, the older system originating in Babylonia approximately 4,500 years ago, assigns values 1–8 based on sound vibration (the number 9 is considered sacred and not assigned to letters). Pythagorean numerology, developed in ancient Greece around 2,500 years ago, uses a simpler sequential mapping (A=1, B=2, C=3… I=9, J=1, etc.).</p>
                   <p>Most Vedic numerologists prefer <strong>Chaldean for name analysis</strong> — especially business names — because its sound‑vibration basis aligns naturally with Vedic phonetic principles. The two systems often produce different numbers for the same name; neither is &quot;wrong&quot; — they reveal different vibrational layers.</p>
-                  <p>Vastuvid K.K. Nagaich often recommends <strong>subtle name adjustments</strong> — adding or removing a single letter — to harmonise the Name Number with the Psychic and Destiny Numbers, a practice that has transformed businesses and personal lives alike.</p>
+                  <p>AstroVastu Expert K.K. Nagaich often recommends <strong>subtle name adjustments</strong> — adding or removing a single letter — to harmonise the Name Number with the Psychic and Destiny Numbers, a practice that has transformed businesses and personal lives alike.</p>
                 </div>
               </div>
 
@@ -207,7 +207,7 @@ export default function BlogPage() {
                   <h2 className="font-serif text-2xl text-nidra-indigo">Conclusion — Numbers Are a Language, Not Superstition</h2>
                 </div>
                 <p>Vedic numerology is not fortune‑telling — it is a system of profound self‑awareness. The numbers derived from your birth date and name are not random. They form a code that, when properly understood, reveals your strengths, illuminates your challenges, and guides your most important life decisions. From JC Chaudhry&apos;s ₹7,300 crore success to Radhika Jain&apos;s boutique transformation, the evidence is compelling: when humans align their identity with their numerical blueprint, remarkable things happen.</p>
-                <p className="font-medium">Vastuvid K.K. Nagaich provides comprehensive numerological analysis as part of his Vedic consultation services — combining Driver Number, Destiny Number, Name Number, and Nakshatra analysis into a complete personal blueprint.</p>
+                <p className="font-medium">AstroVastu Expert K.K. Nagaich provides comprehensive numerological analysis as part of his Vedic consultation services — combining Driver Number, Destiny Number, Name Number, and Nakshatra analysis into a complete personal blueprint.</p>
               </div>
 
             </div>
@@ -216,7 +216,7 @@ export default function BlogPage() {
             <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 to-prakash-gold flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
               <div>
-                <p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p>
+                <p className="font-serif text-lg text-nidra-indigo font-bold">AstroVastu Expert KK Nagaich</p>
                 <p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | Numerologist | Served 2 Lakh+ Clients Worldwide</p>
               </div>
             </div>

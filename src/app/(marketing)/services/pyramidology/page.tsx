@@ -17,7 +17,7 @@ export default function PyramidologyPage() {
             <span className="text-prakash-gold uppercase tracking-[0.3em] text-xs sm:text-sm mb-4 block font-semibold">Advance Treatments · उन्नत उपचार</span>
             <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight drop-shadow-2xl"><span className="bg-gradient-to-r from-amber-300 via-prakash-gold to-sacred-saffron bg-clip-text text-transparent">Pyramidology</span></h1>
             <p className="text-base sm:text-lg md:text-xl text-white/70 max-w-3xl mx-auto mb-4 px-4 leading-relaxed">Copper Pyramid Grids · Brass Pyramid Arrays · Crystal Pyramid Placement · 9‑Pyramid Cosmic Energy Array · Bedroom & Workplace Installations · Dosha Zone Correction · Health & Wealth Amplification</p>
-            <p className="text-sm sm:text-base text-white/50 max-w-2xl mx-auto mb-10">Sacred pyramid energy correction — performed by Vastuvid K.K. Nagaich, 4th generation Guru, MBA, Ex‑CEO — for homes, offices, factories, and spiritual spaces.</p>
+            <p className="text-sm sm:text-base text-white/50 max-w-2xl mx-auto mb-10">Sacred pyramid energy correction — performed by AstroVastu Expert K.K. Nagaich, 4th generation Guru, MBA, Ex‑CEO — for homes, offices, factories, and spiritual spaces.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"><Link href="/bookings" className="px-10 py-5 bg-gradient-to-r from-amber-500 via-prakash-gold to-sacred-saffron text-nidra-indigo font-bold rounded-full shadow-[0_10px_30px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_45px_rgba(255,153,51,0.5)] transition-all text-lg">Book Pyramid Consultation</Link><Link href="#practices" className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-10 py-5 rounded-full text-lg font-medium">Explore Practices ↓</Link></div>
           </div>
         </section>
@@ -107,7 +107,7 @@ export default function PyramidologyPage() {
             <div className="max-w-3xl mx-auto text-center">
               <div className="relative rounded-[40px] p-[2px] bg-gradient-to-br from-prakash-gold/30 via-white/10 to-amber-400/30 shadow-[0_25px_60px_rgba(0,0,0,0.4)]">
                 <div className="rounded-[38px] bg-black/20 backdrop-blur-2xl p-8 sm:p-12 md:p-16 border border-white/10 shadow-inner">
-                  <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Let Vastuvid K.K. Nagaich Design Your Pyramid Energy Grid</h2>
+                  <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Let AstroVastu Expert K.K. Nagaich Design Your Pyramid Energy Grid</h2>
                   <p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10">Book a private Pyramidology consultation — performed personally by a 4th‑generation Vastu Guru, MBA, Ex‑CEO with 20+ years of clinical practice and 2 Lakh+ clients worldwide.</p>
                   <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-amber-500 via-prakash-gold to-sacred-saffron text-nidra-indigo font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">Schedule Your Pyramid Consultation →</Link>
                 </div>

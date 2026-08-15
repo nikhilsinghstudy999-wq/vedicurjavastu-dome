@@ -21,7 +21,7 @@ export default function SolutionConnectionSVG() {
       <g transform="translate(120, 60)">
         <rect x="0" y="0" width="160" height="110" rx="10" fill="#1a252f" stroke="#f1c40f" strokeWidth="2" filter="url(#glow)" />
         <rect x="6" y="6" width="148" height="92" rx="6" fill="#0d1b2a" />
-        {/* Screen content – face of Vastuvid */}
+        {/* Screen content – face of AstroVastu Expert */}
         <circle cx="80" cy="45" r="25" fill="#d4a373" />
         <circle cx="72" cy="40" r="3" fill="#2c3e50" />
         <circle cx="88" cy="40" r="3" fill="#2c3e50" />
@@ -46,7 +46,7 @@ export default function SolutionConnectionSVG() {
         <rect x="18" y="25" width="12" height="25" rx="4" fill="#2980b9" />
       </g>
 
-      {/* Connection lines from computer to Vastuvid on right */}
+      {/* Connection lines from computer to AstroVastu Expert on right */}
       <path d="M280 110 Q380 50 480 110" stroke="#f1c40f" strokeWidth="2" fill="none" opacity="0.7">
         <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
       </path>
@@ -57,7 +57,7 @@ export default function SolutionConnectionSVG() {
         <animate attributeName="opacity" values="0.2;1;0.2" dur="1.3s" repeatCount="indefinite" />
       </circle>
 
-      {/* Vastuvid on right side */}
+      {/* AstroVastu Expert on right side */}
       <g transform="translate(480, 60)" className="float">
         {/* Head */}
         <circle cx="0" cy="0" r="30" fill="#d4a373" stroke="#f1c40f" strokeWidth="2" filter="url(#glow)" />

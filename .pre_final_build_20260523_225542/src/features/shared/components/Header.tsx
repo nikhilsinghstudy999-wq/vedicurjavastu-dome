@@ -364,7 +364,7 @@ export default function Header() {
 
               <div className="drawer-footer">
                 <Link href="/contact" onClick={() => setMenuOpen(false)} className="block w-full text-center py-4 rounded-full text-base uppercase tracking-wide font-bold text-white cta-btn">
-                  Consult Vastuvid ji
+                  Consult AstroVastu Expert ji
                 </Link>
               </div>
             </motion.div>

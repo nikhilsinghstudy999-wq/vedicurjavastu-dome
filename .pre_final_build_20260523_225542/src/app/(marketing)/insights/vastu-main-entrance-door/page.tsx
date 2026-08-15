@@ -41,7 +41,7 @@ export default function BlogPage() {
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
                 <span>9 min read</span>
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
-                <span>By Vastuvid KK Nagaich</span>
+                <span>By AstroVastu Expert KK Nagaich</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
@@ -189,7 +189,7 @@ export default function BlogPage() {
                   <div className="h-10 w-1.5 rounded-full bg-gradient-to-b from-purple-400 to-pink-500" />
                   <h2 className="font-serif text-2xl sm:text-3xl text-nidra-indigo">Case Study — The South‑Facing Entrance That Doubled Revenue</h2>
                 </div>
-                <p>A family‑run textile business in Surat operated from a south‑facing shop for 12 years with consistently declining sales. The south entrance, receiving intense afternoon radiation, made the shop uncomfortably hot by 2 PM — driving customers away during peak shopping hours. Vastuvid K.K. Nagaich was called in. Rather than relocating, he prescribed: a Vastu Purush Yantra buried at the threshold, the door colour changed from black to a warm dark brown, a water feature installed in the northeast corner, and a brass Swastik placed above the door frame.</p>
+                <p>A family‑run textile business in Surat operated from a south‑facing shop for 12 years with consistently declining sales. The south entrance, receiving intense afternoon radiation, made the shop uncomfortably hot by 2 PM — driving customers away during peak shopping hours. AstroVastu Expert K.K. Nagaich was called in. Rather than relocating, he prescribed: a Vastu Purush Yantra buried at the threshold, the door colour changed from black to a warm dark brown, a water feature installed in the northeast corner, and a brass Swastik placed above the door frame.</p>
                 <p>Within <strong>four months</strong>, footfall increased by approximately 40%, and the average customer dwell time doubled — because the shop was now thermally comfortable during afternoon hours. The business, which had been considering closure, went on to open a second location within two years. This case demonstrates that even the most "inauspicious" entrance direction can be corrected without demolition — when the remedies are precise and the principles are understood.</p>
               </div>
 
@@ -200,7 +200,7 @@ export default function BlogPage() {
                   <h2 className="font-serif text-2xl text-nidra-indigo">Conclusion — Your Door Is Your Destiny</h2>
                 </div>
                 <p>The main entrance is not merely the point where you enter your home. It is where opportunity enters your life. Every element — direction, size, material, colour, threshold, and surrounding environment — contributes to a cumulative energetic effect that shapes your family's prosperity, health, and harmony. The 2024 CFD study confirmed scientifically what Vedic architects encoded into scripture: door placement is not arbitrary. It is a measurable, optimisable variable in the physics of human habitation. Whether your door faces North, East, West, or South — there is always a correct configuration and a proven remedy. The question is not whether your entrance is perfect — it is whether you have applied the right corrections.</p>
-                <p className="font-medium">Vastuvid K.K. Nagaich provides comprehensive entrance Vastu analysis as part of every residential and commercial consultation — including exact pada measurement, dosha identification, and personalised remedy prescription.</p>
+                <p className="font-medium">AstroVastu Expert K.K. Nagaich provides comprehensive entrance Vastu analysis as part of every residential and commercial consultation — including exact pada measurement, dosha identification, and personalised remedy prescription.</p>
               </div>
 
             </div>
@@ -209,7 +209,7 @@ export default function BlogPage() {
             <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-prakash-gold to-sacred-saffron flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
               <div>
-                <p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p>
+                <p className="font-serif text-lg text-nidra-indigo font-bold">AstroVastu Expert KK Nagaich</p>
                 <p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide</p>
               </div>
             </div>

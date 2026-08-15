@@ -81,7 +81,7 @@ export function SacredServices() {
             <div className="rounded-[38px] bg-gradient-to-br from-[#1A0A2E] to-[#2E0A0A] p-8 text-white">
               <svg className="w-12 h-12 mx-auto mb-4 text-prakash-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
               <h3 className="font-serif text-2xl mb-2">Full Kundali Analysis</h3>
-              <p className="text-sm text-white/70 mb-2">100‑Page Detailed Report by Vastuvid K.K. Nagaich</p>
+              <p className="text-sm text-white/70 mb-2">100‑Page Detailed Report by AstroVastu Expert K.K. Nagaich</p>
               <div className="text-center mb-4">
                 <span className="line-through text-white/50 text-xl mr-2"><span className="line-through text-gray-400 text-xl mr-2">₹5,999</span> <span className="text-3xl font-bold text-prakash-gold"></span></span>
                 <span className="text-prakash-gold text-4xl font-bold">₹999</span>

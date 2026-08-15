@@ -32,7 +32,7 @@ export function AcharyaVow() {
             <div className="relative w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-prakash-gold/30">
               <Image
                 src="/images/home/acharya-portrait.webp"
-                alt="Vastuvid K.K. Nagaich – Best Vastu Expert in India, 4th Generation Guru"
+                alt="AstroVastu Expert K.K. Nagaich – Best Vastu Expert in India, 4th Generation Guru"
                 width={600}
                 height={750}
                 className="w-full h-auto object-cover"
@@ -40,7 +40,7 @@ export function AcharyaVow() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-nidra-indigo/40 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                <p className="font-serif text-2xl sm:text-3xl drop-shadow-lg">Vastuvid K.K. Nagaich</p>
+                <p className="font-serif text-2xl sm:text-3xl drop-shadow-lg">AstroVastu Expert K.K. Nagaich</p>
                 <p className="text-sm opacity-90 mt-1">4th Generation · Tantra Sadhak · MBA · Former CEO</p>
               </div>
             </div>
@@ -55,7 +55,7 @@ export function AcharyaVow() {
               India's Most‑Watched Vastu Authority
             </h2>
             <p className="text-base sm:text-lg text-nidra-indigo/80 leading-relaxed mb-8">
-              Vastuvid K.K. Nagaich is the only Vastu expert in India who is a trained Tantra Sadhak, MBA, and former CEO. Every ritual is performed by his own hands, every consultation backed by 4‑generation lineage and modern business insight.
+              AstroVastu Expert K.K. Nagaich is the only Vastu expert in India who is a trained Tantra Sadhak, MBA, and former CEO. Every ritual is performed by his own hands, every consultation backed by 4‑generation lineage and modern business insight.
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">

@@ -41,7 +41,7 @@ export default function BlogPage() {
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
                 <span>11 min read</span>
                 <span className="w-1 h-1 bg-white/30 rounded-full" />
-                <span>By Vastuvid KK Nagaich</span>
+                <span>By AstroVastu Expert KK Nagaich</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
@@ -61,7 +61,7 @@ export default function BlogPage() {
             <div className="prose prose-lg prose-stone max-w-none">
 
               <p className="lead text-xl text-nidra-indigo/70 leading-relaxed">
-                Every business owner understands that location, product quality, and team talent drive success. But according to Vastu Shastra — the ancient Indian science of spatial energy — there is a fourth, invisible factor that can either amplify or sabotage all three: <strong>office layout</strong>. Research published by AECO Design &amp; Architecture Insights reports that businesses in Bengaluru following Vastu‑compliant office layouts experience <strong>up to 30% higher productivity and revenue</strong> compared to those in Vastu‑neutral configurations. Coohom&apos;s 2026 workspace survey found that strategic entry positioning alone boosts reported team satisfaction by over 23%. The Times of India, Financial Express, and Dwello have all published extensive guidelines confirming that office Vastu is not superstition — it is applied energy management. This article presents the definitive Vastu framework for commercial spaces, grounded in published research and two decades of clinical practice by Vastuvid K.K. Nagaich.
+                Every business owner understands that location, product quality, and team talent drive success. But according to Vastu Shastra — the ancient Indian science of spatial energy — there is a fourth, invisible factor that can either amplify or sabotage all three: <strong>office layout</strong>. Research published by AECO Design &amp; Architecture Insights reports that businesses in Bengaluru following Vastu‑compliant office layouts experience <strong>up to 30% higher productivity and revenue</strong> compared to those in Vastu‑neutral configurations. Coohom&apos;s 2026 workspace survey found that strategic entry positioning alone boosts reported team satisfaction by over 23%. The Times of India, Financial Express, and Dwello have all published extensive guidelines confirming that office Vastu is not superstition — it is applied energy management. This article presents the definitive Vastu framework for commercial spaces, grounded in published research and two decades of clinical practice by AstroVastu Expert K.K. Nagaich.
               </p>
 
               {/* ── Section 1: Entrance ── */}
@@ -169,7 +169,7 @@ export default function BlogPage() {
                   <h2 className="font-serif text-2xl text-nidra-indigo">Conclusion — Your Office Is Your Profit Engine</h2>
                 </div>
                 <p>Every element of commercial Vastu — from the direction your entrance faces, to the zone your CEO occupies, to the wall against which your cash locker rests — contributes to a cumulative energetic effect that either attracts or repels business success. The Bengaluru study showing up to 30% higher productivity in Vastu‑compliant firms is not an anomaly — it is the predictable result of aligning workspace energy with cosmic principles that have been empirically validated for over 5,000 years. Whether you run a small consultancy, a mid‑sized agency, or a large factory, the principles are the same: North for wealth, East for growth, Southwest for stability, and Northeast for clarity. The remedies exist for every dosha — often without structural demolition. The question is not whether your office has Vastu defects — it is whether you are ready to correct them.</p>
-                <p className="font-medium">Vastuvid K.K. Nagaich provides comprehensive commercial Vastu audits — entrance analysis, department zoning, CEO cabin optimisation, cash‑counter energy correction, and industrial workflow alignment — for businesses across India and 50+ countries worldwide.</p>
+                <p className="font-medium">AstroVastu Expert K.K. Nagaich provides comprehensive commercial Vastu audits — entrance analysis, department zoning, CEO cabin optimisation, cash‑counter energy correction, and industrial workflow alignment — for businesses across India and 50+ countries worldwide.</p>
               </div>
 
             </div>
@@ -177,7 +177,7 @@ export default function BlogPage() {
             <div className="mt-12 p-6 bg-white/60 backdrop-blur-md rounded-2xl border border-prakash-gold/20 flex items-center gap-4">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-green-600 to-prakash-gold flex items-center justify-center text-white text-xl font-bold shadow-lg">KK</div>
               <div>
-                <p className="font-serif text-lg text-nidra-indigo font-bold">Vastuvid KK Nagaich</p>
+                <p className="font-serif text-lg text-nidra-indigo font-bold">AstroVastu Expert KK Nagaich</p>
                 <p className="text-sm text-nidra-indigo/60">4th Generation Vastu Guru | MBA | Ex‑CEO | 20+ Years Clinical Practice | 2 Lakh+ Clients Worldwide</p>
               </div>
             </div>

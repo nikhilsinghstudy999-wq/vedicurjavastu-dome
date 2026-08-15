@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 export default function ProcessSteps() {
   const steps = [
     { num: '01', title: 'Share Your Concern', desc: 'Tell us your pain points — no Vastu jargon needed. We speak your language.' },
-    { num: '02', title: 'Detailed Audit', desc: 'Vastuvid KK Nagaich personally analyses your space, floor plan, or birth chart.' },
+    { num: '02', title: 'Detailed Audit', desc: 'AstroVastu Expert KK Nagaich personally analyses your space, floor plan, or birth chart.' },
     { num: '03', title: 'Precision Remedies', desc: 'Receive personalised, non‑destructive corrections with ritual execution if needed.' },
     { num: '04', title: 'Transformation', desc: 'Witness measurable improvements in health, wealth, relationships, and peace.' },
   ];

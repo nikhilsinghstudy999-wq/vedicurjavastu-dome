@@ -82,7 +82,7 @@ export function FinalCTA() {
                 transition={{ delay: 0.3 }}
                 className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed"
               >
-                Book a private consultation with Vastuvid K.K. Nagaich and discover how Vedic wisdom can 
+                Book a private consultation with AstroVastu Expert K.K. Nagaich and discover how Vedic wisdom can 
                 transform your home, business, and life. Over 2 lakh clients across 50+ countries have 
                 experienced the power of authentic Vastu Shastra.
               </motion.p>

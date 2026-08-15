@@ -20,7 +20,7 @@ export default function PeepalTreeRemedyPage() {
                 <span>•</span>
                 <span>8 min read</span>
                 <span>•</span>
-                <span>By Vastuvid KK Nagaich</span>
+                <span>By AstroVastu Expert KK Nagaich</span>
               </div>
               <h1 className="font-serif text-4xl md:text-5xl text-nidra-indigo mb-6">
                 Peepal Tree Growing on House Walls – Signs and Remedies
@@ -106,7 +106,7 @@ export default function PeepalTreeRemedyPage() {
 
             <div className="mt-12 p-6 bg-vastu-stone/20 rounded-2xl border border-prakash-gold/20">
               <h3 className="font-serif text-xl text-nidra-indigo mb-2">Need personal guidance?</h3>
-              <p className="text-nidra-indigo/70 mb-4">Book a consultation with Vastuvid KK Nagaich for a detailed analysis and personalised remedies.</p>
+              <p className="text-nidra-indigo/70 mb-4">Book a consultation with AstroVastu Expert KK Nagaich for a detailed analysis and personalised remedies.</p>
               <Link href="/bookings" className="luxury-button inline-block">Book Consultation →</Link>
             </div>
           </article>

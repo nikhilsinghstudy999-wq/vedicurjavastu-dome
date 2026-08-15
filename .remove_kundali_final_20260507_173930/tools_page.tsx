@@ -140,7 +140,7 @@ function FinalCTASection() {
           <div className="relative rounded-[40px] p-[2px] bg-gradient-to-br from-prakash-gold/30 via-white/10 to-sacred-saffron/30 shadow-[0_25px_60px_rgba(0,0,0,0.4)]">
             <div className="rounded-[38px] bg-black/20 backdrop-blur-2xl p-8 sm:p-12 md:p-16 border border-white/10 shadow-inner">
               <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Ready for Deeper Insight?</h2>
-              <p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10">Book a private consultation with Vastuvid K.K. Nagaich for personalised guidance.</p>
+              <p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-10">Book a private consultation with AstroVastu Expert K.K. Nagaich for personalised guidance.</p>
               <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">Schedule Now →</Link>
             </div>
           </div>

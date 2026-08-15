@@ -12,7 +12,7 @@ const products = [
   { id: 4, name: "Kuber Yantra", category: "Yantras", price: 1299, description: "Energised Kuber Yantra for financial stability and business growth. Place in North direction.", benefits: ["Attracts wealth", "Business growth", "Financial stability"], whatsapp: "Hi, I want to buy the Kuber Yantra (₹1,299). Please guide me.", image: "/images/products/product-4.jpg" },
   { id: 5, name: "Rose Quartz Tree", category: "Crystals", price: 2499, description: "Rose quartz tree of life – harmonises relationships, attracts love, and brings peace.", benefits: ["Harmonises relationships", "Attracts love", "Emotional healing"], whatsapp: "Hi, I want to buy the Rose Quartz Tree (₹2,499). Please guide me.", image: "/images/products/product-5.jpg" },
   { id: 6, name: "Brass Tortoise", category: "Vastu Figurines", price: 899, description: "Brass tortoise for longevity, stability, and career growth. Place in North direction.", benefits: ["Longevity & health", "Career stability", "Protection"], whatsapp: "Hi, I want to buy the Brass Tortoise (₹899). Please guide me.", image: "/images/products/product-6.jpg" },
-  { id: 7, name: "Vastu Dosh Nivaran Yantra", category: "Yantras", price: 1999, description: "Powerful yantra to remove Vastu defects without demolition. Energised by Vastuvid K.K. Nagaich.", benefits: ["Removes Vastu defects", "Balances five elements", "Harmonises space"], whatsapp: "Hi, I want to buy the Vastu Dosh Nivaran Yantra (₹1,999). Please guide me.", image: "/images/products/product-7.jpg" },
+  { id: 7, name: "Vastu Dosh Nivaran Yantra", category: "Yantras", price: 1999, description: "Powerful yantra to remove Vastu defects without demolition. Energised by AstroVastu Expert K.K. Nagaich.", benefits: ["Removes Vastu defects", "Balances five elements", "Harmonises space"], whatsapp: "Hi, I want to buy the Vastu Dosh Nivaran Yantra (₹1,999). Please guide me.", image: "/images/products/product-7.jpg" },
   { id: 8, name: "Amethyst Crystal", category: "Crystals", price: 1199, description: "Natural amethyst geode – promotes peace, stress relief, and spiritual awareness.", benefits: ["Stress relief", "Peaceful sleep", "Spiritual awareness"], whatsapp: "Hi, I want to buy the Amethyst Crystal (₹1,199). Please guide me.", image: "/images/products/product-8.jpg" },
   { id: 9, name: "Brass Frog", category: "Vastu Figurines", price: 699, description: "Brass frog for prosperity, abundance, and financial flow. Place in North or East.", benefits: ["Attracts prosperity", "Financial growth", "Removes obstacles"], whatsapp: "Hi, I want to buy the Brass Frog (₹699). Please guide me.", image: "/images/products/product-9.jpg" },
   { id: 10, name: "Gomati Chakra", category: "Sacred Items", price: 499, description: "Set of 7 Gomati Chakras – natural sea fossils for good luck, protection, and prosperity.", benefits: ["Good luck & fortune", "Protection", "Prosperity"], whatsapp: "Hi, I want to buy the Gomati Chakra set (₹499). Please guide me.", image: "/images/products/product-10.jpg" },
@@ -45,7 +45,7 @@ export default function ProductCatalogue() {
             VedicUrja <span className="text-prakash-gold">Product Catalogue</span>
           </h1>
           <p className="text-nidra-indigo/60 max-w-2xl mx-auto">
-            Authentic, energised Vastu products – each item personally blessed by Vastuvid K.K. Nagaich.
+            Authentic, energised Vastu products – each item personally blessed by AstroVastu Expert K.K. Nagaich.
           </p>
         </div>
 

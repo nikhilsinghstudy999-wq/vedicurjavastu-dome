@@ -39,14 +39,14 @@ function HeroSection() {
         <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-prakash-gold uppercase tracking-[0.3em] text-sm mb-6 block font-bold">
           India’s Most‑Viewed Vastu Authority
         </motion.span>
-        <AnimatedText text="Vastuvid K.K. Nagaich" className="font-serif text-6xl md:text-8xl lg:text-9xl mb-6 text-white drop-shadow-2xl" />
+        <AnimatedText text="AstroVastu Expert K.K. Nagaich" className="font-serif text-6xl md:text-8xl lg:text-9xl mb-6 text-white drop-shadow-2xl" />
         <GradientText text="4th Generation · MBA · Ex‑CEO · Tantra Sadhak" className="font-serif text-2xl md:text-4xl mb-8 block" />
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-12">
           The only Vastu master who performs every ritual himself — and has <span className="font-bold">100 million+ views</span> across platforms.
         </motion.p>
         {/* Stat buttons have been removed as requested */}
         <div className="flex flex-wrap justify-center gap-6">
-          <Link href="/contact" className="luxury-button text-lg px-8 py-4">Consult Vastuvid ji</Link>
+          <Link href="/contact" className="luxury-button text-lg px-8 py-4">Consult AstroVastu Expert ji</Link>
           <Link href="/free-tools" className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-full text-lg font-medium transition">Explore Free Tools</Link>
         </div>
       </div>
@@ -113,7 +113,7 @@ function PillarsSection() {
 
 function WhyChooseSection() {
   const reasons = [
-    { title: 'He Performs Every Ritual', desc: 'Unlike consultants who only give remedies, Vastuvid ji personally conducts each Havan, Yantra energisation, and Pooja – the true secret behind lasting transformations.', icon: '🔥' },
+    { title: 'He Performs Every Ritual', desc: 'Unlike consultants who only give remedies, AstroVastu Expert ji personally conducts each Havan, Yantra energisation, and Pooja – the true secret behind lasting transformations.', icon: '🔥' },
     { title: 'Business Mind, Vedic Soul', desc: 'MBA + ex‑CEO who understands P&L statements. He identifies Vastu defects that directly impact your revenue, employee retention, and client acquisition.', icon: '💼' },
     { title: '100 Million+ Organic Views', desc: 'His viral Instagram reels have reached over 100M views, making him the most‑watched Vastu expert in the world. His wisdom is trusted globally.', icon: '📈' },
   ];
@@ -121,7 +121,7 @@ function WhyChooseSection() {
     <section className="py-28 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <AnimatedText text="Why Vastuvid KK Nagaich?" className="font-serif text-5xl md:text-6xl text-nidra-indigo mb-4" />
+          <AnimatedText text="Why AstroVastu Expert KK Nagaich?" className="font-serif text-5xl md:text-6xl text-nidra-indigo mb-4" />
         </div>
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {reasons.map((r, i) => (
@@ -182,7 +182,7 @@ function ReelsSection() {
     <section className="py-28 bg-gradient-to-b from-white to-vastu-parchment overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6">
         <AnimatedText text="Viral Reels – 100M+ Views" className="font-serif text-5xl md:text-6xl text-center text-nidra-indigo mb-6" />
-        <p className="text-center text-nidra-indigo/60 mb-12 max-w-2xl mx-auto">Witness the real Vastuvid in action – rituals, remedies, and wisdom that millions watch daily.</p>
+        <p className="text-center text-nidra-indigo/60 mb-12 max-w-2xl mx-auto">Witness the real AstroVastu Expert in action – rituals, remedies, and wisdom that millions watch daily.</p>
         <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
           {REELS.map((reel, i) => (
             <motion.div key={i} initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ delay: i * 0.05 }} className="flex-shrink-0 w-[320px] sm:w-[380px] snap-start">
@@ -214,7 +214,7 @@ function QuoteSection() {
       <div className="container mx-auto px-6 max-w-4xl text-center">
         <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8 }}>
           <p className="font-serif text-3xl md:text-4xl italic leading-relaxed">"The soul of VedicUrja is not an algorithm. It is a living lineage, a direct and sacred inheritance from masters whose wisdom transcends the limitations of textbooks."</p>
-          <p className="mt-6 text-prakash-gold uppercase tracking-wider">— Vastuvid K.K. Nagaich</p>
+          <p className="mt-6 text-prakash-gold uppercase tracking-wider">— AstroVastu Expert K.K. Nagaich</p>
         </motion.div>
       </div>
     </section>
@@ -236,7 +236,7 @@ function FinalCTASection() {
         <AnimatedText text="Step Into the Legacy" className="font-serif text-5xl md:text-7xl text-nidra-indigo mb-6" />
         <p className="text-xl text-nidra-indigo/70 max-w-3xl mx-auto mb-10">Experience authentic Vastu wisdom – from a master who personally performs every ritual.</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/contact" className="luxury-button text-lg px-12 py-5">Consult Vastuvid K.K. Nagaich</Link>
+          <Link href="/contact" className="luxury-button text-lg px-12 py-5">Consult AstroVastu Expert K.K. Nagaich</Link>
           <Link href="/free-tools" className="border-2 border-prakash-gold text-nidra-indigo px-10 py-5 rounded-full text-lg font-medium hover:bg-prakash-gold/10 transition">Explore Free Tools</Link>
         </div>
       </div>

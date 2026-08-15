@@ -133,7 +133,7 @@ export default function BookingsPage() {
               <div className="text-6xl mb-4 text-prakash-gold">✓</div>
               <h2 className="font-serif text-3xl text-nidra-indigo mb-2">Request Received</h2>
               <p className="text-nidra-indigo/70 mb-6">
-                Vastuvid KK Nagaich will contact you within 12 hours on WhatsApp.
+                AstroVastu Expert KK Nagaich will contact you within 12 hours on WhatsApp.
               </p>
               <button onClick={() => setSubmitted(false)} className="luxury-button w-full">
                 Book Another Consultation
@@ -175,7 +175,7 @@ export default function BookingsPage() {
                 animate={{ opacity: 1 }}
                 className="text-lg md:text-xl text-nidra-indigo/70 max-w-2xl mx-auto mb-8"
               >
-                Book a one‑on‑one virtual consultation with Vastuvid KK Nagaich – India's most trusted Vastu expert.
+                Book a one‑on‑one virtual consultation with AstroVastu Expert KK Nagaich – India's most trusted Vastu expert.
               </motion.p>
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
@@ -219,7 +219,7 @@ export default function BookingsPage() {
               <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 {[
                   { step: '01', title: 'Submit Details', desc: 'Fill the form and upload your layout plan.' },
-                  { step: '02', title: 'Acharya Reviews', desc: 'Vastuvid ji analyses your space and prepares remedies.' },
+                  { step: '02', title: 'Acharya Reviews', desc: 'AstroVastu Expert ji analyses your space and prepares remedies.' },
                   { step: '03', title: 'Consultation', desc: 'Connect via WhatsApp video call for personalised guidance.' },
                 ].map((item, i) => (
                   <motion.div

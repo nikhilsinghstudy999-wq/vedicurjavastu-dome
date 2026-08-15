@@ -22,7 +22,7 @@ export default function VirtualConsultCTA() {
                 Can't Visit In Person?
               </h2>
               <p className="text-white/70 text-base sm:text-lg max-w-xl mx-auto mb-8">
-                Book a secure virtual consultation with Vastuvid KK Nagaich — screen sharing, real‑time analysis, and personalised remedies from anywhere in the world.
+                Book a secure virtual consultation with AstroVastu Expert KK Nagaich — screen sharing, real‑time analysis, and personalised remedies from anywhere in the world.
               </p>
               <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">
                 Book Virtual Consultation →

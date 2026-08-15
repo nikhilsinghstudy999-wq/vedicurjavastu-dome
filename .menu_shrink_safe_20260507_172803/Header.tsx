@@ -124,7 +124,7 @@ export default function Header() {
           : <span className="font-serif text-xl sm:text-2xl text-white font-bold tracking-wide drop-shadow-lg">VedicUrja<span className="text-yellow-400">.</span></span>}
         </Link>
         <div className="flex items-center gap-3 flex-shrink-0">
-          <Link href="/contact" className="cta-btn hidden sm:inline-flex">Consult Vastuvid ji</Link>
+          <Link href="/contact" className="cta-btn hidden sm:inline-flex">Consult AstroVastu Expert ji</Link>
           <button onClick={() => setMenuOpen(true)} className="menu-btn" aria-label="Open menu"><span /></button>
         </div>
       </header>
@@ -172,7 +172,7 @@ export default function Header() {
                 </div>
               </nav>
               <div className="drawer-footer">
-                <Link href="/contact" onClick={() => setMenuOpen(false)} className="block w-full text-center py-4 rounded-full text-base uppercase tracking-wide font-bold text-white cta-btn">Consult Vastuvid ji</Link>
+                <Link href="/contact" onClick={() => setMenuOpen(false)} className="block w-full text-center py-4 rounded-full text-base uppercase tracking-wide font-bold text-white cta-btn">Consult AstroVastu Expert ji</Link>
               </div>
             </motion.div>
           </>

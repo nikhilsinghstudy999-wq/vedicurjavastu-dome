@@ -64,7 +64,7 @@ export default function Footer() {
             </p>
             <p className="mt-2 text-xs text-nidra-indigo/50">
               Registered Business: Vedic Vastu Urja<br />
-              Vastuvid K.K. Nagaich — MBA, Ex‑CEO<br />
+              AstroVastu Expert K.K. Nagaich — MBA, Ex‑CEO<br />
               4th Generation Vastu Guru
             </p>
             {/* Social icons */}

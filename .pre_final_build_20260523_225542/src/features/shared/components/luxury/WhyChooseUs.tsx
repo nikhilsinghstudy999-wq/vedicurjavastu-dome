@@ -27,7 +27,7 @@ export default function WhyChooseUs() {
             No Other Expert Possesses
           </h2>
           <p className="text-nidra-indigo/60 max-w-2xl mx-auto text-sm sm:text-base">
-            Vastuvid KK Nagaich uniquely combines Tantra mastery, MBA‑grade business acumen, and 4th‑generation Vedic lineage — a trio unmatched by any other consultant in India.
+            AstroVastu Expert KK Nagaich uniquely combines Tantra mastery, MBA‑grade business acumen, and 4th‑generation Vedic lineage — a trio unmatched by any other consultant in India.
           </p>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

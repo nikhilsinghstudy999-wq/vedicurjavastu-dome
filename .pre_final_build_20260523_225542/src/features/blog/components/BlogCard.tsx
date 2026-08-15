@@ -56,7 +56,7 @@ export default function BlogCard({ post, index }: BlogCardProps) {
                 {post.read_time} min read
               </span>
               <span className="w-1 h-1 rounded-full bg-prakash-gold/40" />
-              <span>By {post.author_name || 'Vastuvid KK Nagaich'}</span>
+              <span>By {post.author_name || 'AstroVastu Expert KK Nagaich'}</span>
             </div>
 
             <h3 className="font-serif text-xl text-nidra-indigo font-bold mb-2 line-clamp-2 group-hover:text-prakash-gold transition-colors">

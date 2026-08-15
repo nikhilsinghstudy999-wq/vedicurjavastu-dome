@@ -93,7 +93,7 @@ export default function RitualsPage() {
               <span className="bg-gradient-to-r from-purple-300 via-prakash-gold to-sacred-saffron bg-clip-text text-transparent">Vedic Rituals</span>
             </h1>
             <p className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-10">
-              Personalised Yantra Pran Pratishtha, Navagraha Shanti, Havan, and Anushthan – performed by Vastuvid K.K. Nagaich himself.
+              Personalised Yantra Pran Pratishtha, Navagraha Shanti, Havan, and Anushthan – performed by AstroVastu Expert K.K. Nagaich himself.
             </p>
             <Link href="/bookings" className="luxury-button text-lg px-10 py-5">Book a Ritual Consultation</Link>
           </div>
@@ -111,7 +111,7 @@ export default function RitualsPage() {
               <YouTubeEmbed videoId="fjUP13uEUi0" title="#1 Astrologer on India News in India" />
             </div>
             <p className="text-center text-nidra-indigo/60 mt-6 text-sm">
-              Vastuvid K.K. Nagaich – the #1 Astrologer on national television
+              AstroVastu Expert K.K. Nagaich – the #1 Astrologer on national television
             </p>
           </div>
         </section>
@@ -169,7 +169,7 @@ export default function RitualsPage() {
           <div className="container mx-auto px-4 relative z-10 text-center">
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl text-white mb-4">Experience the Transformative Power of Vedic Rituals</h2>
             <p className="text-white/70 text-lg max-w-2xl mx-auto mb-8">
-              Book a personal ritual with Vastuvid K.K. Nagaich – 100M+ views, 80K+ followers.
+              Book a personal ritual with AstroVastu Expert K.K. Nagaich – 100M+ views, 80K+ followers.
             </p>
             <Link href="/bookings" className="inline-block px-10 py-5 bg-gradient-to-r from-prakash-gold via-sacred-saffron to-kumkuma-red text-white font-bold rounded-full shadow-[0_10px_40px_rgba(232,185,96,0.4)] hover:shadow-[0_20px_50px_rgba(255,153,51,0.5)] transition-all text-lg">
               Schedule Your Ritual Session →
